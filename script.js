@@ -633,14 +633,14 @@ function downloadPDFWFH() {
                 <tr>
                     <td style="width: 50%; text-align: left;">
                         <p style="margin:0; font-weight: bold;">Mengetahui,</p>
-                        <p style="margin:0; font-weight: bold;">Kepala Balai Penyuluhan KB</p>
-                        <p style="margin:0; font-weight: bold;">Kecamatan Taliabu Barat,</p>
+                        <p style="margin:0; font-weight: bold;">Plt. Kepala Perwakilan Kemendukbangga/BKKBN</p>
+                        <p style="margin:0; font-weight: bold;">Provinsi Maluku Utara,</p>
                         <br><br><br>
-                        <p style="margin:0; font-weight: bold; text-decoration: underline;">......................................................</p>
-                        <p style="margin:0;">NIP. ......................................................</p>
+                        <p style="margin:0; font-weight: bold; text-decoration: underline;">Anshar Djainahu, S.Sos</p>
+                        <p style="margin:0;">NIP. 198012182007011001</p>
                     </td>
                     <td style="width: 50%; text-align: right;">
-                        <p style="margin:0;">Taliabu Barat, ............................ ${tahun}</p>
+                        <p style="margin:0;">Kab/Kota, ............................ ${tahun}</p>
                         <p style="margin:0; font-weight: bold;">Penyuluh KB,</p>
                         <br><br><br>
                         <p style="margin:0; font-weight: bold; text-decoration: underline;">${nama}</p>
