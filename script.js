@@ -159,6 +159,8 @@ function prosesLoginManual() {
     if (!u || !p) { alert("Silakan masukkan username dan password."); return; }
 
     localStorage.setItem('sidelila_username', u);
+    
+    // Cek jika login sebagai admin
     if (u === "admin" && p === "admin2026") {
         localStorage.setItem('sidelila_logged_in', 'true');
         localStorage.setItem('sidelila_role', 'admin');
@@ -166,7 +168,13 @@ function prosesLoginManual() {
         return;
     }
 
-    if (p !== "user12345") { alert("Password salah! Masukan Password kembali"); return; }
+    // Cek jika password user salah
+    if (p !== "user12345") { 
+        alert("Password salah! Masukan Password kembali"); 
+        return; 
+    }
+    
+    // Jika lolos sebagai user biasa
     localStorage.setItem('sidelila_logged_in', 'true');
     localStorage.setItem('sidelila_role', 'user');
     tampilkanDashboard();
