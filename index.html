@@ -605,4 +605,21 @@
     <!-- TAMBAHKAN TOMBOL UNDUH PDF DI SINI -->
     <button onclick="downloadHasilPDF()" style="background: #16a34a; color: #fff; border: none; padding: 10px 20px; border-radius: 6px; cursor: pointer; margin-left: 10px;">📥 Unduh Hasil Ujian (PDF)</button>
 </div>
+	  <!-- Panggil File Script.js di Sini -->
+    <script src="script.js"></script>
+    <script>
+        // Pemantau utama untuk mereset posisi scroll kontainer dan jendela browser saat menu diklik
+        document.addEventListener("click", function(event) {
+            if (event.target.closest("aside") && (event.target.closest("a") || event.target.closest("div"))) {
+                setTimeout(function() {
+                    const mainContainer = document.querySelector('main') || document.querySelector('.overflow-y-auto');
+                    if (mainContainer) mainContainer.scrollTop = 0;
+                    window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+                }, 50);
+            }
+        });
+    </script>
+
+</body>
+</html>
 
