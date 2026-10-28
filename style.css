@@ -1,0 +1,132 @@
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f8fafc;
+    color: #1e293b;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}
+
+/* Smooth Hide/Show Animations */
+.page-section {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.25s ease-in-out;
+}
+.page-section.active {
+    display: block;
+    opacity: 1;
+}
+
+/* Running Text Styling */
+.marquee-container {
+    overflow: hidden;
+    white-space: nowrap;
+    background: linear-gradient(90deg, #1e40af 0%, #0369a1 100%);
+}
+.marquee-content {
+    display: inline-block;
+    padding-left: 100%;
+    animation: marquee 28s linear infinite;
+}
+@keyframes marquee {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(-100%, 0); }
+}
+
+/* Sidebar Submenu Transition */
+.submenu-list {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+.submenu-list.open {
+    max-height: 500px;
+}
+
+/* Active Menu Styles */
+.nav-link.active {
+    background-color: #0284c7;
+    color: #ffffff;
+    font-weight: 600;
+    box-shadow: 0 2px 4px rgba(2, 132, 199, 0.25);
+}
+.sub-link.active {
+    color: #0284c7;
+    font-weight: 700;
+    background-color: #e0effe;
+}
+
+/* Efek Gerak & Animasi Tombol Masuk */
+.btn-login-animate {
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-login-animate:hover {
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 10px 20px -5px rgba(2, 132, 199, 0.4);
+}
+
+.btn-login-animate:active {
+    transform: translateY(1px) scale(0.98);
+}
+
+/* --- PENGATURAN CETAK / PRINT UNTUK ESTIMASI PANGKAT --- */
+@media print {
+    body * {
+        visibility: hidden;
+    }
+    #print-area-pangkat, #print-area-pangkat * {
+        visibility: visible;
+    }
+    #print-area-pangkat {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        background: #ffffff !important;
+        color: #000000 !important;
+        box-shadow: none !important;
+        border: none !important;
+        padding: 20px !important;
+    }
+    #print-area-pangkat * {
+        color: #000000 !important;
+        background: transparent !important;
+    }
+    /* Sembunyikan tombol cetak saat proses print */
+    .no-print {
+        display: none !important;
+    }
+}
+
+/* --- PENGATURAN KONTROL SCROLL & LAYOUT AMAN SIDELILA --- */
+html, body {
+    height: 100% !important;
+    overflow-anchor: none !important;
+    scroll-behavior: auto !important;
+}
+
+main, .overflow-y-auto {
+    overflow-y: auto !important;
+    overflow-anchor: none !important;
+}
+
+div[id*="section-"], .page-section {
+    scroll-margin-top: 20px;
+}
