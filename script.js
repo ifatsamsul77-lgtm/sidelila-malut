@@ -108,13 +108,34 @@ const subMateriData = {
               { name: "MODUL GATI", desc: "BELUM DITAMBAHKAN", icon: "📄", link: "#" },
               { name: "MODUL GATI", desc: "BELUM DITAMBAHKAN", icon: "📄", link: "#" },
               { name: "MODUL GATI", desc: "BELUM DITAMBAHKAN", icon: "📄", link: "#" },
-              { name: "MODUL GATI", desc: "BELUM DITAMBAHKAN", icon: "📄", link: "#" },]},
+              { name: "MODUL GATI", desc: "BELUM DITAMBAHKAN", icon: "📄", link: "#" },
+             ]},
     tamasya: { title: "Modul TAMASYA", parent: "quickwin", items: 
              [{ name: "Pedoman Pelaksanaan TAMASYA", desc: "Taman Asuh Sayang Anak di wilayah khusus", icon: "📄", link: "#" },
+              { name: "Modul TAMASYA", desc: "Belum Ditambahkan", icon: "📄", link: "#" },
+              { name: "Modul TAMASYA", desc: "Belum Ditambahkan", icon: "📄", link: "#" },
               ] },
-    sidaya: { title: "Modul SIDAYA", parent: "quickwin", items: [{ name: "Pedoman Program SIDAYA", desc: "Pemberdayaan ekonomi keluarga akseptor", icon: "📄", link: "#" }] },
-    penyuluhan: { title: "Materi Penyuluhan Umum", parent: "lainnya", items: [{ name: "Lembar Balik Program Bangga Kencana", desc: "Media utama penyuluhan keluarga berencana", icon: "📂", link: "#" }] },
-    panduan: { title: "Panduan Lapangan PKB/PLKB", parent: "lainnya", items: [{ name: "Petunjuk Teknis Operasional Lini Lapangan", desc: "Acuan kerja harian penyuluh KB", icon: "📖", link: "#" }] }
+    sidaya: { title: "Modul SIDAYA", parent: "quickwin", items: 
+             [{ name: "Modul SIDAYA", desc: "Belum Ditambahkan", icon: "📄", link: "#" },
+              { name: "Modul SIDAYA", desc: "Belum Ditambahkan", icon: "📄", link: "#" },
+              { name: "Modul SIDAYA", desc: "Belum Ditambahkan", icon: "📄", link: "#" },
+             ] },
+    penyuluhan: { title: "Materi Penyuluhan Umum", parent: "lainnya", items: 
+             [{ name: "Modul Penyuluhan", desc: "Belum Ditambahkan", icon: "📂", link: "#" },
+              { name: "Modul Penyuluhan", desc: "Belum Ditambahkan", icon: "📂", link: "#" },
+              { name: "Modul Penyuluhan", desc: "Belum Ditambahkan", icon: "📂", link: "#" },
+              { name: "Modul Penyuluhan", desc: "Belum Ditambahkan", icon: "📂", link: "#" },
+              { name: "Modul Penyuluhan", desc: "Belum Ditambahkan", icon: "📂", link: "#" },
+              { name: "Modul Penyuluhan", desc: "Belum Ditambahkan", icon: "📂", link: "#" },
+             ] },
+    panduan: { title: "Panduan Lapangan PKB/PLKB", parent: "lainnya", items: 
+             [{ name: "Panduan Tekhnis", desc: "Belum Ditambahkan", icon: "📖", link: "#" },
+              { name: "Panduan Tekhnis", desc: "Belum Ditambahkan", icon: "📖", link: "#" },
+              { name: "Petunjuk Tekhnis", desc: "Belum Ditambahkan", icon: "📖", link: "#" },
+              { name: "Petunjuk Tekhnis", desc: "Belum Ditambahkan", icon: "📖", link: "#" },
+              { name: "Petunjuk Tekhnis", desc: "Belum Ditambahkan", icon: "📖", link: "#" },
+              { name: "Petunjuk Tekhnis", desc: "Belum Ditambahkan", icon: "📖", link: "#" },
+             ] },
 };
 
 // --- DATA PERATURAN ---
