@@ -102,77 +102,19 @@ const subMateriData = {
             { name: "JUKNIS AKSI 1-2-3", desc: "Pedoman Pelaksanaan Intervensi Penurunan Stunting Terintegrasi", icon: "🔍", link: "https://drive.google.com/file/d/18E0u-uEx-C_aG8HnLsP3kT9YDA96gp3h/view?usp=sharing" }
         ]
     },
-    gati: { title: "Modul GATI", parent: "quickwin", items: 
-             [{ name: "Pedoman Pelaksanaan GATI", desc: "Gerakan Ayah Teladan Indonesia di lapangan", icon: "📄", link: "#" },
-              { name: "MODUL GATI", desc: "BELUM DITAMBAHKAN", icon: "📄", link: "#" },
-              { name: "MODUL GATI", desc: "BELUM DITAMBAHKAN", icon: "📄", link: "#" },
-              { name: "MODUL GATI", desc: "BELUM DITAMBAHKAN", icon: "📄", link: "#" },
-              { name: "MODUL GATI", desc: "BELUM DITAMBAHKAN", icon: "📄", link: "#" },
-              { name: "MODUL GATI", desc: "BELUM DITAMBAHKAN", icon: "📄", link: "#" },
-             ]},
-    tamasya: { title: "Modul TAMASYA", parent: "quickwin", items: 
-             [{ name: "Pedoman Pelaksanaan TAMASYA", desc: "Taman Asuh Sayang Anak di wilayah khusus", icon: "📄", link: "#" },
-              { name: "Modul TAMASYA", desc: "Belum Ditambahkan", icon: "📄", link: "#" },
-              { name: "Modul TAMASYA", desc: "Belum Ditambahkan", icon: "📄", link: "#" },
-              ] },
-    sidaya: { title: "Modul SIDAYA", parent: "quickwin", items: 
-             [{ name: "Modul SIDAYA", desc: "Belum Ditambahkan", icon: "📄", link: "#" },
-              { name: "Modul SIDAYA", desc: "Belum Ditambahkan", icon: "📄", link: "#" },
-              { name: "Modul SIDAYA", desc: "Belum Ditambahkan", icon: "📄", link: "#" },
-             ] },
-    penyuluhan: { title: "Materi Penyuluhan Umum", parent: "lainnya", items: 
-             [{ name: "Modul Penyuluhan", desc: "Belum Ditambahkan", icon: "📂", link: "#" },
-              { name: "Modul Penyuluhan", desc: "Belum Ditambahkan", icon: "📂", link: "#" },
-              { name: "Modul Penyuluhan", desc: "Belum Ditambahkan", icon: "📂", link: "#" },
-              { name: "Modul Penyuluhan", desc: "Belum Ditambahkan", icon: "📂", link: "#" },
-              { name: "Modul Penyuluhan", desc: "Belum Ditambahkan", icon: "📂", link: "#" },
-              { name: "Modul Penyuluhan", desc: "Belum Ditambahkan", icon: "📂", link: "#" },
-             ] },
-    panduan: { title: "Panduan Lapangan PKB/PLKB", parent: "lainnya", items: 
-             [{ name: "Panduan Tekhnis", desc: "Belum Ditambahkan", icon: "📖", link: "#" },
-              { name: "Panduan Tekhnis", desc: "Belum Ditambahkan", icon: "📖", link: "#" },
-              { name: "Petunjuk Tekhnis", desc: "Belum Ditambahkan", icon: "📖", link: "#" },
-              { name: "Petunjuk Tekhnis", desc: "Belum Ditambahkan", icon: "📖", link: "#" },
-              { name: "Petunjuk Tekhnis", desc: "Belum Ditambahkan", icon: "📖", link: "#" },
-              { name: "Petunjuk Tekhnis", desc: "Belum Ditambahkan", icon: "📖", link: "#" },
-             ] },
+    gati: { title: "Modul GATI", parent: "quickwin", items: [{ name: "Pedoman Pelaksanaan GATI", desc: "Gerakan Ayah Teladan Indonesia di lapangan", icon: "📄", link: "#" }] },
+    tamasya: { title: "Modul TAMASYA", parent: "quickwin", items: [{ name: "Pedoman Pelaksanaan TAMASYA", desc: "Taman Asuh Sayang Anak di wilayah khusus", icon: "📄", link: "#" }] },
+    sidaya: { title: "Modul SIDAYA", parent: "quickwin", items: [{ name: "Pedoman Program SIDAYA", desc: "Pemberdayaan ekonomi keluarga akseptor", icon: "📄", link: "#" }] },
+    penyuluhan: { title: "Materi Penyuluhan Umum", parent: "lainnya", items: [{ name: "Lembar Balik Program Bangga Kencana", desc: "Media utama penyuluhan keluarga berencana", icon: "📂", link: "#" }] },
+    panduan: { title: "Panduan Lapangan PKB/PLKB", parent: "lainnya", items: [{ name: "Petunjuk Teknis Operasional Lini Lapangan", desc: "Acuan kerja harian penyuluh KB", icon: "📖", link: "#" }] }
 };
 
 // --- DATA PERATURAN ---
 const dataPeraturan = {
-    uu: { title: "Direktori Undang-Undang", items: 
-            [{ name: "UU No. 52 Tahun 2009", desc: "Perkembangan Kependudukan & Pembangunan Keluarga", icon: "📜", link: "https://drive.google.com/file/d/117CV01siCHhGE3YLmsv1Pe3oLmvDoY-h/view?usp=sharing" },
-             { name: "UU No. 23 Tahun 2026", desc: "Tentang Administrasi Kependudukan", icon: "📜", link: "https://drive.google.com/file/d/1nT8papq4S9-JXx_u3FSTN-zR5pyb_-p2/view?usp=sharing" },
-             { name: "UU No. 23 Tahun 2014", desc: "Tentang Pemerintah Daerah", icon: "📜", link: "https://drive.google.com/file/d/1APvsGhajjseCmfiDfXx38ADdsROgn8KN/view?usp=sharing" }, // <-- KOMA SUDAH DITAMBAHKAN DI SINI
-             { name: "UU No. xx Tahun xxxx", desc: "Belum Ditambahkan", icon: "📜", link: "#" },
-             { name: "UU No. xx Tahun xxxx", desc: "Belum Ditambahkan", icon: "📜", link: "#" },
-             { name: "UU No. xx Tahun xxxx", desc: "Belum Ditambahkan", icon: "📜", link: "#" }
-            ]},
-       perpres: { title: "Direktori Peraturan Presiden", items: 
-            [{ name: "Perpres No. 72 Tahun 2021", desc: "Percepatan Penurunan Stunting Nasional", icon: "🏛️", link: "https://drive.google.com/file/d/1LVLCU9TJcZGWmh0csqQlyQ6_Kd3aKuFk/view?usp=sharing" },
-             { name: "Perpres No. 03 Tahun 2026", desc: "Pencegahan dan Penanganan Anak Tidak Sekolah", icon: "🏛️", link: "https://drive.google.com/file/d/1PmhSKzLYUtpZzMHAXDd9Exz8AyCern8O/view?usp=sharing" },
-             { name: "Perpres No. 180 Tahun 2024", desc: "Kementerian Kependudukan dan Pembangunan Keluarga", icon: "🏛️", link: "https://drive.google.com/file/d/134oL27yWqx7OXayNxeKf3tMeXiA-diXP/view?usp=sharing" },
-             { name: "Perpres No. 181 Tahun XXXX", desc: "Badan Kependudukan dan Keluarga Berencana Nasional", icon: "🏛️", link: "https://drive.google.com/file/d/1aATw2KfiBMjNouDKhTcizR0Y7bf1uZ24/view?usp=sharing" },
-             { name: "Perpres No. XX Tahun XXXX", desc: "BELUM DITAMBAHKAN", icon: "🏛️", link: "#" },
-             { name: "Perpres No. XX Tahun XXXX", desc: "BELUM DITAMBAHKAN", icon: "🏛️", link: "#" }
-            ]},
-       permen: { title: "Direktori Peraturan Menteri", items: 
-            [{ name: "Permen No.03 Tahun 2026", desc: "Penyelenggaraan Layanan Informasi Publik Kemendukbangga/BKKBN", icon: "📑", link: "https://drive.google.com/file/d/10xaf96bxODsYMhe9TwzxiLLIrJr1VSWf/view?usp=sharing" },
-             { name: "Permen No 01 Tahun 2026", desc: "Tim Pendamping Keluarga", icon: "📑", link: "https://drive.google.com/file/d/1h1tNRNDrVoYURQkI1xtp6CxDqMX9muBk/view?usp=sharing" },
-             { name: "Permen No 05 Tahun xxxx", desc: "Juknis Penggunaan Dana BOKB Tahun 2026", icon: "📑", link: "https://drive.google.com/file/d/180iy0y66eIQ77WR36wq1ULcT7PgA0pM8/view?usp=sharing" },
-             { name: "Permen No xx Tahun xxxx", desc: "BELUM DITAMBAHKAN", icon: "📑", link: "#" },
-             { name: "Permen No xx Tahun xxxx", desc: "BELUM DITAMBAHKAN", icon: "📑", link: "#" },
-             { name: "Permen No xx Tahun xxxx", desc: "BELUM DITAMBAHKAN", icon: "📑", link: "#" },
-             { name: "Permen No xx Tahun xxxx", desc: "BELUM DITAMBAHKAN", icon: "📑", link: "#" }
-            ]},
-       juknis: { title: "Direktori Petunjuk Teknis & Keputusan", items: 
-            [{ name: "Juknis Pengelolaan Kampung KB", desc: "Panduan pembentukan dan klasifikasi kampung", icon: "📂", link: "#" },
-             { name: "Juknis XXXXXXXXXXX", desc: "BELUM DITAMBAHKAN", icon: "📂", link: "#" },
-             { name: "Juknis XXXXXXXXXXX", desc: "BELUM DITAMBAHKAN", icon: "📂", link: "#" },
-             { name: "Juknis XXXXXXXXXXX", desc: "BELUM DITAMBAHKAN", icon: "📂", link: "#" },
-             { name: "Juknis XXXXXXXXXXX", desc: "BELUM DITAMBAHKAN", icon: "📂", link: "#" },
-             { name: "Juknis XXXXXXXXXXX", desc: "BELUM DITAMBAHKAN", icon: "📂", link: "#" }
-            ]},
+    uu: { title: "Direktori Undang-Undang", items: [{ name: "UU No. 52 Tahun 2009", desc: "Perkembangan Kependudukan & Pembangunan Keluarga", icon: "📜", link: "#" }] },
+    perpres: { title: "Direktori Peraturan Presiden", items: [{ name: "Perpres No. 72 Tahun 2021", desc: "Percepatan Penurunan Stunting Nasional", icon: "🏛️", link: "#" }] },
+    permen: { title: "Direktori Peraturan Menteri", items: [{ name: "Permenpan RB Jabatan Fungsional PKB", desc: "Standar Kompetensi & Butir Kegiatan PKB/PLKB", icon: "📑", link: "#" }] },
+    juknis: { title: "Direktori Petunjuk Teknis & Keputusan", items: [{ name: "Juknis Pengelolaan Kampung KB", desc: "Panduan pembentukan dan klasifikasi kampung", icon: "📂", link: "#" }] }
 };
 
 // --- 3. LOGIKA SLIDER FOTO BERANDA ---
@@ -224,7 +166,7 @@ function prosesLoginManual() {
         return;
     }
 
-    if (p !== "user123456") { alert("Password salah! Masukan Password kembali"); return; }
+    if (p !== "salenga2026") { alert("Password salah! Masukan Password kembali"); return; }
     localStorage.setItem('sidelila_logged_in', 'true');
     localStorage.setItem('sidelila_role', 'user');
     tampilkanDashboard();
@@ -662,14 +604,14 @@ function downloadPDFWFH() {
                 <tr>
                     <td style="width: 50%; text-align: left;">
                         <p style="margin:0; font-weight: bold;">Mengetahui,</p>
-                        <p style="margin:0; font-weight: bold;">Plt. Kepala Perwakilan Kemendukbangga/BKKBN</p>
-                        <p style="margin:0; font-weight: bold;">Provinsi Maluku Utara,</p>
+                        <p style="margin:0; font-weight: bold;">Kepala Balai Penyuluhan KB</p>
+                        <p style="margin:0; font-weight: bold;">Kecamatan Taliabu Barat,</p>
                         <br><br><br>
-                        <p style="margin:0; font-weight: bold; text-decoration: underline;">Anshar Djainahu, S.Sos</p>
-                        <p style="margin:0;">NIP. 198012182007011001</p>
+                        <p style="margin:0; font-weight: bold; text-decoration: underline;">......................................................</p>
+                        <p style="margin:0;">NIP. ......................................................</p>
                     </td>
                     <td style="width: 50%; text-align: right;">
-                        <p style="margin:0;">Kab/Kota, ............................ ${tahun}</p>
+                        <p style="margin:0;">Taliabu Barat, ............................ ${tahun}</p>
                         <p style="margin:0; font-weight: bold;">Penyuluh KB,</p>
                         <br><br><br>
                         <p style="margin:0; font-weight: bold; text-decoration: underline;">${nama}</p>
@@ -1300,10 +1242,10 @@ function cetakDokumen1() {
                     <td style="width: 50%; text-align: right;">
                         <p style="margin:0;">Ditetapkan di : ${tempat}</p>
                         <p style="margin:0;">Pada tanggal : ${tglPenetapan}</p>
-                        <br><p style="margin:0; font-weight: bold;">Plt. Kepala Perwakilan BKKBN Provinsi Maluku Utara,</p>
+                        <br><p style="margin:0; font-weight: bold;">Kepala Perwakilan BKKBN Provinsi Maluku Utara,</p>
                         <br><br><br>
-                        <p style="margin:0; font-weight: bold; text-decoration: underline;">Anshar Djainahu, S.Sos</p>
-                        <p style="margin:0;">NIP. 198012182007011001</p>
+                        <p style="margin:0; font-weight: bold; text-decoration: underline;">dr. Victor Palimbong, M.K.M.</p>
+                        <p style="margin:0;">NIP. 197707252005011016</p>
                     </td>
                 </tr>
             </table>
@@ -1430,10 +1372,10 @@ function cetakDokumen2() {
                     <td style="width: 50%; text-align: right;">
                         <p style="margin:0;">Ditetapkan di : ${tempat}</p>
                         <p style="margin:0;">Pada tanggal : ${tglPenetapan}</p>
-                        <br><p style="margin:0; font-weight: bold;">Plt. Kepala Perwakilan BKKBN Provinsi Maluku Utara,</p>
+                        <br><p style="margin:0; font-weight: bold;">Kepala Perwakilan BKKBN Provinsi Maluku Utara,</p>
                         <br><br><br>
-                        <p style="margin:0; font-weight: bold; text-decoration: underline;">Anshar Djainahu, S.Sos.</p>
-                        <p style="margin:0;">NIP. 198012182007011001</p>
+                        <p style="margin:0; font-weight: bold; text-decoration: underline;">dr. Victor Palimbong, M.K.M.</p>
+                        <p style="margin:0;">NIP. 197707252005011016</p>
                     </td>
                 </tr>
             </table>
@@ -1453,9 +1395,9 @@ function cetakDokumen3() {
     const tahun = document.getElementById('up-tahun')?.value || '2025';
     const predikat = document.getElementById('up-predikat')?.value || 'Sangat Baik';
     const akLama = parseFloat(document.getElementById('up-ak-lama')?.value) || 118.480;
-    const noSk = document.getElementById('up-no-sk')?.value || 'x/KP.xx/Jxx/20xx';
+    const noSk = document.getElementById('up-no-sk')?.value || '4/KP.09/J28/2026';
     const tempat = document.getElementById('up-tempat')?.value || 'Sofifi';
-    const tglPenetapan = document.getElementById('up-tgl-penetapan')?.value || 'xx xxxxxxx xxxx';
+    const tglPenetapan = document.getElementById('up-tgl-penetapan')?.value || '02 Januari 2026';
 
     let akBaru = 56.250;
     if (predikat === "Baik") akBaru = 37.500;
@@ -1567,10 +1509,10 @@ function cetakDokumen3() {
                     <td style="width: 50%; text-align: right;">
                         <p style="margin:0;">Ditetapkan di : ${tempat}</p>
                         <p style="margin:0;">Pada tanggal : ${tglPenetapan}</p>
-                        <br><p style="margin:0; font-weight: bold;">Plt. Kepala Perwakilan BKKBN Provinsi Maluku Utara,</p>
+                        <br><p style="margin:0; font-weight: bold;">Kepala Perwakilan BKKBN Provinsi Maluku Utara,</p>
                         <br><br><br>
-                        <p style="margin:0; font-weight: bold; text-decoration: underline;">Anshar Djainahu, S.Sos.</p>
-                        <p style="margin:0;">NIP. 198012182007011001</p>
+                        <p style="margin:0; font-weight: bold; text-decoration: underline;">dr. Victor Palimbong, M.K.M.</p>
+                        <p style="margin:0;">NIP. 197707252005011016</p>
                     </td>
                 </tr>
             </table>
@@ -10669,4 +10611,21 @@ function ulangUjian() {
     document.getElementById('kompetensi-nama').value = '';
     document.getElementById('kompetensi-nip').value = '';
     document.getElementById('kompetensi-wilayah').value = '';
+}
+
+function downloadHasilPDF() {
+    // Menangkap elemen rekap soal berdasarkan ID
+    const element = document.getElementById('area-rekap-soal');
+    
+    // Pengaturan format file PDF yang akan diunduh
+    const options = {
+        margin:       10,
+        filename:     'Hasil-Uji-Kompetensi-SIDELILA.pdf',
+        image:        { type: 'jpeg', quality: 0.98 },
+        html2canvas:  { scale: 2 },
+        jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' }
+    };
+
+    // Proses eksekusi pengunduhan PDF
+    html2pdf().from(element).set(options).save();
 }
