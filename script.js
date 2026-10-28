@@ -166,7 +166,7 @@ function prosesLoginManual() {
         return;
     }
 
-    if (p !== "salenga2026") { alert("Password salah! Masukan Password kembali"); return; }
+    if (p !== "user12345") { alert("Password salah! Masukan Password kembali"); return; }
     localStorage.setItem('sidelila_logged_in', 'true');
     localStorage.setItem('sidelila_role', 'user');
     tampilkanDashboard();
