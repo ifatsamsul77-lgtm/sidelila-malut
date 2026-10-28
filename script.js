@@ -1271,10 +1271,10 @@ function cetakDokumen1() {
                     <td style="width: 50%; text-align: right;">
                         <p style="margin:0;">Ditetapkan di : ${tempat}</p>
                         <p style="margin:0;">Pada tanggal : ${tglPenetapan}</p>
-                        <br><p style="margin:0; font-weight: bold;">Kepala Perwakilan BKKBN Provinsi Maluku Utara,</p>
+                        <br><p style="margin:0; font-weight: bold;">Plt. Kepala Perwakilan BKKBN Provinsi Maluku Utara,</p>
                         <br><br><br>
-                        <p style="margin:0; font-weight: bold; text-decoration: underline;">dr. Victor Palimbong, M.K.M.</p>
-                        <p style="margin:0;">NIP. 197707252005011016</p>
+                        <p style="margin:0; font-weight: bold; text-decoration: underline;">Anshar Djainahu, S.Sos</p>
+                        <p style="margin:0;">NIP. 198012182007011001</p>
                     </td>
                 </tr>
             </table>
@@ -1401,10 +1401,10 @@ function cetakDokumen2() {
                     <td style="width: 50%; text-align: right;">
                         <p style="margin:0;">Ditetapkan di : ${tempat}</p>
                         <p style="margin:0;">Pada tanggal : ${tglPenetapan}</p>
-                        <br><p style="margin:0; font-weight: bold;">Kepala Perwakilan BKKBN Provinsi Maluku Utara,</p>
+                        <br><p style="margin:0; font-weight: bold;">Plt. Kepala Perwakilan BKKBN Provinsi Maluku Utara,</p>
                         <br><br><br>
-                        <p style="margin:0; font-weight: bold; text-decoration: underline;">dr. Victor Palimbong, M.K.M.</p>
-                        <p style="margin:0;">NIP. 197707252005011016</p>
+                        <p style="margin:0; font-weight: bold; text-decoration: underline;">Anshar Djainahu, S.Sos.</p>
+                        <p style="margin:0;">NIP. 198012182007011001</p>
                     </td>
                 </tr>
             </table>
@@ -1424,9 +1424,9 @@ function cetakDokumen3() {
     const tahun = document.getElementById('up-tahun')?.value || '2025';
     const predikat = document.getElementById('up-predikat')?.value || 'Sangat Baik';
     const akLama = parseFloat(document.getElementById('up-ak-lama')?.value) || 118.480;
-    const noSk = document.getElementById('up-no-sk')?.value || '4/KP.09/J28/2026';
+    const noSk = document.getElementById('up-no-sk')?.value || 'x/KP.xx/Jxx/20xx';
     const tempat = document.getElementById('up-tempat')?.value || 'Sofifi';
-    const tglPenetapan = document.getElementById('up-tgl-penetapan')?.value || '02 Januari 2026';
+    const tglPenetapan = document.getElementById('up-tgl-penetapan')?.value || 'xx xxxxxxx xxxx';
 
     let akBaru = 56.250;
     if (predikat === "Baik") akBaru = 37.500;
@@ -1538,10 +1538,10 @@ function cetakDokumen3() {
                     <td style="width: 50%; text-align: right;">
                         <p style="margin:0;">Ditetapkan di : ${tempat}</p>
                         <p style="margin:0;">Pada tanggal : ${tglPenetapan}</p>
-                        <br><p style="margin:0; font-weight: bold;">Kepala Perwakilan BKKBN Provinsi Maluku Utara,</p>
+                        <br><p style="margin:0; font-weight: bold;">Plt. Kepala Perwakilan BKKBN Provinsi Maluku Utara,</p>
                         <br><br><br>
-                        <p style="margin:0; font-weight: bold; text-decoration: underline;">dr. Victor Palimbong, M.K.M.</p>
-                        <p style="margin:0;">NIP. 197707252005011016</p>
+                        <p style="margin:0; font-weight: bold; text-decoration: underline;">Anshar Djainahu, S.Sos.</p>
+                        <p style="margin:0;">NIP. 198012182007011001</p>
                     </td>
                 </tr>
             </table>
