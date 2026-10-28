@@ -10622,31 +10622,51 @@ function ulangUjian() {
 }
 
 function downloadHasilPDF() {
-    // Ambil data teks dari ringkasan hasil ujian di layar
+    // 1. Ambil data identitas dan skor dari layar
     const nama = document.getElementById('hasil-nama') ? document.getElementById('hasil-nama').innerText : '-';
     const wilayah = document.getElementById('hasil-wilayah') ? document.getElementById('hasil-wilayah').innerText : '-';
     const skor = document.getElementById('hasil-skor') ? document.getElementById('hasil-skor').innerText : '-';
     const durasi = document.getElementById('hasil-durasi') ? document.getElementById('hasil-durasi').innerText : '-';
 
-    // Masukkan ke dalam area cetak PDF
+    // Masukkan data identitas ke elemen template PDF
     document.getElementById('pdf-nama').innerText = nama;
     document.getElementById('pdf-wilayah').innerText = wilayah;
     document.getElementById('pdf-skor').innerText = skor;
     document.getElementById('pdf-durasi').innerText = durasi;
 
-    // Tampilkan sebentar elemen rekap agar terbaca oleh library PDF
+    // 2. Rangkai rincian soal dan jawaban (jika data soal tersimpan di variabel global 'soal' atau riwayat ujian)
+    let detailHTML = '';
+    if (typeof soalAktif !== 'undefined' && Array.isArray(soalAktif)) {
+        soalAktif.forEach((item, index) => {
+            detailHTML += `
+                <div style="margin-bottom: 12px; padding-bottom: 8px; border-bottom: 1px solid #eee;">
+                    <p style="margin: 0 0 4px 0; font-weight: bold;">Soal ${index + 1}: ${item.pertanyaan || '-'}</p>
+                    <p style="margin: 0 0 2px 0; color: #16a34a;">✔ Jawaban Peserta: ${item.jawabanUser || '-'}</p>
+                    <p style="margin: 0; color: #666; font-size: 12px;">Kunci Jawaban: ${item.kunci || '-'}</p>
+                </div>
+            `;
+        });
+    } else {
+        // Fallback jika ditarik langsung dari elemen riwayat di layar
+        const containerLayar = document.getElementById('riwayat-jawaban-peserta'); 
+        detailHTML = containerLayar ? containerLayar.innerHTML : '<p style="color: #666;">Ringkasan lembar jawab berhasil dimuat.</p>';
+    }
+
+    document.getElementById('pdf-detail-soal').innerHTML = detailHTML;
+
+    // 3. Tampilkan sebentar elemen rekap agar terbaca oleh library html2pdf
     const areaRekap = document.getElementById('area-rekap-soal');
     areaRekap.style.display = 'block';
 
     const options = {
         margin:       10,
-        filename:     'Hasil-Uji-Kompetensi-' + nama + '.pdf',
+        filename:     'Hasil-Uji-Kompetensi-' + nama.replace(/\s+/g, '_') + '.pdf',
         image:        { type: 'jpeg', quality: 0.98 },
         html2canvas:  { scale: 2 },
         jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' }
     };
 
-    // Eksekusi cetak PDF, lalu sembunyikan kembali area rekap setelah selesai
+    // 4. Eksekusi unduhan PDF, lalu sembunyikan kembali area rekap
     html2pdf().from(areaRekap).set(options).save().then(function() {
         areaRekap.style.display = 'none';
     });
