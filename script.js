@@ -120,9 +120,9 @@ const subMateriData = {
 // --- DATA PERATURAN ---
 const dataPeraturan = {
     uu: { title: "Direktori Undang-Undang", items: 
-             [{ name: "UU No. 52 Tahun 2009", desc: "Perkembangan Kependudukan & Pembangunan Keluarga", icon: "📜", link: "#" },
-              { name: "UU No. XX Tahun XXXX", desc: "BELUM DI TAMBAHKAN", icon: "📜", link: "#" },
-              { name: "UU No. XX Tahun XXXX", desc: "BELUM DITAMBAHKAN", icon: "📜", link: "#" }]},
+             [{ name: "UU No. 52 Tahun 2009", desc: "Perkembangan Kependudukan & Pembangunan Keluarga", icon: "📜", link: "https://drive.google.com/file/d/117CV01siCHhGE3YLmsv1Pe3oLmvDoY-h/view?usp=sharing" },
+              { name: "UU No. 23 Tahun 2026", desc: "Tentang Administrasi Kependudukan", icon: "📜", link: "https://drive.google.com/file/d/1nT8papq4S9-JXx_u3FSTN-zR5pyb_-p2/view?usp=sharing" },
+              { name: "UU No. 23 Tahun 2014", desc: "Tentang Pemerintah Daerah", icon: "📜", link: "https://drive.google.com/file/d/1APvsGhajjseCmfiDfXx38ADdsROgn8KN/view?usp=sharing" }]},
     perpres: { title: "Direktori Peraturan Presiden", items: 
              [{ name: "Perpres No. 72 Tahun 2021", desc: "Percepatan Penurunan Stunting Nasional", icon: "🏛️", link: "#" },
               { name: "Perpres No. XX Tahun XXXX", desc: "BELUM DITAMBAHKAN", icon: "🏛️", link: "#" },
