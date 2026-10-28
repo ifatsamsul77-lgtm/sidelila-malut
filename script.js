@@ -112,9 +112,9 @@ const subMateriData = {
 // --- DATA PERATURAN ---
 const dataPeraturan = {
     uu: { title: "Direktori Undang-Undang", items: 
-             [{ name: "UU No. 52 Tahun 2009", desc: "Perkembangan Kependudukan & Pembangunan Keluarga", icon: "📜", link: "#" }],
-             [{ name: "UU No. 52 Tahun 2009", desc: "Perkembangan Kependudukan & Pembangunan Keluarga", icon: "📜", link: "#" }],
-             [{ name: "UU No. 52 Tahun 2009", desc: "Perkembangan Kependudukan & Pembangunan Keluarga", icon: "📜", link: "#" }]},
+             [{ name: "UU No. 52 Tahun 2009", desc: "Perkembangan Kependudukan & Pembangunan Keluarga", icon: "📜", link: "#" },
+              { name: "UU No. 52 Tahun 2009", desc: "Perkembangan Kependudukan & Pembangunan Keluarga", icon: "📜", link: "#" },
+              { name: "UU No. 52 Tahun 2009", desc: "Perkembangan Kependudukan & Pembangunan Keluarga", icon: "📜", link: "#" }]},
     perpres: { title: "Direktori Peraturan Presiden", items: [{ name: "Perpres No. 72 Tahun 2021", desc: "Percepatan Penurunan Stunting Nasional", icon: "🏛️", link: "#" }] },
     permen: { title: "Direktori Peraturan Menteri", items: [{ name: "Permenpan RB Jabatan Fungsional PKB", desc: "Standar Kompetensi & Butir Kegiatan PKB/PLKB", icon: "📑", link: "#" }] },
     juknis: { title: "Direktori Petunjuk Teknis & Keputusan", items: [{ name: "Juknis Pengelolaan Kampung KB", desc: "Panduan pembentukan dan klasifikasi kampung", icon: "📂", link: "#" }] }
