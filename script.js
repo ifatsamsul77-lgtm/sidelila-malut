@@ -10622,18 +10622,32 @@ function ulangUjian() {
 }
 
 function downloadHasilPDF() {
-    // Menangkap elemen rekap soal berdasarkan ID
-    const element = document.getElementById('area-rekap-soal');
-    
-    // Pengaturan format file PDF yang akan diunduh
+    // Ambil data teks dari ringkasan hasil ujian di layar
+    const nama = document.getElementById('hasil-nama') ? document.getElementById('hasil-nama').innerText : '-';
+    const wilayah = document.getElementById('hasil-wilayah') ? document.getElementById('hasil-wilayah').innerText : '-';
+    const skor = document.getElementById('hasil-skor') ? document.getElementById('hasil-skor').innerText : '-';
+    const durasi = document.getElementById('hasil-durasi') ? document.getElementById('hasil-durasi').innerText : '-';
+
+    // Masukkan ke dalam area cetak PDF
+    document.getElementById('pdf-nama').innerText = nama;
+    document.getElementById('pdf-wilayah').innerText = wilayah;
+    document.getElementById('pdf-skor').innerText = skor;
+    document.getElementById('pdf-durasi').innerText = durasi;
+
+    // Tampilkan sebentar elemen rekap agar terbaca oleh library PDF
+    const areaRekap = document.getElementById('area-rekap-soal');
+    areaRekap.style.display = 'block';
+
     const options = {
         margin:       10,
-        filename:     'Hasil-Uji-Kompetensi-SIDELILA.pdf',
+        filename:     'Hasil-Uji-Kompetensi-' + nama + '.pdf',
         image:        { type: 'jpeg', quality: 0.98 },
         html2canvas:  { scale: 2 },
         jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' }
     };
 
-    // Proses eksekusi pengunduhan PDF
-    html2pdf().from(element).set(options).save();
+    // Eksekusi cetak PDF, lalu sembunyikan kembali area rekap setelah selesai
+    html2pdf().from(areaRekap).set(options).save().then(function() {
+        areaRekap.style.display = 'none';
+    });
 }
