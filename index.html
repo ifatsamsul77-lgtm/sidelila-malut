@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+<script>
+  // Konfigurasi koneksi ke Firebase SIDELILA
+ const firebaseConfig = {
+  apiKey: "AIzaSyCMoYo6NTRzEsJ7J1eFgmS6GQ16acWvn3I",
+  authDomain: "sidelila.firebaseapp.com",
+  projectId: "sidelila",
+  storageBucket: "sidelila.firebasestorage.app",
+  messagingSenderId: "1024741476117",
+  appId: "1:1024741476117:web:d2eba9d8583f3e4e4ccb1c"
+};
+  
+  // Inisialisasi Firebase
+  firebase.initializeApp(firebaseConfig);
+  const db = firebase.firestore();
+</script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIDELILA v2.0 - Sistem Informasi & Edukasi Lini Lapangan</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0f7ff',
+                            100: '#e0effe',
+                            500: '#0284c7',
+                            600: '#0369a1',
+                            700: '#1d4ed8',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Hubungkan ke File CSS Eksternal -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="h-screen flex flex-col overflow-hidden bg-slate-50">
+
+    <!-- HALAMAN LOGIN -->
+    <div id="view-login" class="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/80 backdrop-blur-sm p-4">
+        <div class="bg-white rounded-2xl shadow-2xl w-full max-w-4xl overflow-hidden border border-slate-200 grid grid-cols-1 md:grid-cols-2 m-auto">
+            
+            <!-- SISI KIRI: BANNER LOGIN -->
+            <div class="bg-gradient-to-br from-slate-900 via-blue-950 to-sky-900 p-8 sm:p-12 text-white flex flex-col justify-between relative overflow-hidden">
+                <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-sky-500/10 rounded-full blur-2xl"></div>
+                <div>
+                    <span class="bg-sky-500/20 text-sky-300 text-[10px] font-extrabold px-3 py-1 rounded-full border border-sky-400/30 uppercase tracking-widest">Portal Lini Lapangan</span>
+                    
+                    <div class="w-16 h-16 my-4 flex items-center justify-center">
+                        <img src="logo.png" alt="Logo Instansi" class="w-full h-full object-contain drop-shadow-md">
+                    </div>
+
+                    <h2 class="text-2xl sm:text-3xl font-black tracking-tight">SIDELILA</h2>
+                    <p class="text-xs text-slate-300 mt-2 leading-relaxed">Sistem Informasi Dan Edukasi Lini Lapangan — Solusi terpadu bagi PKB/PLKB di lapangan</p>
+                </div>
+                <div class="text-[9px] text-slate-400 mt-6 pt-4 border-t border-slate-800">
+                    &copy; 2026 Balai Penyuluhan KB Kec. Taliabu Barat
+                </div>
+            </div>
+
+            <!-- SISI KANAN: FORM LOGIN -->
+            <div class="bg-slate-50 p-8 sm:p-12 flex flex-col justify-center">
+                <div class="mb-6">
+                    <h3 class="text-xl font-bold text-slate-800">Selamat Datang</h3>
+                    <p class="text-xs text-slate-500 mt-1">Silakan masuk menggunakan akun penyuluh Anda.</p>
+                </div>
+                <div class="space-y-4">
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 mb-1">Username</label>
+                        <input type="text" id="login-user" placeholder="Ketik: user" class="w-full text-xs p-3 bg-white border border-slate-300 rounded-xl focus:ring-2 focus:ring-sky-500 focus:outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 mb-1">Password</label>
+                        <input type="password" id="login-pass" placeholder="Ketik: user" class="w-full text-xs p-3 bg-white border border-slate-300 rounded-xl focus:ring-2 focus:ring-sky-500 focus:outline-none">
+                    </div>
+                    <button type="button" onclick="prosesLoginManual()" class="w-full bg-sky-600 hover:bg-sky-700 text-white font-bold py-3 rounded-xl text-xs transition-all shadow-md cursor-pointer btn-login-animate">
+                        🔑 Masuk ke Aplikasi
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- APLIKASI UTAMA (DASHBOARD) -->
+    <div id="view-dashboard" class="flex flex-col h-screen overflow-hidden" style="display: none;">
+        
+        <!-- TOP NAVIGATION BAR -->
+        <header class="h-16 bg-white border-b border-slate-200 flex items-center justify-between px-4 md:px-6 z-30 shrink-0 shadow-sm">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 flex items-center justify-center">
+                    <img src="logo.png" alt="Logo Instansi" class="w-full h-full object-contain">
+                </div>
+                <div>
+                    <h1 class="text-xl font-extrabold tracking-tight flex items-center gap-1.5">
+                        <span class="text-amber-500">SI</span><span class="text-blue-600">DELILA</span>
+                        <span class="text-xs bg-sky-100 text-sky-700 font-bold px-2 py-0.5 rounded-full border border-sky-200">v2.0</span>
+                    </h1>
+                    <p class="text-[11px] text-slate-500 font-medium hidden sm:block">Sistem Informasi Dan Edukasi Lini Lapangan</p>
+                </div>
+            </div>
+
+            <div class="flex items-center gap-4">
+                <div class="flex items-center gap-3 bg-slate-100 p-1.5 pr-4 rounded-full border border-slate-200">
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=120" alt="Avatar Admin" class="w-8 h-8 rounded-full object-cover border-2 border-white shadow-sm">
+                    <div class="text-left leading-tight hidden sm:block">
+                        <p class="text-xs font-bold text-slate-800">Admin</p>
+                        <p class="text-[10px] text-slate-500">Abang Utam</p>
+                    </div>
+                </div>
+                <button onclick="handleLogout()" class="bg-rose-50 hover:bg-rose-100 text-rose-600 font-bold px-3.5 py-2 rounded-xl text-xs transition-all border border-rose-200 flex items-center gap-1.5 cursor-pointer">
+                    🚪 Keluar
+                </button>
+            </div>
+        </header>
+
+        <div class="flex flex-1 overflow-hidden">
+            
+            <!-- SIDEBAR -->
+            <aside class="w-64 bg-slate-900 text-slate-300 flex flex-col shrink-0 border-r border-slate-800 overflow-y-auto">
+                <div class="p-4 uppercase text-[11px] font-bold tracking-wider text-slate-400 border-b border-slate-800/60">
+                    Menu Utama
+                </div>
+                <nav class="p-3 space-y-1">
+                    <a href="#" onclick="navigateTo('beranda', event)" id="menu-beranda" class="nav-link flex items-center gap-3 px-3.5 py-2.5 rounded-lg text-sm text-slate-300 hover:bg-slate-800 transition-all active">
+                        <span class="text-base">🏠</span>
+                        <span>1. Beranda</span>
+                    </a>
+                    <a href="#" onclick="navigateTo('aplikasi', event)" id="menu-aplikasi" class="nav-link flex items-center gap-3 px-3.5 py-2.5 rounded-lg text-sm text-slate-300 hover:bg-slate-800 transition-all">
+                        <span class="text-base">🚀</span>
+                        <span>2. Aplikasi Terpadu</span>
+                    </a>
+                    
+                    <!-- 3. MATERI -->
+                    <div class="rounded-lg">
+                        <button onclick="toggleSubmenu('submenu-materi')" class="w-full flex items-center justify-between px-3.5 py-2.5 rounded-lg text-sm text-slate-300 hover:bg-slate-800 transition-all focus:outline-none cursor-pointer">
+                            <div class="flex items-center gap-3" onclick="navigateTo('materi', event)">
+                                <span class="text-base">📚</span>
+                                <span>3. Materi</span>
+                            </div>
+                            <span id="arrow-submenu-materi" class="text-xs transition-transform duration-200">▼</span>
+                        </button>
+                        <div id="submenu-materi" class="pl-8 pr-2 space-y-1 mt-1" style="display: block;">
+                            <a href="#" onclick="openMateriCategory('poktan', event)" class="block py-2 px-3 rounded-md text-xs text-slate-400 hover:text-white hover:bg-slate-800 transition-all">• Modul POKTAN</a>
+                            <a href="#" onclick="openMateriCategory('quickwin', event)" class="block py-2 px-3 rounded-md text-xs text-slate-400 hover:text-white hover:bg-slate-800 transition-all">• Modul QUICKWIN</a>
+                            <a href="#" onclick="openMateriCategory('lainnya', event)" class="block py-2 px-3 rounded-md text-xs text-slate-400 hover:text-white hover:bg-slate-800 transition-all">• Modul Lainnya</a>
+                        </div>
+                    </div>
+
+                    <!-- 4. PERATURAN -->
+                    <div class="rounded-lg">
+                        <button onclick="toggleSubmenu('submenu-peraturan')" class="w-full flex items-center justify-between px-3.5 py-2.5 rounded-lg text-sm text-slate-300 hover:bg-slate-800 transition-all focus:outline-none cursor-pointer">
+                            <div class="flex items-center gap-3" onclick="navigateTo('peraturan', event)">
+                                <span class="text-base">⚖️</span>
+                                <span>4. Peraturan</span>
+                            </div>
+                            <span id="arrow-submenu-peraturan" class="text-xs transition-transform duration-200">▼</span>
+                        </button>
+                        <div id="submenu-peraturan" class="pl-8 pr-2 space-y-1 mt-1" style="display: block;">
+                            <a href="#" onclick="openPeraturanCategory('uu', event)" class="block py-2 px-3 rounded-md text-xs text-slate-400 hover:text-white hover:bg-slate-800 transition-all">• Undang-Undang</a>
+                            <a href="#" onclick="openPeraturanCategory('perpres', event)" class="block py-2 px-3 rounded-md text-xs text-slate-400 hover:text-white hover:bg-slate-800 transition-all">• Peraturan Presiden</a>
+                            <a href="#" onclick="openPeraturanCategory('permen', event)" class="block py-2 px-3 rounded-md text-xs text-slate-400 hover:text-white hover:bg-slate-800 transition-all">• Peraturan Menteri</a>
+                            <a href="#" onclick="openPeraturanCategory('juknis', event)" class="block py-2 px-3 rounded-md text-xs text-slate-400 hover:text-white hover:bg-slate-800 transition-all">• Petunjuk Teknis</a>
+                        </div>
+                    </div>
+
+                    <!-- 5. FORM LAPORAN -->
+                    <div class="rounded-lg">
+                        <button onclick="toggleSubmenu('submenu-form')" class="w-full flex items-center justify-between px-3.5 py-2.5 rounded-lg text-sm text-slate-300 hover:bg-slate-800 transition-all focus:outline-none cursor-pointer">
+                            <div class="flex items-center gap-3" onclick="navigateTo('form', event)">
+                                <span class="text-base">📋</span>
+                                <span>5. Form Laporan</span>
+                            </div>
+                            <span id="arrow-submenu-form" class="text-xs transition-transform duration-200">▼</span>
+                        </button>
+                        <div id="submenu-form" class="pl-8 pr-2 space-y-1 mt-1" style="display: block;">
+                            <a href="#" onclick="openFormType('wfh', event)" class="block py-2 px-3 rounded-md text-xs text-slate-400 hover:text-white hover:bg-slate-800 transition-all">• Form WFH</a>
+                            <a href="#" onclick="openFormType('estimasi-sasaran', event)" class="block py-2 px-3 rounded-md text-xs text-slate-400 hover:text-white hover:bg-slate-800 transition-all">• Estimasi Sasaran</a>
+                            <a href="#" onclick="openFormType('estimasi-pangkat', event)" class="block py-2 px-3 rounded-md text-xs text-slate-400 hover:text-white hover:bg-slate-800 transition-all">• Estimasi Kenaikan Pangkat</a>
+                            <a href="#" onclick="openFormType('usulan-pangkat', event)" class="block py-2 px-3 rounded-md text-xs text-slate-400 hover:text-white hover:bg-slate-800 transition-all">• Form Usulan Kenaikan Pangkat</a>
+                        </div>
+                    </div>
+
+                    <a href="#" onclick="navigateTo('galeri', event)" id="menu-galeri" class="nav-link flex items-center gap-3 px-3.5 py-2.5 rounded-lg text-sm text-slate-300 hover:bg-slate-800 transition-all">
+                        
+			<span class="text-base">🖼️</span>
+                        <span>6. Galeri Kegiatan</span>
+                    </a>
+
+			<a href="#" onclick="navigateTo('kompetensi', event)" id="menu-kompetensi" class="nav-link flex items-center gap-3 px-3.5 py-2.5 rounded-lg text-sm text-slate-300 hover:bg-slate-800 transition-all">
+    <span class="text-base">📋</span>
+    <span>7. Uji Kompetensi</span>
+</a>
+                </nav>
+            </aside>
+
+		<!-- SECTION: KOMPETENSI LINI LAPANGAN -->
+<div id="section-kompetensi" class="menu-section" style="display: none; padding: 20px;">
+    <h2 style="font-size: 22px; font-weight: bold; margin-bottom: 15px; color: #1e3a8a;">Uji Kompetensi</h2>
+    
+    <!-- KOTAK 1: FORM IDENTITAS (Muncul sebelum ujian mulai) -->
+    <div id="kompetensi-form-container" style="background: #fff; padding: 25px; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); max-width: 600px;">
+        <h3 style="margin-bottom: 10px; font-size: 18px; color: #333;">Formulir Latihan Mandiri</h3>
+        <p style="color: #666; font-size: 14px; margin-bottom: 20px;">Silakan isi identitas singkat terlebih dahulu sebelum memulai latihan soal kompetensi.</p>
+        
+        <div style="margin-bottom: 15px;">
+            <label style="display: block; margin-bottom: 5px; font-weight: bold; font-size: 14px;">Nama Lengkap:</label>
+            <input type="text" id="kompetensi-nama" placeholder="Masukkan nama dan gelar..." style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 6px;">
+        </div>
+        
+        <div style="margin-bottom: 15px;">
+            <label style="display: block; margin-bottom: 5px; font-weight: bold; font-size: 14px;">NIP / ID Pegawai:</label>
+            <input type="text" id="kompetensi-nip" placeholder="Masukkan NIP atau ID..." style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 6px;">
+        </div>
+
+        <div style="margin-bottom: 20px;">
+            <label style="display: block; margin-bottom: 5px; font-weight: bold; font-size: 14px;">Asal Wilayah / Kecamatan:</label>
+            <input type="text" id="kompetensi-wilayah" placeholder="Contoh: Taliabu Barat" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 6px;">
+        </div>
+
+        <button onclick="mulaiUjianKompetensi()" style="background: #2563eb; color: #fff; border: none; padding: 12px 20px; border-radius: 6px; font-weight: bold; cursor: pointer; width: 100%;">Mulai Latihan Soal</button>
+    </div>
+
+    <!-- KOTAK 2: AREA SOAL & TIMER (Tertutup sebelum ujian dimulai) -->
+    <div id="kompetensi-soal-container" style="display: none; background: #fff; padding: 25px; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); max-width: 700px;">
+        <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid #eee; padding-bottom: 10px; margin-bottom: 20px;">
+            <span id="info-peserta" style="font-weight: bold; color: #333;"></span>
+            <div style="background: #fee2e2; color: #991b1b; padding: 8px 15px; border-radius: 6px; font-weight: bold;">
+                ⏱️ Sisa Waktu: <span id="timer-countdown">90:00</span>
+            </div>
+        </div>
+
+        <!-- Daftar Soal akan dimasukkan otomatis lewat JavaScript -->
+        <div id="lembar-soal"></div>
+
+        <div style="margin-top: 25px; text-align: right;">
+            <button onclick="selesaikanUjian()" style="background: #16a34a; color: #fff; border: none; padding: 12px 25px; border-radius: 6px; font-weight: bold; cursor: pointer;">Selesai / Mengakhiri</button>
+        </div>
+    </div>
+
+    <!-- KOTAK 3: HASIL UJIAN (Muncul setelah selesai) -->
+    <div id="kompetensi-hasil-container" style="display: none; background: #fff; padding: 25px; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); max-width: 600px; text-align: center;">
+        <h3 style="color: #16a34a; font-size: 22px; margin-bottom: 10px;">Latihan Selesai! 🎉</h3>
+        <p style="color: #666; margin-bottom: 20px;">Terima kasih telah mengikuti latihan kompetensi lini lapangan.</p>
+        
+        <div style="background: #f8fafc; padding: 15px; border-radius: 8px; margin-bottom: 20px; text-align: left;">
+            <p><strong>Nama:</strong> <span id="hasil-nama">-</span></p>
+            <p><strong>Wilayah:</strong> <span id="hasil-wilayah">-</span></p>
+            <p><strong>Perolehan Skor:</strong> <span id="hasil-skor" style="font-size: 20px; font-weight: bold; color: #2563eb;">-</span></p>
+            <p><strong>Durasi Pengerjaan:</strong> <span id="hasil-durasi">-</span></p>
+        </div>
+
+        <button onclick="ulangUjian()" style="background: #475569; color: #fff; border: none; padding: 10px 20px; border-radius: 6px; cursor: pointer;">Ulangi Latihan</button>
+    </div>
+</div>
+
+
+            <!-- MAIN CONTENT -->
+            <main class="flex-1 overflow-y-auto p-4 md:p-6 bg-slate-50">
+
+                <!-- SECTION 1: BERANDA -->
+                <section id="section-beranda" class="page-section active space-y-6">
+                    <div class="marquee-container rounded-xl shadow-md py-2.5 px-4 text-white text-sm font-medium border border-blue-900/30">
+                        <div class="marquee-content">
+                            📢 Selamat Datang di Portal Sistem Informasi dan Edukasi Lini Lapangan (SIDELILA) — Abang Utam Selalu Siap Memberikan Informasi & Mengedukasi Petugas Lini Lapangan! 🌟
+                        </div>
+                    </div>
+
+                    <div class="bg-gradient-to-r from-sky-600 via-blue-700 to-indigo-800 rounded-2xl p-6 md:p-8 text-white shadow-lg relative overflow-hidden">
+                        <div class="relative z-10 max-w-2xl">
+                            <span class="bg-white/20 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider backdrop-blur-md">Portal Utama</span>
+                            <h2 class="text-2xl md:text-3xl font-extrabold mt-3 mb-2 leading-tight">Pengembangan Kompetensi & Edukasi Penyuluh Lapangan</h2>
+                            <p class="text-sky-100 text-sm leading-relaxed mb-6">Akses seluruh layanan aplikasi terpadu, unduh modul edukasi POKTAN, panduan teknis,pengisian Laporan WFH, hingga Perhitungan Angka Kredit Kenaikan Pangkat dalam satu tempat.</p>
+                            <div class="flex flex-wrap gap-3">
+                                <button onclick="navigateTo('aplikasi')" class="bg-white text-sky-800 hover:bg-sky-50 font-bold px-5 py-2.5 rounded-xl shadow-md text-sm transition-all flex items-center gap-2 cursor-pointer">
+                                    🚀 Buka Aplikasi Terpadu
+                                </button>
+                                <button onclick="navigateTo('materi')" class="bg-sky-500/30 hover:bg-sky-500/40 text-white font-semibold px-5 py-2.5 rounded-xl border border-white/30 text-sm transition-all flex items-center gap-2 backdrop-blur-sm cursor-pointer">
+                                    📖 Lihat Modul Materi
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slider Foto Kegiatan -->
+                    <div class="bg-white rounded-2xl p-5 border border-slate-200 shadow-sm space-y-4">
+                        <div class="flex items-center justify-between">
+                            <h3 class="text-lg font-bold text-slate-800 flex items-center gap-2">
+                                📸 Dokumentasi & Kegiatan Lapangan Utama
+                            </h3>
+                            <span class="text-xs font-medium text-slate-500">Auto-Slide Active</span>
+                        </div>
+                        <div class="relative rounded-xl overflow-hidden h-64 md:h-80 shadow-inner group">
+                            <div id="slider-container" class="flex h-full transition-transform duration-500 ease-out">
+                                <div class="w-full h-full flex-shrink-0 relative">
+                                    <img src="kegiatan1.jpg" class="w-full h-full object-cover" alt="Kegiatan 1">
+                                </div>
+                                <div class="w-full h-full flex-shrink-0 relative">
+                                    <img src="kegiatan2.jpg" class="w-full h-full object-cover" alt="Kegiatan 2">
+                                </div>
+                                <div class="w-full h-full flex-shrink-0 relative">
+                                    <img src="kegiatan3.jpg" class="w-full h-full object-cover" alt="Kegiatan 3">
+                                </div>
+                            </div>
+                            <button onclick="prevSlide()" class="absolute left-3 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/70 text-white p-2 rounded-full transition-all opacity-0 group-hover:opacity-100 cursor-pointer">❮</button>
+                            <button onclick="nextSlide()" class="absolute right-3 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/70 text-white p-2 rounded-full transition-all opacity-0 group-hover:opacity-100 cursor-pointer">❯</button>
+                            <div class="absolute bottom-3 right-4 flex gap-1.5 z-10" id="slider-dots">
+                                <span onclick="goToSlide(0)" class="w-2.5 h-2.5 rounded-full bg-white transition-all cursor-pointer"></span>
+                                <span onclick="goToSlide(1)" class="w-2.5 h-2.5 rounded-full bg-white/50 transition-all cursor-pointer"></span>
+                                <span onclick="goToSlide(2)" class="w-2.5 h-2.5 rounded-full bg-white/50 transition-all cursor-pointer"></span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SECTION 2: APLIKASI TERPADU -->
+                <section id="section-aplikasi" class="page-section space-y-5" style="display: none;">
+                    <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm">
+                        <h3 class="text-xl font-bold text-slate-800 flex items-center gap-2">
+                            🚀 Layanan Aplikasi Terpadu Lini Lapangan
+                        </h3>
+                        <p class="text-xs text-slate-500 mt-1">Pilih dan akses secara langsung sistem informasi operasional penyuluhan.</p>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+                        <a href="https://newsiga-siga.kemendukbangga.go.id/#/login" target="_blank" class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-all group hover:border-sky-300">
+                            <div class="w-12 h-12 rounded-lg bg-sky-100 text-sky-600 flex items-center justify-center font-bold text-xl mb-3 group-hover:scale-105 transition-transform">📊</div>
+                            <h4 class="font-bold text-slate-800 group-hover:text-sky-600 transition-colors">NewSIGA</h4>
+                            <p class="text-xs text-slate-500 mt-1 leading-relaxed">Sistem Informasi Keluarga untuk pencatatan dan pelaporan pelayanan.</p>
+                        </a>
+
+                        <a href="https://sidaya.kemendukbangga.go.id/" target="_blank" class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-all group hover:border-sky-300">
+                            <div class="w-12 h-12 rounded-lg bg-blue-100 text-blue-600 flex items-center justify-center font-bold text-xl mb-3 group-hover:scale-105 transition-transform">💡</div>
+                            <h4 class="font-bold text-slate-800 group-hover:text-blue-600 transition-colors">SIDAYA</h4>
+                            <p class="text-xs text-slate-500 mt-1 leading-relaxed">Sistem Informasi Lansia Berdaya</p>
+                        </a>
+
+                        <a href="https://sigenting.kemendukbangga.go.id/" target="_blank" class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-all group hover:border-sky-300">
+                            <div class="w-12 h-12 rounded-lg bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold text-xl mb-3 group-hover:scale-105 transition-transform">🌱</div>
+                            <h4 class="font-bold text-slate-800 group-hover:text-emerald-600 transition-colors">SiGENTING</h4>
+                            <p class="text-xs text-slate-500 mt-1 leading-relaxed">Sistem Informasi Gerakan Orang Tua Asuh Cegah Stunting.</p>
+                        </a>
+
+ <a href="https://gati.kemendukbangga.go.id/" target="_blank" class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-all group hover:border-sky-300">
+                            <div class="w-12 h-12 rounded-lg bg-blue-100 text-blue-600 flex items-center justify-center font-bold text-xl mb-3 group-hover:scale-105 transition-transform">👥</div>
+                            <h4 class="font-bold text-slate-800 group-hover:text-blue-600 transition-colors">GATI</h4>
+                            <p class="text-xs text-slate-500 mt-1 leading-relaxed">Gerakan Ayah Teladan Indonesia.</p>
+                        </a>
+
+<a href="https://siga-sirika.bkkbn.go.id/sirikaLandingPage" target="_blank" class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-all group hover:border-sky-300">
+                            <div class="w-12 h-12 rounded-lg bg-purple-100 text-purple-600 flex items-center justify-center font-bold text-xl mb-3 group-hover:scale-105 transition-transform">📑</div>
+                            <h4 class="font-bold text-slate-800 group-hover:text-purple-600 transition-colors">SIRIKA</h4>
+                            <p class="text-xs text-slate-500 mt-1 leading-relaxed">Sistem Informasi Rantai Pasok ALOKON</p>
+                        </a>
+
+                        <a href="https://rumahdataku.bkkbn.go.id/" target="_blank" class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-all group hover:border-sky-300">
+                            <div class="w-12 h-12 rounded-lg bg-amber-100 text-amber-600 flex items-center justify-center font-bold text-xl mb-3 group-hover:scale-105 transition-transform">🏠</div>
+                            <h4 class="font-bold text-slate-800 group-hover:text-amber-600 transition-colors">Rumah Dataku</h4>
+                            <p class="text-xs text-slate-500 mt-1 leading-relaxed">Pusat data kependudukan dan pemetaan keluarga di tingkat desa/kelurahan.</p>
+                        </a>
+
+                        <a href="https://kampungkb.kemendukbangga.go.id/" target="_blank" class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-all group hover:border-sky-300">
+                            <div class="w-12 h-12 rounded-lg bg-indigo-100 text-indigo-600 flex items-center justify-center font-bold text-xl mb-3 group-hover:scale-105 transition-transform">🏘️</div>
+                            <h4 class="font-bold text-slate-800 group-hover:text-indigo-600 transition-colors">Kampung KB</h4>
+                            <p class="text-xs text-slate-500 mt-1 leading-relaxed">Portal Pengelolaan Program Kampung Keluarga Berkualitas.</p>
+                        </a>
+
+                        
+                        <a href="https://simsdm.bkkbn.go.id/login/show_login" target="_blank" class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-all group hover:border-sky-300">
+                            <div class="w-12 h-12 rounded-lg bg-rose-100 text-rose-600 flex items-center justify-center font-bold text-xl mb-3 group-hover:scale-105 transition-transform">👥</div>
+                            <h4 class="font-bold text-slate-800 group-hover:text-rose-600 transition-colors">SIM SDM</h4>
+                            <p class="text-xs text-slate-500 mt-1 leading-relaxed">Sistem Informasi Manajemen Sumber Daya Manusia.</p>
+                        </a>
+
+                        <a href="https://evisum4.bkkbn.go.id/" target="_blank" class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-all group hover:border-sky-300">
+                            <div class="w-12 h-12 rounded-lg bg-cyan-100 text-cyan-600 flex items-center justify-center font-bold text-xl mb-3 group-hover:scale-105 transition-transform">📝</div>
+                            <h4 class="font-bold text-slate-800 group-hover:text-cyan-600 transition-colors">Evisum4</h4>
+                            <p class="text-xs text-slate-500 mt-1 leading-relaxed">Aplikasi pelaporan dan visum kinerja harian PKB/PLKB.</p>
+                        </a>
+
+                    
+ 			<a href="https://malut.kemendukbangga.go.id/" target="_blank" class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-all group hover:border-sky-300">
+                            <div class="w-12 h-12 rounded-lg bg-blue-100 text-blue-600 flex items-center justify-center font-bold text-xl mb-3 group-hover:scale-105 transition-transform">🏠</div>
+                            <h4 class="font-bold text-slate-800 group-hover:text-blue-600 transition-colors">WEBSITE RESMI</h4>
+                            <p class="text-xs text-slate-500 mt-1 leading-relaxed">Website Resmi Kemendukbangga/BKKBN Perwakilan MALUT.</p>
+                        </a>
+
+        </div>
+    </div>
+
+  </section>
+
+                <!-- SECTION 3: MATERI -->
+                <section id="section-materi" class="page-section space-y-5" style="display: none;">
+                    <div id="materi-categories-view" class="space-y-5">
+                        <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm">
+                            <h3 class="text-xl font-bold text-slate-800 flex items-center gap-2">
+                                📚 Modul & Material Edukasi Penyuluhan
+                            </h3>
+                            <p class="text-xs text-slate-500 mt-1">Pilih kategori modul penyuluhan dan panduan teknis operasional.</p>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                            <a href="#" onclick="openMateriCategory('poktan', event)" class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm hover:border-sky-400 hover:shadow-md transition-all block group">
+                                <div class="text-3xl mb-3">👶</div>
+                                <h5 class="font-bold text-slate-800 text-sm group-hover:text-sky-600">Modul POKTAN</h5>
+                                <p class="text-xs text-slate-500 mt-1">Materi BKB, BKR, BKL, PIK-R, dan UPPKA.</p>
+                            </a>
+
+                            <a href="#" onclick="openMateriCategory('quickwin', event)" class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm hover:border-sky-400 hover:shadow-md transition-all block group">
+                                <div class="text-3xl mb-3">🌱</div>
+                                <h5 class="font-bold text-slate-800 text-sm group-hover:text-sky-600">Modul QUICKWIN</h5>
+                                <p class="text-xs text-slate-500 mt-1">Materi GENTING, GATI, TAMASYA, dan SIDAYA.</p>
+                            </a>
+
+                            <a href="#" onclick="openMateriCategory('lainnya', event)" class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm hover:border-sky-400 hover:shadow-md transition-all block group">
+                                <div class="text-3xl mb-3">📂</div>
+                                <h5 class="font-bold text-slate-800 text-sm group-hover:text-sky-600">Modul Lainnya</h5>
+                                <p class="text-xs text-slate-500 mt-1">Lembar balik, bahan penyuluhan umum & Juknis.</p>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div id="materi-detail-view" style="display: none;" class="space-y-4">
+                        <div class="flex justify-between items-center bg-white p-4 rounded-xl border border-slate-200 shadow-sm">
+                            <h4 id="materi-category-title" class="font-bold text-slate-800 text-sm"></h4>
+                            <button onclick="showMateriCategoriesView()" class="px-3 py-1.5 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-bold rounded-lg transition-all">
+                                ← Kembali ke Kategori Materi
+                            </button>
+                        </div>
+                        <div id="materi-items-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"></div>
+                    </div>
+                </section>
+
+                <!-- SECTION 4: PERATURAN -->
+                <section id="section-peraturan" class="page-section space-y-5" style="display: none;">
+                    <div id="peraturan-categories-view" class="space-y-5">
+                        <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm">
+                            <h3 class="text-xl font-bold text-slate-800 flex items-center gap-2">
+                                ⚖️ Regulasi & Peraturan Perundang-Undangan
+                            </h3>
+                            <p class="text-xs text-slate-500 mt-1">Pilih jenis regulasi dan dasar hukum operasional penyuluhan.</p>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                            <a href="#" onclick="openPeraturanCategory('uu', event)" class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm hover:border-blue-400 hover:shadow-md transition-all block group">
+                                <div class="text-3xl mb-3">📜</div>
+                                <h5 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">Undang-Undang</h5>
+                                <p class="text-xs text-slate-500 mt-1">UU Perkembangan Kependudukan & KB.</p>
+                            </a>
+
+                            <a href="#" onclick="openPeraturanCategory('perpres', event)" class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm hover:border-blue-400 hover:shadow-md transition-all block group">
+                                <div class="text-3xl mb-3">🏛️</div>
+                                <h5 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">Peraturan Presiden</h5>
+                                <p class="text-xs text-slate-500 mt-1">Perpres Stunting & Strategi Nasional.</p>
+                            </a>
+
+                            <a href="#" onclick="openPeraturanCategory('permen', event)" class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm hover:border-blue-400 hover:shadow-md transition-all block group">
+                                <div class="text-3xl mb-3">📑</div>
+                                <h5 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">Peraturan Menteri</h5>
+                                <p class="text-xs text-slate-500 mt-1">Permenpan RB Jabatan Fungsional.</p>
+                            </a>
+
+                            <a href="#" onclick="openPeraturanCategory('juknis', event)" class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm hover:border-blue-400 hover:shadow-md transition-all block group">
+                                <div class="text-3xl mb-3">📂</div>
+                                <h5 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">Petunjuk Teknis</h5>
+                                <p class="text-xs text-slate-500 mt-1">Juknis Pengelolaan Kampung KB.</p>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div id="peraturan-detail-view" style="display: none;" class="space-y-4">
+                        <div class="flex justify-between items-center bg-white p-4 rounded-xl border border-slate-200 shadow-sm">
+                            <h4 id="peraturan-category-title" class="font-bold text-slate-800 text-sm"></h4>
+                            <button onclick="showPeraturanCategoriesView()" class="px-3 py-1.5 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-bold rounded-lg transition-all">
+                                ← Kembali ke Kategori Peraturan
+                            </button>
+                        </div>
+                        <div id="peraturan-items-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"></div>
+                    </div>
+                </section>
+
+                <!-- SECTION 5: FORM LAPORAN -->
+                <section id="section-form" class="page-section space-y-5" style="display: none;">
+                    <div id="form-categories-view" class="space-y-5">
+                        <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm">
+                            <h3 class="text-xl font-bold text-slate-800 flex items-center gap-2">
+                                📋 Form & Layanan Pengisian Laporan
+                            </h3>
+                            <p class="text-xs text-slate-500 mt-1">Pilih jenis form layanan administrasi dan pelaporan fungsional.</p>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                            <a href="#" onclick="openFormType('wfh', event)" class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm hover:border-sky-400 hover:shadow-md transition-all block group">
+                                <div class="text-3xl mb-3">🏡</div>
+                                <h5 class="font-bold text-slate-800 text-sm group-hover:text-sky-600">Form WFH</h5>
+                                <p class="text-xs text-slate-500 mt-1">Format pelaporan aktivitas kerja dari rumah / kantor.</p>
+                            </a>
+
+                            <a href="#" onclick="openFormType('estimasi-sasaran', event)" class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm hover:border-sky-400 hover:shadow-md transition-all block group">
+                                <div class="text-3xl mb-3">🎯</div>
+                                <h5 class="font-bold text-slate-800 text-sm group-hover:text-sky-600">Estimasi Sasaran</h5>
+                                <p class="text-xs text-slate-500 mt-1">Simulasi perhitungan target sasaran wilayah binaan.</p>
+                            </a>
+
+                            <a href="#" onclick="openFormType('estimasi-pangkat', event)" class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm hover:border-sky-400 hover:shadow-md transition-all block group">
+                                <div class="text-3xl mb-3">🧮</div>
+                                <h5 class="font-bold text-slate-800 text-sm group-hover:text-sky-600">Estimasi Kenaikan Pangkat</h5>
+                                <p class="text-xs text-slate-500 mt-1">Kalkulator akumulasi angka kredit fungsional.</p>
+                            </a>
+
+                            <a href="#" onclick="openFormType('usulan-pangkat', event)" class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm hover:border-sky-400 hover:shadow-md transition-all block group">
+                                <div class="text-3xl mb-3">📑</div>
+                                <h5 class="font-bold text-slate-800 text-sm group-hover:text-sky-600">Form Usulan Pangkat</h5>
+                                <p class="text-xs text-slate-500 mt-1">Pengajuan dan verifikasi berkas kenaikan jenjang.</p>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div id="form-detail-container" style="display: none;" class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm space-y-6"></div>
+
+		    <!-- SECTION: KOMPETENSI LINI LAPANGAN -->
+<div id="section-kompetensi" class="menu-section page-section" style="display: none; padding: 20px;">
+    <!-- KOTAK 1: FORM IDENTITAS -->
+    <div id="kompetensi-form-container" style="background: #fff; padding: 25px; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); max-width: 600px;">
+        <h3 style="margin-bottom: 10px; font-size: 18px; color: #333;">Formulir Latihan Mandiri</h3>
+        <p style="color: #666; font-size: 14px; margin-bottom: 20px;">Silakan isi identitas singkat terlebih dahulu sebelum memulai latihan soal kompetensi.</p>
+        
+        <div style="margin-bottom: 15px;">
+            <label style="display: block; margin-bottom: 5px; font-weight: bold; font-size: 14px;">Nama Lengkap:</label>
+            <input type="text" id="kompetensi-nama" placeholder="Masukkan nama dan gelar..." style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 6px;">
+        </div>
+        
+        <div style="margin-bottom: 15px;">
+            <label style="display: block; margin-bottom: 5px; font-weight: bold; font-size: 14px;">NIP / ID Pegawai:</label>
+            <input type="text" id="kompetensi-nip" placeholder="Masukkan NIP atau ID..." style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 6px;">
+        </div>
+
+        <div style="margin-bottom: 20px;">
+            <label style="display: block; margin-bottom: 5px; font-weight: bold; font-size: 14px;">Asal Wilayah / Kecamatan:</label>
+            <input type="text" id="kompetensi-wilayah" placeholder="Contoh: Taliabu Barat" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 6px;">
+        </div>
+
+        <button onclick="mulaiUjianKompetensi()" style="background: #2563eb; color: #fff; border: none; padding: 12px 20px; border-radius: 6px; font-weight: bold; cursor: pointer; width: 100%;">Mulai Latihan Soal</button>
+    </div>
+
+    <!-- KOTAK 2: AREA SOAL & TIMER -->
+    <div id="kompetensi-soal-container" style="display: none; background: #fff; padding: 25px; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); max-width: 700px;">
+        <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid #eee; padding-bottom: 10px; margin-bottom: 20px;">
+            <span id="info-peserta" style="font-weight: bold; color: #333;"></span>
+            <div style="background: #fee2e2; color: #991b1b; padding: 8px 15px; border-radius: 6px; font-weight: bold;">
+                ⏱️ Sisa Waktu: <span id="timer-countdown">15:00</span>
+            </div>
+        </div>
+        <div id="lembar-soal"></div>
+        <div style="margin-top: 25px; text-align: right;">
+            <button onclick="selesaikanUjian()" style="background: #16a34a; color: #fff; border: none; padding: 12px 25px; border-radius: 6px; font-weight: bold; cursor: pointer;">Selesai / Mengakhiri</button>
+        </div>
+    </div>
+
+    <!-- KOTAK 3: HASIL UJIAN -->
+    <div id="kompetensi-hasil-container" style="display: none; background: #fff; padding: 25px; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); max-width: 600px; text-align: center;">
+        <h3 style="color: #16a34a; font-size: 22px; margin-bottom: 10px;">Latihan Selesai! 🎉</h3>
+        <p style="color: #666; margin-bottom: 20px;">Terima kasih telah mengikuti latihan kompetensi lini lapangan.</p>
+        <div style="background: #f8fafc; padding: 15px; border-radius: 8px; margin-bottom: 20px; text-align: left;">
+            <p><strong>Nama:</strong> <span id="hasil-nama">-</span></p>
+            <p><strong>Wilayah:</strong> <span id="hasil-wilayah">-</span></p>
+            <p><strong>Perolehan Skor:</strong> <span id="hasil-skor" style="font-size: 20px; font-weight: bold; color: #2563eb;">-</span></p>
+            <p><strong>Durasi Pengerjaan:</strong> <span id="hasil-durasi">-</span></p>
+        </div>
+        <button onclick="ulangUjian()" style="background: #475569; color: #fff; border: none; padding: 10px 20px; border-radius: 6px; cursor: pointer;">Ulangi Latihan</button>
+    </div>
+</div>
+
+                </section>
+
+                <!-- SECTION 6: GALERI -->
+<section id="section-galeri" class="page-section" style="display: none;">
+    <div id="galeri-container"></div>
+</section>
+
+            </main>
+        </div>
+    </div>
+
+    <!-- Panggil File Script.js di Sini -->
+    <script src="script.js"></script>
+</body>
+</html>
