@@ -277,11 +277,18 @@
         </div>
 
         <button onclick="ulangUjian()" style="background: #475569; color: #fff; border: none; padding: 10px 20px; border-radius: 6px; cursor: pointer;">Ulangi Latihan</button>
-    <button onclick="downloadHasilPDF()" style="background: #16a34a; color: #fff; border: none; padding: 10px 20px; border-radius: 6px; cursor: pointer; margin-left: 10px;">
-    📥 Unduh Hasil Ujian (PDF)
-</button>
-		<div id="area-rekap-soal" style="display: none;"></div>
-	</div>
+ 		<button onclick="downloadHasilPDF()" style="background: #16a34a; color: #fff; border: none; padding: 10px 20px; border-radius: 6px; cursor: pointer; margin-left: 10px; transition: all 0.2s ease;" onmousedown="this.style.transform='scale(0.95)'" onmouseup="this.style.transform='scale(1)'">
+        📥 Unduh Hasil Ujian (PDF)
+    </button>
+</div>
+		<!-- TEMPLATE REKAP PDF (Agar hasil unduhan tidak polos) -->
+<div id="area-rekap-soal" style="display: none; padding: 20px; background: #fff; color: #000; font-family: Arial, sans-serif;">
+    <h2 style="text-align: center; color: #16a34a;">LAPORAN HASIL UJI KOMPETENSI SIDELILA</h2>
+    <hr style="margin-bottom: 15px;">
+    <p><strong>Nama Peserta:</strong> <span id="pdf-nama">-</span></p>
+    <p><strong>Wilayah:</strong> <span id="pdf-wilayah">-</span></p>
+    <p><strong>Perolehan Skor:</strong> <span id="pdf-skor">-</span></p>
+    <p><strong>Durasi Pengerjaan:</strong> <span id="pdf-durasi">-</span></p>
 </div>
 
 
