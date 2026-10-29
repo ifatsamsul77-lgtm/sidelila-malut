@@ -1177,13 +1177,13 @@ function bukaFormUsulanPangkat() {
                         <option value="Cukup">Cukup (75% - 28,125 AK)</option>
                     </select>
                 </div>
-                <div class="space-y-1"><label class="block text-xs font-bold text-slate-700">AK Lama / s.d. Tahun Sebelumnya</label><input type="number" step="0.001" id="up-ak-lama" value="118.480" class="w-full p-2.5 bg-white border border-slate-300 rounded-xl text-xs font-bold text-sky-700"></div>
+               <div class="space-y-1"><label class="block text-xs font-bold text-slate-700">AK Lama / s.d. Tahun Sebelumnya</label><input type="number" step="0.001" id="up-ak-lama" placeholder="Contoh: 118.480" class="w-full p-2.5 bg-white border border-slate-300 rounded-xl text-xs font-bold text-sky-700"></div>
             </div>
             <h4 class="text-xs font-bold text-slate-800 uppercase tracking-wide border-b border-slate-200 pb-2 pt-2">✍️ Data Penetapan & Pejabat Penandatangan</h4>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <div class="space-y-1"><label class="block text-xs font-bold text-slate-700">Nomor SK / Dokumen</label><input type="text" id="up-no-sk" value="4/KP.09/J28/2026" class="w-full p-2.5 bg-white border border-slate-300 rounded-xl text-xs font-medium"></div>
-                <div class="space-y-1"><label class="block text-xs font-bold text-slate-700">Tempat Penetapan</label><input type="text" id="up-tempat" value="Sofifi" class="w-full p-2.5 bg-white border border-slate-300 rounded-xl text-xs font-medium"></div>
-                <div class="space-y-1"><label class="block text-xs font-bold text-slate-700">Tanggal Penetapan</label><input type="text" id="up-tgl-penetapan" value="02 Januari 2026" class="w-full p-2.5 bg-white border border-slate-300 rounded-xl text-xs font-medium"></div>
+                <div class="space-y-1"><label class="block text-xs font-bold text-slate-700">Nomor SK / Dokumen</label><input type="text" id="up-no-sk" placeholder="Masukkan nomor SK..." class="w-full p-2.5 bg-white border border-slate-300 rounded-xl text-xs font-medium"></div>
+                <div class="space-y-1"><label class="block text-xs font-bold text-slate-700">Tempat Penetapan</label><input type="text" id="up-tempat" placeholder="Contoh: Sofifi" class="w-full p-2.5 bg-white border border-slate-300 rounded-xl text-xs font-medium"></div>
+                <div class="space-y-1"><label class="block text-xs font-bold text-slate-700">Tanggal Penetapan</label><input type="text" id="up-tgl-penetapan" placeholder="Contoh: 02 Januari 2026" class="w-full p-2.5 bg-white border border-slate-300 rounded-xl text-xs font-medium"></div>
             </div>
         </div>
         <div class="bg-gradient-to-br from-slate-900 to-sky-950 p-6 rounded-2xl text-white shadow-xl space-y-4 text-center">
