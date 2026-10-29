@@ -262,36 +262,21 @@
         </div>
     </div>
 
-  <!-- KOTAK 3: HASIL UJIAN -->
+    <!-- KOTAK 3: HASIL UJIAN (Muncul setelah selesai) -->
     <div id="kompetensi-hasil-container" style="display: none; background: #fff; padding: 25px; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); max-width: 600px; text-align: center;">
         <h3 style="color: #16a34a; font-size: 22px; margin-bottom: 10px;">Latihan Selesai! 🎉</h3>
         <p style="color: #666; margin-bottom: 20px;">Terima kasih telah mengikuti latihan kompetensi lini lapangan.</p>
+        
         <div style="background: #f8fafc; padding: 15px; border-radius: 8px; margin-bottom: 20px; text-align: left;">
             <p><strong>Nama:</strong> <span id="hasil-nama">-</span></p>
             <p><strong>Wilayah:</strong> <span id="hasil-wilayah">-</span></p>
             <p><strong>Perolehan Skor:</strong> <span id="hasil-skor" style="font-size: 20px; font-weight: bold; color: #2563eb;">-</span></p>
             <p><strong>Durasi Pengerjaan:</strong> <span id="hasil-durasi">-</span></p>
         </div>
-        <button onclick="ulangUjian()" style="background: #475569; color: #fff; border: none; padding: 10px 20px; border-radius: 6px; cursor: pointer;">Ulangi Latihan</button>
-        
-        <!-- TOMBOL UNDUH PDF -->
-        <button onclick="downloadHasilPDF()" style="background: #16a34a; color: #fff; border: none; padding: 10px 20px; border-radius: 6px; cursor: pointer; margin-left: 10px;">📥 Unduh Hasil Ujian (PDF)</button>
-    </div>
 
-    <!-- WADAH CETAK PDF 50 SOAL (TERSEMBUNYI) -->
-    <div id="area-rekap-soal" style="display: none; padding: 20px; background: #fff; color: #000; font-family: Arial, sans-serif;">
-        <h2 style="text-align: center; color: #16a34a; margin-bottom: 5px;">LAPORAN EVALUASI UJI KOMPETENSI SIDELILA</h2>
-        <p style="text-align: center; color: #666; font-size: 14px; margin-top: 0;">Balai Penyuluhan KB Kecamatan Taliabu Barat</p>
-        <hr style="margin-bottom: 15px;">
-        
-        <p><strong>Nama Peserta:</strong> <span id="pdf-nama">-</span></p>
-        <p><strong>Wilayah:</strong> <span id="pdf-wilayah">-</span></p>
-        <p><strong>Perolehan Skor:</strong> <span id="pdf-skor">-</span></p>
-        <p><strong>Durasi Pengerjaan:</strong> <span id="pdf-durasi">-</span></p>
-        
-        <h3 style="margin-top: 25px; border-bottom: 2px solid #16a34a; padding-bottom: 5px; color: #16a34a;">Rincian 50 Soal dan Jawaban</h3>
-        <div id="pdf-detail-50-soal" style="margin-top: 15px; font-size: 12px; line-height: 1.4;"></div>
+        <button onclick="ulangUjian()" style="background: #475569; color: #fff; border: none; padding: 10px 20px; border-radius: 6px; cursor: pointer;">Ulangi Latihan</button>
     </div>
+</div>
 
 
             <!-- MAIN CONTENT -->
@@ -563,101 +548,84 @@
 
                     <div id="form-detail-container" style="display: none;" class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm space-y-6"></div>
 
-<!-- SECTION: KOMPETENSI LINI LAPANGAN -->
-    <div id="section-kompetensi" class="menu-section page-section" style="display: none; padding: 20px;">
-        <!-- KOTAK 1: FORM IDENTITAS -->
-        <div id="kompetensi-form-container" style="background: #fff; padding: 25px; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); max-width: 600px;">
-            <h3 style="margin-bottom: 10px; font-size: 18px; color: #333;">Formulir Latihan Mandiri</h3>
-            <p style="color: #666; font-size: 14px; margin-bottom: 20px;">Silakan isi identitas singkat terlebih dahulu sebelum memulai latihan soal kompetensi.</p>
-            
-            <div style="margin-bottom: 15px;">
-                <label style="display: block; margin-bottom: 5px; font-weight: bold; font-size: 14px;">Nama Lengkap:</label>
-                <input type="text" id="kompetensi-nama" placeholder="Masukkan nama dan gelar..." style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 6px;">
-            </div>
-            
-            <div style="margin-bottom: 15px;">
-                <label style="display: block; margin-bottom: 5px; font-weight: bold; font-size: 14px;">NIP / ID Pegawai:</label>
-                <input type="text" id="kompetensi-nip" placeholder="Masukkan NIP atau ID..." style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 6px;">
-            </div>
-
-            <div style="margin-bottom: 20px;">
-                <label style="display: block; margin-bottom: 5px; font-weight: bold; font-size: 14px;">Asal Wilayah / Kecamatan:</label>
-                <input type="text" id="kompetensi-wilayah" placeholder="Contoh: Taliabu Barat" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 6px;">
-            </div>
-
-            <button onclick="mulaiUjianKompetensi()" style="background: #2563eb; color: #fff; border: none; padding: 12px 20px; border-radius: 6px; font-weight: bold; cursor: pointer; width: 100%;">Mulai Latihan Soal</button>
+            <!-- SECTION: KOMPETENSI LINI LAPANGAN -->
+<div id="section-kompetensi" class="menu-section page-section" style="display: none; padding: 20px;">
+    <!-- KOTAK 1: FORM IDENTITAS -->
+    <div id="kompetensi-form-container" style="background: #fff; padding: 25px; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); max-width: 600px;">
+        <h3 style="margin-bottom: 10px; font-size: 18px; color: #333;">Formulir Latihan Mandiri</h3>
+        <p style="color: #666; font-size: 14px; margin-bottom: 20px;">Silakan isi identitas singkat terlebih dahulu sebelum memulai latihan soal kompetensi.</p>
+        
+        <div style="margin-bottom: 15px;">
+            <label style="display: block; margin-bottom: 5px; font-weight: bold; font-size: 14px;">Nama Lengkap:</label>
+            <input type="text" id="kompetensi-nama" placeholder="Masukkan nama dan gelar..." style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 6px;">
+        </div>
+        
+        <div style="margin-bottom: 15px;">
+            <label style="display: block; margin-bottom: 5px; font-weight: bold; font-size: 14px;">NIP / ID Pegawai:</label>
+            <input type="text" id="kompetensi-nip" placeholder="Masukkan NIP atau ID..." style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 6px;">
         </div>
 
-        <!-- KOTAK 2: AREA SOAL & TIMER -->
-        <div id="kompetensi-soal-container" style="display: none; background: #fff; padding: 25px; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); max-width: 700px;">
-            <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid #eee; padding-bottom: 10px; margin-bottom: 20px;">
-                <span id="info-peserta" style="font-weight: bold; color: #333;"></span>
-                <div style="background: #fee2e2; color: #991b1b; padding: 8px 15px; border-radius: 6px; font-weight: bold;">
-                    ⏱️ Sisa Waktu: <span id="timer-countdown">15:00</span>
-                </div>
-            </div>
-            <div id="lembar-soal"></div>
-            <div style="margin-top: 25px; text-align: right;">
-                <button onclick="selesaikanUjian()" style="background: #16a34a; color: #fff; border: none; padding: 12px 25px; border-radius: 6px; font-weight: bold; cursor: pointer;">Selesai / Mengakhiri</button>
-            </div>
+        <div style="margin-bottom: 20px;">
+            <label style="display: block; margin-bottom: 5px; font-weight: bold; font-size: 14px;">Asal Wilayah / Kecamatan:</label>
+            <input type="text" id="kompetensi-wilayah" placeholder="Contoh: Taliabu Barat" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 6px;">
         </div>
 
-        <!-- KOTAK 3: HASIL UJIAN -->
-        <div id="kompetensi-hasil-container" style="display: none; background: #fff; padding: 25px; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); max-width: 600px; text-align: center;">
-            <h3 style="color: #16a34a; font-size: 22px; margin-bottom: 10px;">Latihan Selesai! 🎉</h3>
-            <p style="color: #666; margin-bottom: 20px;">Terima kasih telah mengikuti latihan kompetensi lini lapangan.</p>
-            <div style="background: #f8fafc; padding: 15px; border-radius: 8px; margin-bottom: 20px; text-align: left;">
-                <p><strong>Nama:</strong> <span id="hasil-nama">-</span></p>
-                <p><strong>Wilayah:</strong> <span id="hasil-wilayah">-</span></p>
-                <p><strong>Perolehan Skor:</strong> <span id="hasil-skor" style="font-size: 20px; font-weight: bold; color: #2563eb;">-</span></p>
-                <p><strong>Durasi Pengerjaan:</strong> <span id="hasil-durasi">-</span></p>
-            </div>
-            <button onclick="ulangUjian()" style="background: #475569; color: #fff; border: none; padding: 10px 20px; border-radius: 6px; cursor: pointer;">Ulangi Latihan</button>
-            
-            <!-- TOMBOL UNDUH PDF -->
-            <button onclick="downloadHasilPDF()" style="background: #16a34a; color: #fff; border: none; padding: 10px 20px; border-radius: 6px; cursor: pointer; margin-left: 10px;">📥 Unduh Hasil Ujian (PDF)</button>
-        </div>
+        <button onclick="mulaiUjianKompetensi()" style="background: #2563eb; color: #fff; border: none; padding: 12px 20px; border-radius: 6px; font-weight: bold; cursor: pointer; width: 100%;">Mulai Latihan Soal</button>
+    </div>
 
-        <!-- WADAH CETAK PDF 50 SOAL (TERSEMBUNYI) -->
-        <div id="area-rekap-soal" style="display: none; padding: 20px; background: #fff; color: #000; font-family: Arial, sans-serif;">
-            <h2 style="text-align: center; color: #16a34a; margin-bottom: 5px;">LAPORAN EVALUASI UJI KOMPETENSI SIDELILA</h2>
-            <p style="text-align: center; color: #666; font-size: 14px; margin-top: 0;">Balai Penyuluhan KB Kecamatan Taliabu Barat</p>
-            <hr style="margin-bottom: 15px;">
-            
-            <p><strong>Nama Peserta:</strong> <span id="pdf-nama">-</span></p>
-            <p><strong>Wilayah:</strong> <span id="pdf-wilayah">-</span></p>
-            <p><strong>Perolehan Skor:</strong> <span id="pdf-skor">-</span></p>
-            <p><strong>Durasi Pengerjaan:</strong> <span id="pdf-durasi">-</span></p>
-            
-            <h3 style="margin-top: 25px; border-bottom: 2px solid #16a34a; padding-bottom: 5px; color: #16a34a;">Rincian 50 Soal dan Jawaban</h3>
-            <div id="pdf-detail-50-soal" style="margin-top: 15px; font-size: 12px; line-height: 1.4;"></div>
+    <!-- KOTAK 2: AREA SOAL & TIMER -->
+    <div id="kompetensi-soal-container" style="display: none; background: #fff; padding: 25px; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); max-width: 700px;">
+        <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid #eee; padding-bottom: 10px; margin-bottom: 20px;">
+            <span id="info-peserta" style="font-weight: bold; color: #333;"></span>
+            <div style="background: #fee2e2; color: #991b1b; padding: 8px 15px; border-radius: 6px; font-weight: bold;">
+                ⏱️ Sisa Waktu: <span id="timer-countdown">15:00</span>
+            </div>
+        </div>
+        <div id="lembar-soal"></div>
+        <div style="margin-top: 25px; text-align: right;">
+            <button onclick="selesaikanUjian()" style="background: #16a34a; color: #fff; border: none; padding: 12px 25px; border-radius: 6px; font-weight: bold; cursor: pointer;">Selesai / Mengakhiri</button>
         </div>
     </div>
 
-    <!-- SECTION 6: GALERI -->
-    <section id="section-galeri" class="page-section" style="display: none;">
-        <div id="galeri-container"></div>
-    </section>
-
-</main>
+    <!-- KOTAK 3: HASIL UJIAN -->
+    <div id="kompetensi-hasil-container" style="display: none; background: #fff; padding: 25px; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); max-width: 600px; text-align: center;">
+        <h3 style="color: #16a34a; font-size: 22px; margin-bottom: 10px;">Latihan Selesai! 🎉</h3>
+        <p style="color: #666; margin-bottom: 20px;">Terima kasih telah mengikuti latihan kompetensi lini lapangan.</p>
+        <div style="background: #f8fafc; padding: 15px; border-radius: 8px; margin-bottom: 20px; text-align: left;">
+            <p><strong>Nama:</strong> <span id="hasil-nama">-</span></p>
+            <p><strong>Wilayah:</strong> <span id="hasil-wilayah">-</span></p>
+            <p><strong>Perolehan Skor:</strong> <span id="hasil-skor" style="font-size: 20px; font-weight: bold; color: #2563eb;">-</span></p>
+            <p><strong>Durasi Pengerjaan:</strong> <span id="hasil-durasi">-</span></p>
+        </div>
+        <button onclick="ulangUjian()" style="background: #475569; color: #fff; border: none; padding: 10px 20px; border-radius: 6px; cursor: pointer;">Ulangi Latihan</button>
+    </div>
 </div>
-</div>
 
-<!-- Panggil File Script.js di Sini -->
-<script src="script.js"></script>
-<script>
-    // Pemantau utama untuk mereset posisi scroll kontainer dan jendela browser saat menu diklik
-    document.addEventListener("click", function(event) {
-        if (event.target.closest("aside") && (event.target.closest("a") || event.target.closest("div"))) {
-            setTimeout(function() {
-                const mainContainer = document.querySelector('main') || document.querySelector('.overflow-y-auto');
-                if (mainContainer) mainContainer.scrollTop = 0;
-                window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
-            }, 50);
-        }
-    });
-</script>
+                </section>
+
+                <!-- SECTION 6: GALERI -->
+<section id="section-galeri" class="page-section" style="display: none;">
+    <div id="galeri-container"></div>
+</section>
+
+            </main>
+        </div>
+    </div>
+
+    <!-- Panggil File Script.js di Sini -->
+    <script src="script.js"></script>
+    <script>
+        // Pemantau utama untuk mereset posisi scroll kontainer dan jendela browser saat menu diklik
+        document.addEventListener("click", function(event) {
+            if (event.target.closest("aside") && (event.target.closest("a") || event.target.closest("div"))) {
+                setTimeout(function() {
+                    const mainContainer = document.querySelector('main') || document.querySelector('.overflow-y-auto');
+                    if (mainContainer) mainContainer.scrollTop = 0;
+                    window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+                }, 50);
+            }
+        });
+    </script>
 
 </body>
 </html>
-					
