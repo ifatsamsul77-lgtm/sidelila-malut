@@ -573,8 +573,9 @@ function downloadPDFWFH() {
     if (rows.length === 0) {
         tabelRowsHTML = `<tr><td colspan="4" style="border: 1px solid black; padding: 8px; text-align: center;">Tidak ada data kegiatan.</td></tr>`;
     } else {
-        rows.forEach((row, index) => {
-            const tgl = row.querySelector('input[type="date"]')?.value || '-';
+       rows.forEach((row, index) => {
+            const tglMentah = row.querySelector('input[type="date"]')?.value || '-';
+            const tgl = formatTanggalIndo(tglMentah); // <--- Ubah tgl menjadi memanggil fungsi formatTanggalIndo
             const uraian = row.querySelector('input[type="text"]')?.value || '-';
             const bukti = row.querySelector('input[type="url"]')?.value || '-';
             tabelRowsHTML += `
