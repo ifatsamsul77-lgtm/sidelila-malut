@@ -16,35 +16,6 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 // --- 2. DATA MATERI & DIREKTORI BERTINGKAT ---
-const dataMateri = {
-    poktan: {
-        title: "Modul POKTAN (Kelompok Kegiatan)",
-        items: [
-            { name: "BINA KELUARGA BALITA", desc: "Modul & Materi BKB", icon: "👶", isSubdirectory: true, subKey: "bkb" },
-            { name: "BINA KELUARGA REMAJA", desc: "Modul & Materi BKR", icon: "🧑", isSubdirectory: true, subKey: "bkr" },
-            { name: "BINA KELUARGA LANSIA", desc: "Modul & Materi BKL", icon: "🧓", isSubdirectory: true, subKey: "bkl" },
-            { name: "PUSAT INFORMASI & KONSELING REMAJA", desc: "Modul & Materi PIK-R", icon: "🎓", isSubdirectory: true, subKey: "pikr" },
-            { name: "UPAYA PENINGKATAN PENDAPATAN KELUARGA AKSEPTOR", desc: "Modul & Materi UPPKA", icon: "💼", isSubdirectory: true, subKey: "uppka" }
-        ]
-    },
-    quickwin: {
-        title: "Modul QUICKWIN BKKBN",
-        items: [
-            { name: "GERAKAN ORANG TUA ASUH CEGAH STUNTING", desc: "Modul & Materi GENTING", icon: "🌱", isSubdirectory: true, subKey: "genting" },
-            { name: "GERAKAN AYAH TELADAN INDONESIA", desc: "Modul & Materi GATI", icon: "👨‍👩‍👧", isSubdirectory: true, subKey: "gati" },
-            { name: "TAMAN ASUH SAYANG ANAK", desc: "Modul & Materi TAMASYA", icon: "🏖️", isSubdirectory: true, subKey: "tamasya" },
-            { name: "LANSIA BERDAYA", desc: "Modul & Materi SIDAYA", icon: "💡", isSubdirectory: true, subKey: "sidaya" }
-        ]
-    },
-    lainnya: {
-        title: "Modul Referensi & Penyuluhan Lainnya",
-        items: [
-            { name: "Materi Penyuluhan Umum", desc: "Modul & Lembar Balik / Bahan Edukasi", icon: "📂", isSubdirectory: true, subKey: "penyuluhan" },
-            { name: "Panduan Lapangan PKB/PLKB", desc: "Modul & Petunjuk Teknis Lini Lapangan", icon: "📖", isSubdirectory: true, subKey: "panduan" }
-        ]
-    }
-};
-
 const subMateriData = {
     bkb: {
         title: "Bina Keluarga Balita (BKB)",
@@ -91,7 +62,7 @@ const subMateriData = {
             { name: "MODUL BKLL", desc: "Materi Belum Tersedia", icon:'<img src="icon8.png" class="w-8 h-8 object-contain">', link: "#" }
         ]
     },
-   pikr: { 
+    pikr: { 
         title: "PIK-Remaja (PIK-R)", 
         parent: "poktan", 
         items: [
@@ -148,7 +119,6 @@ const subMateriData = {
               { name: "Petunjuk Tekhnis", desc: "Belum Ditambahkan", icon: "📖", link: "#" },
              ] },
 };
-
 // --- DATA PERATURAN ---
 const dataPeraturan = {
     uu: { title: "Direktori Undang-Undang", items: 
