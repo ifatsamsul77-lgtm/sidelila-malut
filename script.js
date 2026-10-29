@@ -91,7 +91,18 @@ const subMateriData = {
             { name: "MODUL BKLL", desc: "Materi Belum Tersedia", icon:'<img src="icon8.png" class="w-8 h-8 object-contain">', link: "#" }
         ]
     },
-    pikr: { title: "PIK-Remaja (PIK-R)", parent: "poktan", items: [{ name: "Juknis Pembentukan & Pengelolaan PIK-R", desc: "Standar operasional kelompok berjejaring", icon: "📄", link: "#" }] },
+    pikr: { title: "PIK-Remaja (PIK-R)", parent: "poktan", items: 
+       [{ name: "MEMAHAMI DAN MENGATASI BULLYING, desc: "Membangun Lingkungan Belajar yang Aman dan Nyaman dan Saling Menghargai", icon: "📄", link: "https://docs.google.com/presentation/d/1pHAHpOdL4zo_4ugu7DNGRvWYM36ZsqetqZmfpiJZTNc/edit?usp=sharing" },
+        { name: "MODUL PIK-REMAJA", desc: "Modul belum ditambahkan", icon: "📄", link: "#" },
+        { name: "MODUL PIK-REMAJA", desc: "Modul belum ditambahkan", icon: "📄", link: "#" },
+        { name: "MODUL PIK-REMAJA", desc: "Modul belum ditambahkan", icon: "📄", link: "#" },
+        { name: "MODUL PIK-REMAJA", desc: "Modul belum ditambahkan", icon: "📄", link: "#" },
+        { name: "MODUL PIK-REMAJA", desc: "Modul belum ditambahkan", icon: "📄", link: "#" },
+        { name: "MODUL PIK-REMAJA", desc: "Modul belum ditambahkan", icon: "📄", link: "#" },
+        { name: "MODUL PIK-REMAJA", desc: "Modul belum ditambahkan", icon: "📄", link: "#" },
+        { name: "MODUL PIK-REMAJA", desc: "Modul belum ditambahkan", icon: "📄", link: "#" }
+       ] 
+   },
     uppka: { title: "Sub-Direktori: UPPKA", parent: "poktan", items: [{ name: "Pedoman Umum Pengelolaan UPPKA", desc: "Penguatan ekonomi keluarga akseptor KB", icon: "📄", link: "#" }] },
     genting: {
         title: "Modul GENTING",
