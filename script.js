@@ -91,8 +91,18 @@ const subMateriData = {
             { name: "MODUL BKLL", desc: "Materi Belum Tersedia", icon:'<img src="icon8.png" class="w-8 h-8 object-contain">', link: "#" }
         ]
     },
-    pikr: { title: "PIK-Remaja (PIK-R)", parent: "poktan", items: 
-       [{ name: "MEMAHAMI DAN MENGATASI BULLYING", desc: "Membangun Lingkungan Belajar yang Aman dan Nyaman dan Saling Menghargai", icon: "📄", link: "https://docs.google.com/presentation/d/1pHAHpOdL4zo_4ugu7DNGRvWYM36ZsqetqZmfpiJZTNc/edit?usp=sharing" }]   },
+   pikr: { 
+        title: "PIK-Remaja (PIK-R)", 
+        parent: "poktan", 
+        items: [
+            { 
+                name: "MEMAHAMI DAN MENGATASI BULLYING", 
+                desc: "Membangun Lingkungan Belajar yang Aman dan Nyaman dan Saling Menghargai", 
+                icon: "📄", 
+                link: "https://docs.google.com/presentation/d/1pHAHpOdL4zo_4ugu7DNGRvWYM36ZsqetqZmfpiJZTNc/edit?usp=sharing" 
+            }
+        ] 
+    },
     uppka: { title: "Sub-Direktori: UPPKA", parent: "poktan", items: [{ name: "Pedoman Umum Pengelolaan UPPKA", desc: "Penguatan ekonomi keluarga akseptor KB", icon: "📄", link: "#" }] },
     genting: {
         title: "Modul GENTING",
