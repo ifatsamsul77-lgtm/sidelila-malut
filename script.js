@@ -10622,52 +10622,5 @@ function ulangUjian() {
 }
 
 function downloadHasilPDF() {
-    // 1. Ambil data ringkasan peserta dari layar
-    const nama = document.getElementById('hasil-nama') ? document.getElementById('hasil-nama').innerText : 'Peserta';
-    const wilayah = document.getElementById('hasil-wilayah') ? document.getElementById('hasil-wilayah').innerText : '-';
-    const skor = document.getElementById('hasil-skor') ? document.getElementById('hasil-skor').innerText : '-';
-    const durasi = document.getElementById('hasil-durasi') ? document.getElementById('hasil-durasi').innerText : '-';
-
-    document.getElementById('pdf-nama').innerText = nama;
-    document.getElementById('pdf-wilayah').innerText = wilayah;
-    document.getElementById('pdf-skor').innerText = skor;
-    document.getElementById('pdf-durasi').innerText = durasi;
-
-    // 2. Rangkum seluruh ke-50 soal dan jawaban ke wadah cetak PDF
-    let html50Soal = '';
-    
-    if (typeof kumpulanSoal !== 'undefined' && kumpulanSoal.length > 0) {
-        kumpulanSoal.forEach((soal, i) => {
-            let jawabanUser = (typeof jawabanPengguna !== 'undefined' && jawabanPengguna[i]) ? jawabanPengguna[i] : 'Tidak dijawab';
-            let kunciBenar = soal.kunci || '-';
-            
-            html50Soal += `
-                <div style="margin-bottom: 15px; padding-bottom: 10px; border-bottom: 1px solid #ddd; page-break-inside: avoid;">
-                    <p style="font-weight: bold; margin: 0 0 5px 0;">Soal No. ${i + 1}: ${soal.pertanyaan}</p>
-                    <p style="margin: 0 0 3px 0; color: #16a34a;"><strong>Jawaban Anda:</strong> ${jawabanUser}</p>
-                    <p style="margin: 0; color: #333;"><strong>Kunci Jawaban:</strong> ${kunciBenar}</p>
-                </div>
-            `;
-        });
-    } else {
-        html50Soal = '<p style="color: #666;">Data lembar jawab 50 soal berhasil dimuat.</p>';
-    }
-
-    document.getElementById('pdf-detail-50-soal').innerHTML = html50Soal;
-
-    // 3. Proses unduh dokumen PDF secara otomatis
-    const areaRekap = document.getElementById('area-rekap-soal');
-    areaRekap.style.display = 'block';
-
-    const options = {
-        margin:       10,
-        filename:     'Evaluasi-Ujian-' + nama.replace(/\s+/g, '_') + '.pdf',
-        image:        { type: 'jpeg', quality: 0.98 },
-        html2canvas:  { scale: 2 },
-        jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' }
-    };
-
-    html2pdf().from(areaRekap).set(options).save().then(function() {
-        areaRekap.style.display = 'none'; // Sembunyikan kembali setelah terdownload
-    });
+    alert("Tombol unduh diklik!");
 }
