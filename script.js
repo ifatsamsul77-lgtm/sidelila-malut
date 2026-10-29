@@ -485,14 +485,21 @@ function bukaFormWFH() {
                 <div class="grid grid-cols-3 items-center"><span class="font-bold text-slate-700">NAMA</span><span class="col-span-2"><input type="text" id="wfh-nama" placeholder="Masukkan Nama Lengkap..." class="w-full px-3 py-2 bg-white border border-slate-300 rounded font-medium"></span></div>
                 <div class="grid grid-cols-3 items-center"><span class="font-bold text-slate-700">NIP</span><span class="col-span-2"><input type="text" id="wfh-nip" placeholder="Masukkan NIP (18 Digit)..." class="w-full px-3 py-2 bg-white border border-slate-300 rounded font-medium"></span></div>
                 <div class="grid grid-cols-3 items-center"><span class="font-bold text-slate-700">JABATAN</span><span class="col-span-2">
-                    <select id="wfh-jabatan" class="w-full px-3 py-2 bg-white border border-slate-300 rounded font-medium">
-                        <option value="">-- Pilih Jabatan --</option>
-                        <option value="Penyuluh KB Ahli Pertama">Penyuluh KB Ahli Pertama</option>
-                        <option value="Penyuluh KB Ahli Muda">Penyuluh KB Ahli Muda</option>
-                        <option value="Penyuluh KB Ahli Madya">Penyuluh KB Ahli Madya</option>
-                        <option value="Penyuluh KB Penyelia">Penyuluh KB Penyelia</option>
-                    </select>
-                </span></div>
+                    <select id="wfh-jabatan" class="w-full p-2.5 bg-white border border-slate-300 rounded-xl text-xs focus:outline-none focus:border-sky-500 font-medium">
+    <option value="">-- Pilih Jenjang Jabatan --</option>
+    <optgroup label="Kategori Keterampilan">
+        <option value="Penyuluh KB Pemula">Penyuluh KB Pemula</option>
+        <option value="Penyuluh KB Terampil">Penyuluh KB Terampil</option>
+        <option value="Penyuluh KB Mahir">Penyuluh KB Mahir</option>
+        <option value="Penyuluh KB Penyelia">Penyuluh KB Penyelia</option>
+    </optgroup>
+    <optgroup label="Kategori Keahlian">
+        <option value="Penyuluh KB Ahli Pertama">Penyuluh KB Ahli Pertama</option>
+        <option value="Penyuluh KB Ahli Muda">Penyuluh KB Ahli Muda</option>
+        <option value="Penyuluh KB Ahli Madya">Penyuluh KB Ahli Madya</option>
+        <option value="Penyuluh KB Ahli Utama">Penyuluh KB Ahli Utama</option>
+    </optgroup>
+</select>                </span></div>
             </div>
             <div class="space-y-3 mb-6">
                 <h4 class="text-xs font-bold text-slate-800 uppercase">1. Pelaksanaan Kegiatan WFH</h4>
