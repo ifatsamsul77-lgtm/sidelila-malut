@@ -10662,7 +10662,7 @@ function simpanHasilKeFirebase(dataHasil) {
     }
 }
 
-// 5. Ulangi latihan
+// --- 5. Ulangi latihan ---
 function ulangUjian() {
     document.getElementById('kompetensi-hasil-container').style.display = 'none';
     document.getElementById('kompetensi-form-container').style.display = 'block';
@@ -10671,3 +10671,97 @@ function ulangUjian() {
     document.getElementById('kompetensi-wilayah').value = '';
 }
 
+// --- TEMPELKAN FUNGSI BARU INI DI BAGIAN PALING BAWAH SCRIPT.JS ---
+function cetakEvaluasiUjian() {
+    if (!soalAktif || soalAktif.length === 0) {
+        alert("Tidak ada data soal untuk dicetak.");
+        return;
+    }
+
+    const nama = document.getElementById('kompetensi-nama')?.value || 'Peserta';
+    const nip = document.getElementById('kompetensi-nip')?.value || '-';
+    const wilayah = document.getElementById('kompetensi-wilayah')?.value || '-';
+    const skorStr = document.getElementById('hasil-skor')?.innerText || '-';
+    const durasiStr = document.getElementById('hasil-durasi')?.innerText || '-';
+
+    let pembahasanHTML = "";
+
+    soalAktif.forEach((item, index) => {
+        const selectedInput = document.querySelector(`input[name="soal_${index}"]:checked`);
+        const userChoiceIdx = selectedInput ? parseInt(selectedInput.value) : null;
+
+        const kunciIdx = item.jawaban; 
+        const teksKunci = item.pilihan[kunciIdx];
+        const teksUser = userChoiceIdx !== null ? item.pilihan[userChoiceIdx] : "<span style='color: red;'>Tidak dijawab</span>";
+
+        const isBenar = userChoiceIdx === kunciIdx;
+        const statusBadge = isBenar 
+            ? '<b style="color: #16a34a;">[ Benar ]</b>' 
+            : '<b style="color: #dc2626;">[ Salah ]</b>';
+
+        pembahasanHTML += `
+            <div style="margin-bottom: 15px; page-break-inside: avoid; border-bottom: 1px solid #ddd; padding-bottom: 10px;">
+                <p style="font-weight: bold; margin-bottom: 5px;">${index + 1}. ${item.pertanyaan}</p>
+                <div style="font-size: 10pt; margin-left: 10px;">
+                    <p style="margin: 2px 0;">Jawaban Anda: ${teksUser} ${statusBadge}</p>
+                    <p style="margin: 2px 0; color: #16a34a;"><b>Kunci Jawaban Yang Benar:</b> ${teksKunci}</p>
+                </div>
+            </div>
+        `;
+    });
+
+    const printHTML = `
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <meta charset="utf-8">
+            <title>Evaluasi Hasil Uji Kompetensi - ${nama}</title>
+            <style>
+                body { font-family: "Times New Roman", Times, serif; font-size: 11pt; line-height: 1.4; color: #000; padding: 20px; background: #fff; }
+                .kop { border-bottom: double 3px black; padding-bottom: 8px; margin-bottom: 15px; width: 100%; }
+                .judul { text-align: center; font-weight: bold; font-size: 12pt; margin-bottom: 5px; text-transform: uppercase; }
+                .sub-judul { text-align: center; font-weight: bold; font-size: 10pt; margin-bottom: 15px; text-transform: uppercase; }
+                .info-box { border: 1px solid black; padding: 10px; margin-bottom: 20px; background-color: #f9f9f9; }
+                .info-box table { width: 100%; border-collapse: collapse; }
+                .info-box td { padding: 3px 0; font-size: 10pt; vertical-align: top; }
+            </style>
+        </head>
+        <body>
+            <table class="kop" style="border-collapse: collapse; width: 100%;">
+                <tr>
+                    <td style="width: 55px; border: none;"><img src="logo.png" alt="Logo" style="width: 45px; height: 45px; object-fit: contain;" onerror="this.style.display='none'"></td>
+                    <td style="width: 120px; border: none; font-weight: bold; font-size: 9pt; line-height: 1.2;">Kemendukbangga/<br>BKKBN</td>
+                    <td style="border: none; text-align: right; font-size: 9pt; line-height: 1.3;">
+                        <b>Kementerian Kependudukan dan Pembangunan Keluarga / BKKBN</b><br>
+                        Perwakilan BKKBN Provinsi Maluku Utara<br>
+                        Portal SIDELILA v2.0 | malut.bkkbn.go.id
+                    </td>
+                </tr>
+            </table>
+
+            <div class="judul">EVALUASI HASIL LATIHAN MANDIRI UJI KOMPETENSI</div>
+            <div class="sub-judul">TENAGA LINI LAPANGAN BKKBN PROVINSI MALUKU UTARA</div>
+
+            <div class="info-box">
+                <table>
+                    <tr><td style="width: 130px;"><b>Nama Peserta</b></td><td style="width: 15px;">:</td><td><b>${nama}</b></td></tr>
+                    <tr><td><b>NIP / ID</b></td><td>:</td><td>${nip}</td></tr>
+                    <tr><td><b>Asal Wilayah</b></td><td>:</td><td>${wilayah}</td></tr>
+                    <tr><td><b>Perolehan Skor</b></td><td>:</td><td><b>${skorStr}</b></td></tr>
+                    <tr><td><b>Durasi Pengerjaan</b></td><td>:</td><td>${durasiStr}</td></tr>
+                </table>
+            </div>
+
+            <div style="font-weight: bold; font-size: 11pt; margin-bottom: 10px; border-bottom: 2px solid black; padding-bottom: 4px;">
+                REKAPITULASI SOAL & KUNCI JAWABAN (50 SOAL)
+            </div>
+
+            <div>
+                ${pembahasanHTML}
+            </div>
+        </body>
+        </html>
+    `;
+
+    bukaJendelaCetak(printHTML);
+}
