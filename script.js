@@ -10686,17 +10686,4 @@ function ulangUjian() {
         <button onclick="downloadHasilPDF()" style="background: #16a34a; color: #fff; border: none; padding: 10px 20px; border-radius: 6px; cursor: pointer; margin-left: 10px;">📥 Unduh Hasil Ujian (PDF)</button>
     </div>
 
-    <!-- WADAH CETAK PDF 50 SOAL (TERSEMBUNYI) -->
-    <div id="area-rekap-soal" style="display: none; padding: 20px; background: #fff; color: #000; font-family: Arial, sans-serif;">
-        <h2 style="text-align: center; color: #16a34a; margin-bottom: 5px;">LAPORAN EVALUASI UJI KOMPETENSI SIDELILA</h2>
-        <p style="text-align: center; color: #666; font-size: 14px; margin-top: 0;">Balai Penyuluhan KB Kecamatan Taliabu Barat</p>
-        <hr style="margin-bottom: 15px;">
-        
-        <p><strong>Nama Peserta:</strong> <span id="pdf-nama">-</span></p>
-        <p><strong>Wilayah:</strong> <span id="pdf-wilayah">-</span></p>
-        <p><strong>Perolehan Skor:</strong> <span id="pdf-skor">-</span></p>
-        <p><strong>Durasi Pengerjaan:</strong> <span id="pdf-durasi">-</span></p>
-        
-        <h3 style="margin-top: 25px; border-bottom: 2px solid #16a34a; padding-bottom: 5px; color: #16a34a;">Rincian 50 Soal dan Jawaban</h3>
-        <div id="pdf-detail-50-soal" style="margin-top: 15px; font-size: 12px; line-height: 1.4;"></div>
-    </div>
+  
