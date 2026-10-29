@@ -10670,35 +10670,3 @@ function ulangUjian() {
     document.getElementById('kompetensi-nip').value = '';
     document.getElementById('kompetensi-wilayah').value = '';
 }
-<!-- KOTAK 3: HASIL UJIAN -->
-    <div id="kompetensi-hasil-container" style="display: none; background: #fff; padding: 25px; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); max-width: 600px; text-align: center;">
-        <h3 style="color: #16a34a; font-size: 22px; margin-bottom: 10px;">Latihan Selesai! 🎉</h3>
-        <p style="color: #666; margin-bottom: 20px;">Terima kasih telah mengikuti latihan kompetensi lini lapangan.</p>
-        <div style="background: #f8fafc; padding: 15px; border-radius: 8px; margin-bottom: 20px; text-align: left;">
-            <p><strong>Nama:</strong> <span id="hasil-nama">-</span></p>
-            <p><strong>Wilayah:</strong> <span id="hasil-wilayah">-</span></p>
-            <p><strong>Perolehan Skor:</strong> <span id="hasil-skor" style="font-size: 20px; font-weight: bold; color: #2563eb;">-</span></p>
-            <p><strong>Durasi Pengerjaan:</strong> <span id="hasil-durasi">-</span></p>
-        </div>
-        <button onclick="ulangUjian()" style="background: #475569; color: #fff; border: none; padding: 10px 20px; border-radius: 6px; cursor: pointer;">Ulangi Latihan</button>
-        
-        <!-- TOMBOL UNDUH PDF -->
-        <button onclick="downloadHasilPDF()" style="background: #16a34a; color: #fff; border: none; padding: 10px 20px; border-radius: 6px; cursor: pointer; margin-left: 10px;">📥 Unduh Hasil Ujian (PDF)</button>
-    </div>
-
-    <!-- WADAH CETAK PDF 50 SOAL (TERSEMBUNYI) -->
-    <div id="area-rekap-soal" style="display: none; padding: 20px; background: #fff; color: #000; font-family: Arial, sans-serif;">
-        <h2 style="text-align: center; color: #16a34a; margin-bottom: 5px;">LAPORAN EVALUASI UJI KOMPETENSI SIDELILA</h2>
-        <p style="text-align: center; color: #666; font-size: 14px; margin-top: 0;">Balai Penyuluhan KB Kecamatan Taliabu Barat</p>
-        <hr style="margin-bottom: 15px;">
-        
-        <p><strong>Nama Peserta:</strong> <span id="pdf-nama">-</span></p>
-        <p><strong>Wilayah:</strong> <span id="pdf-wilayah">-</span></p>
-        <p><strong>Perolehan Skor:</strong> <span id="pdf-skor">-</span></p>
-        <p><strong>Durasi Pengerjaan:</strong> <span id="pdf-durasi">-</span></p>
-        
-        <h3 style="margin-top: 25px; border-bottom: 2px solid #16a34a; padding-bottom: 5px; color: #16a34a;">Rincian 50 Soal dan Jawaban</h3>
-        <div id="pdf-detail-50-soal" style="margin-top: 15px; font-size: 12px; line-height: 1.4;"></div>
-    </div>
-
-  
