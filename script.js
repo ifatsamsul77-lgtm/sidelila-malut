@@ -10670,3 +10670,4 @@ function ulangUjian() {
     document.getElementById('kompetensi-nip').value = '';
     document.getElementById('kompetensi-wilayah').value = '';
 }
+
