@@ -108,71 +108,49 @@ const subMateriData = {
               { name: "MODUL GATI", desc: "BELUM DITAMBAHKAN", icon: "📄", link: "#" },
               { name: "MODUL GATI", desc: "BELUM DITAMBAHKAN", icon: "📄", link: "#" },
               { name: "MODUL GATI", desc: "BELUM DITAMBAHKAN", icon: "📄", link: "#" },
-              { name: "MODUL GATI", desc: "BELUM DITAMBAHKAN", icon: "📄", link: "#" },
-             ]},
+              { name: "MODUL GATI", desc: "BELUM DITAMBAHKAN", icon: "📄", link: "#" },]},
     tamasya: { title: "Modul TAMASYA", parent: "quickwin", items: 
              [{ name: "Pedoman Pelaksanaan TAMASYA", desc: "Taman Asuh Sayang Anak di wilayah khusus", icon: "📄", link: "#" },
-              { name: "Modul TAMASYA", desc: "Belum Ditambahkan", icon: "📄", link: "#" },
-              { name: "Modul TAMASYA", desc: "Belum Ditambahkan", icon: "📄", link: "#" },
               ] },
-    sidaya: { title: "Modul SIDAYA", parent: "quickwin", items: 
-             [{ name: "Modul SIDAYA", desc: "Belum Ditambahkan", icon: "📄", link: "#" },
-              { name: "Modul SIDAYA", desc: "Belum Ditambahkan", icon: "📄", link: "#" },
-              { name: "Modul SIDAYA", desc: "Belum Ditambahkan", icon: "📄", link: "#" },
-             ] },
-    penyuluhan: { title: "Materi Penyuluhan Umum", parent: "lainnya", items: 
-             [{ name: "Modul Penyuluhan", desc: "Belum Ditambahkan", icon: "📂", link: "#" },
-              { name: "Modul Penyuluhan", desc: "Belum Ditambahkan", icon: "📂", link: "#" },
-              { name: "Modul Penyuluhan", desc: "Belum Ditambahkan", icon: "📂", link: "#" },
-              { name: "Modul Penyuluhan", desc: "Belum Ditambahkan", icon: "📂", link: "#" },
-              { name: "Modul Penyuluhan", desc: "Belum Ditambahkan", icon: "📂", link: "#" },
-              { name: "Modul Penyuluhan", desc: "Belum Ditambahkan", icon: "📂", link: "#" },
-             ] },
-    panduan: { title: "Panduan Lapangan PKB/PLKB", parent: "lainnya", items: 
-             [{ name: "Panduan Tekhnis", desc: "Belum Ditambahkan", icon: "📖", link: "#" },
-              { name: "Panduan Tekhnis", desc: "Belum Ditambahkan", icon: "📖", link: "#" },
-              { name: "Petunjuk Tekhnis", desc: "Belum Ditambahkan", icon: "📖", link: "#" },
-              { name: "Petunjuk Tekhnis", desc: "Belum Ditambahkan", icon: "📖", link: "#" },
-              { name: "Petunjuk Tekhnis", desc: "Belum Ditambahkan", icon: "📖", link: "#" },
-              { name: "Petunjuk Tekhnis", desc: "Belum Ditambahkan", icon: "📖", link: "#" },
-             ] },
+    sidaya: { title: "Modul SIDAYA", parent: "quickwin", items: [{ name: "Pedoman Program SIDAYA", desc: "Pemberdayaan ekonomi keluarga akseptor", icon: "📄", link: "#" }] },
+    penyuluhan: { title: "Materi Penyuluhan Umum", parent: "lainnya", items: [{ name: "Lembar Balik Program Bangga Kencana", desc: "Media utama penyuluhan keluarga berencana", icon: "📂", link: "#" }] },
+    panduan: { title: "Panduan Lapangan PKB/PLKB", parent: "lainnya", items: [{ name: "Petunjuk Teknis Operasional Lini Lapangan", desc: "Acuan kerja harian penyuluh KB", icon: "📖", link: "#" }] }
 };
 
 // --- DATA PERATURAN ---
 const dataPeraturan = {
     uu: { title: "Direktori Undang-Undang", items: 
-            [{ name: "UU No. 52 Tahun 2009", desc: "Perkembangan Kependudukan & Pembangunan Keluarga", icon: "📜", link: "https://drive.google.com/file/d/117CV01siCHhGE3YLmsv1Pe3oLmvDoY-h/view?usp=sharing" },
-             { name: "UU No. 23 Tahun 2026", desc: "Tentang Administrasi Kependudukan", icon: "📜", link: "https://drive.google.com/file/d/1nT8papq4S9-JXx_u3FSTN-zR5pyb_-p2/view?usp=sharing" },
-             { name: "UU No. 23 Tahun 2014", desc: "Tentang Pemerintah Daerah", icon: "📜", link: "https://drive.google.com/file/d/1APvsGhajjseCmfiDfXx38ADdsROgn8KN/view?usp=sharing" }, // <-- KOMA SUDAH DITAMBAHKAN DI SINI
-             { name: "UU No. xx Tahun xxxx", desc: "Belum Ditambahkan", icon: "📜", link: "#" },
-             { name: "UU No. xx Tahun xxxx", desc: "Belum Ditambahkan", icon: "📜", link: "#" },
-             { name: "UU No. xx Tahun xxxx", desc: "Belum Ditambahkan", icon: "📜", link: "#" }
-            ]},
-       perpres: { title: "Direktori Peraturan Presiden", items: 
-            [{ name: "Perpres No. 72 Tahun 2021", desc: "Percepatan Penurunan Stunting Nasional", icon: "🏛️", link: "https://drive.google.com/file/d/1LVLCU9TJcZGWmh0csqQlyQ6_Kd3aKuFk/view?usp=sharing" },
-             { name: "Perpres No. 03 Tahun 2026", desc: "Pencegahan dan Penanganan Anak Tidak Sekolah", icon: "🏛️", link: "https://drive.google.com/file/d/1PmhSKzLYUtpZzMHAXDd9Exz8AyCern8O/view?usp=sharing" },
-             { name: "Perpres No. 180 Tahun 2024", desc: "Kementerian Kependudukan dan Pembangunan Keluarga", icon: "🏛️", link: "https://drive.google.com/file/d/134oL27yWqx7OXayNxeKf3tMeXiA-diXP/view?usp=sharing" },
-             { name: "Perpres No. 181 Tahun XXXX", desc: "Badan Kependudukan dan Keluarga Berencana Nasional", icon: "🏛️", link: "https://drive.google.com/file/d/1aATw2KfiBMjNouDKhTcizR0Y7bf1uZ24/view?usp=sharing" },
-             { name: "Perpres No. XX Tahun XXXX", desc: "BELUM DITAMBAHKAN", icon: "🏛️", link: "#" },
-             { name: "Perpres No. XX Tahun XXXX", desc: "BELUM DITAMBAHKAN", icon: "🏛️", link: "#" }
-            ]},
-       permen: { title: "Direktori Peraturan Menteri", items: 
-            [{ name: "Permen No.03 Tahun 2026", desc: "Penyelenggaraan Layanan Informasi Publik Kemendukbangga/BKKBN", icon: "📑", link: "https://drive.google.com/file/d/10xaf96bxODsYMhe9TwzxiLLIrJr1VSWf/view?usp=sharing" },
-             { name: "Permen No 01 Tahun 2026", desc: "Tim Pendamping Keluarga", icon: "📑", link: "https://drive.google.com/file/d/1h1tNRNDrVoYURQkI1xtp6CxDqMX9muBk/view?usp=sharing" },
-             { name: "Permen No 05 Tahun xxxx", desc: "Juknis Penggunaan Dana BOKB Tahun 2026", icon: "📑", link: "https://drive.google.com/file/d/180iy0y66eIQ77WR36wq1ULcT7PgA0pM8/view?usp=sharing" },
-             { name: "Permen No xx Tahun xxxx", desc: "BELUM DITAMBAHKAN", icon: "📑", link: "#" },
-             { name: "Permen No xx Tahun xxxx", desc: "BELUM DITAMBAHKAN", icon: "📑", link: "#" },
-             { name: "Permen No xx Tahun xxxx", desc: "BELUM DITAMBAHKAN", icon: "📑", link: "#" },
-             { name: "Permen No xx Tahun xxxx", desc: "BELUM DITAMBAHKAN", icon: "📑", link: "#" }
-            ]},
-       juknis: { title: "Direktori Petunjuk Teknis & Keputusan", items: 
-            [{ name: "Juknis Pengelolaan Kampung KB", desc: "Panduan pembentukan dan klasifikasi kampung", icon: "📂", link: "#" },
-             { name: "Juknis XXXXXXXXXXX", desc: "BELUM DITAMBAHKAN", icon: "📂", link: "#" },
-             { name: "Juknis XXXXXXXXXXX", desc: "BELUM DITAMBAHKAN", icon: "📂", link: "#" },
-             { name: "Juknis XXXXXXXXXXX", desc: "BELUM DITAMBAHKAN", icon: "📂", link: "#" },
-             { name: "Juknis XXXXXXXXXXX", desc: "BELUM DITAMBAHKAN", icon: "📂", link: "#" },
-             { name: "Juknis XXXXXXXXXXX", desc: "BELUM DITAMBAHKAN", icon: "📂", link: "#" }
-            ]},
+             [{ name: "UU No. 52 Tahun 2009", desc: "Perkembangan Kependudukan & Pembangunan Keluarga", icon: "📜", link: "https://drive.google.com/file/d/117CV01siCHhGE3YLmsv1Pe3oLmvDoY-h/view?usp=sharing" },
+              { name: "UU No. 23 Tahun 2026", desc: "Tentang Administrasi Kependudukan", icon: "📜", link: "https://drive.google.com/file/d/1nT8papq4S9-JXx_u3FSTN-zR5pyb_-p2/view?usp=sharing" },
+              { name: "UU No. 23 Tahun 2014", desc: "Tentang Pemerintah Daerah", icon: "📜", link: "https://drive.google.com/file/d/1APvsGhajjseCmfiDfXx38ADdsROgn8KN/view?usp=sharing" }
+              { name: "UU No. xx Tahun xxxx", desc: "Belum Ditambahkan", icon: "📜", link: "#" },
+              { name: "UU No. xx Tahun xxxx", desc: "Belum Ditambahkan", icon: "📜", link: "#" },
+              { name: "UU No. xx Tahun xxxx", desc: "Belum Ditambahkan", icon: "📜", link: "#" },]},
+   
+    perpres: { title: "Direktori Peraturan Presiden", items: 
+             [{ name: "Perpres No. 72 Tahun 2021", desc: "Percepatan Penurunan Stunting Nasional", icon: "🏛️", link: "#" },
+              { name: "Perpres No. XX Tahun XXXX", desc: "BELUM DITAMBAHKAN", icon: "🏛️", link: "#" },
+              { name: "Perpres No. XX Tahun XXXX", desc: "BELUM DITAMBAHKAN", icon: "🏛️", link: "#" },
+              { name: "Perpres No. XX Tahun XXXX", desc: "BELUM DITAMBAHKAN", icon: "🏛️", link: "#" },
+              { name: "Perpres No. XX Tahun XXXX", desc: "BELUM DITAMBAHKAN", icon: "🏛️", link: "#" },
+              { name: "Perpres No. XX Tahun XXXX", desc: "BELUM DITAMBAHKAN", icon: "🏛️", link: "#" },]},
+   
+    permen: { title: "Direktori Peraturan Menteri", items: 
+             [{ name: "Permenpan RB Jabatan Fungsional PKB", desc: "Standar Kompetensi & Butir Kegiatan PKB/PLKB", icon: "📑", link: "#" },
+              { name: "Permen No xx Tahun xxxx", desc: "BELUM DITAMBAHKAN", icon: "📑", link: "#" },
+              { name: "Permen No xx Tahun xxxx", desc: "BELUM DITAMBAHKAN", icon: "📑", link: "#" },
+              { name: "Permen No xx Tahun xxxx", desc: "BELUM DITAMBAHKAN", icon: "📑", link: "#" },
+              { name: "Permen No xx Tahun xxxx", desc: "BELUM DITAMBAHKAN", icon: "📑", link: "#" },
+              { name: "Permen No xx Tahun xxxx", desc: "BELUM DITAMBAHKAN", icon: "📑", link: "#" },
+              { name: "Permen No xx Tahun xxxx", desc: "BELUM DITAMBAHKAN", icon: "📑", link: "#" },]},
+   
+    juknis: { title: "Direktori Petunjuk Teknis & Keputusan", items: 
+             [{ name: "Juknis Pengelolaan Kampung KB", desc: "Panduan pembentukan dan klasifikasi kampung", icon: "📂", link: "#" },
+              { name: "Juknis XXXXXXXXXXX", desc: "BELUM DITAMBAHKAN", icon: "📂", link: "#" },
+              { name: "Juknis XXXXXXXXXXX", desc: "BELUM DITAMBAHKAN", icon: "📂", link: "#" },
+              { name: "Juknis XXXXXXXXXXX", desc: "BELUM DITAMBAHKAN", icon: "📂", link: "#" },
+              { name: "Juknis XXXXXXXXXXX", desc: "BELUM DITAMBAHKAN", icon: "📂", link: "#" },
+              { name: "Juknis XXXXXXXXXXX", desc: "BELUM DITAMBAHKAN", icon: "📂", link: "#" },]}
 };
 
 // --- 3. LOGIKA SLIDER FOTO BERANDA ---
