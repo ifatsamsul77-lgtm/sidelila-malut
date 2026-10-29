@@ -92,17 +92,7 @@ const subMateriData = {
         ]
     },
     pikr: { title: "PIK-Remaja (PIK-R)", parent: "poktan", items: 
-       [{ name: "MEMAHAMI DAN MENGATASI BULLYING, desc: "Membangun Lingkungan Belajar yang Aman dan Nyaman dan Saling Menghargai", icon: "📄", link: "https://docs.google.com/presentation/d/1pHAHpOdL4zo_4ugu7DNGRvWYM36ZsqetqZmfpiJZTNc/edit?usp=sharing" },
-        { name: "MODUL PIK-REMAJA", desc: "Modul belum ditambahkan", icon: "📄", link: "#" },
-        { name: "MODUL PIK-REMAJA", desc: "Modul belum ditambahkan", icon: "📄", link: "#" },
-        { name: "MODUL PIK-REMAJA", desc: "Modul belum ditambahkan", icon: "📄", link: "#" },
-        { name: "MODUL PIK-REMAJA", desc: "Modul belum ditambahkan", icon: "📄", link: "#" },
-        { name: "MODUL PIK-REMAJA", desc: "Modul belum ditambahkan", icon: "📄", link: "#" },
-        { name: "MODUL PIK-REMAJA", desc: "Modul belum ditambahkan", icon: "📄", link: "#" },
-        { name: "MODUL PIK-REMAJA", desc: "Modul belum ditambahkan", icon: "📄", link: "#" },
-        { name: "MODUL PIK-REMAJA", desc: "Modul belum ditambahkan", icon: "📄", link: "#" }
-       ] 
-   },
+       [{ name: "MEMAHAMI DAN MENGATASI BULLYING, desc: "Membangun Lingkungan Belajar yang Aman dan Nyaman dan Saling Menghargai", icon: "📄", link: "https://docs.google.com/presentation/d/1pHAHpOdL4zo_4ugu7DNGRvWYM36ZsqetqZmfpiJZTNc/edit?usp=sharing" }] },   },
     uppka: { title: "Sub-Direktori: UPPKA", parent: "poktan", items: [{ name: "Pedoman Umum Pengelolaan UPPKA", desc: "Penguatan ekonomi keluarga akseptor KB", icon: "📄", link: "#" }] },
     genting: {
         title: "Modul GENTING",
