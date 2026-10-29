@@ -511,7 +511,11 @@ function bukaFormWFH() {
                     <textarea id="wfh-kendala" rows="2" placeholder="Masukkan kendala jika ada..." class="w-full p-2 bg-transparent border-b border-slate-300 focus:border-sky-600 focus:outline-none rounded-none text-xs resize-y"></textarea>
                 </div>
             </div>
-            <div class="pt-6 border-t border-slate-200 text-center">
+            <div class="mb-4 text-left">
+       <label class="text-xs font-bold text-slate-800 uppercase block mb-1">Tanggal Surat / Laporan</label>
+       <input type="date" id="wfh-tanggal-surat" class="w-full p-2 bg-white border border-slate-300 rounded text-xs">
+   </div>
+               <div class="pt-6 border-t border-slate-200 text-center">
                 <button type="button" onclick="downloadPDFWFH()" class="px-8 py-3 bg-rose-600 text-white text-xs font-bold rounded-xl hover:bg-rose-700 shadow-md cursor-pointer">📥 Download PDF</button>
             </div>
         `;
