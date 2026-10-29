@@ -566,6 +566,8 @@ function downloadPDFWFH() {
     const jabatan = document.getElementById('wfh-jabatan')?.value || 'Penyuluh KB';
     const target = document.getElementById('wfh-target')?.value || '-';
     const kendala = document.getElementById('wfh-kendala')?.value || '-';
+    const tglSuratMentah = document.getElementById('wfh-tanggal-surat')?.value || '';
+    const tanggalSuratFinal = tglSuratMentah ? formatTanggalIndo(tglSuratMentah) : `............................ ${tahun}`;
     
     const rows = document.querySelectorAll('#wfh-tabel-body tr');
     let tabelRowsHTML = '';
@@ -669,7 +671,7 @@ function downloadPDFWFH() {
                         <p style="margin:0;">NIP. 198012182007011001</p>
                     </td>
                     <td style="width: 50%; text-align: right;">
-                        <p style="margin:0;">Kab/Kota, ............................ ${tahun}</p>
+                        <p style="margin:0;">Kab/Kota, ${tanggalSuratFinal}</p>
                         <p style="margin:0; font-weight: bold;">Penyuluh KB,</p>
                         <br><br><br>
                         <p style="margin:0; font-weight: bold; text-decoration: underline;">${nama}</p>
