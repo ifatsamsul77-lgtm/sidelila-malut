@@ -161,6 +161,7 @@ const dataPeraturan = {
              { name: "Permen No 01 Tahun 2026", desc: "Tim Pendamping Keluarga", icon: "📑", link: "https://drive.google.com/file/d/1h1tNRNDrVoYURQkI1xtp6CxDqMX9muBk/view?usp=sharing" },
              { name: "Permen No 05 Tahun 2025", desc: "Juknis Penggunaan Dana BOKB Tahun 2026", icon: "📑", link: "https://drive.google.com/file/d/180iy0y66eIQ77WR36wq1ULcT7PgA0pM8/view?usp=sharing" },
              { name: "Permen No 01 Tahun 2025", desc: "Pendayagunaan Tenaga Penyuluh Keluarga Berencana dan Petugas Lapangan Keluarga Berencana", icon: "📑", link: "https://drive.google.com/file/d/1JZ3BKCRtYXW4QXOJOE8FL5n412pY9Io4/view?usp=sharing" },
+             { name: "Permenpan/RB No 18 Tahun 2025", desc: "Jabatan Fungsional di Bidang Kependudukan dan Pembangunan Keluarga", icon: "📑", link: "https://drive.google.com/file/d/1eNOV6hIDJLENEwhUNMZMLJeuQ2i_uqvR/view?usp=sharing" },
              { name: "Permen No xx Tahun xxxx", desc: "BELUM DITAMBAHKAN", icon: "📑", link: "#" },
              { name: "Permen No xx Tahun xxxx", desc: "BELUM DITAMBAHKAN", icon: "📑", link: "#" },
              { name: "Permen No xx Tahun xxxx", desc: "BELUM DITAMBAHKAN", icon: "📑", link: "#" }
