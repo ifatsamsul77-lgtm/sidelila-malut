@@ -121,7 +121,7 @@ const subMateriData = {
               { name: "Modul SIDAYA", desc: "Belum Ditambahkan", icon: "📄", link: "#" },
              ] },
     penyuluhan: { title: "Materi Penyuluhan Umum", parent: "lainnya", items: 
-             [{ name: "Modul Penyuluhan", desc: "Belum Ditambahkan", icon: "📂", link: "#" },
+             [{ name: "Modul SATYAGATRA", desc: "Sistim Rujukan Pusat Pelayanan Keluarga Sejahtera", icon: "📂", link: "https://docs.google.com/presentation/d/1crhRv9fxUPkTYINP_9nDD5s-fCRlfZ4O/edit?usp=sharing&ouid=104636205695945782752&rtpof=true&sd=true" },
               { name: "Modul Penyuluhan", desc: "Belum Ditambahkan", icon: "📂", link: "#" },
               { name: "Modul Penyuluhan", desc: "Belum Ditambahkan", icon: "📂", link: "#" },
               { name: "Modul Penyuluhan", desc: "Belum Ditambahkan", icon: "📂", link: "#" },
