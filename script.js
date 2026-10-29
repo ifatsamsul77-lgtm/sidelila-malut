@@ -10633,7 +10633,7 @@ function downloadHasilPDF() {
     document.getElementById('pdf-skor').innerText = skor;
     document.getElementById('pdf-durasi').innerText = durasi;
 
-    // 2. Mengambil dan merangkum seluruh soal dan jawaban yang dikerjakan
+    // 2. Rangkum seluruh ke-50 soal dan jawaban ke wadah cetak PDF
     let html50Soal = '';
     
     if (typeof kumpulanSoal !== 'undefined' && kumpulanSoal.length > 0) {
@@ -10650,7 +10650,7 @@ function downloadHasilPDF() {
             `;
         });
     } else {
-        html50Soal = '<p style="color: #666;">Ringkasan lembar jawab berhasil dimuat untuk evaluasi.</p>';
+        html50Soal = '<p style="color: #666;">Data lembar jawab 50 soal berhasil dimuat.</p>';
     }
 
     document.getElementById('pdf-detail-50-soal').innerHTML = html50Soal;
@@ -10668,6 +10668,6 @@ function downloadHasilPDF() {
     };
 
     html2pdf().from(areaRekap).set(options).save().then(function() {
-        areaRekap.style.display = 'none'; // Sembunyikan kembali wadah setelah terdownload
+        areaRekap.style.display = 'none'; // Sembunyikan kembali setelah terdownload
     });
 }
