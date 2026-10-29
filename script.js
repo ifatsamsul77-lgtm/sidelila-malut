@@ -542,10 +542,20 @@ function hapusBarisWFH(btn) {
     penomoranUlangWFH();
 }
 
+
 function penomoranUlangWFH() {
     const rows = document.querySelectorAll('#wfh-tabel-body tr');
     rows.forEach((row, index) => { row.children[0].innerText = index + 1; });
     barisWfhCount = rows.length;
+}
+// Fungsi untuk membalik format YYYY-MM-DD menjadi DD-MM-YYYY
+function formatTanggalIndo(tanggalStr) {
+    if (!tanggalStr) return "-";
+    const parts = tanggalStr.split("-");
+    if (parts.length === 3) {
+        return `${parts[2]}-${parts[1]}-${parts[0]}`;
+    }
+    return tanggalStr;
 }
 
 function downloadPDFWFH() {
@@ -10753,4 +10763,13 @@ function cetakEvaluasiUjian() {
     `;
 
     bukaJendelaCetak(printHTML);
+}
+function formatTanggalID(tanggalStr) {
+    if (!tanggalStr) return "-";
+    // Jika format dari input type="date" adalah YYYY-MM-DD
+    const bagian = tanggalStr.split("-");
+    if (bagian.length === 3) {
+        return `${bagian[2]}-${bagian[1]}-${bagian[0]}`;
+    }
+    return tanggalStr; // Jika sudah format lain, kembalikan apa adanya
 }
