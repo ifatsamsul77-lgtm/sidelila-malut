@@ -56,7 +56,7 @@ const subMateriData = {
             { name: "MATERI BKB", desc: "Program Penyuluhan dan Pemberdayaan Keluarga dalam Pengasuhan Tumbuh Kembang Anak Usia 0-5 Tahun", icon:'<img src="icon4.png" class="w-8 h-8 object-contain">', link: "https://docs.google.com/presentation/d/1s9vgX5cdo7OuwdXzvqVCpUc_wKMguLsL/edit?usp=sharing&ouid=104636205695945782752&rtpof=true&sd=true" },
             { name: "BUKU SAKU KADER", desc: "Bahan Penyuluhan Bina Keluarga Balita", icon: "📝", link: "https://drive.google.com/file/d/1Go8PF1u8BL_1iuf3tS2_Fm3CECuseFnE/view?usp=sharing" },
             { name: "MATERI POLA ASUH ANAK", desc: "Pola Asuh pada 1000 Hari Pertama Kehidupan", icon:'<img src="images215.jpg" class="w-8 h-8 object-contain">', link: "https://docs.google.com/presentation/d/13E8NXccD9ZTGBNpHCVpqM2Gd56XMvoR0/edit?usp=sharing&ouid=104636205695945782752&rtpof=true&sd=true" },
-            { name: "MODUL BKB", desc: "Materi Belum Tersedia", icon: "📝", link: "#" },
+            { name: "Materi Kartu Kembang Anak", desc: "Panduan Praktis Cara Pengisian dan Penilaian Tumbuh Kembang Anak Bagi PKB/PLKB, Kader dan Orang Tua", icon: "📝", link: "https://docs.google.com/presentation/d/1Ps4Kk3xF2Dq2wzWik1Xmoa3ogYiRBgTro_Fozdw8Ock/edit?usp=sharing"},
             { name: "MODUL BKB", desc: "Materi Belum Tersedia", icon: "📝", link: "#" },
             { name: "MODUL BKB", desc: "Materi Belum Tersedia", icon: "📝", link: "#" }
         ]
