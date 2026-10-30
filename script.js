@@ -1743,24 +1743,24 @@ function muatGaleriFirebase() {
       .onSnapshot((querySnapshot) => {
           console.log("Data Firestore berhasil diakses. Jumlah dokumen:", querySnapshot.size);
           
-          // Pastikan section galeri dipaksa tampil
-          const sectionGaleri = document.getElementById('section-galeri');
-          if (sectionGaleri) {
-              sectionGaleri.style.display = 'block';
-              sectionGaleri.style.visibility = 'visible';
-          }
+         // Pastikan section galeri dipaksa tampil
+    const sectionGaleri = document.getElementById('section-galeri');
+    if (sectionGaleri) {
+        sectionGaleri.style.display = 'block';
+        sectionGaleri.style.visibility = 'visible';
+    }
 
-          // Cari kontainer, jika tidak ada buat langsung di dalam section atau body
-          let container = document.getElementById('galeri-container');
-          if (!container) {
-              container = document.createElement('div');
-              container.id = 'galeri-container';
-              if (sectionGaleri) {
-                  sectionGaleri.appendChild(container);
-              } else {
-                  document.body.appendChild(container);
-              }
-          }
+    // Cari kontainer, jika tidak ada buat langsung di dalam section atau body utama
+    let container = document.getElementById('galeri-container');
+    if (!container) {
+        container = document.createElement('div');
+        container.id = 'galeri-container';
+        if (sectionGaleri) {
+            sectionGaleri.appendChild(container);
+        } else {
+            document.body.appendChild(container);
+        }
+    }
 
           let html = "";
           if (querySnapshot.empty) {
