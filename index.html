@@ -611,5 +611,22 @@
             }
         });
     </script>
+
+	<script>
+    // Script otomatis: Jika bukan admin, sembunyikan form upload galeri
+    window.addEventListener('DOMContentLoaded', (event) => {
+        const formAdmin = document.getElementById('form-upload-admin');
+        if (formAdmin) {
+            // Cek apakah panel/tombol admin aktif di layar
+            const isAdmin = document.body.innerHTML.includes('Admin') || localStorage.getItem('isAdmin') === 'true';
+            if (!isAdmin) {
+                formAdmin.style.display = 'none';
+            } else {
+                formAdmin.style.display = 'block';
+            }
+        }
+    });
+</script>
+	
 </body>
 </html>
