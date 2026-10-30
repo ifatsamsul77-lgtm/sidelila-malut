@@ -1734,7 +1734,7 @@ function simpanFotoGaleriFirebase(fileFoto, judulFoto, keteranganFoto) {
 function muatGaleriFirebase() {
     console.log("Fungsi muatGaleriFirebase dipanggil...");
     
-  let container = document.getElementById('galeri-container');
+    let container = document.getElementById('galeri-container');
     
     // Jika wadah belum ada di halaman, buat secara otomatis di dalam section galeri
     if (!container) {
@@ -1756,33 +1756,37 @@ function muatGaleriFirebase() {
         return;
     }
 
-    // Ambil data dari Firestore
+    // Ambil data dari Firestore dengan tata letak Grid 2 Kolom Tailwind
     db.collection("galeri_sidelila")
       .onSnapshot((querySnapshot) => {
           console.log("Data Firestore berhasil diakses. Jumlah dokumen:", querySnapshot.size);
           let html = "";
           
           if (querySnapshot.empty) {
-              html = '<p style="text-align: center; color: #777;">Belum ada dokumentasi foto kegiatan.</p>';
+              html = '<div class="col-span-full text-center py-16 bg-white rounded-2xl border border-slate-200 shadow-sm"><p class="text-xs font-bold text-slate-700">Belum ada dokumentasi foto kegiatan.</p></div>';
           } else {
+              // Bungkus dengan grid 2 kolom responsive
+              html = '<div class="grid grid-cols-1 md:grid-cols-2 gap-4">';
               querySnapshot.forEach((doc) => {
                   const data = doc.data();
                   html += `
-                      <div class="galeri-card" style="border: 1px solid #ccc; padding: 15px; margin-bottom: 15px; border-radius: 8px; background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
-                          <img src="${data.image}" alt="${data.judul || 'Foto Kegiatan'}" style="width: 100%; max-height: 300px; object-fit: cover; border-radius: 6px;">
-                          <h4 style="margin: 10px 0 5px 0; font-size: 16px; color: #333; font-weight: bold;">${data.judul || ''}</h4>
-                          <p style="margin: 0 0 8px 0; font-size: 14px; color: #555;">${data.keterangan || ''}</p>
-                          <small style="color: #888;">${data.tanggalFormatted || ''}</small>
+                      <div class="bg-white rounded-2xl border border-slate-200/80 shadow-sm overflow-hidden group">
+                          <div class="aspect-video bg-slate-100 overflow-hidden">
+                              <img src="${data.image}" alt="${data.judul || 'Foto Kegiatan'}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                          </div>
+                          <div class="p-4">
+                              <p class="text-xs text-slate-700 font-medium leading-relaxed">${data.keterangan || data.judul || ''}</p>
+                          </div>
                       </div>
                   `;
               });
+              html += '</div>';
           }
           container.innerHTML = html;
       }, (error) => {
           console.error("Gagal mengambil data dari Firestore:", error);
       });
 }
-
 // 1. Jalankan sekali saat pertama kali halaman dibuka
 muatGaleriFirebase();
 
