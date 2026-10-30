@@ -1734,38 +1734,34 @@ function simpanFotoGaleriFirebase(fileFoto, judulFoto, keteranganFoto) {
 function muatGaleriFirebase() {
     console.log("Fungsi muatGaleriFirebase dipanggil...");
     
-    let container = document.getElementById('galeri-container');
-    
-    // Jika wadah belum ada di halaman, buat secara otomatis di dalam section galeri
-    if (!container) {
-        const sectionGaleri = document.getElementById('section-galeri');
-        if (sectionGaleri) {
-            container = document.createElement('div');
-            container.id = 'galeri-container';
-            sectionGaleri.appendChild(container);
-            console.log("Wadah #galeri-container berhasil dibuat secara otomatis.");
-        } else {
-            console.error("Section galeri tidak ditemukan di halaman!");
-            return;
-        }
-    }
-
     // Cek apakah variabel db dari Firebase aktif
     if (typeof db === 'undefined') {
         console.error("Variabel database (db) belum didefinisikan!");
         return;
     }
 
-    // Ambil data dari Firestore dengan tata letak Grid 2 Kolom Tailwind
+    // Ambil data dari Firestore
     db.collection("galeri_sidelila")
       .onSnapshot((querySnapshot) => {
           console.log("Data Firestore berhasil diakses. Jumlah dokumen:", querySnapshot.size);
-          let html = "";
           
+          // Cari atau buat wadah kontainer secara langsung saat data datang
+          let container = document.getElementById('galeri-container');
+          if (!container) {
+              const sectionGaleri = document.getElementById('section-galeri');
+              if (sectionGaleri) {
+                  container = document.createElement('div');
+                  container.id = 'galeri-container';
+                  sectionGaleri.appendChild(container);
+              } else {
+                  return;
+              }
+          }
+
+          let html = "";
           if (querySnapshot.empty) {
               html = '<div class="col-span-full text-center py-16 bg-white rounded-2xl border border-slate-200 shadow-sm"><p class="text-xs font-bold text-slate-700">Belum ada dokumentasi foto kegiatan.</p></div>';
           } else {
-              // Bungkus dengan grid 2 kolom responsive
               html = '<div class="grid grid-cols-1 md:grid-cols-2 gap-4">';
               querySnapshot.forEach((doc) => {
                   const data = doc.data();
@@ -1787,6 +1783,7 @@ function muatGaleriFirebase() {
           console.error("Gagal mengambil data dari Firestore:", error);
       });
 }
+
 // 1. Jalankan sekali saat pertama kali halaman dibuka
 muatGaleriFirebase();
 
