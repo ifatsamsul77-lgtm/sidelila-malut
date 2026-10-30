@@ -79,7 +79,7 @@ const subMateriData = {
         title: "Modul GENTING",
         parent: "quickwin",
         items: [
-            { name: "PANDUAN Aplikasi SIGENTING", desc: "Pengenalan Aplikasi SiGENTING", icon: '<img src="icon1.png" class="w-8 h-8 object-contain">', link: "https://drive.google.com/file/d/1apLwoYoRZKxrERlNjiq1QhlFDXl3oE3Y/view?usp=sharing" },
+            { name: "PANDUAN Aplikasi SIGENTING", desc: "Pengenalan Aplikasi SiGENTING", icon: '<img src="icon109.png" class="w-8 h-8 object-contain">', link: "https://drive.google.com/file/d/1apLwoYoRZKxrERlNjiq1QhlFDXl3oE3Y/view?usp=sharing" },
             { name: "PANDUAN AKSI CEPAT PENURUNAN STUNTING", desc: "Landasan Kebijakan Gerakan Orang Tua Asuh Cegah Stunting", icon: "📄", link: "https://docs.google.com/presentation/d/1TuZ1r65vUkM1IXedOjyb4Wjw84YUWsuD3UArmK9H9ik/edit?usp=sharing" },
             { name: "PANDUAN PELAKSANAAN GENTING", desc: "Sosialisasi Keputusan Menteri Kemendukbangga", icon: "👨‍👩‍👧", link: "https://docs.google.com/presentation/d/1-OkeN-ozFKj2aBRctIVblui4VqoXGWh_JJ2nGd5FpSk/edit?usp=sharing" },
             { name: "PANDUAN PELAKSANAAN GENTING", desc: "Buku Panduan Pelaksaan GENTING 2026", icon: '<img src="icon1.png" class="w-8 h-8 object-contain">', link: "https://drive.google.com/file/d/1AmwFtK-xTBY8JU0dr9pdHsrjCeb20ffp/view?usp=sharing" }, 
