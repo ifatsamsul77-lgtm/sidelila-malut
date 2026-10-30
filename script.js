@@ -309,6 +309,36 @@ function showMateriCategoriesView() {
     document.getElementById('materi-detail-view').style.display = 'none';
 }
 
+// --- DATA UTAMA KATEGORI MATERI ---
+const dataMateri = {
+    poktan: {
+        title: "Modul Kelompok Kegiatan (POKTAN)",
+        items: [
+            { isSubdirectory: true, subKey: "bkb", name: "Bina Keluarga Balita (BKB)", desc: "Materi BKB, BKB HI, EMAS, dan Kartu Kembang Anak", icon: "👶" },
+            { isSubdirectory: true, subKey: "bkr", name: "Bina Keluarga Remaja (BKR)", desc: "Modul pembangunan karakter dan ketahanan remaja", icon: "👦" },
+            { isSubdirectory: true, subKey: "bkl", name: "Bina Keluarga Lansia (BKL)", desc: "Pedoman pelaksanaan pembinaan lansia tangguh", icon: "👵" },
+            { isSubdirectory: true, subKey: "pikr", name: "PIK-Remaja (PIK-R)", desc: "Pusat Informasi dan Konseling Remaja", icon: "📄" },
+            { isSubdirectory: true, subKey: "uppka", name: "UPPKA", desc: "Usaha Peningkatan Pendapatan Keluarga Akseptor", icon: "📄" }
+        ]
+    },
+    quickwin: {
+        title: "Modul Program Unggulan (QUICKWIN)",
+        items: [
+            { isSubdirectory: true, subKey: "genting", name: "Modul GENTING", desc: "Gerakan Orang Tua Asuh Cegah Stunting", icon: "🌱" },
+            { isSubdirectory: true, subKey: "gati", name: "Modul GATI", desc: "Gerakan Ayah Teladan Indonesia", icon: "📄" },
+            { isSubdirectory: true, subKey: "tamasya", name: "Modul TAMASYA", desc: "Taman Asuh Sayang Anak di wilayah khusus", icon: "📄" },
+            { isSubdirectory: true, subKey: "sidaya", name: "Modul SIDAYA", desc: "Sistem Pemberdayaan Keluarga", icon: "📄" }
+        ]
+    },
+    lainnya: {
+        title: "Modul & Bahan Penyuluhan Lainnya",
+        items: [
+            { isSubdirectory: true, subKey: "penyuluhan", name: "Materi Penyuluhan Umum", desc: "Modul Satyagatra, Kampung KB, dll", icon: "📂" },
+            { isSubdirectory: true, subKey: "panduan", name: "Panduan Lapangan PKB/PLKB", desc: "Panduan Teknis dan Petunjuk Teknis Operasional", icon: "📖" }
+        ]
+    }
+};
+
 function openMateriCategory(categoryKey, event) {
     if (event) event.preventDefault();
     navigateTo('materi');
