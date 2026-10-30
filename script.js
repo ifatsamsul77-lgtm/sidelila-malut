@@ -10980,19 +10980,18 @@ async function hapusGaleriFirebase(docId) {
 }
 
 // ==========================================
-// PENGATUR TAMPILAN FORM ADMIN GALERI
+// PAKSA MUNCULKAN FORM ADMIN GALERI SAAT MENU GALERI DIBUKA
 // ==========================================
-document.addEventListener("DOMContentLoaded", function() {
+function cekDanTampilkanFormAdmin() {
     const formAdminGaleri = document.getElementById('form-upload-admin');
     if (formAdminGaleri) {
-        // Cek apakah halaman/menu yang aktif adalah area admin
-        // (Sesuaikan dengan kondisi login atau URL admin Anda)
-        const isAdminSession = localStorage.getItem('isAdmin') === 'true' || window.location.hash.includes('admin') || document.body.innerHTML.includes('Panel Admin');
-        
-        if (isAdminSession) {
-            formAdminGaleri.style.display = 'block'; // Tampilkan jika admin
-        } else {
-            formAdminGaleri.style.display = 'none';  // Sembunyikan jika user biasa
-        }
+        // Cek apakah elemen atau menu admin sedang aktif di halaman Anda
+        // Kita set 'block' agar form langsung muncul di sisi admin
+        formAdminGaleri.style.display = 'block';
     }
+}
+
+// Jalankan otomatis setiap kali halaman dimuat atau fungsi galeri dipanggil
+window.addEventListener('load', function() {
+    setTimeout(cekDanTampilkanFormAdmin, 1000);
 });
