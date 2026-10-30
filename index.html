@@ -198,17 +198,18 @@
                             <span id="arrow-submenu-form" class="text-xs transition-transform duration-200">▼</span>
                         </button>
                         <div id="submenu-form" class="pl-8 pr-2 space-y-1 mt-1" style="display: block;">
-                            <a href="#" onclick="navigateTo('galeri', event); muatGalerifirebase(); window.scrollTo({top: 0, behavior: 'smooth'});" class="block py-2 px-3 rounded-md text-xs text-slate-400 hover:text-white hover:bg-slate-800 transition-all">• Form WFH</a>
+                            <a href="#" onclick="openFormType('wfh', event); window.scrollTo({top: 0, behavior: 'smooth'});" class="block py-2 px-3 rounded-md text-xs text-slate-400 hover:text-white hover:bg-slate-800 transition-all">• Form WFH</a>
                             <a href="#" onclick="openFormType('estimasi-sasaran', event); window.scrollTo({top: 0, behavior: 'smooth'});" class="block py-2 px-3 rounded-md text-xs text-slate-400 hover:text-white hover:bg-slate-800 transition-all">• Estimasi Sasaran</a>
                             <a href="#" onclick="openFormType('estimasi-pangkat', event); window.scrollTo({top: 0, behavior: 'smooth'});" class="block py-2 px-3 rounded-md text-xs text-slate-400 hover:text-white hover:bg-slate-800 transition-all">• Estimasi Kenaikan Pangkat</a>
                             <a href="#" onclick="openFormType('usulan-pangkat', event); window.scrollTo({top: 0, behavior: 'smooth'});" class="block py-2 px-3 rounded-md text-xs text-slate-400 hover:text-white hover:bg-slate-800 transition-all">• Form Usulan Kenaikan Pangkat</a>
                         </div>
                     </div>
 
-                   <a href="#" onclick="navigateTo('galeri', event); muatGaleriFirebase(); window.scrollTo({top: 0, behavior: 'smooth'});"" id="menu-galeri" class="nav-link flex items-center gap-3 px-3.5 py-2.5 rounded-lg text-sm text-slate-300 hover:bg-slate-800 transition-all">
-    <span class="text-base">📸</span>
-    <span>6. Galeri Kegiatan</span>
-</a>
+                    <a href="#" onclick="navigateTo('galeri', event); window.scrollTo({top: 0, behavior: 'smooth'});" id="menu-galeri" class="nav-link flex items-center gap-3 px-3.5 py-2.5 rounded-lg text-sm text-slate-300 hover:bg-slate-800 transition-all">
+                        
+			<span class="text-base">🖼️</span>
+                        <span>6. Galeri Kegiatan</span>
+                    </a>
 
 			<a href="#" onclick="navigateTo('kompetensi', event); window.scrollTo({top: 0, behavior: 'smooth'});" id="menu-kompetensi" class="nav-link flex items-center gap-3 px-3.5 py-2.5 rounded-lg text-sm text-slate-300 hover:bg-slate-800 transition-all">
     <span class="text-base">📋</span>
@@ -562,17 +563,9 @@
         </div>
     </div>
             <!-- SECTION 6: GALERI -->
-       <section id="section-galeri" class="page-section space-y-5" style="display: none;">
-    <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm">
-        <h3 class="text-xl font-bold text-slate-800 flex items-center gap-2">
-            📸 Galeri Kegiatan Lini Lapangan
-        </h3>
-        <p class="text-xs text-slate-500 mt-1">Dokumentasi visual kegiatan operasional penyuluhan.</p>
-    </div>
-
-    <!-- Wadah penampung galeri -->
-    <div id="galeri-container"></div>
-</section>
+            <section id="section-galeri" class="page-section" style="display: none;">
+                <div id="galeri-container"></div>
+            </section>
 
             </main>
         </div>
