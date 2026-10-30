@@ -1732,7 +1732,7 @@ function simpanFotoGaleriFirebase(fileFoto, judulFoto, keteranganFoto) {
 
 // Fungsi untuk memuat dan menampilkan galeri secara aman dan otomatis
 function muatGaleriFirebase() {
-    console.log("Fungsi muatGaleriFirebase dipanggil...");
+    console.log("Fungsi muatGaleriFirebase dipanggil secara mandiri...");
 
     if (typeof db === 'undefined') {
         console.error("Variabel database (db) belum didefinisikan!");
@@ -1743,33 +1743,30 @@ function muatGaleriFirebase() {
       .onSnapshot((querySnapshot) => {
           console.log("Data Firestore berhasil diakses. Jumlah dokumen:", querySnapshot.size);
           
-         // Pastikan section galeri dipaksa tampil
-    const sectionGaleri = document.getElementById('section-galeri');
-    if (sectionGaleri) {
-        sectionGaleri.style.display = 'block';
-        sectionGaleri.style.visibility = 'visible';
-    }
+          // Cari area tampilan utama (main atau body) agar pasti tampil
+          const mainArea = document.querySelector('main') || document.body;
 
-  // Cari area utama atau section aktif di layar
-    const targetArea = document.getElementById('section-galeri') || document.querySelector('main') || document.body;
-    if (targetArea && targetArea.style) {
-        targetArea.style.display = 'block';
-        targetArea.style.visibility = 'visible';
-    }
+          // Cek apakah wadah galeri independen sudah ada, jika belum buat langsung
+          let container = document.getElementById('galeri-mandiri-container');
+          if (!container) {
+              container = document.createElement('div');
+              container.id = 'galeri-mandiri-container';
+              container.style.cssText = 'padding: 20px; background: #f8fafc; min-height: 80vh;';
+              mainArea.appendChild(container);
+          }
 
-    let container = document.getElementById('galeri-container');
-    if (!container) {
-        container = document.createElement('div');
-        container.id = 'galeri-container';
-        targetArea.appendChild(container);
-    }
+          // Pastikan section galeri bawaan lama dibuka jika ada
+          const sectionGaleri = document.getElementById('section-galeri');
+          if (sectionGaleri) {
+              sectionGaleri.style.display = 'block';
+          }
 
-          let html = "";
+          let html = `<div class="mb-6"><h2 class="text-xl font-black uppercase text-slate-800">Galeri Dokumentasi Kegiatan</h2><p class="text-xs text-slate-500">Daftar foto kegiatan lini lapangan SIDELILA.</p></div>`;
+          
           if (querySnapshot.empty) {
-              html = '<div class="col-span-full text-center py-16 bg-white rounded-2xl border border-slate-200 shadow-sm"><p class="text-xs font-bold text-slate-700">Belum ada dokumentasi foto kegiatan.</p></div>';
+              html += '<div class="text-center py-16 bg-white rounded-2xl border border-slate-200 shadow-sm"><p class="text-xs font-bold text-slate-700">Belum ada dokumentasi foto kegiatan.</p></div>';
           } else {
-              // Susun grid 2 kolom yang rapi
-              html = '<div class="grid grid-cols-1 md:grid-cols-2 gap-4 p-4">';
+              html += '<div class="grid grid-cols-1 md:grid-cols-2 gap-6">';
               querySnapshot.forEach((doc) => {
                   const data = doc.data();
                   html += `
@@ -1779,6 +1776,7 @@ function muatGaleriFirebase() {
                           </div>
                           <div class="p-4">
                               <p class="text-xs text-slate-700 font-medium leading-relaxed">${data.keterangan || data.judul || ''}</p>
+                              <span class="text-[10px] text-slate-400 mt-2 block">${data.tanggalFormatted || ''}</span>
                           </div>
                       </div>
                   `;
@@ -1786,20 +1784,13 @@ function muatGaleriFirebase() {
               html += '</div>';
           }
           
-          // Eksekusi injeksi HTML ke layar secara langsung
           container.innerHTML = html;
-          
-          // Paksa kontainer agar tampil jelas di layar utama
           container.style.display = 'block';
-          container.style.visibility = 'visible';
-          container.style.opacity = '1';
-          
-          console.log("HTML galeri berhasil disuntikkan ke layar!");
+          console.log("Galeri mandiri berhasil dirender ke layar!");
       }, (error) => {
           console.error("Gagal mengambil data dari Firestore:", error);
       });
 }
-
 
 // 1. Jalankan sekali saat pertama kali halaman dibuka
 muatGaleriFirebase();
