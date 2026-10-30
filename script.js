@@ -1734,10 +1734,14 @@ function simpanFotoGaleriFirebase(fileFoto, judulFoto, keteranganFoto) {
 function muatGaleriFirebase() {
     console.log("Fungsi muatGaleriFirebase dipanggil...");
     
+    // Cari section galeri atau buat langsung jika belum ada
+    let sectionGaleri = document.getElementById('section-galeri');
+    if (sectionGaleri) {
+        sectionGaleri.style.display = 'block'; // Pastikan section terbuka
+    }
+
     let container = document.getElementById('galeri-container');
-    const sectionGaleri = document.getElementById('section-galeri');
-    
-    if (sectionGaleri && !container) {
+    if (!container && sectionGaleri) {
         container = document.createElement('div');
         container.id = 'galeri-container';
         sectionGaleri.appendChild(container);
@@ -1752,13 +1756,12 @@ function muatGaleriFirebase() {
       .onSnapshot((querySnapshot) => {
           console.log("Data Firestore berhasil diakses. Jumlah dokumen:", querySnapshot.size);
           
-          if (!container) {
-              container = document.getElementById('galeri-container');
-              if (!container && sectionGaleri) {
-                  container = document.createElement('div');
-                  container.id = 'galeri-container';
-                  sectionGaleri.appendChild(container);
-              }
+          // Validasi ulang kontainer saat data masuk
+          let activeContainer = document.getElementById('galeri-container');
+          if (!activeContainer && sectionGaleri) {
+              activeContainer = document.createElement('div');
+              activeContainer.id = 'galeri-container';
+              sectionGaleri.appendChild(activeContainer);
           }
 
           let html = "";
@@ -1781,9 +1784,9 @@ function muatGaleriFirebase() {
               });
               html += '</div>';
           }
-          
-          if (container) {
-              container.innerHTML = html;
+
+          if (activeContainer) {
+              activeContainer.innerHTML = html;
           }
       }, (error) => {
           console.error("Gagal mengambil data dari Firestore:", error);
