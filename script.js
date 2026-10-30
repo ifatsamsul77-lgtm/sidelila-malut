@@ -10911,3 +10911,70 @@ async function hapusGaleriFirebase(docId) {
         }
     }
 }
+// ==========================================
+// KELOLA GALERI KEGIATAN (ADMIN UPLOAD & DELETE)
+// ==========================================
+
+// Fungsi untuk mengunggah foto galeri baru dari panel admin
+async function uploadGaleriBaru(event) {
+    event.preventDefault();
+    const fileInput = document.getElementById('input-file-galeri');
+    const ketInput = document.getElementById('input-keterangan-galeri');
+    const btnSubmit = document.getElementById('btn-upload-galeri');
+
+    const file = fileInput.files[0];
+    const keterangan = ketInput.value;
+
+    if (!file) return;
+
+    btnSubmit.disabled = true;
+    btnSubmit.innerText = "Mengunggah...";
+
+    try {
+        const reader = new FileReader();
+        reader.onload = async function(e) {
+            const base64Image = e.target.result;
+
+            // Simpan ke Firestore collection 'galeri_sidelila'
+            await db.collection("galeri_sidelila").add({
+                image: base64Image,
+                keterangan: keterangan,
+                tanggalFormatted: new Date().toLocaleDateString('id-ID', { day: 'numeric', month: 'long', year: 'numeric' }),
+                createdAt: firebase.firestore.FieldValue.serverTimestamp()
+            });
+
+            alert("Foto galeri berhasil ditambahkan!");
+            fileInput.value = "";
+            ketInput.value = "";
+            btnSubmit.disabled = false;
+            btnSubmit.innerText = "Simpan & Unggah Foto";
+            
+            // Muat ulang galeri agar foto baru langsung tampil
+            if (typeof muatGaleriFirebase === 'function') {
+                muatGaleriFirebase();
+            }
+        };
+        reader.readAsDataURL(file);
+    } catch (error) {
+        console.error("Gagal mengunggah foto:", error);
+        alert("Terjadi kesalahan saat mengunggah foto.");
+        btnSubmit.disabled = false;
+        btnSubmit.innerText = "Simpan & Unggah Foto";
+    }
+}
+
+// Fungsi untuk menghapus foto galeri berdasarkan ID dokumen Firestore
+async function hapusGaleriFirebase(docId) {
+    if (confirm("Apakah Anda yakin ingin menghapus foto kegiatan ini?")) {
+        try {
+            await db.collection("galeri_sidelila").doc(docId).delete();
+            alert("Foto berhasil dihapus.");
+            if (typeof muatGaleriFirebase === 'function') {
+                muatGaleriFirebase();
+            }
+        } catch (error) {
+            console.error("Gagal menghapus foto:", error);
+            alert("Gagal menghapus foto dari database.");
+        }
+    }
+}
