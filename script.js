@@ -1734,14 +1734,10 @@ function simpanFotoGaleriFirebase(fileFoto, judulFoto, keteranganFoto) {
 function muatGaleriFirebase() {
     console.log("Fungsi muatGaleriFirebase dipanggil...");
     
-    // Paksa agar section galeri terlihat di layar
-    const sectionGaleri = document.getElementById('section-galeri');
-    if (sectionGaleri) {
-        sectionGaleri.style.display = 'block';
-    }
-
     let container = document.getElementById('galeri-container');
-    if (!container && sectionGaleri) {
+    const sectionGaleri = document.getElementById('section-galeri');
+    
+    if (sectionGaleri && !container) {
         container = document.createElement('div');
         container.id = 'galeri-container';
         sectionGaleri.appendChild(container);
@@ -1756,7 +1752,14 @@ function muatGaleriFirebase() {
       .onSnapshot((querySnapshot) => {
           console.log("Data Firestore berhasil diakses. Jumlah dokumen:", querySnapshot.size);
           
-          if (!container) return;
+          if (!container) {
+              container = document.getElementById('galeri-container');
+              if (!container && sectionGaleri) {
+                  container = document.createElement('div');
+                  container.id = 'galeri-container';
+                  sectionGaleri.appendChild(container);
+              }
+          }
 
           let html = "";
           if (querySnapshot.empty) {
@@ -1778,7 +1781,10 @@ function muatGaleriFirebase() {
               });
               html += '</div>';
           }
-          container.innerHTML = html;
+          
+          if (container) {
+              container.innerHTML = html;
+          }
       }, (error) => {
           console.error("Gagal mengambil data dari Firestore:", error);
       });
