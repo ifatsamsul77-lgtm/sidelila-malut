@@ -1734,7 +1734,7 @@ function simpanFotoGaleriFirebase(fileFoto, judulFoto, keteranganFoto) {
 function muatGaleriFirebase() {
     console.log("Fungsi muatGaleriFirebase dipanggil...");
     
-    let container = document.getElementById('galeri-container');
+  let container = document.getElementById('galeri-container');
     
     // Jika wadah belum ada di halaman, buat secara otomatis di dalam section galeri
     if (!container) {
@@ -1832,12 +1832,7 @@ document.addEventListener("click", function(e) {
     }
 });
 
-// Jalankan juga secara otomatis saat halaman pertama kali dibuka di perangkat mana pun
-if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', muatGaleriFirebase);
-} else {
-    muatGaleriFirebase();
-}
+
 
 // --- BANK SOAL KOMPETENSI LINI LAPANGAN ---
 const bankSoalKompetensi = [
