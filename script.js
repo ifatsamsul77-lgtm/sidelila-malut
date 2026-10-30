@@ -1750,16 +1750,18 @@ function muatGaleriFirebase() {
         sectionGaleri.style.visibility = 'visible';
     }
 
-    // Cari kontainer, jika tidak ada buat langsung di dalam section atau body utama
+  // Cari area utama atau section aktif di layar
+    const targetArea = document.getElementById('section-galeri') || document.querySelector('main') || document.body;
+    if (targetArea && targetArea.style) {
+        targetArea.style.display = 'block';
+        targetArea.style.visibility = 'visible';
+    }
+
     let container = document.getElementById('galeri-container');
     if (!container) {
         container = document.createElement('div');
         container.id = 'galeri-container';
-        if (sectionGaleri) {
-            sectionGaleri.appendChild(container);
-        } else {
-            document.body.appendChild(container);
-        }
+        targetArea.appendChild(container);
     }
 
           let html = "";
