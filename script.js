@@ -10978,3 +10978,21 @@ async function hapusGaleriFirebase(docId) {
         }
     }
 }
+
+// ==========================================
+// PENGATUR TAMPILAN FORM ADMIN GALERI
+// ==========================================
+document.addEventListener("DOMContentLoaded", function() {
+    const formAdminGaleri = document.getElementById('form-upload-admin');
+    if (formAdminGaleri) {
+        // Cek apakah halaman/menu yang aktif adalah area admin
+        // (Sesuaikan dengan kondisi login atau URL admin Anda)
+        const isAdminSession = localStorage.getItem('isAdmin') === 'true' || window.location.hash.includes('admin') || document.body.innerHTML.includes('Panel Admin');
+        
+        if (isAdminSession) {
+            formAdminGaleri.style.display = 'block'; // Tampilkan jika admin
+        } else {
+            formAdminGaleri.style.display = 'none';  // Sembunyikan jika user biasa
+        }
+    }
+});
