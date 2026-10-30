@@ -1734,13 +1734,6 @@ function simpanFotoGaleriFirebase(fileFoto, judulFoto, keteranganFoto) {
 function muatGaleriFirebase() {
     console.log("Fungsi muatGaleriFirebase dipanggil...");
 
-    // Paksa tampilkan section galeri secara langsung
-    const sectionGaleri = document.getElementById('section-galeri');
-    if (sectionGaleri) {
-        sectionGaleri.style.display = 'block';
-        sectionGaleri.style.visibility = 'visible';
-    }
-
     if (typeof db === 'undefined') {
         console.error("Variabel database (db) belum didefinisikan!");
         return;
@@ -1750,18 +1743,31 @@ function muatGaleriFirebase() {
       .onSnapshot((querySnapshot) => {
           console.log("Data Firestore berhasil diakses. Jumlah dokumen:", querySnapshot.size);
           
+          // Pastikan section galeri dipaksa tampil
+          const sectionGaleri = document.getElementById('section-galeri');
+          if (sectionGaleri) {
+              sectionGaleri.style.display = 'block';
+              sectionGaleri.style.visibility = 'visible';
+          }
+
+          // Cari kontainer, jika tidak ada buat langsung di dalam section atau body
           let container = document.getElementById('galeri-container');
-          if (!container && sectionGaleri) {
+          if (!container) {
               container = document.createElement('div');
               container.id = 'galeri-container';
-              sectionGaleri.appendChild(container);
+              if (sectionGaleri) {
+                  sectionGaleri.appendChild(container);
+              } else {
+                  document.body.appendChild(container);
+              }
           }
 
           let html = "";
           if (querySnapshot.empty) {
               html = '<div class="col-span-full text-center py-16 bg-white rounded-2xl border border-slate-200 shadow-sm"><p class="text-xs font-bold text-slate-700">Belum ada dokumentasi foto kegiatan.</p></div>';
           } else {
-              html = '<div class="grid grid-cols-1 md:grid-cols-2 gap-4">';
+              // Susun grid 2 kolom yang rapi
+              html = '<div class="grid grid-cols-1 md:grid-cols-2 gap-4 p-4">';
               querySnapshot.forEach((doc) => {
                   const data = doc.data();
                   html += `
@@ -1778,13 +1784,14 @@ function muatGaleriFirebase() {
               html += '</div>';
           }
           
-          if (container) {
-              container.innerHTML = html;
-          }
+          // Eksekusi injeksi HTML ke layar secara langsung
+          container.innerHTML = html;
+          console.log("HTML galeri berhasil disuntikkan ke layar!");
       }, (error) => {
           console.error("Gagal mengambil data dari Firestore:", error);
       });
 }
+
 
 // 1. Jalankan sekali saat pertama kali halaman dibuka
 muatGaleriFirebase();
