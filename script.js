@@ -1786,6 +1786,12 @@ function muatGaleriFirebase() {
           
           // Eksekusi injeksi HTML ke layar secara langsung
           container.innerHTML = html;
+          
+          // Paksa kontainer agar tampil jelas di layar utama
+          container.style.display = 'block';
+          container.style.visibility = 'visible';
+          container.style.opacity = '1';
+          
           console.log("HTML galeri berhasil disuntikkan ke layar!");
       }, (error) => {
           console.error("Gagal mengambil data dari Firestore:", error);
