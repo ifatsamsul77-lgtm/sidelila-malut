@@ -1732,7 +1732,7 @@ function simpanFotoGaleriFirebase(fileFoto, judulFoto, keteranganFoto) {
 
 // Fungsi untuk memuat dan menampilkan galeri secara aman dan otomatis
 function muatGaleriFirebase() {
-    console.log("Fungsi muatGaleriFirebase dipanggil secara mandiri...");
+    console.log("Fungsi muatGaleriFirebase dipanggil...");
 
     if (typeof db === 'undefined') {
         console.error("Variabel database (db) belum didefinisikan!");
@@ -1743,30 +1743,32 @@ function muatGaleriFirebase() {
       .onSnapshot((querySnapshot) => {
           console.log("Data Firestore berhasil diakses. Jumlah dokumen:", querySnapshot.size);
           
-          // Cari area tampilan utama (main atau body) agar pasti tampil
-          const mainArea = document.querySelector('main') || document.body;
-
-          // Cek apakah wadah galeri independen sudah ada, jika belum buat langsung
-          let container = document.getElementById('galeri-mandiri-container');
-          if (!container) {
-              container = document.createElement('div');
-              container.id = 'galeri-mandiri-container';
-              container.style.cssText = 'padding: 20px; background: #f8fafc; min-height: 80vh;';
-              mainArea.appendChild(container);
-          }
-
-          // Pastikan section galeri bawaan lama dibuka jika ada
-          const sectionGaleri = document.getElementById('section-galeri');
+          // Cari section galeri atau area konten utama yang sedang aktif
+          let targetArea = document.getElementById('section-galeri') || document.querySelector('main') || document.body;
+          
+          // Pastikan section galeri dipaksa tampil
+          let sectionGaleri = document.getElementById('section-galeri');
           if (sectionGaleri) {
               sectionGaleri.style.display = 'block';
           }
 
-          let html = `<div class="mb-6"><h2 class="text-xl font-black uppercase text-slate-800">Galeri Dokumentasi Kegiatan</h2><p class="text-xs text-slate-500">Daftar foto kegiatan lini lapangan SIDELILA.</p></div>`;
-          
+          // Cari atau buat kontainer galeri langsung di area aktif
+          let container = document.getElementById('galeri-container');
+          if (!container) {
+              container = document.createElement('div');
+              container.id = 'galeri-container';
+              if (sectionGaleri) {
+                  sectionGaleri.appendChild(container);
+              } else {
+                  targetArea.appendChild(container);
+              }
+          }
+
+          let html = "";
           if (querySnapshot.empty) {
-              html += '<div class="text-center py-16 bg-white rounded-2xl border border-slate-200 shadow-sm"><p class="text-xs font-bold text-slate-700">Belum ada dokumentasi foto kegiatan.</p></div>';
+              html = '<div class="col-span-full text-center py-16 bg-white rounded-2xl border border-slate-200 shadow-sm"><p class="text-xs font-bold text-slate-700">Belum ada dokumentasi foto kegiatan.</p></div>';
           } else {
-              html += '<div class="grid grid-cols-1 md:grid-cols-2 gap-6">';
+              html = '<div class="grid grid-cols-1 md:grid-cols-2 gap-4 p-4">';
               querySnapshot.forEach((doc) => {
                   const data = doc.data();
                   html += `
@@ -1776,7 +1778,6 @@ function muatGaleriFirebase() {
                           </div>
                           <div class="p-4">
                               <p class="text-xs text-slate-700 font-medium leading-relaxed">${data.keterangan || data.judul || ''}</p>
-                              <span class="text-[10px] text-slate-400 mt-2 block">${data.tanggalFormatted || ''}</span>
                           </div>
                       </div>
                   `;
@@ -1785,13 +1786,10 @@ function muatGaleriFirebase() {
           }
           
           container.innerHTML = html;
-          container.style.display = 'block';
-          console.log("Galeri mandiri berhasil dirender ke layar!");
       }, (error) => {
           console.error("Gagal mengambil data dari Firestore:", error);
       });
 }
-
 // 1. Jalankan sekali saat pertama kali halaman dibuka
 muatGaleriFirebase();
 
@@ -10843,72 +10841,3 @@ function loadGaleriKegiatan() {
         `;
     });
 }
-
-// ==========================================
-// KELOLA GALERI KEGIATAN (ADMIN UPLOAD & DELETE)
-// ==========================================
-
-// Fungsi untuk mengunggah foto galeri baru dari panel admin
-async function uploadGaleriBaru(event) {
-    event.preventDefault();
-    const fileInput = document.getElementById('input-file-galeri');
-    const ketInput = document.getElementById('input-keterangan-galeri');
-    const btnSubmit = document.getElementById('btn-upload-galeri');
-
-    const file = fileInput.files[0];
-    const keterangan = ketInput.value;
-
-    if (!file) return;
-
-    btnSubmit.disabled = true;
-    btnSubmit.innerText = "Mengunggah...";
-
-    try {
-        const reader = new FileReader();
-        reader.onload = async function(e) {
-            const base64Image = e.target.result;
-
-            // Simpan ke Firestore collection 'galeri_sidelila'
-            await db.collection("galeri_sidelila").add({
-                image: base64Image,
-                keterangan: keterangan,
-                tanggalFormatted: new Date().toLocaleDateString('id-ID', { day: 'numeric', month: 'long', year: 'numeric' }),
-                createdAt: firebase.firestore.FieldValue.serverTimestamp()
-            });
-
-            alert("Foto galeri berhasil ditambahkan!");
-            fileInput.value = "";
-            ketInput.value = "";
-            btnSubmit.disabled = false;
-            btnSubmit.innerText = "Simpan & Unggah Foto";
-            
-            // Muat ulang galeri agar foto baru langsung tampil
-            if (typeof muatGaleriFirebase === 'function') {
-                muatGaleriFirebase();
-            }
-        };
-        reader.readAsDataURL(file);
-    } catch (error) {
-        console.error("Gagal mengunggah foto:", error);
-        alert("Terjadi kesalahan saat mengunggah foto.");
-        btnSubmit.disabled = false;
-        btnSubmit.innerText = "Simpan & Unggah Foto";
-    }
-}
-
-// Fungsi untuk menghapus foto galeri berdasarkan ID dokumen Firestore
-async function hapusGaleriFirebase(docId) {
-    if (confirm("Apakah Anda yakin ingin menghapus foto kegiatan ini?")) {
-        try {
-            await db.collection("galeri_sidelila").doc(docId).delete();
-            alert("Foto berhasil dihapus.");
-            if (typeof muatGaleriFirebase === 'function') {
-                muatGaleriFirebase();
-            }
-        } catch (error) {
-            console.error("Gagal menghapus foto:", error);
-            alert("Gagal menghapus foto dari database.");
-        }
-    }
-}
-
