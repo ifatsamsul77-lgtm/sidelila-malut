@@ -10812,3 +10812,30 @@ function formatTanggalID(tanggalStr) {
     }
     return tanggalStr; // Jika sudah format lain, kembalikan apa adanya
 }
+// --- DATA GALERI KEGIATAN LINI LAPANGAN ---
+const galeriData = [
+    { 
+        image: "foto1.jpg", 
+        caption: "Dokumentasi kegiatan operasional penyuluhan lini lapangan." 
+    }
+];
+
+// --- FUNGSI MERENDER GALERI KE TAMPILAN USER ---
+function loadGaleriKegiatan() {
+    const grid = document.getElementById('galeri-items-grid');
+    if (!grid) return;
+    
+    grid.innerHTML = '';
+    galeriData.forEach(item => {
+        grid.innerHTML += `
+            <div class="bg-white rounded-2xl border border-slate-200/80 shadow-sm hover:shadow-md hover:border-sky-400 transition-all overflow-hidden group">
+                <div class="overflow-hidden aspect-video bg-slate-100">
+                    <img src="${item.image}" alt="Dokumentasi Kegiatan" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                </div>
+                <div class="p-4">
+                    <p class="text-xs text-slate-700 font-medium leading-relaxed">${item.caption}</p>
+                </div>
+            </div>
+        `;
+    });
+}
