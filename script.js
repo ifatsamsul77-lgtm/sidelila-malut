@@ -1,5 +1,5 @@
 /* ==========================================================================
-   SIDELILA v2.0 - SCRIPT UTAMA, DIREKTORI MATERI & PERATURAN (FINAL SAFE)
+   SIDELILA v2.0 - SCRIPT UTAMA, DIREKTORI & MODUL LENGKAP (FINAL FIXED)
    ========================================================================== */
 
 // --- 1. CEK SESI OTOMATIS & INISIALISASI DASHBOARD ---
@@ -158,7 +158,7 @@ if (typeof window.dataMateri === 'undefined') {
 }
 const dataMateri = window.dataMateri;
 
-// --- 4. DATA DIREKTORI PERATURAN & FUNGSI NAVIGASINYA ---
+// --- 4. DATA DIREKTORI PERATURAN & NAVIGASI ---
 if (typeof window.dataPeraturan === 'undefined') {
     window.dataPeraturan = {
         uu: { title: "Direktori Undang-Undang", items: 
@@ -287,7 +287,62 @@ function openSubMateri(subKey) {
     });
 }
 
-// --- 5. LOGIKA SLIDER FOTO BERANDA (AMAN DARI DUPLIKASI) ---
+// --- 5. LOGIKA FUNGSI FORM LAPORAN YANG HILANG (FIX REFERENCE ERROR) ---
+function bukaEstimasiSasaran() {
+    const container = document.getElementById('form-detail-container');
+    const catView = document.getElementById('form-categories-view');
+    if (catView) catView.style.display = 'none';
+    if (container) {
+        container.style.display = 'block';
+        container.innerHTML = `
+            <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-4">
+                <div class="flex justify-between items-center border-b pb-3">
+                    <h3 class="font-bold text-slate-800 text-sm">Simulasi Estimasi Sasaran Wilayah Binaan</h3>
+                    <button type="button" onclick="closeFormDetailView()" class="px-3 py-1 bg-slate-100 hover:bg-slate-200 text-xs font-bold rounded-lg cursor-pointer">← Kembali</button>
+                </div>
+                <p class="text-xs text-slate-600">Fitur kalkulator dan estimasi sasaran operasional lini lapangan.</p>
+            </div>
+        `;
+    }
+}
+
+function bukaEstimasiPangkat() {
+    const container = document.getElementById('form-detail-container');
+    const catView = document.getElementById('form-categories-view');
+    if (catView) catView.style.display = 'none';
+    if (container) {
+        container.style.display = 'block';
+        container.innerHTML = `
+            <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-4">
+                <div class="flex justify-between items-center border-b pb-3">
+                    <h3 class="font-bold text-slate-800 text-sm">Kalkulator Estimasi Kenaikan Pangkat</h3>
+                    <button type="button" onclick="closeFormDetailView()" class="px-3 py-1 bg-slate-100 hover:bg-slate-200 text-xs font-bold rounded-lg cursor-pointer">← Kembali</button>
+                </div>
+                <p class="text-xs text-slate-600">Simulasi perhitungan akumulasi angka kredit fungsional PKB/PLKB.</p>
+            </div>
+        `;
+    }
+}
+
+function bukaFormUsulanPangkat() {
+    const container = document.getElementById('form-detail-container');
+    const catView = document.getElementById('form-categories-view');
+    if (catView) catView.style.display = 'none';
+    if (container) {
+        container.style.display = 'block';
+        container.innerHTML = `
+            <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-4">
+                <div class="flex justify-between items-center border-b pb-3">
+                    <h3 class="font-bold text-slate-800 text-sm">Form Usulan Pengajuan Kenaikan Pangkat</h3>
+                    <button type="button" onclick="closeFormDetailView()" class="px-3 py-1 bg-slate-100 hover:bg-slate-200 text-xs font-bold rounded-lg cursor-pointer">← Kembali</button>
+                </div>
+                <p class="text-xs text-slate-600">Form pengajuan dan verifikasi berkas kenaikan jenjang jabatan.</p>
+            </div>
+        `;
+    }
+}
+
+// --- 6. LOGIKA SLIDER FOTO BERANDA ---
 if (typeof window.currentSlide === 'undefined') {
     window.currentSlide = 0;
 }
@@ -324,7 +379,7 @@ function nextSlide() { showSlide(window.currentSlide + 1); }
 function prevSlide() { showSlide(window.currentSlide - 1); }
 function goToSlide(index) { showSlide(index); }
 
-// --- 6. SISTEM LOGIN & SESSION ---
+// --- 7. SISTEM LOGIN & SESSION ---
 function prosesLoginManual() {
     const userEl = document.getElementById('login-user');
     const passEl = document.getElementById('login-pass');
@@ -385,7 +440,7 @@ function handleLogout() {
     }
 }
 
-// --- 7. NAVIGASI HALAMAN & SIDEBAR ---
+// --- 8. NAVIGASI HALAMAN & SIDEBAR ---
 function navigateTo(sectionId, event) {
     window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
     document.body.scrollTop = 0;
@@ -457,13 +512,13 @@ function closeFormDetailView() {
 function openFormType(key, event) {
     if (event) event.preventDefault();
     navigateTo('form');
-    if (typeof bukaFormWFH === 'function' && key === 'wfh') bukaFormWFH();
-    else if (typeof bukaEstimasiSasaran === 'function' && key === 'estimasi-sasaran') bukaEstimasiSasaran();
-    else if (typeof bukaEstimasiPangkat === 'function' && key === 'estimasi-pangkat') bukaEstimasiPangkat();
-    else if (typeof bukaFormUsulanPangkat === 'function' && key === 'usulan-pangkat') bukaFormUsulanPangkat();
+    if (key === 'wfh' && typeof bukaFormWFH === 'function') bukaFormWFH();
+    else if (key === 'estimasi-sasaran') bukaEstimasiSasaran();
+    else if (key === 'estimasi-pangkat') bukaEstimasiPangkat();
+    else if (key === 'usulan-pangkat') bukaFormUsulanPangkat();
 }
 
-// --- 8. PENDUKUNG CETAK GLOBAL ---
+// --- 9. PENDUKUNG CETAK GLOBAL ---
 function bukaJendelaCetak(htmlContent) {
     const win = window.open('', '_blank');
     if (!win) { alert("Izinkan pop-up browser."); return; }
@@ -471,81 +526,4 @@ function bukaJendelaCetak(htmlContent) {
     win.document.close();
     win.focus();
     setTimeout(() => { win.print(); }, 500);
-}
-
-// --- TAMBAHAN FUNGSI PENGHUBUNG FORM LAPORAN & GALERI (FINAL FIX) ---
-function bukaEstimasiSasaran() {
-    const container = document.getElementById('form-detail-container');
-    const catView = document.getElementById('form-categories-view');
-    if (catView) catView.style.display = 'none';
-    if (container) {
-        container.style.display = 'block';
-        container.innerHTML = `
-            <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-4">
-                <div class="flex justify-between items-center border-b pb-3">
-                    <h3 class="font-bold text-slate-800 text-sm">Simulasi Estimasi Sasaran Wilayah Binaan</h3>
-                    <button type="button" onclick="closeFormDetailView()" class="px-3 py-1 bg-slate-100 hover:bg-slate-200 text-xs font-bold rounded-lg">← Kembali</button>
-                </div>
-                <p class="text-xs text-slate-600">Fitur kalkulator dan estimasi sasaran operasional lini lapangan.</p>
-            </div>
-        `;
-    }
-}
-
-function bukaEstimasiPangkat() {
-    const container = document.getElementById('form-detail-container');
-    const catView = document.getElementById('form-categories-view');
-    if (catView) catView.style.display = 'none';
-    if (container) {
-        container.style.display = 'block';
-        container.innerHTML = `
-            <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-4">
-                <div class="flex justify-between items-center border-b pb-3">
-                    <h3 class="font-bold text-slate-800 text-sm">Kalkulator Estimasi Kenaikan Pangkat</h3>
-                    <button type="button" onclick="closeFormDetailView()" class="px-3 py-1 bg-slate-100 hover:bg-slate-200 text-xs font-bold rounded-lg">← Kembali</button>
-                </div>
-                <p class="text-xs text-slate-600">Simulasi perhitungan akumulasi angka kredit fungsional PKB/PLKB.</p>
-            </div>
-        `;
-    }
-}
-
-function bukaFormUsulanPangkat() {
-    const container = document.getElementById('form-detail-container');
-    const catView = document.getElementById('form-categories-view');
-    if (catView) catView.style.display = 'none';
-    if (container) {
-        container.style.display = 'block';
-        container.innerHTML = `
-            <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-4">
-                <div class="flex justify-between items-center border-b pb-3">
-                    <h3 class="font-bold text-slate-800 text-sm">Form Usulan Pengajuan Kenaikan Pangkat</h3>
-                    <button type="button" onclick="closeFormDetailView()" class="px-3 py-1 bg-slate-100 hover:bg-slate-200 text-xs font-bold rounded-lg">← Kembali</button>
-                </div>
-                <p class="text-xs text-slate-600">Form pengajuan dan verifikasi berkas kenaikan jenjang jabatan.</p>
-            </div>
-        `;
-    }
-}
-
-// Pastikan fungsi render galeri global terpanggil dengan aman
-if (typeof renderGaleriView === 'undefined') {
-    function renderGaleriView() {
-        const target = document.getElementById('section-galeri');
-        if (!target) return;
-        target.innerHTML = `
-            <div class="space-y-6">
-                <div class="border-b border-slate-200 pb-4">
-                    <h2 class="text-lg font-black uppercase text-slate-900">Galeri Dokumentasi Kegiatan</h2>
-                    <p class="text-xs text-slate-500 mt-1">Dokumentasi visual kegiatan operasional dan program Bangga Kencana.</p>
-                </div>
-                <div id="galeri-container" class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                    <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm text-center col-span-full">
-                        <p class="text-xs font-bold text-slate-600">Belum ada dokumentasi foto kegiatan di server.</p>
-                    </div>
-                </div>
-            </div>
-        `;
-        if (typeof muatGaleriFirebase === 'function') muatGaleriFirebase();
-    }
 }
