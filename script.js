@@ -1,5 +1,5 @@
 /* ==========================================================================
-   SIDELILA v2.0 - SCRIPT UTAMA GABUNGAN 100% LENGKAP & UTUH (FINAL)
+   SIDELILA v2.0 - SCRIPT UTAMA LENGKAP & UTUH (FINAL CLEANED)
    ========================================================================== */
 
 // --- 1. CEK SESI OTOMATIS & INISIALISASI DASHBOARD ---
@@ -14,150 +14,6 @@ document.addEventListener("DOMContentLoaded", function() {
         if (viewDash) viewDash.style.display = 'none';
     }
 });
-
-// --- 2. DATA MATERI & DIREKTORI BERTINGKAT ---
-const subMateriData = {
-    bkb: {
-        title: "Bina Keluarga Balita (BKB)",
-        parent: "poktan",
-        items: [
-            { name: "MATERI BKB HIU", desc: "Pedoman Bina Keluarga Balita Holistik Integratif Unggulan", icon:'<img src="images1.png" class="w-8 h-8 object-contain">', link: "https://drive.google.com/file/d/1p9KVHX5fwC2JSIu3HrLJyhmfaPzlFqWz/view?usp=sharing" },
-            { name: "MATERI BKB EMAS", desc: "Bina Keluarga Balita Eliminasi Masalah Anak Stunting", icon:'<img src="images213.jpg" class="w-8 h-8 object-contain">', link: "https://drive.google.com/file/d/1hwFektsgmjnhXBOQOmcgvHuUHKpANvpR/view?usp=sharing" },
-            { name: "MATERI BKB HI", desc: "Buku Panduan Penyuluhan BKB-HI Bagi Kader", icon:'<img src="icon3.png" class="w-8 h-8 object-contain">', link: "https://drive.google.com/file/d/1xzeEQrKxBgIYBa9FYIdXMO_JNxDZ3uy-/view?usp=sharing" },
-            { name: "MATERI BKB", desc: "Program Penyuluhan dan Pemberdayaan Keluarga dalam Pengasuhan Tumbuh Kembang Anak Usia 0-5 Tahun", icon:'<img src="icon4.png" class="w-8 h-8 object-contain">', link: "https://docs.google.com/presentation/d/1s9vgX5cdo7OuwdXzvqVCpUc_wKMguLsL/edit?usp=sharing&ouid=104636205695945782752&rtpof=true&sd=true" },
-            { name: "BUKU SAKU KADER", desc: "Bahan Penyuluhan Bina Keluarga Balita", icon: "📝", link: "https://drive.google.com/file/d/1Go8PF1u8BL_1iuf3tS2_Fm3CECuseFnE/view?usp=sharing" },
-            { name: "MATERI POLA ASUH ANAK", desc: "Pola Asuh pada 1000 Hari Pertama Kehidupan", icon:'<img src="images215.jpg" class="w-8 h-8 object-contain">', link: "https://docs.google.com/presentation/d/13E8NXccD9ZTGBNpHCVpqM2Gd56XMvoR0/edit?usp=sharing&ouid=104636205695945782752&rtpof=true&sd=true" },
-            { name: "Materi Kartu Kembang Anak", desc: "Panduan Praktis Cara Pengisian dan Penilaian Tumbuh Kembang Anak Bagi PKB/PLKB, Kader dan Orang Tua", icon: "📝", link: "https://docs.google.com/presentation/d/1Ps4Kk3xF2Dq2wzWik1Xmoa3ogYiRBgTro_Fozdw8Ock/edit?usp=sharing"},
-            { name: "MODUL BKB", desc: "Materi Belum Tersedia", icon: "📝", link: "#" },
-            { name: "MODUL BKB", desc: "Materi Belum Tersedia", icon: "📝", link: "#" }
-        ]
-    },
-    bkr: {
-        title: "Bina Keluarga Remaja (BKR)",
-        parent: "poktan",
-        items: [
-            { name: "MODUL BKR 1", desc: "Membangun Karakter, Komunikasi Efektif dan Ketahanan Mental Menuju Generasi Berencana", icon:'<img src="icon1.png" class="w-8 h-8 object-contain">', link: "https://docs.google.com/presentation/d/1w9XOoVwaYfOyH9QtAFcp0kOiyvdosypm/edit?usp=sharing" },
-            { name: "MODUL BKR 2", desc: "Pedoman Pengelolaan Bina Keluarga Remaja", icon:'<img src="images216.jpg" class="w-8 h-8 object-contain">', link: "https://drive.google.com/file/d/1n3SuYqpnVUrDgc5tfyfZ2Z1xDNEoFC8p/view?usp=sharing" },
-            { name: "MODUL BKR 3", desc: "Mekanisme Pengelolaan dan Pengembangan Program BKR", icon:'<img src="icon2.png" class="w-8 h-8 object-contain">', link: "https://docs.google.com/presentation/d/1HlAgzWjNr9kZNGdap0aEcgEen7S6mBBS/edit?usp=sharing" },
-            { name: "MODUL BKR 4", desc: "Pencatatan & Pelaporan Bina Keluarga Remaja", icon:'<img src="images217.jpg" class="w-8 h-8 object-contain">', link: "https://docs.google.com/presentation/d/1iTkYLkLvHs29ybiTh2PGFp0M6UHHgFBC/edit?usp=sharing&ouid=104636205695945782752&rtpof=true&sd=true" },
-            { name: "MODUL BKR 5", desc: "Pengelolaan POKTAN Bina Keluarga Remaja", icon:'<img src="icon7.png" class="w-8 h-8 object-contain">', link: "https://docs.google.com/presentation/d/1g5JLV96VKcTmwSkVn4YAZXlwb-2gB-7A/edit?usp=sharing&ouid=104636205695945782752&rtpof=true&sd=true" },
-            { name: "MODUL BKR 6", desc: "Indikator Keberhasilan BKR", icon:'<img src="icon6.png" class="w-8 h-8 object-contain">', link: "https://docs.google.com/presentation/d/1gtePMkxHT2WAM7q413vQigDxoZwX9coC/edit?usp=sharing&ouid=104636205695945782752&rtpof=true&sd=true" },
-            { name: "MODUL BKR 7", desc: "Materi Belum Tersedia", icon:'<img src="icon1.png" class="w-8 h-8 object-contain">', link: "#" },
-            { name: "MODUL BKR 8", desc: "Materi Belum Tersedia", icon:'<img src="icon1.png" class="w-8 h-8 object-contain">', link: "#" },
-            { name: "MODUL BKR 9", desc: "Materi Belum Tersedia", icon:'<img src="icon1.png" class="w-8 h-8 object-contain">', link: "#" }
-        ]
-    },
-    bkl: {
-        title: "Bina Keluarga Lansia (BKL)",
-        parent: "poktan",
-        items: [
-            { name: "Pedoman Pelaksanaan Kelompok BKL", desc: "Acuan operasional pembinaan lansia tangguh", icon:'<img src="icon021.png" class="w-8 h-8 object-contain">', link: "#" },
-            { name: "Pedoman Pelaksanaan Kelompok BKL", desc: "Acuan operasional pembinaan lansia tangguh", icon:'<img src="icon8.png" class="w-8 h-8 object-contain">', link: "#" },
-            { name: "MODUL BKLL", desc: "Materi Belum Tersedia", icon:'<img src="icon8.png" class="w-8 h-8 object-contain">', link: "#" },
-            { name: "MODUL BKLL", desc: "Materi Belum Tersedia", icon:'<img src="icon8.png" class="w-8 h-8 object-contain">', link: "#" },
-            { name: "MODUL BKLL", desc: "Materi Belum Tersedia", icon:'<img src="icon8.png" class="w-8 h-8 object-contain">', link: "#" },
-            { name: "MODUL BKLL", desc: "Materi Belum Tersedia", icon:'<img src="icon8.png" class="w-8 h-8 object-contain">', link: "#" },
-            { name: "MODUL BKLL", desc: "Materi Belum Tersedia", icon:'<img src="icon8.png" class="w-8 h-8 object-contain">', link: "#" },
-            { name: "MODUL BKLL", desc: "Materi Belum Tersedia", icon:'<img src="icon8.png" class="w-8 h-8 object-contain">', link: "#" },
-            { name: "MODUL BKLL", desc: "Materi Belum Tersedia", icon:'<img src="icon8.png" class="w-8 h-8 object-contain">', link: "#" }
-        ]
-    },
-    pikr: { 
-        title: "PIK-Remaja (PIK-R)", 
-        parent: "poktan", 
-        items: [
-            { 
-                name: "MEMAHAMI DAN MENGATASI BULLYING", 
-                desc: "Membangun Lingkungan Belajar yang Aman dan Nyaman dan Saling Menghargai", 
-                icon: "📄", 
-                link: "https://docs.google.com/presentation/d/1pHAHpOdL4zo_4ugu7DNGRvWYM36ZsqetqZmfpiJZTNc/edit?usp=sharing" 
-            }
-        ] 
-    },
-    uppka: { title: "Sub-Direktori: UPPKA", parent: "poktan", items: [{ name: "Pedoman Umum Pengelolaan UPPKA", desc: "Penguatan ekonomi keluarga akseptor KB", icon: "📄", link: "#" }] },
-    genting: {
-        title: "Modul GENTING",
-        parent: "quickwin",
-        items: [
-            { name: "PANDUAN Aplikasi SIGENTING", desc: "Pengenalan Aplikasi SiGENTING", icon: '<img src="icon109.png" class="w-8 h-8 object-contain">', link: "https://drive.google.com/file/d/1apLwoYoRZKxrERlNjiq1QhlFDXl3oE3Y/view?usp=sharing" },
-            { name: "PANDUAN AKSI CEPAT PENURUNAN STUNTING", desc: "Landasan Kebijakan Gerakan Orang Tua Asuh Cegah Stunting", icon: "📄", link: "https://docs.google.com/presentation/d/1TuZ1r65vUkM1IXedOjyb4Wjw84YUWsuD3UArmK9H9ik/edit?usp=sharing" },
-            { name: "PANDUAN PELAKSANAAN GENTING", desc: "Sosialisasi Keputusan Menteri Kemendukbangga", icon: "👨‍👩‍👧", link: "https://docs.google.com/presentation/d/1-OkeN-ozFKj2aBRctIVblui4VqoXGWh_JJ2nGd5FpSk/edit?usp=sharing" },
-            { name: "PANDUAN PELAKSANAAN GENTING", desc: "Buku Panduan Pelaksaan GENTING 2026", icon: '<img src="icon1.png" class="w-8 h-8 object-contain">', link: "https://drive.google.com/file/d/1AmwFtK-xTBY8JU0dr9pdHsrjCeb20ffp/view?usp=sharing" }, 
-           { name: "JUKNIS AKSI 1-2-3", desc: "Pedoman Pelaksanaan Intervensi Penurunan Stunting Terintegrasi", icon: "🔍", link: "https://drive.google.com/file/d/18E0u-uEx-C_aG8HnLsP3kT9YDA96gp3h/view?usp=sharing" }
-        ]
-    },
-    gati: { title: "Modul GATI", parent: "quickwin", items: 
-             [{ name: "Pedoman Pelaksanaan GATI", desc: "Gerakan Ayah Teladan Indonesia di lapangan", icon: "📄", link: "#" },
-              { name: "MODUL GATI", desc: "BELUM DITAMBAHKAN", icon: "📄", link: "#" },
-              { name: "MODUL GATI", desc: "BELUM DITAMBAHKAN", icon: "📄", link: "#" },
-              { name: "MODUL GATI", desc: "BELUM DITAMBAHKAN", icon: "📄", link: "#" },
-              { name: "MODUL GATI", desc: "BELUM DITAMBAHKAN", icon: "📄", link: "#" },
-              { name: "MODUL GATI", desc: "BELUM DITAMBAHKAN", icon: "📄", link: "#" },
-             ]},
-    tamasya: { title: "Modul TAMASYA", parent: "quickwin", items: 
-             [{ name: "Pedoman Pelaksanaan TAMASYA", desc: "Taman Asuh Sayang Anak di wilayah khusus", icon: "📄", link: "#" },
-              { name: "Modul TAMASYA", desc: "Belum Ditambahkan", icon: "📄", link: "#" },
-              { name: "Modul TAMASYA", desc: "Belum Ditambahkan", icon: "📄", link: "#" },
-              ] },
-    sidaya: { title: "Modul SIDAYA", parent: "quickwin", items: 
-             [{ name: "Modul SIDAYA", desc: "Belum Ditambahkan", icon: "📄", link: "#" },
-              { name: "Modul SIDAYA", desc: "Belum Ditambahkan", icon: "📄", link: "#" },
-              { name: "Modul SIDAYA", desc: "Belum Ditambahkan", icon: "📄", link: "#" },
-             ] },
-    penyuluhan: { title: "Materi Penyuluhan Umum", parent: "lainnya", items: 
-             [{ name: "Modul SATYAGATRA", desc: "Sistim Rujukan Pusat Pelayanan Keluarga Sejahtera", icon: "📂", link: "https://docs.google.com/presentation/d/1crhRv9fxUPkTYINP_9nDD5s-fCRlfZ4O/edit?usp=sharing&ouid=104636205695945782752&rtpof=true&sd=true" },
-              { name: "Modul KAMPUNG KB", desc: "Strategi Peningkatan Kualitas Hidup dari tingkat Dusun/RT", icon: "📂", link: "https://docs.google.com/presentation/d/1xiixVefzwvJi7NbqYgDYopt9LH7Q5SKNrUwCf5r97ME/edit?usp=sharing" },
-              { name: "Modul Penyuluhan", desc: "Belum Ditambahkan", icon: "📂", link: "#" },
-              { name: "Modul Penyuluhan", desc: "Belum Ditambahkan", icon: "📂", link: "#" },
-              { name: "Modul Penyuluhan", desc: "Belum Ditambahkan", icon: "📂", link: "#" },
-              { name: "Modul Penyuluhan", desc: "Belum Ditambahkan", icon: "📂", link: "#" },
-             ] },
-    panduan: { title: "Panduan Lapangan PKB/PLKB", parent: "lainnya", items: 
-             [{ name: "Panduan Tekhnis", desc: "Belum Ditambahkan", icon: "📖", link: "#" },
-              { name: "Panduan Tekhnis", desc: "Belum Ditambahkan", icon: "📖", link: "#" },
-              { name: "Petunjuk Tekhnis", desc: "Belum Ditambahkan", icon: "📖", link: "#" },
-              { name: "Petunjuk Tekhnis", desc: "Belum Ditambahkan", icon: "📖", link: "#" },
-              { name: "Petunjuk Tekhnis", desc: "Belum Ditambahkan", icon: "📖", link: "#" },
-              { name: "Petunjuk Tekhnis", desc: "Belum Ditambahkan", icon: "📖", link: "#" },
-             ] },
-};
-// --- DATA PERATURAN ---
-const dataPeraturan = {
-    uu: { title: "Direktori Undang-Undang", items: 
-            [{ name: "UU No. 52 Tahun 2009", desc: "Perkembangan Kependudukan & Pembangunan Keluarga", icon: "📜", link: "https://drive.google.com/file/d/117CV01siCHhGE3YLmsv1Pe3oLmvDoY-h/view?usp=sharing" },
-             { name: "UU No. 23 Tahun 2026", desc: "Tentang Administrasi Kependudukan", icon: "📜", link: "https://drive.google.com/file/d/1nT8papq4S9-JXx_u3FSTN-zR5pyb_-p2/view?usp=sharing" },
-             { name: "UU No. 23 Tahun 2014", desc: "Tentang Pemerintah Daerah", icon: "📜", link: "https://drive.google.com/file/d/1APvsGhajjseCmfiDfXx38ADdsROgn8KN/view?usp=sharing" }, // <-- KOMA SUDAH DITAMBAHKAN DI SINI
-             { name: "UU No. xx Tahun xxxx", desc: "Belum Ditambahkan", icon: "📜", link: "#" },
-             { name: "UU No. xx Tahun xxxx", desc: "Belum Ditambahkan", icon: "📜", link: "#" },
-             { name: "UU No. xx Tahun xxxx", desc: "Belum Ditambahkan", icon: "📜", link: "#" }
-            ]},
-       perpres: { title: "Direktori Peraturan Presiden", items: 
-            [{ name: "Perpres No. 72 Tahun 2021", desc: "Percepatan Penurunan Stunting Nasional", icon: "🏛️", link: "https://drive.google.com/file/d/1LVLCU9TJcZGWmh0csqQlyQ6_Kd3aKuFk/view?usp=sharing" },
-             { name: "Perpres No. 03 Tahun 2026", desc: "Pencegahan dan Penanganan Anak Tidak Sekolah", icon: "🏛️", link: "https://drive.google.com/file/d/1PmhSKzLYUtpZzMHAXDd9Exz8AyCern8O/view?usp=sharing" },
-             { name: "Perpres No. 180 Tahun 2024", desc: "Kementerian Kependudukan dan Pembangunan Keluarga", icon: "🏛️", link: "https://drive.google.com/file/d/134oL27yWqx7OXayNxeKf3tMeXiA-diXP/view?usp=sharing" },
-             { name: "Perpres No. 181 Tahun XXXX", desc: "Badan Kependudukan dan Keluarga Berencana Nasional", icon: "🏛️", link: "https://drive.google.com/file/d/1aATw2KfiBMjNouDKhTcizR0Y7bf1uZ24/view?usp=sharing" },
-             { name: "Perpres No. XX Tahun XXXX", desc: "BELUM DITAMBAHKAN", icon: "🏛️", link: "#" },
-             { name: "Perpres No. XX Tahun XXXX", desc: "BELUM DITAMBAHKAN", icon: "🏛️", link: "#" }
-            ]},
-       permen: { title: "Direktori Peraturan Menteri", items: 
-            [{ name: "Permen No.03 Tahun 2026", desc: "Penyelenggaraan Layanan Informasi Publik Kemendukbangga/BKKBN", icon: "📑", link: "https://drive.google.com/file/d/10xaf96bxODsYMhe9TwzxiLLIrJr1VSWf/view?usp=sharing" },
-             { name: "Permen No 01 Tahun 2026", desc: "Tim Pendamping Keluarga", icon: "📑", link: "https://drive.google.com/file/d/1h1tNRNDrVoYURQkI1xtp6CxDqMX9muBk/view?usp=sharing" },
-             { name: "Permen No 05 Tahun 2025", desc: "Juknis Penggunaan Dana BOKB Tahun 2026", icon: "📑", link: "https://drive.google.com/file/d/180iy0y66eIQ77WR36wq1ULcT7PgA0pM8/view?usp=sharing" },
-             { name: "Permen No 01 Tahun 2025", desc: "Pendayagunaan Tenaga Penyuluh Keluarga Berencana dan Petugas Lapangan Keluarga Berencana", icon: "📑", link: "https://drive.google.com/file/d/1JZ3BKCRtYXW4QXOJOE8FL5n412pY9Io4/view?usp=sharing" },
-             { name: "Permenpan/RB No 18 Tahun 2025", desc: "Jabatan Fungsional di Bidang Kependudukan dan Pembangunan Keluarga", icon: "📑", link: "https://drive.google.com/file/d/1eNOV6hIDJLENEwhUNMZMLJeuQ2i_uqvR/view?usp=sharing" },
-             { name: "Permendukbangga No 03 Tahun 2025", desc: "Uji Kompetensi Jabatan Fungsional di Bidang Kependudukan dan Pembangunan Keluarga", icon: "📑", link: "https://drive.google.com/file/d/1uYd-qXDt6B0b446hY1aspsfM1270Hyd1/view?usp=sharing" },
-             { name: "Permen No xx Tahun xxxx", desc: "BELUM DITAMBAHKAN", icon: "📑", link: "#" },
-             { name: "Permen No xx Tahun xxxx", desc: "BELUM DITAMBAHKAN", icon: "📑", link: "#" }
-            ]},
-       juknis: { title: "Direktori Petunjuk Teknis & Keputusan", items: 
-            [{ name: "Juknis Pengelolaan Kampung KB", desc: "Panduan pembentukan dan klasifikasi kampung", icon: "📂", link: "#" },
-             { name: "Juknis XXXXXXXXXXX", desc: "BELUM DITAMBAHKAN", icon: "📂", link: "#" },
-             { name: "Juknis XXXXXXXXXXX", desc: "BELUM DITAMBAHKAN", icon: "📂", link: "#" },
-             { name: "Juknis XXXXXXXXXXX", desc: "BELUM DITAMBAHKAN", icon: "📂", link: "#" },
-             { name: "Juknis XXXXXXXXXXX", desc: "BELUM DITAMBAHKAN", icon: "📂", link: "#" },
-             { name: "Juknis XXXXXXXXXXX", desc: "BELUM DITAMBAHKAN", icon: "📂", link: "#" }
-            ]},
-};
 
 // --- 3. LOGIKA SLIDER FOTO BERANDA ---
 let currentSlide = 0;
@@ -249,7 +105,6 @@ function handleLogout() {
 
 // --- 5. NAVIGASI HALAMAN & SIDEBAR ---
 function navigateTo(sectionId, event) {
-    // Perintah paksa naik ke atas paling utama
     window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
@@ -259,34 +114,27 @@ function navigateTo(sectionId, event) {
     if (event) event.preventDefault();
     localStorage.setItem('sidelila_active_section', sectionId);
 
-    // 1. Sembunyikan SEMUA halaman berkelas .page-section secara paksa
     document.querySelectorAll('.page-section').forEach(sec => {
         sec.classList.remove('active');
         sec.style.setProperty('display', 'none', 'important');
     });
 
-    // 2. Paksa sembunyikan Uji Kompetensi berdasarkan ID-nya secara langsung
     const ujiKompetensiBox = document.getElementById('section-kompetensi');
     if (ujiKompetensiBox) {
         ujiKompetensiBox.style.setProperty('display', 'none', 'important');
     }
 
-    // 3. Tampilkan hanya halaman utama yang dipilih oleh pengguna
     const targetSection = document.getElementById(`section-${sectionId}`);
     if (targetSection) {
         targetSection.classList.add('active');
         targetSection.style.setProperty('display', 'block', 'important');
     }
 
-    // 4. Atur status aktif pada menu sidebar sebelah kiri
     document.querySelectorAll('.nav-link').forEach(link => link.classList.remove('active'));
     const activeLink = document.getElementById(`menu-${sectionId}`);
     if (activeLink) activeLink.classList.add('active');
 
-    // 5. Eksekusi fungsi tambahan sesuai menu yang diklik
     if (sectionId === 'beranda') initSlider();
-    if (sectionId !== 'materi') showMateriCategoriesView();
-    if (sectionId !== 'peraturan') showPeraturanCategoriesView();
     if (sectionId === 'form') closeFormDetailView();
     if (sectionId === 'galeri') renderGaleriView();
 }
@@ -307,137 +155,39 @@ function toggleSubmenu(submenuId) {
 
 // --- 6. MENU MATERI & PERATURAN ---
 function showMateriCategoriesView() {
-    document.getElementById('materi-categories-view').style.display = 'block';
-    document.getElementById('materi-detail-view').style.display = 'none';
-}
-
-// --- DATA UTAMA KATEGORI MATERI ---
-const dataMateri = {
-    poktan: {
-        title: "Modul Kelompok Kegiatan (POKTAN)",
-        items: [
-            { isSubdirectory: true, subKey: "bkb", name: "Bina Keluarga Balita (BKB)", desc: "Materi BKB, BKB HI, EMAS, dan Kartu Kembang Anak", icon: "👶" },
-            { isSubdirectory: true, subKey: "bkr", name: "Bina Keluarga Remaja (BKR)", desc: "Modul pembangunan karakter dan ketahanan remaja", icon: "👦" },
-            { isSubdirectory: true, subKey: "bkl", name: "Bina Keluarga Lansia (BKL)", desc: "Pedoman pelaksanaan pembinaan lansia tangguh", icon: "👵" },
-            { isSubdirectory: true, subKey: "pikr", name: "PIK-Remaja (PIK-R)", desc: "Pusat Informasi dan Konseling Remaja", icon: "📄" },
-            { isSubdirectory: true, subKey: "uppka", name: "UPPKA", desc: "Usaha Peningkatan Pendapatan Keluarga Akseptor", icon: "📄" }
-        ]
-    },
-    quickwin: {
-        title: "Modul Program Unggulan (QUICKWIN)",
-        items: [
-            { isSubdirectory: true, subKey: "genting", name: "Modul GENTING", desc: "Gerakan Orang Tua Asuh Cegah Stunting", icon: "🌱" },
-            { isSubdirectory: true, subKey: "gati", name: "Modul GATI", desc: "Gerakan Ayah Teladan Indonesia", icon: "📄" },
-            { isSubdirectory: true, subKey: "tamasya", name: "Modul TAMASYA", desc: "Taman Asuh Sayang Anak di wilayah khusus", icon: "📄" },
-            { isSubdirectory: true, subKey: "sidaya", name: "Modul SIDAYA", desc: "Sistem Pemberdayaan Keluarga", icon: "📄" }
-        ]
-    },
-    lainnya: {
-        title: "Modul & Bahan Penyuluhan Lainnya",
-        items: [
-            { isSubdirectory: true, subKey: "penyuluhan", name: "Materi Penyuluhan Umum", desc: "Modul Satyagatra, Kampung KB, dll", icon: "📂" },
-            { isSubdirectory: true, subKey: "panduan", name: "Panduan Lapangan PKB/PLKB", desc: "Panduan Teknis dan Petunjuk Teknis Operasional", icon: "📖" }
-        ]
-    }
-};
-
-function openMateriCategory(categoryKey, event) {
-    if (event) event.preventDefault();
-    navigateTo('materi');
-    const catData = dataMateri[categoryKey];
-    if (!catData) return;
-
-    document.getElementById('materi-categories-view').style.display = 'none';
-    document.getElementById('materi-detail-view').style.display = 'block';
-    document.getElementById('materi-category-title').innerText = catData.title;
-
-    const grid = document.getElementById('materi-items-grid');
-    grid.innerHTML = '';
-    
-    catData.items.forEach(item => {
-        if (item.isSubdirectory) {
-            grid.innerHTML += `
-                <div onclick="openSubMateri('${item.subKey}')" class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm hover:border-sky-400 transition-all block group cursor-pointer">
-                    <div class="text-3xl mb-3">${item.icon}</div>
-                    <h5 class="font-bold text-slate-800 text-sm group-hover:text-sky-600">${item.name}</h5>
-                    <p class="text-xs text-slate-500 mt-1">${item.desc}</p>
-                    <span class="inline-block mt-3 text-[10px] font-bold text-sky-600 bg-sky-50 px-2.5 py-1 rounded">📂 Buka Sub-Direktori →</span>
-                </div>
-            `;
-        } else {
-            grid.innerHTML += `
-                <a href="${item.link}" target="_blank" class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm hover:border-sky-400 transition-all block group">
-                    <div class="text-3xl mb-3">${item.icon}</div>
-                    <h5 class="font-bold text-slate-800 text-sm group-hover:text-sky-600">${item.name}</h5>
-                    <p class="text-xs text-slate-500 mt-1">${item.desc}</p>
-                </a>
-            `;
-        }
-    });
-}
-
-function openSubMateri(subKey) {
-    const subData = subMateriData[subKey];
-    if (!subData) return;
-
-    document.getElementById('materi-category-title').innerText = subData.title;
-    const grid = document.getElementById('materi-items-grid');
-    grid.innerHTML = `
-        <div class="col-span-full mb-3">
-            <button type="button" onclick="openMateriCategory('${subData.parent}')" class="px-3.5 py-1.5 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-bold rounded-lg transition-all cursor-pointer">
-                ← Kembali ke Daftar Kategori
-            </button>
-        </div>
-    `;
-
-    subData.items.forEach(item => {
-        grid.innerHTML += `
-            <a href="${item.link}" target="_blank" class="bg-sky-50/50 p-5 rounded-2xl border border-sky-200 shadow-sm hover:border-sky-500 transition-all block group">
-                <div class="text-3xl mb-3">${item.icon}</div>
-                <h5 class="font-bold text-slate-800 text-sm group-hover:text-sky-600">${item.name}</h5>
-                <p class="text-xs text-slate-500 mt-1">${item.desc}</p>
-                <span class="inline-block mt-3 text-[10px] font-bold text-sky-700 bg-sky-100 px-2.5 py-1 rounded">📄 Lihat / Unduh Dokumen</span>
-            </a>
-        `;
-    });
+    const mCat = document.getElementById('materi-categories-view');
+    const mDet = document.getElementById('materi-detail-view');
+    if (mCat) mCat.style.display = 'block';
+    if (mDet) mDet.style.display = 'none';
 }
 
 function showPeraturanCategoriesView() {
-    document.getElementById('peraturan-categories-view').style.display = 'block';
-    document.getElementById('peraturan-detail-view').style.display = 'none';
+    const pCat = document.getElementById('peraturan-categories-view');
+    const pDet = document.getElementById('peraturan-detail-view');
+    if (pCat) pCat.style.display = 'block';
+    if (pDet) pDet.style.display = 'none';
 }
 
-function openPeraturanCategory(categoryKey, event) {
+// --- 7. ROUTER HANDLER MENU FORM ---
+function openFormType(key, event) {
     if (event) event.preventDefault();
-    navigateTo('peraturan');
-    const catData = dataPeraturan[categoryKey];
-    if (!catData) return;
-
-    document.getElementById('peraturan-categories-view').style.display = 'none';
-    document.getElementById('peraturan-detail-view').style.display = 'block';
-    document.getElementById('peraturan-category-title').innerText = catData.title;
-
-    const grid = document.getElementById('peraturan-items-grid');
-    grid.innerHTML = `
-        <div class="col-span-full mb-3">
-            <button type="button" onclick="showPeraturanCategoriesView()" class="px-3.5 py-1.5 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-bold rounded-lg transition-all cursor-pointer">
-                ← Kembali ke Daftar Kategori Peraturan
-            </button>
-        </div>
-    `;
-    
-    catData.items.forEach(item => {
-        grid.innerHTML += `
-            <a href="${item.link}" target="_blank" class="bg-blue-50/50 p-5 rounded-2xl border border-blue-200 shadow-sm hover:border-blue-500 transition-all block group">
-                <div class="text-3xl mb-3">${item.icon}</div>
-                <h5 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">${item.name}</h5>
-                <p class="text-xs text-slate-500 mt-1">${item.desc}</p>
-                <span class="inline-block mt-3 text-[10px] font-bold text-blue-700 bg-blue-100 px-2.5 py-1 rounded">📜 Lihat / Unduh Regulasi</span>
-            </a>
-        `;
-    });
+    navigateTo('form');
+    if (key === 'wfh') bukaFormWFH();
+    else if (key === 'estimasi-sasaran') bukaEstimasiSasaran();
+    else if (key === 'estimasi-pangkat') bukaEstimasiPangkat();
+    else if (key === 'usulan-pangkat') bukaFormUsulanPangkat();
 }
 
+function closeFormDetailView() {
+    const catView = document.getElementById('form-categories-view');
+    const detailContainer = document.getElementById('form-detail-container');
+    if (catView) catView.style.display = 'block';
+    if (detailContainer) {
+        detailContainer.style.display = 'none';
+        detailContainer.innerHTML = '';
+    }
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
 
 // ==========================================================================
 // 9. MODUL 2: ESTIMASI SASARAN (LENGKAP DENGAN TOMBOL DOWNLOAD PDF)
@@ -549,9 +299,6 @@ function bukaEstimasiSasaran() {
     }
 }
 
-// ==========================================================================
-// 9. MODUL 2: ESTIMASI SASARAN (LENGKAP DENGAN TOMBOL DOWNLOAD PDF)
-// ==========================================================================
 function hitungEstimasiSasaran() {
     const wilayah = document.getElementById('est-wilayah')?.value.trim() || 'Wilayah Binaan';
     const jmlPddkInput = document.getElementById('est-penduduk')?.value;
@@ -637,9 +384,7 @@ function cetakPDFEstimasiSasaran() {
     bukaJendelaCetak(printHTML);
 }
 
-// ==========================================================================
-// 10. MODUL 3: ESTIMASI KENAIKAN PANGKAT (LENGKAP)
-// ==========================================================================
+// --- 10. MODUL 3: ESTIMASI KENAIKAN PANGKAT ---
 function bukaEstimasiPangkat() {
     const catView = document.getElementById('form-categories-view');
     const detailContainer = document.getElementById('form-detail-container');
@@ -1227,7 +972,6 @@ function cetakDokumen3() {
 
     if (memenuhiSyarat) {
         statusPernyataan = 'Kelebihan / <span style="text-decoration: line-through;">Kekurangan</span> Angka Kredit: <b>+' + selisih.toFixed(3) + ' (Memenuhi syarat AK)</b>';
-        // PERBAIKAN DI SINI: Diarahkan ke IV/a (Pembina) terlebih dahulu
         kesimpulanSk = 'DAPAT DIPERTIMBANGKAN UNTUK KENAIKAN PANGKAT SETINGKAT LEBIH TINGGI MENJADI PEMBINA / IV/a';
     } else {
         statusPernyataan = '<span style="text-decoration: line-through;">Kelebihan</span> / Kekurangan Angka Kredit: <b>' + selisih.toFixed(3) + ' (Belum memenuhi syarat AK)</b>';
@@ -1337,6 +1081,12 @@ function cetakDokumen3() {
     bukaJendelaCetak(html);
 }
 
-
-
-
+// --- PENDUKUNG CETAK ---
+function bukaJendelaCetak(htmlContent) {
+    const win = window.open('', '_blank');
+    if (!win) { alert("Izinkan pop-up browser."); return; }
+    win.document.write(htmlContent);
+    win.document.close();
+    win.focus();
+    setTimeout(() => { win.print(); }, 500);
+}
