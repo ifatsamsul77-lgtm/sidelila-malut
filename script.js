@@ -472,3 +472,80 @@ function bukaJendelaCetak(htmlContent) {
     win.focus();
     setTimeout(() => { win.print(); }, 500);
 }
+
+// --- TAMBAHAN FUNGSI PENGHUBUNG FORM LAPORAN & GALERI (FINAL FIX) ---
+function bukaEstimasiSasaran() {
+    const container = document.getElementById('form-detail-container');
+    const catView = document.getElementById('form-categories-view');
+    if (catView) catView.style.display = 'none';
+    if (container) {
+        container.style.display = 'block';
+        container.innerHTML = `
+            <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-4">
+                <div class="flex justify-between items-center border-b pb-3">
+                    <h3 class="font-bold text-slate-800 text-sm">Simulasi Estimasi Sasaran Wilayah Binaan</h3>
+                    <button type="button" onclick="closeFormDetailView()" class="px-3 py-1 bg-slate-100 hover:bg-slate-200 text-xs font-bold rounded-lg">← Kembali</button>
+                </div>
+                <p class="text-xs text-slate-600">Fitur kalkulator dan estimasi sasaran operasional lini lapangan.</p>
+            </div>
+        `;
+    }
+}
+
+function bukaEstimasiPangkat() {
+    const container = document.getElementById('form-detail-container');
+    const catView = document.getElementById('form-categories-view');
+    if (catView) catView.style.display = 'none';
+    if (container) {
+        container.style.display = 'block';
+        container.innerHTML = `
+            <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-4">
+                <div class="flex justify-between items-center border-b pb-3">
+                    <h3 class="font-bold text-slate-800 text-sm">Kalkulator Estimasi Kenaikan Pangkat</h3>
+                    <button type="button" onclick="closeFormDetailView()" class="px-3 py-1 bg-slate-100 hover:bg-slate-200 text-xs font-bold rounded-lg">← Kembali</button>
+                </div>
+                <p class="text-xs text-slate-600">Simulasi perhitungan akumulasi angka kredit fungsional PKB/PLKB.</p>
+            </div>
+        `;
+    }
+}
+
+function bukaFormUsulanPangkat() {
+    const container = document.getElementById('form-detail-container');
+    const catView = document.getElementById('form-categories-view');
+    if (catView) catView.style.display = 'none';
+    if (container) {
+        container.style.display = 'block';
+        container.innerHTML = `
+            <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-4">
+                <div class="flex justify-between items-center border-b pb-3">
+                    <h3 class="font-bold text-slate-800 text-sm">Form Usulan Pengajuan Kenaikan Pangkat</h3>
+                    <button type="button" onclick="closeFormDetailView()" class="px-3 py-1 bg-slate-100 hover:bg-slate-200 text-xs font-bold rounded-lg">← Kembali</button>
+                </div>
+                <p class="text-xs text-slate-600">Form pengajuan dan verifikasi berkas kenaikan jenjang jabatan.</p>
+            </div>
+        `;
+    }
+}
+
+// Pastikan fungsi render galeri global terpanggil dengan aman
+if (typeof renderGaleriView === 'undefined') {
+    function renderGaleriView() {
+        const target = document.getElementById('section-galeri');
+        if (!target) return;
+        target.innerHTML = `
+            <div class="space-y-6">
+                <div class="border-b border-slate-200 pb-4">
+                    <h2 class="text-lg font-black uppercase text-slate-900">Galeri Dokumentasi Kegiatan</h2>
+                    <p class="text-xs text-slate-500 mt-1">Dokumentasi visual kegiatan operasional dan program Bangga Kencana.</p>
+                </div>
+                <div id="galeri-container" class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm text-center col-span-full">
+                        <p class="text-xs font-bold text-slate-600">Belum ada dokumentasi foto kegiatan di server.</p>
+                    </div>
+                </div>
+            </div>
+        `;
+        if (typeof muatGaleriFirebase === 'function') muatGaleriFirebase();
+    }
+}
