@@ -1,5 +1,5 @@
 /* ==========================================================================
-   SIDELILA v2.0 - SCRIPT UTAMA, DIREKTORI & MODUL LENGKAP (FINAL FIXED)
+   SIDELILA v2.0 - SCRIPT UTAMA, DIREKTORI & MODUL LENGKAP (FINAL PERFECT)
    ========================================================================== */
 
 // --- 1. CEK SESI OTOMATIS & INISIALISASI DASHBOARD ---
@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 });
 
-// --- 2. DATA MATERI & DIREKTORI BERTINGKAT (AMAN DARI DUPLIKASI) ---
+// --- 2. DATA MATERI & DIREKTORI BERTINGKAT (DIPROTEKSI AMAN) ---
 if (typeof window.subMateriData === 'undefined') {
     window.subMateriData = {
         bkb: {
@@ -123,7 +123,9 @@ if (typeof window.subMateriData === 'undefined') {
                  ] },
     };
 }
-const subMateriData = window.subMateriData;
+if (typeof subMateriData === 'undefined') {
+    var subMateriData = window.subMateriData;
+}
 
 // --- 3. DATA UTAMA KATEGORI MATERI ---
 if (typeof window.dataMateri === 'undefined') {
@@ -156,7 +158,9 @@ if (typeof window.dataMateri === 'undefined') {
         }
     };
 }
-const dataMateri = window.dataMateri;
+if (typeof dataMateri === 'undefined') {
+    var dataMateri = window.dataMateri;
+}
 
 // --- 4. DATA DIREKTORI PERATURAN & NAVIGASI ---
 if (typeof window.dataPeraturan === 'undefined') {
@@ -180,7 +184,9 @@ if (typeof window.dataPeraturan === 'undefined') {
                 ]}
     };
 }
-const dataPeraturan = window.dataPeraturan;
+if (typeof dataPeraturan === 'undefined') {
+    var dataPeraturan = window.dataPeraturan;
+}
 
 function showPeraturanCategoriesView() {
     const pCat = document.getElementById('peraturan-categories-view');
@@ -287,7 +293,7 @@ function openSubMateri(subKey) {
     });
 }
 
-// --- 5. LOGIKA FUNGSI FORM LAPORAN YANG HILANG (FIX REFERENCE ERROR) ---
+// --- 5. LOGIKA FORM LAPORAN ---
 function bukaEstimasiSasaran() {
     const container = document.getElementById('form-detail-container');
     const catView = document.getElementById('form-categories-view');
