@@ -1,5 +1,5 @@
 /* ==========================================================================
-   SIDELILA v2.0 - SCRIPT UTAMA LENGKAP & DIREKTORI MATERI (FINAL)
+   SIDELILA v2.0 - SCRIPT UTAMA LENGKAP & DIREKTORI MATERI UTUH (FINAL)
    ========================================================================== */
 
 // --- 1. CEK SESI OTOMATIS & INISIALISASI DASHBOARD ---
@@ -235,9 +235,11 @@ function showSlide(index) {
 
     container.style.transform = `translateX(-${currentSlide * 100}%)`;
 
-    dots.forEach((dot, idx) => {
-        dot.className = idx === currentSlide ? "w-2.5 h-2.5 rounded-full bg-white transition-all cursor-pointer" : "w-2.5 h-2.5 rounded-full bg-white/50 transition-all cursor-pointer";
-    });
+    if (dots && dots.length > 0) {
+        dots.forEach((dot, idx) => {
+            dot.className = idx === currentSlide ? "w-2.5 h-2.5 rounded-full bg-white transition-all cursor-pointer" : "w-2.5 h-2.5 rounded-full bg-white/50 transition-all cursor-pointer";
+        });
+    }
 }
 
 function nextSlide() { showSlide(currentSlide + 1); }
@@ -269,8 +271,10 @@ function prosesLoginManual() {
 }
 
 function tampilkanDashboard() {
-    document.getElementById('view-login').style.display = 'none';
-    document.getElementById('view-dashboard').style.display = 'block';
+    const viewLogin = document.getElementById('view-login');
+    const viewDash = document.getElementById('view-dashboard');
+    if (viewLogin) viewLogin.style.display = 'none';
+    if (viewDash) viewDash.style.display = 'block';
 
     const role = localStorage.getItem('sidelila_role');
     const username = localStorage.getItem('sidelila_username') || 'Pengguna';
@@ -296,8 +300,10 @@ function handleLogout() {
         localStorage.removeItem('sidelila_username');
         localStorage.removeItem('sidelila_role');
         localStorage.removeItem('sidelila_active_section');
-        document.getElementById('view-dashboard').style.display = 'none';
-        document.getElementById('view-login').style.display = 'flex';
+        const viewLogin = document.getElementById('view-login');
+        const viewDash = document.getElementById('view-dashboard');
+        if (viewDash) viewDash.style.display = 'none';
+        if (viewLogin) viewLogin.style.display = 'flex';
     }
 }
 
@@ -333,9 +339,9 @@ function navigateTo(sectionId, event) {
     if (activeLink) activeLink.classList.add('active');
 
     if (sectionId === 'beranda') initSlider();
-    if (sectionId !== 'materi') showMateriCategoriesView();
+    if (sectionId !== 'materi' && typeof showMateriCategoriesView === 'function') showMateriCategoriesView();
     if (sectionId === 'form') closeFormDetailView();
-    if (sectionId === 'galeri') renderGaleriView();
+    if (sectionId === 'galeri' && typeof renderGaleriView === 'function') renderGaleriView();
 }
 
 function toggleSubmenu(submenuId) {
@@ -373,10 +379,10 @@ function closeFormDetailView() {
 function openFormType(key, event) {
     if (event) event.preventDefault();
     navigateTo('form');
-    if (key === 'wfh') bukaFormWFH();
-    else if (key === 'estimasi-sasaran') bukaEstimasiSasaran();
-    else if (key === 'estimasi-pangkat') bukaEstimasiPangkat();
-    else if (key === 'usulan-pangkat') bukaFormUsulanPangkat();
+    if (typeof bukaFormWFH === 'function' && key === 'wfh') bukaFormWFH();
+    else if (typeof bukaEstimasiSasaran === 'function' && key === 'estimasi-sasaran') bukaEstimasiSasaran();
+    else if (typeof bukaEstimasiPangkat === 'function' && key === 'estimasi-pangkat') bukaEstimasiPangkat();
+    else if (typeof bukaFormUsulanPangkat === 'function' && key === 'usulan-pangkat') bukaFormUsulanPangkat();
 }
 
 // --- PENDUKUNG CETAK GLOBAL ---
