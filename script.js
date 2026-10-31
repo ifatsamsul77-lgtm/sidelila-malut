@@ -679,10 +679,10 @@ function downloadPDFWFH() {
             <table class="data">
                 <thead>
                     <tr>
-                       <th style="width: 35px;">No</th>
+                    <th style="width: 35px;">No</th>
                     <th style="width: 80px;">Tanggal</th>
                     <th style="width: 330px;">Uraian Kegiatan</th>
-                    <th style="width: 110px;">Bukti Dukung (Link)</th>
+                    <th style="width: 110px; max-width: 110px; word-break: break-all; overflow-wrap: break-word;">Bukti Dukung (Link)</th>
                     </tr>
                 </thead>
                 <tbody>
