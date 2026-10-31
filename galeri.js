@@ -1,37 +1,15 @@
 // ==========================================================================
-// SIDELILA v2.0 - MODUL GALERI FOTO KEGIATAN (FINAL)
+// SIDELILA v2.0 - MODUL GALERI FOTO KEGIATAN (FIXED & ALIGNED)
 // ==========================================================================
 
-// --- 1. RENDER TAMPILAN GALERI & PANEL ADMIN ---
+// --- 1. RENDER UTAMA TAMPILAN GALERI & PANEL ADMIN ---
 function renderGaleriView() {
     const target = document.getElementById('section-galeri');
     if (!target) return;
     
     const role = localStorage.getItem('sidelila_role');
-    const list = JSON.parse(localStorage.getItem('sidelila_gallery_photos') || '[]');
-    let cards = '';
     
-    if (list.length === 0) {
-        cards = `<div class="col-span-full text-center py-16 bg-white rounded-2xl border border-slate-200 shadow-sm"><p class="text-xs font-bold text-slate-700">Belum ada dokumentasi foto kegiatan.</p></div>`;
-    } else {
-        list.slice().reverse().forEach(item => {
-            const btnDel = role === 'admin' ? `<div class="pt-2 border-t border-slate-100 flex justify-end"><button type="button" onclick="hapusFotoGaleri(${item.id})" class="text-[11px] font-bold text-rose-600 bg-rose-50 px-2.5 py-1 rounded cursor-pointer hover:bg-rose-100 transition-all">🗑️ Hapus Foto</button></div>` : '';
-            cards += `
-                <div class="bg-white rounded-2xl border border-slate-200/80 shadow-sm overflow-hidden flex flex-col group hover:border-sky-400 transition-all">
-                    <div class="relative aspect-video bg-slate-100 overflow-hidden">
-                        <img src="${item.image}" alt="Dokumentasi" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-                        <span class="absolute bottom-2 right-2 bg-black/60 backdrop-blur-sm text-white text-[10px] px-2.5 py-1 rounded-full font-medium">${item.date}</span>
-                    </div>
-                    <div class="p-4 flex flex-col flex-grow justify-between space-y-3">
-                        <p class="text-xs text-slate-800 font-medium leading-relaxed">${item.caption}</p>
-                        ${btnDel}
-                    </div>
-                </div>
-            `;
-        });
-    }
-
-    // Panel Admin: Tombol unggah foto dan kolom teks keterangan kegiatan
+    // Panel Admin: Hanya muncul jika role adalah admin
     const formAdmin = role === 'admin' ? `
         <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200 space-y-4 max-w-2xl mb-6 shadow-sm">
             <h4 class="text-xs font-black uppercase text-slate-900 tracking-wider">➕ Panel Admin: Unggah Foto Kegiatan</h4>
@@ -49,7 +27,7 @@ function renderGaleriView() {
         </div>
     ` : '';
 
-    // Tata letak grid kartu foto diatur menjadi 2 kolom (posisi 2x2 / dua deret)
+    // Kerangka utama halaman galeri dengan kontainer penampung data dari Firebase
     target.innerHTML = `
         <div class="space-y-6">
             <div class="border-b border-slate-200 pb-4">
@@ -57,53 +35,40 @@ function renderGaleriView() {
                 <p class="text-xs text-slate-500 mt-1">Dokumentasi visual kegiatan operasional dan program Bangga Kencana di lapangan.</p>
             </div>
             ${formAdmin}
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                ${cards}
+            <div id="galeri-container">
+                <div class="text-center py-16 bg-white rounded-2xl border border-slate-200 shadow-sm">
+                    <p class="text-xs font-bold text-slate-700">Memuat dokumentasi foto kegiatan...</p>
+                </div>
             </div>
         </div>
     `;
+
+    // Panggil pemuatan data real-time dari Firebase Firestore
+    muatGaleriFirebase();
 }
 
-// --- 2. PROSES UNGGAH LOKAL ---
+// --- 2. PROSES TOMBOL PUBLIKASIKAN (Dihubungkan ke Firebase) ---
 function prosesUnggahGaleri() {
     const fileInput = document.getElementById('galeri-file-input');
     const captionInput = document.getElementById('galeri-caption-input');
-    if (!fileInput || !fileInput.files[0]) { alert("Pilih foto terlebih dahulu."); return; }
-    const caption = captionInput ? captionInput.value.trim() : "";
-    if (!caption) { alert("Tuliskan keterangan foto."); return; }
     
-    const reader = new FileReader();
-    reader.onload = function(e) {
-        const list = JSON.parse(localStorage.getItem('sidelila_gallery_photos') || '[]');
-        list.push({ 
-            id: Date.now(), 
-            image: e.target.result, 
-            caption: caption, 
-            date: new Date().toLocaleDateString('id-ID', { day: 'numeric', month: 'long', year: 'numeric' }) 
-        });
-        localStorage.setItem('sidelila_gallery_photos', JSON.stringify(list));
-        alert("Foto berhasil dipublikasikan!");
-        renderGaleriView();
-    };
-    reader.readAsDataURL(fileInput.files[0]);
-}
-
-// --- 3. HAPUS FOTO ---
-function hapusFotoGaleri(id) {
-    if (confirm("Hapus foto ini dari galeri?")) {
-        let list = JSON.parse(localStorage.getItem('sidelila_gallery_photos') || '[]');
-        list = list.filter(item => item.id !== id);
-        localStorage.setItem('sidelila_gallery_photos', JSON.stringify(list));
-        renderGaleriView();
+    if (!fileInput || !fileInput.files[0]) { 
+        alert("Pilih foto terlebih dahulu."); 
+        return; 
     }
+    const caption = captionInput ? captionInput.value.trim() : "";
+    if (!caption) { 
+        alert("Tuliskan keterangan foto."); 
+        return; 
+    }
+    
+    // Jalankan fungsi simpan kompresi ke Firebase Firestore
+    simpanFotoGaleriFirebase(fileInput.files[0], "Dokumentasi Kegiatan SIDELILA", caption);
 }
 
-// --- 4. INTEGRASI FIREBASE FIRESTORE & KOMPRESI OTOMATIS ---
+// --- 3. INTEGRASI FIREBASE FIRESTORE & KOMPRESI OTOMATIS ---
 function simpanFotoGaleriFirebase(fileFoto, judulFoto, keteranganFoto) {
-    if (!fileFoto) {
-        alert("Silakan pilih foto terlebih dahulu!");
-        return;
-    }
+    if (!fileFoto) return;
 
     const reader = new FileReader();
     reader.onload = function(e) {
@@ -131,6 +96,11 @@ function simpanFotoGaleriFirebase(fileFoto, judulFoto, keteranganFoto) {
             
             const compressedDataUrl = canvas.toDataURL('image/jpeg', 0.7);
 
+            if (typeof db === 'undefined') {
+                alert("Koneksi database belum siap!");
+                return;
+            }
+
             // Menyimpan ke database Firestore (Koleksi: "galeri_sidelila")
             db.collection("galeri_sidelila").add({
                 judul: judulFoto,
@@ -143,7 +113,12 @@ function simpanFotoGaleriFirebase(fileFoto, judulFoto, keteranganFoto) {
             })
             .then(() => {
                 alert("Foto berhasil diunggah ke server SIDELILA!");
-                document.getElementById('form-upload-galeri')?.reset();
+                if (document.getElementById('galeri-caption-input')) {
+                    document.getElementById('galeri-caption-input').value = '';
+                }
+                if (document.getElementById('galeri-file-input')) {
+                    document.getElementById('galeri-file-input').value = '';
+                }
             })
             .catch((error) => {
                 console.error("Gagal mengunggah foto: ", error);
@@ -154,38 +129,59 @@ function simpanFotoGaleriFirebase(fileFoto, judulFoto, keteranganFoto) {
     reader.readAsDataURL(fileFoto);
 }
 
-// Memuat dan menampilkan galeri secara real-time dari Firebase
+// --- 4. HAPUS FOTO DARI FIREBASE ---
+function hapusFotoGaleri(docId) {
+    if (confirm("Hapus foto ini dari server galeri?")) {
+        if (typeof db === 'undefined') return;
+        db.collection("galeri_sidelila").doc(docId).delete()
+          .then(() => {
+              console.log("Foto berhasil dihapus dari server.");
+          })
+          .catch((error) => {
+              console.error("Gagal menghapus foto: ", error);
+              alert("Gagal menghapus foto dari server.");
+          });
+    }
+}
+
+// --- 5. MEMUAT & MENAMPILKAN GALERI REAL-TIME DARI FIREBASE (GRID 2x2) ---
 function muatGaleriFirebase() {
     if (typeof db === 'undefined') return;
 
     db.collection("galeri_sidelila")
+      .orderBy("timestamp", "desc")
       .onSnapshot((querySnapshot) => {
-          let sectionGaleri = document.getElementById('section-galeri');
-          if (!sectionGaleri) return;
-
           let container = document.getElementById('galeri-container');
-          if (!container) {
-              container = document.createElement('div');
-              container.id = 'galeri-container';
-              sectionGaleri.appendChild(container);
-          }
+          if (!container) return;
 
           let html = "";
+          const role = localStorage.getItem('sidelila_role');
+
           if (querySnapshot.empty) {
               html = '<div class="col-span-full text-center py-16 bg-white rounded-2xl border border-slate-200 shadow-sm"><p class="text-xs font-bold text-slate-700">Belum ada dokumentasi foto kegiatan di server.</p></div>';
           } else {
-              // Tata letak grid 2 kolom (posisi 2x2 / dua deret) untuk data Firestore
-              html = '<div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-4">';
+              // Tata letak grid 2 kolom (posisi 2x2 / dua deret) untuk User & Admin
+              html = '<div class="grid grid-cols-1 sm:grid-cols-2 gap-6">';
               querySnapshot.forEach((doc) => {
                   const data = doc.data();
+                  const docId = doc.id;
+                  
+                  // Tombol Hapus khusus Admin menggunakan ID dokumen Firestore
+                  const btnDel = role === 'admin' ? `
+                      <div class="pt-2 border-t border-slate-100 flex justify-end">
+                          <button type="button" onclick="hapusFotoGaleri('${docId}')" class="text-[11px] font-bold text-rose-600 bg-rose-50 px-2.5 py-1 rounded cursor-pointer hover:bg-rose-100 transition-all">🗑️ Hapus Foto</button>
+                      </div>
+                  ` : '';
+
                   html += `
                       <div class="bg-white rounded-2xl border border-slate-200/80 shadow-sm overflow-hidden group hover:border-sky-400 transition-all flex flex-col">
                           <div class="aspect-video bg-slate-100 overflow-hidden relative">
                               <img src="${data.image}" alt="${data.judul || 'Foto Kegiatan'}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                               <span class="absolute bottom-2 right-2 bg-black/60 backdrop-blur-sm text-white text-[10px] px-2.5 py-1 rounded-full font-medium">${data.tanggalFormatted || ''}</span>
                           </div>
-                          <div class="p-4 flex-grow">
+                          <div class="p-4 flex flex-col flex-grow justify-between space-y-3">
                               <p class="text-xs text-slate-700 font-medium leading-relaxed">${data.keterangan || data.judul || ''}</p>
+                              ${btnDel}
                           </div>
                       </div>
                   `;
@@ -197,6 +193,3 @@ function muatGaleriFirebase() {
           console.error("Gagal mengambil data dari Firestore:", error);
       });
 }
-
-// Panggil pemuatan saat pertama kali dimuat
-muatGaleriFirebase();
