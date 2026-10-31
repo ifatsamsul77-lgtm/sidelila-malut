@@ -1,5 +1,5 @@
 /* ==========================================================================
-   SIDELILA v2.0 - SCRIPT UTAMA & DIREKTORI MATERI (SAFE PROTECTED)
+   SIDELILA v2.0 - SCRIPT UTAMA, DIREKTORI MATERI & PERATURAN (FINAL SAFE)
    ========================================================================== */
 
 // --- 1. CEK SESI OTOMATIS & INISIALISASI DASHBOARD ---
@@ -15,9 +15,9 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 });
 
-// --- 2. DATA MATERI & DIREKTORI BERTINGKAT (DIPROTEKSI DARI DUPLIKASI) ---
-if (typeof subMateriData === 'undefined') {
-    var subMateriData = {
+// --- 2. DATA MATERI & DIREKTORI BERTINGKAT (AMAN DARI DUPLIKASI) ---
+if (typeof window.subMateriData === 'undefined') {
+    window.subMateriData = {
         bkb: {
             title: "Bina Keluarga Balita (BKB)",
             parent: "poktan",
@@ -123,10 +123,11 @@ if (typeof subMateriData === 'undefined') {
                  ] },
     };
 }
+const subMateriData = window.subMateriData;
 
 // --- 3. DATA UTAMA KATEGORI MATERI ---
-if (typeof dataMateri === 'undefined') {
-    var dataMateri = {
+if (typeof window.dataMateri === 'undefined') {
+    window.dataMateri = {
         poktan: {
             title: "Modul Kelompok Kegiatan (POKTAN)",
             items: [
@@ -154,6 +155,75 @@ if (typeof dataMateri === 'undefined') {
             ]
         }
     };
+}
+const dataMateri = window.dataMateri;
+
+// --- 4. DATA DIREKTORI PERATURAN & FUNGSI NAVIGASINYA ---
+if (typeof window.dataPeraturan === 'undefined') {
+    window.dataPeraturan = {
+        uu: { title: "Direktori Undang-Undang", items: 
+                [{ name: "UU No. 52 Tahun 2009", desc: "Perkembangan Kependudukan & Pembangunan Keluarga", icon: "📜", link: "https://drive.google.com/file/d/117CV01siCHhGE3YLmsv1Pe3oLmvDoY-h/view?usp=sharing" },
+                 { name: "UU No. 23 Tahun 2026", desc: "Tentang Administrasi Kependudukan", icon: "📜", link: "https://drive.google.com/file/d/1nT8papq4S9-JXx_u3FSTN-zR5pyb_-p2/view?usp=sharing" },
+                 { name: "UU No. 23 Tahun 2014", desc: "Tentang Pemerintah Daerah", icon: "📜", link: "https://drive.google.com/file/d/1APvsGhajjseCmfiDfXx38ADdsROgn8KN/view?usp=sharing" }
+                ]},
+        perpres: { title: "Direktori Peraturan Presiden", items: 
+                [{ name: "Perpres No. 72 Tahun 2021", desc: "Percepatan Penurunan Stunting Nasional", icon: "🏛️", link: "https://drive.google.com/file/d/1LVLCU9TJcZGWmh0csqQlyQ6_Kd3aKuFk/view?usp=sharing" },
+                 { name: "Perpres No. 03 Tahun 2026", desc: "Pencegahan dan Penanganan Anak Tidak Sekolah", icon: "🏛️", link: "https://drive.google.com/file/d/1PmhSKzLYUtpZzMHAXDd9Exz8AyCern8O/view?usp=sharing" },
+                 { name: "Perpres No. 180 Tahun 2024", desc: "Kementerian Kependudukan dan Pembangunan Keluarga", icon: "🏛️", link: "https://drive.google.com/file/d/134oL27yWqx7OXayNxeKf3tMeXiA-diXP/view?usp=sharing" }
+                ]},
+        permen: { title: "Direktori Peraturan Menteri", items: 
+                [{ name: "Permen No.03 Tahun 2026", desc: "Penyelenggaraan Layanan Informasi Publik Kemendukbangga/BKKBN", icon: "📑", link: "https://drive.google.com/file/d/10xaf96bxODsYMhe9TwzxiLLIrJr1VSWf/view?usp=sharing" },
+                 { name: "Permen No 01 Tahun 2026", desc: "Tim Pendamping Keluarga", icon: "📑", link: "https://drive.google.com/file/d/1h1tNRNDrVoYURQkI1xtp6CxDqMX9muBk/view?usp=sharing" }
+                ]},
+        juknis: { title: "Direktori Petunjuk Teknis & Keputusan", items: 
+                [{ name: "Juknis Pengelolaan Kampung KB", desc: "Panduan pembentukan dan klasifikasi kampung", icon: "📂", link: "#" }
+                ]}
+    };
+}
+const dataPeraturan = window.dataPeraturan;
+
+function showPeraturanCategoriesView() {
+    const pCat = document.getElementById('peraturan-categories-view');
+    const pDet = document.getElementById('peraturan-detail-view');
+    if (pCat) pCat.style.display = 'block';
+    if (pDet) pDet.style.display = 'none';
+}
+
+function openPeraturanCategory(categoryKey, event) {
+    if (event) event.preventDefault();
+    navigateTo('peraturan');
+    const catData = dataPeraturan[categoryKey];
+    if (!catData) return;
+
+    const pCat = document.getElementById('peraturan-categories-view');
+    const pDet = document.getElementById('peraturan-detail-view');
+    if (pCat) pCat.style.display = 'none';
+    if (pDet) pDet.style.display = 'block';
+    
+    const titleEl = document.getElementById('peraturan-category-title');
+    if (titleEl) titleEl.innerText = catData.title;
+
+    const grid = document.getElementById('peraturan-items-grid');
+    if (!grid) return;
+
+    grid.innerHTML = `
+        <div class="col-span-full mb-3">
+            <button type="button" onclick="showPeraturanCategoriesView()" class="px-3.5 py-1.5 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-bold rounded-lg transition-all cursor-pointer">
+                ← Kembali ke Daftar Kategori Peraturan
+            </button>
+        </div>
+    `;
+    
+    catData.items.forEach(item => {
+        grid.innerHTML += `
+            <a href="${item.link}" target="_blank" class="bg-blue-50/50 p-5 rounded-2xl border border-blue-200 shadow-sm hover:border-blue-500 transition-all block group">
+                <div class="text-3xl mb-3">${item.icon}</div>
+                <h5 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">${item.name}</h5>
+                <p class="text-xs text-slate-500 mt-1">${item.desc}</p>
+                <span class="inline-block mt-3 text-[10px] font-bold text-blue-700 bg-blue-100 px-2.5 py-1 rounded">📜 Lihat / Unduh Regulasi</span>
+            </a>
+        `;
+    });
 }
 
 function openMateriCategory(categoryKey, event) {
@@ -217,14 +287,18 @@ function openSubMateri(subKey) {
     });
 }
 
-// --- 4. LOGIKA SLIDER FOTO BERANDA ---
-let currentSlide = 0;
-let slideInterval;
+// --- 5. LOGIKA SLIDER FOTO BERANDA (AMAN DARI DUPLIKASI) ---
+if (typeof window.currentSlide === 'undefined') {
+    window.currentSlide = 0;
+}
+if (typeof window.slideInterval === 'undefined') {
+    window.slideInterval = null;
+}
 
 function initSlider() {
-    showSlide(currentSlide);
-    if (slideInterval) clearInterval(slideInterval);
-    slideInterval = setInterval(() => { nextSlide(); }, 4000);
+    showSlide(window.currentSlide);
+    if (window.slideInterval) clearInterval(window.slideInterval);
+    window.slideInterval = setInterval(() => { nextSlide(); }, 4000);
 }
 
 function showSlide(index) {
@@ -233,24 +307,24 @@ function showSlide(index) {
     if (!container) return;
 
     const totalSlides = container.children.length;
-    if (index >= totalSlides) currentSlide = 0;
-    else if (index < 0) currentSlide = totalSlides - 1;
-    else currentSlide = index;
+    if (index >= totalSlides) window.currentSlide = 0;
+    else if (index < 0) window.currentSlide = totalSlides - 1;
+    else window.currentSlide = index;
 
-    container.style.transform = `translateX(-${currentSlide * 100}%)`;
+    container.style.transform = `translateX(-${window.currentSlide * 100}%)`;
 
     if (dots && dots.length > 0) {
         dots.forEach((dot, idx) => {
-            dot.className = idx === currentSlide ? "w-2.5 h-2.5 rounded-full bg-white transition-all cursor-pointer" : "w-2.5 h-2.5 rounded-full bg-white/50 transition-all cursor-pointer";
+            dot.className = idx === window.currentSlide ? "w-2.5 h-2.5 rounded-full bg-white transition-all cursor-pointer" : "w-2.5 h-2.5 rounded-full bg-white/50 transition-all cursor-pointer";
         });
     }
 }
 
-function nextSlide() { showSlide(currentSlide + 1); }
-function prevSlide() { showSlide(currentSlide - 1); }
+function nextSlide() { showSlide(window.currentSlide + 1); }
+function prevSlide() { showSlide(window.currentSlide - 1); }
 function goToSlide(index) { showSlide(index); }
 
-// --- 5. SISTEM LOGIN & SESSION ---
+// --- 6. SISTEM LOGIN & SESSION ---
 function prosesLoginManual() {
     const userEl = document.getElementById('login-user');
     const passEl = document.getElementById('login-pass');
@@ -311,7 +385,7 @@ function handleLogout() {
     }
 }
 
-// --- 6. NAVIGASI HALAMAN & SIDEBAR ---
+// --- 7. NAVIGASI HALAMAN & SIDEBAR ---
 function navigateTo(sectionId, event) {
     window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
     document.body.scrollTop = 0;
@@ -389,7 +463,7 @@ function openFormType(key, event) {
     else if (typeof bukaFormUsulanPangkat === 'function' && key === 'usulan-pangkat') bukaFormUsulanPangkat();
 }
 
-// --- PENDUKUNG CETAK GLOBAL ---
+// --- 8. PENDUKUNG CETAK GLOBAL ---
 function bukaJendelaCetak(htmlContent) {
     const win = window.open('', '_blank');
     if (!win) { alert("Izinkan pop-up browser."); return; }
