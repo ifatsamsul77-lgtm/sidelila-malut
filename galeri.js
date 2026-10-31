@@ -1,66 +1,120 @@
-// --- 12. MODUL GALERI FOTO KEGIATAN ---
+// ==========================================
+// MODUL GALERI KEGIATAN (SIDELILA v2.0)
+// Terisolasi, Berbasis Firebase Firestore, Tanpa Atribut Tanggal
+// ==========================================
+
+// 1. Fungsi Utama Render Tampilan Galeri Berdasarkan Peran (Role)
 function renderGaleriView() {
     const target = document.getElementById('section-galeri');
     if (!target) return;
-    const role = localStorage.getItem('sidelila_role');
-    const list = JSON.parse(localStorage.getItem('sidelila_gallery_photos') || '[]');
-    let cards = '';
-    if (list.length === 0) {
-        cards = `<div class="col-span-full text-center py-16 bg-white rounded-2xl border shadow-sm"><p class="text-sm font-bold text-slate-700">Belum ada dokumentasi foto kegiatan.</p></div>`;
-    } else {
-        list.slice().reverse().forEach(item => {
-            const btnDel = role === 'admin' ? `<div class="pt-2 border-t flex justify-end"><button type="button" onclick="hapusFotoGaleri(${item.id})" class="text-[11px] font-bold text-rose-600 bg-rose-50 px-2.5 py-1 rounded">🗑️ Hapus</button></div>` : '';
-            cards += `<div class="bg-white rounded-2xl border shadow-sm overflow-hidden flex flex-col"><div class="relative h-52 bg-slate-100"><img src="${item.image}" class="w-full h-full object-cover"><span class="absolute bottom-2 right-2 bg-black/60 text-white text-[10px] px-2.5 py-1 rounded-full">${item.date}</span></div><div class="p-4 flex flex-col flex-grow justify-between space-y-3"><p class="text-xs text-slate-800">${item.caption}</p>${btnDel}</div></div>`;
-        });
-    }
-    const formAdmin = role === 'admin' ? `<div class="bg-slate-50 p-5 rounded-2xl border space-y-3 max-w-2xl mb-6"><h4 class="text-xs font-bold uppercase">➕ Panel Admin: Unggah Foto</h4><input type="file" id="galeri-file-input" accept="image/*" class="w-full p-2 bg-white border rounded text-xs"><textarea id="galeri-caption-input" rows="2" placeholder="Caption..." class="w-full p-2 bg-white border rounded text-xs"></textarea><button type="button" onclick="prosesUnggahGaleri()" class="px-4 py-2 bg-sky-600 text-white text-xs font-bold rounded">Publikasikan</button></div>` : '';
-    target.innerHTML = `<div class="space-y-6"><div class="border-b pb-4"><h2 class="text-lg font-black uppercase">Galeri Dokumentasi Kegiatan</h2></div>${formAdmin}<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">${cards}</div></div>`;
+    
+    const role = localStorage.getItem('sidelila_role') || 'user';
+
+    // Panel khusus Admin di bagian atas (Hanya muncul jika role === 'admin')
+    const formAdmin = role === 'admin' ? `
+        <div class="bg-slate-50 p-5 rounded-2xl border border-slate-200 shadow-sm space-y-3 max-w-2xl mb-6">
+            <h4 class="text-xs font-bold uppercase text-slate-800 tracking-wider">➕ Panel Admin: Unggah Dokumentasi Foto</h4>
+            <input type="file" id="galeri-file-input" accept="image/*" class="w-full p-2 bg-white border border-slate-300 rounded-xl text-xs">
+            <textarea id="galeri-caption-input" rows="2" placeholder="Tuliskan keterangan foto..." class="w-full p-2 bg-white border border-slate-300 rounded-xl text-xs focus:ring-2 focus:ring-sky-500 focus:outline-none"></textarea>
+            <button type="button" onclick="prosesUnggahGaleriFirebase()" class="px-4 py-2.5 bg-sky-600 hover:bg-sky-700 text-white text-xs font-bold rounded-xl shadow-sm transition-all cursor-pointer">
+                🚀 Publikasikan ke Server
+            </button>
+        </div>
+    ` : '';
+
+    // Kerangka dasar kontainer galeri di dalam section terisolasi
+    target.innerHTML = `
+        <div class="space-y-6">
+            <div class="border-b border-slate-200 pb-4">
+                <h2 class="text-lg font-black uppercase text-slate-800">Galeri Dokumentasi Kegiatan</h2>
+            </div>
+            ${formAdmin}
+            <div id="galeri-container">
+                <div class="text-center py-12 text-slate-400 text-xs font-medium">Memuat data galeri...</div>
+            </div>
+        </div>
+    `;
+
+    // Ambil data dari Firebase Firestore
+    muatGaleriFirebase();
 }
 
-function prosesUnggahGaleri() {
-    const fileInput = document.getElementById('galeri-file-input');
-    const captionInput = document.getElementById('galeri-caption-input');
-    if (!fileInput || !fileInput.files[0]) { alert("Pilih foto terlebih dahulu."); return; }
-    const caption = captionInput ? captionInput.value.trim() : "";
-    if (!caption) { alert("Tuliskan caption foto."); return; }
-    const reader = new FileReader();
-    reader.onload = function(e) {
-        const list = JSON.parse(localStorage.getItem('sidelila_gallery_photos') || '[]');
-        list.push({ id: Date.now(), image: e.target.result, caption: caption, date: new Date().toLocaleDateString('id-ID', { day: 'numeric', month: 'long', year: 'numeric' }) });
-        localStorage.setItem('sidelila_gallery_photos', JSON.stringify(list));
-        alert("Foto berhasil dipublikasikan!");
-        renderGaleriView();
-    };
-    reader.readAsDataURL(fileInput.files[0]);
-}
-
-function hapusFotoGaleri(id) {
-    if (confirm("Hapus foto ini?")) {
-        let list = JSON.parse(localStorage.getItem('sidelila_gallery_photos') || '[]');
-        list = list.filter(item => item.id !== id);
-        localStorage.setItem('sidelila_gallery_photos', JSON.stringify(list));
-        renderGaleriView();
-    }
-}
-
-// --- PENDUKUNG CETAK ---
-function bukaJendelaCetak(htmlContent) {
-    const win = window.open('', '_blank');
-    if (!win) { alert("Izinkan pop-up browser."); return; }
-    win.document.write(htmlContent);
-    win.document.close();
-    win.focus();
-    setTimeout(() => { win.print(); }, 500);
-}
-
-// Fungsi Upload Galeri ke Firebase Firestore dengan Kompresi Otomatis
-function simpanFotoGaleriFirebase(fileFoto, judulFoto, keteranganFoto) {
-    if (!fileFoto) {
-        alert("Silakan pilih foto terlebih dahulu!");
+// 2. Fungsi Ambil & Render Data dari Firebase Firestore ke Tampilan
+function muatGaleriFirebase() {
+    if (typeof db === 'undefined') {
+        console.error("Koneksi Firestore (db) belum siap.");
         return;
     }
 
+    db.collection("galeri_sidelila")
+      .orderBy("timestamp", "desc")
+      .onSnapshot((querySnapshot) => {
+          const container = document.getElementById('galeri-container');
+          if (!container) return;
+
+          const role = localStorage.getItem('sidelila_role') || 'user';
+          let cards = '';
+
+          if (querySnapshot.empty) {
+              container.innerHTML = `<div class="text-center py-16 bg-white rounded-2xl border border-slate-200 shadow-sm"><p class="text-xs font-bold text-slate-700">Belum ada dokumentasi foto kegiatan.</p></div>`;
+              return;
+          }
+
+          querySnapshot.forEach((doc) => {
+              const item = doc.data();
+              const docId = doc.id;
+
+              // Tombol hapus khusus admin
+              const btnDel = role === 'admin' ? `
+                  <div class="pt-2 border-t border-slate-100 flex justify-end">
+                      <button type="button" onclick="hapusFotoGaleriFirebase('${docId}')" class="text-[11px] font-bold text-rose-600 bg-rose-50 hover:bg-rose-100 px-2.5 py-1 rounded-lg transition-all cursor-pointer">
+                          🗑️ Hapus
+                      </button>
+                  </div>
+              ` : '';
+
+              // Layout Kartu: 
+              // Admin: Tersusun ke samping lalu ke bawah (mengikuti grid responsif)
+              // User: Grid kartu 2x2 ke bawah, lengkap dengan caption di bawah foto TANPA ADA TANGGAL.
+              cards += `
+                  <div class="bg-white rounded-2xl border border-slate-200/80 shadow-sm overflow-hidden flex flex-col group hover:shadow-md transition-all">
+                      <div class="aspect-video bg-slate-100 overflow-hidden">
+                          <img src="${item.image}" alt="Dokumentasi" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                      </div>
+                      <div class="p-4 flex flex-col flex-grow justify-between space-y-3">
+                          <p class="text-xs text-slate-800 font-medium leading-relaxed">${item.keterangan || item.judul || ''}</p>
+                          ${btnDel}
+                      </div>
+                  </div>
+              `;
+          });
+
+          // Terapkan struktur grid 2x2 ke bawah untuk user / responsif
+          container.innerHTML = `<div class="grid grid-cols-1 sm:grid-cols-2 gap-6">${cards}</div>`;
+      }, (error) => {
+          console.error("Gagal memuat galeri:", error);
+      });
+}
+
+// 3. Fungsi Unggah Foto ke Firebase Storage (via kompresi DataURL) & Firestore
+function prosesUnggahGaleriFirebase() {
+    const fileInput = document.getElementById('galeri-file-input');
+    const captionInput = document.getElementById('galeri-caption-input');
+
+    if (!fileInput || !fileInput.files[0]) {
+        alert("Silakan pilih foto terlebih dahulu.");
+        return;
+    }
+
+    const caption = captionInput ? captionInput.value.trim() : "";
+    if (!caption) {
+        alert("Tuliskan keterangan (caption) foto.");
+        return;
+    }
+
+    const fileFoto = fileInput.files[0];
     const reader = new FileReader();
+
     reader.onload = function(e) {
         const img = new Image();
         img.src = e.target.result;
@@ -70,7 +124,7 @@ function simpanFotoGaleriFirebase(fileFoto, judulFoto, keteranganFoto) {
             
             let width = img.width;
             let height = img.height;
-            const maxDim = 800; // Batas maksimal ukuran agar ringan
+            const maxDim = 800; // Batas ukuran maksimal agar optimal
             
             if (width > height && width > maxDim) {
                 height *= maxDim / width;
@@ -86,19 +140,17 @@ function simpanFotoGaleriFirebase(fileFoto, judulFoto, keteranganFoto) {
             
             const compressedDataUrl = canvas.toDataURL('image/jpeg', 0.7);
 
-            // Menyimpan ke database Firestore (Koleksi: "galeri_sidelila")
+            // Simpan ke Firestore
             db.collection("galeri_sidelila").add({
-                judul: judulFoto,
-                keterangan: keteranganFoto,
+                judul: "Dokumentasi Kegiatan SIDELILA",
+                keterangan: caption,
                 image: compressedDataUrl,
-                timestamp: firebase.firestore.FieldValue.serverTimestamp(),
-                tanggalFormatted: new Date().toLocaleDateString('id-ID', {
-                    day: 'numeric', month: 'long', year: 'numeric'
-                })
+                timestamp: firebase.firestore.FieldValue.serverTimestamp()
             })
             .then(() => {
-                alert("Foto berhasil diunggah ke server SIDELILA!");
-                document.getElementById('form-upload-galeri')?.reset();
+                alert("Foto berhasil dipublikasikan ke server!");
+                if (fileInput) fileInput.value = '';
+                if (captionInput) captionInput.value = '';
             })
             .catch((error) => {
                 console.error("Gagal mengunggah foto: ", error);
@@ -109,140 +161,16 @@ function simpanFotoGaleriFirebase(fileFoto, judulFoto, keteranganFoto) {
     reader.readAsDataURL(fileFoto);
 }
 
-// Fungsi untuk memuat dan menampilkan galeri secara aman dan otomatis
-function muatGaleriFirebase() {
-    console.log("Fungsi muatGaleriFirebase dipanggil...");
-
-    if (typeof db === 'undefined') {
-        console.error("Variabel database (db) belum didefinisikan!");
-        return;
+// 4. Fungsi Hapus Foto dari Firebase Firestore
+function hapusFotoGaleriFirebase(docId) {
+    if (confirm("Apakah Anda yakin ingin menghapus foto ini dari server?")) {
+        db.collection("galeri_sidelila").doc(docId).delete()
+        .then(() => {
+            // Pembaruan UI otomatis ditangani oleh onSnapshot
+        })
+        .catch((error) => {
+            console.error("Gagal menghapus foto: ", error);
+            alert("Gagal menghapus foto.");
+        });
     }
-
-    db.collection("galeri_sidelila")
-      .onSnapshot((querySnapshot) => {
-          console.log("Data Firestore berhasil diakses. Jumlah dokumen:", querySnapshot.size);
-          
-          // Cari section galeri atau area konten utama yang sedang aktif
-          let targetArea = document.getElementById('section-galeri') || document.querySelector('main') || document.body;
-          
-          // Pastikan section galeri dipaksa tampil
-          let sectionGaleri = document.getElementById('section-galeri');
-          if (sectionGaleri) {
-              sectionGaleri.style.display = 'block';
-          }
-
-          // Cari atau buat kontainer galeri langsung di area aktif
-          let container = document.getElementById('galeri-container');
-          if (!container) {
-              container = document.createElement('div');
-              container.id = 'galeri-container';
-              if (sectionGaleri) {
-                  sectionGaleri.appendChild(container);
-              } else {
-                  targetArea.appendChild(container);
-              }
-          }
-
-          let html = "";
-          if (querySnapshot.empty) {
-              html = '<div class="col-span-full text-center py-16 bg-white rounded-2xl border border-slate-200 shadow-sm"><p class="text-xs font-bold text-slate-700">Belum ada dokumentasi foto kegiatan.</p></div>';
-          } else {
-              html = '<div class="grid grid-cols-1 md:grid-cols-2 gap-4 p-4">';
-              querySnapshot.forEach((doc) => {
-                  const data = doc.data();
-                  html += `
-                      <div class="bg-white rounded-2xl border border-slate-200/80 shadow-sm overflow-hidden group">
-                          <div class="aspect-video bg-slate-100 overflow-hidden">
-                              <img src="${data.image}" alt="${data.judul || 'Foto Kegiatan'}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-                          </div>
-                          <div class="p-4">
-                              <p class="text-xs text-slate-700 font-medium leading-relaxed">${data.keterangan || data.judul || ''}</p>
-                          </div>
-                      </div>
-                  `;
-              });
-              html += '</div>';
-          }
-          
-          container.innerHTML = html;
-      }, (error) => {
-          console.error("Gagal mengambil data dari Firestore:", error);
-      });
 }
-// 1. Jalankan sekali saat pertama kali halaman dibuka
-muatGaleriFirebase();
-
-// 2. Tangkap setiap kali menu galeri diklik melalui navigasi
-document.addEventListener("click", function(e) {
-    const targetLink = e.target.closest('a');
-    if (targetLink) {
-        const onclickAttr = targetLink.getAttribute('onclick') || '';
-        // Jika tombol menu galeri yang diklik
-        if (onclickAttr.includes('galeri') || targetLink.id === 'menu-galeri') {
-            console.log("Menu galeri dipilih, memuat data dari Firebase...");
-            setTimeout(muatGaleriFirebase, 150); // Beri jeda sepersekian detik agar elemen siap
-        }
-    }
-});
-// Pemicu tambahan jika menu diklik
-document.addEventListener("click", function(e) {
-    if (e.target && (e.target.textContent.includes("Galeri Kegiatan") || e.target.closest('#menu-galeri'))) {
-        setTimeout(muatGaleriFirebase, 200); // Beri jeda sedikit agar elemen terbuka
-    }
-});
-
-// Otomatis menghubungkan tombol Publikasikan ke Firebase
-document.addEventListener("click", function(e) {
-    if (e.target && e.target.textContent.trim() === "Publikasikan") {
-        const wrapper = e.target.closest('div') || e.target.parentElement;
-        const inputFile = document.querySelector('input[type="file"]');
-        const inputCaption = document.querySelector('textarea') || document.querySelector('input[type="text"]');
-        
-        if (inputFile && inputFile.files[0]) {
-            const file = inputFile.files[0];
-            const keterangan = inputCaption ? inputCaption.value : "";
-            
-            // Jalankan fungsi simpan ke Firebase
-            simpanFotoGaleriFirebase(file, "Dokumentasi Kegiatan SIDELILA", keterangan);
-        } else {
-            alert("Silakan pilih foto terlebih dahulu!");
-        }
-    }
-});
-
-// Memastikan galeri otomatis dimuat saat menu Galeri Kegiatan diklik oleh pengguna
-document.addEventListener("click", function(e) {
-    // Mengecek jika yang diklik adalah menu galeri
-    if (e.target && (e.target.textContent.includes("Galeri Kegiatan") || e.target.closest('#menu-galeri'))) {
-        muatGaleriFirebase();
-    }
-});
-
-// --- DATA GALERI KEGIATAN LINI LAPANGAN ---
-const galeriData = [
-    { 
-        image: "foto1.jpg", 
-        caption: "Dokumentasi kegiatan operasional penyuluhan lini lapangan." 
-    }
-];
-
-// --- FUNGSI MERENDER GALERI KE TAMPILAN USER ---
-function loadGaleriKegiatan() {
-    const grid = document.getElementById('galeri-items-grid');
-    if (!grid) return;
-    
-    grid.innerHTML = '';
-    galeriData.forEach(item => {
-        grid.innerHTML += `
-            <div class="bg-white rounded-2xl border border-slate-200/80 shadow-sm hover:shadow-md hover:border-sky-400 transition-all overflow-hidden group">
-                <div class="overflow-hidden aspect-video bg-slate-100">
-                    <img src="${item.image}" alt="Dokumentasi Kegiatan" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-                </div>
-                <div class="p-4">
-                    <p class="text-xs text-slate-700 font-medium leading-relaxed">${item.caption}</p>
-                </div>
-            </div>
-        `;
-    });
-}
-

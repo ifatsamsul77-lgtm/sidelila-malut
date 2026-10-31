@@ -517,7 +517,7 @@
                     <div id="form-detail-container" style="display: none;" class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm space-y-6"></div>
                 </section>
 
-            <!-- SECTION: KOMPETENSI LINI LAPANGAN (Ditempatkan secara rapi di luar section lain) -->
+            <!-- SECTION: KOMPETENSI LINI LAPANGAN -->
             <section id="section-kompetensi" class="page-section space-y-5" style="display: none; padding: 20px;">
                 <h2 style="font-size: 22px; font-weight: bold; margin-bottom: 15px; color: #1e3a8a;">Uji Kompetensi</h2>
                 
@@ -558,25 +558,26 @@
                     </div>
                 </div>
 
-               <!-- KOTAK 3: HASIL UJIAN (Muncul setelah selesai) -->
-    <div id="kompetensi-hasil-container" style="display: none; background: #fff; padding: 25px; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); max-width: 600px; text-align: center;">
-        <h3 style="color: #16a34a; font-size: 22px; margin-bottom: 10px;">Latihan Selesai! 🎉</h3>
-        <p style="color: #666; margin-bottom: 20px;">Terima kasih telah mengikuti latihan kompetensi lini lapangan.</p>
-        
-        <div style="background: #f8fafc; padding: 15px; border-radius: 8px; margin-bottom: 20px; text-align: left;">
-            <p><strong>Nama:</strong> <span id="hasil-nama">-</span></p>
-            <p><strong>Wilayah:</strong> <span id="hasil-wilayah">-</span></p>
-            <p><strong>Perolehan Skor:</strong> <span id="hasil-skor" style="font-size: 20px; font-weight: bold; color: #2563eb;">-</span></p>
-            <p><strong>Durasi Pengerjaan:</strong> <span id="hasil-durasi">-</span></p>
-        </div>
+               <!-- KOTAK 3: HASIL UJIAN -->
+                <div id="kompetensi-hasil-container" style="display: none; background: #fff; padding: 25px; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); max-width: 600px; text-align: center;">
+                    <h3 style="color: #16a34a; font-size: 22px; margin-bottom: 10px;">Latihan Selesai! 🎉</h3>
+                    <p style="color: #666; margin-bottom: 20px;">Terima kasih telah mengikuti latihan kompetensi lini lapangan.</p>
+                    
+                    <div style="background: #f8fafc; padding: 15px; border-radius: 8px; margin-bottom: 20px; text-align: left;">
+                        <p><strong>Nama:</strong> <span id="hasil-nama">-</span></p>
+                        <p><strong>Wilayah:</strong> <span id="hasil-wilayah">-</span></p>
+                        <p><strong>Perolehan Skor:</strong> <span id="hasil-skor" style="font-size: 20px; font-weight: bold; color: #2563eb;">-</span></p>
+                        <p><strong>Durasi Pengerjaan:</strong> <span id="hasil-durasi">-</span></p>
+                    </div>
 
-        <!-- Tombol Aksi di dalam Kotak Hasil -->
-        <div style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
-            <button onclick="cetakEvaluasiUjian()" style="background: #0284c7; color: #fff; border: none; padding: 10px 20px; border-radius: 6px; font-weight: bold; cursor: pointer;">📥 Download Hasil & Pembahasan Soal</button>
-            <button onclick="ulangUjian()" style="background: #475569; color: #fff; border: none; padding: 10px 20px; border-radius: 6px; cursor: pointer;">Ulangi Latihan</button>
-        </div>
-    </div>
-            <!-- SECTION 6: GALERI -->
+                    <div style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
+                        <button onclick="cetakEvaluasiUjian()" style="background: #0284c7; color: #fff; border: none; padding: 10px 20px; border-radius: 6px; font-weight: bold; cursor: pointer;">📥 Download Hasil & Pembahasan Soal</button>
+                        <button onclick="ulangUjian()" style="background: #475569; color: #fff; border: none; padding: 10px 20px; border-radius: 6px; cursor: pointer;">Ulangi Latihan</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION 6: GALERI (Terisolasi Sempurna) -->
             <section id="section-galeri" class="page-section" style="display: none;">
                 <div id="galeri-container"></div>
             </section>
@@ -585,8 +586,12 @@
         </div>
     </div>
 
-    <!-- Panggil File Script.js di Sini -->
+    <!-- Panggilan Modul Pecahan Terstruktur & Tunggal -->
+    <script src="wfh.js"></script>
+    <script src="galeri.js"></script>
+    <script src="soal.js"></script>
     <script src="script.js"></script>
+
     <script>
         // Pemantau utama untuk mereset posisi scroll kontainer dan jendela browser saat menu diklik
         document.addEventListener("click", function(event) {
@@ -599,14 +604,6 @@
             }
         });
     </script>
-
-<!-- Panggilan Modul Pecahan SIDELILA v2.0 -->
-    <script src="wfh.js"></script>
-    <script src="galeri.js"></script>
-    <script src="soal.js"></script> <!-- Berisi bank 1.000 soal & ujian kompetensi -->
-    <script src="script.js"></script> <!-- Logika utama, router, & fungsi global -->
-
-</body>
 
 </body>
 </html>
