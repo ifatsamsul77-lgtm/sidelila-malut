@@ -229,6 +229,8 @@
                         </div>
                     </div>
 
+
+
                     <div class="bg-gradient-to-r from-sky-600 via-blue-700 to-indigo-800 rounded-2xl p-6 md:p-8 text-white shadow-lg relative overflow-hidden">
                         <div class="relative z-10 max-w-2xl">
                             <span class="bg-white/20 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider backdrop-blur-md">Portal Utama</span>
@@ -274,6 +276,48 @@
                             </div>
                         </div>
                     </div>
+
+<!-- 👇 TEMPELKAN KODE KARTU STATISTIK BARU DI SINI 👇 -->
+                    <div class="bg-gradient-to-br from-white via-slate-50 to-sky-50/40 rounded-2xl p-5 md:p-6 border border-sky-100 shadow-md space-y-4 relative overflow-hidden">
+                        <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-600 via-sky-500 to-indigo-600"></div>
+
+                        <div class="flex items-center justify-between border-b border-slate-200/70 pb-3">
+                            <h3 class="text-sm font-bold text-slate-800 flex items-center gap-2">
+                                <span class="text-base">📊</span> Statistik Pengunjung & Aktivitas Portal
+                            </h3>
+                            <span class="text-[10px] font-bold text-emerald-700 bg-emerald-100/80 px-3 py-1 rounded-full border border-emerald-200 shadow-sm flex items-center gap-1.5 animate-pulse">
+                                <span class="w-2 h-2 rounded-full bg-emerald-500"></span> Live Server
+                            </span>
+                        </div>
+                        
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <!-- Kotak Total Kunjungan -->
+                            <div class="bg-gradient-to-r from-sky-600 to-blue-700 p-4 rounded-xl shadow-md text-white flex items-center gap-4 relative overflow-hidden group hover:shadow-lg transition-all">
+                                <div class="absolute -right-4 -bottom-4 w-24 h-24 bg-white/10 rounded-full blur-xl group-hover:scale-125 transition-transform"></div>
+                                <div class="w-12 h-12 rounded-xl bg-white/20 backdrop-blur-sm text-white flex items-center justify-center text-2xl font-bold shadow-inner">
+                                    👁️
+                                </div>
+                                <div class="relative z-10">
+                                    <p class="text-[11px] text-sky-100 font-bold uppercase tracking-wider">Total Kunjungan Portal</p>
+                                    <p id="stat-total-kunjungan" class="text-2xl font-black text-white mt-0.5 tracking-tight">Memuat...</p>
+                                </div>
+                            </div>
+
+                            <!-- Kotak Status Sistem -->
+                            <div class="bg-white p-4 rounded-xl border border-slate-200/80 shadow-sm flex items-center gap-4 hover:border-blue-300 transition-all">
+                                <div class="w-12 h-12 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center text-xl font-bold border border-blue-100">
+                                    🚀
+                                </div>
+                                <div>
+                                    <p class="text-[11px] text-slate-500 font-bold uppercase tracking-wider">Status Sistem Lini Lapangan</p>
+                                    <div class="flex items-center gap-1.5 mt-1">
+                                        <span class="w-2 h-2 rounded-full bg-blue-600 animate-ping"></span>
+                                        <p class="text-xs font-extrabold text-blue-700">Normal & Terhubung (Online)</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </section>
 
               <!-- SECTION 2: APLIKASI TERPADU -->
@@ -289,7 +333,7 @@
         
         <!-- SIGA BKKBN -->
         <a href="https://newsiga-siga.kemendukbangga.go.id/#/login" target="_blank" class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-all group hover:border-sky-300 block">
-            <img src="icon045.png" class="w-9 h-8 object-contain mb-3" alt="Icon Siga">
+            <img src="icon106.png" class="w-9 h-8 object-contain mb-3" alt="Icon Siga">
             <h4 class="font-bold text-slate-800 group-hover:text-sky-600 transition-colors">SIGA BKKBN</h4>
             <p class="text-xs text-slate-500 mt-1 leading-relaxed">Sistem Informasi Keluarga</p>
         </a>
@@ -352,7 +396,7 @@
 
 		 <!-- LINK WFH -->
         <a href="https://tinyurl.com/LaporanWFH2026PKB" target="_blank" class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-all group hover:border-sky-300 block">
-            <img src="icon5.png" class="w-8 h-8 object-contain mb-3" alt="Icon wfh">
+            <img src="icon023.png" class="w-8 h-8 object-contain mb-3" alt="Icon wfh">
             <h4 class="font-bold text-slate-800 group-hover:text-cyan-600 transition-colors">LINK LAPORAN WFH</h4>
             <p class="text-xs text-slate-500 mt-1 leading-relaxed">Link Pengiriman Laporan WFH PKB/PLKB.</p>
         </a>

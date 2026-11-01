@@ -36,13 +36,13 @@ const subMateriData = {
         title: "Bina Keluarga Remaja (BKR)",
         parent: "poktan",
         items: [
-            { name: "MODUL BKR 1", desc: "Membangun Karakter, Komunikasi Efektif dan Ketahanan Mental Menuju Generasi Berencana", icon:'<img src="icon024.png" class="w-8 h-8 object-contain">', link: "https://docs.google.com/presentation/d/1w9XOoVwaYfOyH9QtAFcp0kOiyvdosypm/edit?usp=sharing" },
+            { name: "MODUL BKR 1", desc: "Membangun Karakter, Komunikasi Efektif dan Ketahanan Mental Menuju Generasi Berencana", icon:'<img src="icon1.png" class="w-8 h-8 object-contain">', link: "https://docs.google.com/presentation/d/1w9XOoVwaYfOyH9QtAFcp0kOiyvdosypm/edit?usp=sharing" },
             { name: "MODUL BKR 2", desc: "Pedoman Pengelolaan Bina Keluarga Remaja", icon:'<img src="images216.jpg" class="w-8 h-8 object-contain">', link: "https://drive.google.com/file/d/1n3SuYqpnVUrDgc5tfyfZ2Z1xDNEoFC8p/view?usp=sharing" },
             { name: "MODUL BKR 3", desc: "Mekanisme Pengelolaan dan Pengembangan Program BKR", icon:'<img src="icon2.png" class="w-8 h-8 object-contain">', link: "https://docs.google.com/presentation/d/1HlAgzWjNr9kZNGdap0aEcgEen7S6mBBS/edit?usp=sharing" },
             { name: "MODUL BKR 4", desc: "Pencatatan & Pelaporan Bina Keluarga Remaja", icon:'<img src="images217.jpg" class="w-8 h-8 object-contain">', link: "https://docs.google.com/presentation/d/1iTkYLkLvHs29ybiTh2PGFp0M6UHHgFBC/edit?usp=sharing&ouid=104636205695945782752&rtpof=true&sd=true" },
             { name: "MODUL BKR 5", desc: "Pengelolaan POKTAN Bina Keluarga Remaja", icon:'<img src="icon7.png" class="w-8 h-8 object-contain">', link: "https://docs.google.com/presentation/d/1g5JLV96VKcTmwSkVn4YAZXlwb-2gB-7A/edit?usp=sharing&ouid=104636205695945782752&rtpof=true&sd=true" },
             { name: "MODUL BKR 6", desc: "Indikator Keberhasilan BKR", icon:'<img src="icon6.png" class="w-8 h-8 object-contain">', link: "https://docs.google.com/presentation/d/1gtePMkxHT2WAM7q413vQigDxoZwX9coC/edit?usp=sharing&ouid=104636205695945782752&rtpof=true&sd=true" },
-            { name: "Modul Pegangan Bagi Fasilitator POKTAN BKR", desc: "Mmbantu Remaja Merencanakan Masa Depan", icon:'<img src="icon048.png" class="w-8 h-8 object-contain">', link: "https://drive.google.com/file/d/19zfzQMZiQKtCdyHvqDmPRcNf_G7B3UdU/view?usp=sharing" },
+            { name: "MODUL BKR 7", desc: "Materi Belum Tersedia", icon:'<img src="icon1.png" class="w-8 h-8 object-contain">', link: "#" },
             { name: "MODUL BKR 8", desc: "Materi Belum Tersedia", icon:'<img src="icon1.png" class="w-8 h-8 object-contain">', link: "#" },
             { name: "MODUL BKR 9", desc: "Materi Belum Tersedia", icon:'<img src="icon1.png" class="w-8 h-8 object-contain">', link: "#" }
         ]
@@ -51,10 +51,10 @@ const subMateriData = {
         title: "Bina Keluarga Lansia (BKL)",
         parent: "poktan",
         items: [
-            { name: "Pedoman Pelaksanaan Kelompok BKL", desc: "Acuan operasional pembinaan lansia tangguh", icon:'<img src="icon041.png" class="w-8 h-8 object-contain">', link: "#" },
-            { name: "Pedoman Pelaksanaan Kelompok BKL", desc: "Acuan operasional pembinaan lansia tangguh", icon:'<img src="icon042.png" class="w-8 h-8 object-contain">', link: "#" },
-            { name: "MODUL BKLL", desc: "Materi Belum Tersedia", icon:'<img src="icon043.png" class="w-8 h-8 object-contain">', link: "#" },
-            { name: "MODUL BKLL", desc: "Materi Belum Tersedia", icon:'<img src="icon044.png" class="w-8 h-8 object-contain">', link: "#" },
+            { name: "Pedoman Pelaksanaan Kelompok BKL", desc: "Acuan operasional pembinaan lansia tangguh", icon:'<img src="icon021.png" class="w-8 h-8 object-contain">', link: "#" },
+            { name: "Pedoman Pelaksanaan Kelompok BKL", desc: "Acuan operasional pembinaan lansia tangguh", icon:'<img src="icon8.png" class="w-8 h-8 object-contain">', link: "#" },
+            { name: "MODUL BKLL", desc: "Materi Belum Tersedia", icon:'<img src="icon8.png" class="w-8 h-8 object-contain">', link: "#" },
+            { name: "MODUL BKLL", desc: "Materi Belum Tersedia", icon:'<img src="icon8.png" class="w-8 h-8 object-contain">', link: "#" },
             { name: "MODUL BKLL", desc: "Materi Belum Tersedia", icon:'<img src="icon8.png" class="w-8 h-8 object-contain">', link: "#" },
             { name: "MODUL BKLL", desc: "Materi Belum Tersedia", icon:'<img src="icon8.png" class="w-8 h-8 object-contain">', link: "#" },
             { name: "MODUL BKLL", desc: "Materi Belum Tersedia", icon:'<img src="icon8.png" class="w-8 h-8 object-contain">', link: "#" },
@@ -70,12 +70,6 @@ const subMateriData = {
                 name: "MEMAHAMI DAN MENGATASI BULLYING", 
                 desc: "Membangun Lingkungan Belajar yang Aman dan Nyaman dan Saling Menghargai", 
                 icon: "📄", 
-                link: "https://docs.google.com/presentation/d/1pHAHpOdL4zo_4ugu7DNGRvWYM36ZsqetqZmfpiJZTNc/edit?usp=sharing" 
-            },
-            { 
-                name: "TENTANG KITA BERAKSI", 
-                desc: "Modul Perencanaan Masa Depan dan Kesehatan Reproduksi bagi Pendidik Sebaya Usia 15 - 19 Tahun", 
-                icon: '<img src="icon4.png" class="w-8 h-8 object-contain">', 
                 link: "https://docs.google.com/presentation/d/1pHAHpOdL4zo_4ugu7DNGRvWYM36ZsqetqZmfpiJZTNc/edit?usp=sharing" 
             }
         ] 
@@ -289,8 +283,11 @@ function navigateTo(sectionId, event) {
     const activeLink = document.getElementById(`menu-${sectionId}`);
     if (activeLink) activeLink.classList.add('active');
 
-    // 5. Eksekusi fungsi tambahan sesuai menu yang diklik
-    if (sectionId === 'beranda') initSlider();
+   // 5. Eksekusi fungsi tambahan sesuai menu yang diklik
+    if (sectionId === 'beranda') {
+        initSlider();
+        catatDanMuatStatistikKunjungan();
+    }
     if (sectionId !== 'materi') showMateriCategoriesView();
     if (sectionId !== 'peraturan') showPeraturanCategoriesView();
     if (sectionId === 'form') closeFormDetailView();
@@ -325,7 +322,7 @@ const dataMateri = {
             { isSubdirectory: true, subKey: "bkb", name: "Bina Keluarga Balita (BKB)", desc: "Materi BKB, BKB HI, EMAS, dan Kartu Kembang Anak", icon: "👶" },
             { isSubdirectory: true, subKey: "bkr", name: "Bina Keluarga Remaja (BKR)", desc: "Modul pembangunan karakter dan ketahanan remaja", icon: "👦" },
             { isSubdirectory: true, subKey: "bkl", name: "Bina Keluarga Lansia (BKL)", desc: "Pedoman pelaksanaan pembinaan lansia tangguh", icon: "👵" },
-            { isSubdirectory: true, subKey: "pikr", name: "PIK-Remaja (PIK-R)", desc: "Pusat Informasi dan Konseling Remaja", icon: '<img src="icon047.png" class="w-8 h-8 object-contain">' },
+            { isSubdirectory: true, subKey: "pikr", name: "PIK-Remaja (PIK-R)", desc: "Pusat Informasi dan Konseling Remaja", icon: "📄" },
             { isSubdirectory: true, subKey: "uppka", name: "UPPKA", desc: "Usaha Peningkatan Pendapatan Keluarga Akseptor", icon: "📄" }
         ]
     },
@@ -1341,6 +1338,40 @@ function cetakDokumen3() {
     `;
     
     bukaJendelaCetak(html);
+}
+
+// --- FUNGSI PENGHITUNG STATISTIK KUNJUNGAN REAL-TIME ---
+function catatDanMuatStatistikKunjungan() {
+    if (typeof db === 'undefined') return;
+
+    const statsRef = db.collection("sidelila_statistik").doc("kunjungan_portal");
+
+    // Cek apakah di sesi browser ini sudah dihitung (agar tidak ganda saat refresh)
+    const sudahDihitung = sessionStorage.getItem('sidelila_counted');
+
+    if (!sudahDihitung) {
+        statsRef.get().then((doc) => {
+            if (doc.exists) {
+                statsRef.update({
+                    total: firebase.firestore.FieldValue.increment(1)
+                });
+            } else {
+                statsRef.set({ total: 1 });
+            }
+            sessionStorage.setItem('sidelila_counted', 'true');
+        }).catch((err) => console.error("Gagal memperbarui statistik:", err));
+    }
+
+    // Ambil data secara real-time untuk ditampilkan di beranda
+    statsRef.onSnapshot((doc) => {
+        const el = document.getElementById('stat-total-kunjungan');
+        if (el && doc.exists) {
+            const jumlah = doc.data().total || 0;
+            el.innerText = jumlah.toLocaleString('id-ID') + ' Orang';
+        } else if (el) {
+            el.innerText = '1 Orang';
+        }
+    });
 }
 
 
