@@ -71,6 +71,11 @@ const subMateriData = {
                 desc: "Membangun Lingkungan Belajar yang Aman dan Nyaman dan Saling Menghargai", 
                 icon: "📄", 
                 link: "https://docs.google.com/presentation/d/1pHAHpOdL4zo_4ugu7DNGRvWYM36ZsqetqZmfpiJZTNc/edit?usp=sharing" 
+            },
+            name: "TENTANG KITA BERAKSI", 
+                desc: "Modul Tentang Perencanaan Masa Depan dan Kesehatan Reproduksi untuk Pendidik Sebaya usia 15 - 19 Tahun", 
+                icon: '<img src="icon4.png" class="w-8 h-8 object-contain">', 
+                link: "https://docs.google.com/presentation/d/1pHAHpOdL4zo_4ugu7DNGRvWYM36ZsqetqZmfpiJZTNc/edit?usp=sharing" 
             }
         ] 
     },
