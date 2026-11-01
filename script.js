@@ -71,6 +71,12 @@ const subMateriData = {
                 desc: "Membangun Lingkungan Belajar yang Aman dan Nyaman dan Saling Menghargai", 
                 icon: "📄", 
                 link: "https://docs.google.com/presentation/d/1pHAHpOdL4zo_4ugu7DNGRvWYM36ZsqetqZmfpiJZTNc/edit?usp=sharing" 
+            },
+            { 
+                name: "MEMAHAMI DAN MENGATASI BULLYING", 
+                desc: "Membangun Lingkungan Belajar yang Aman dan Nyaman dan Saling Menghargai", 
+                icon: "📄", 
+                link: "https://docs.google.com/presentation/d/1pHAHpOdL4zo_4ugu7DNGRvWYM36ZsqetqZmfpiJZTNc/edit?usp=sharing" 
             }
         ] 
     },
