@@ -73,9 +73,9 @@ const subMateriData = {
                 link: "https://docs.google.com/presentation/d/1pHAHpOdL4zo_4ugu7DNGRvWYM36ZsqetqZmfpiJZTNc/edit?usp=sharing" 
             },
             { 
-                name: "MEMAHAMI DAN MENGATASI BULLYING", 
-                desc: "Membangun Lingkungan Belajar yang Aman dan Nyaman dan Saling Menghargai", 
-                icon: "📄", 
+                name: "TENTANG KITA BERAKSI", 
+                desc: "Modul Perencanaan Masa Depan dan Kesehatan Reproduksi bagi Pendidik Sebaya Usia 15 - 19 Tahun", 
+                icon: '<img src="icon4.png" class="w-8 h-8 object-contain">', 
                 link: "https://docs.google.com/presentation/d/1pHAHpOdL4zo_4ugu7DNGRvWYM36ZsqetqZmfpiJZTNc/edit?usp=sharing" 
             }
         ] 
