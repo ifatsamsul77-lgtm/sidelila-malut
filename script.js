@@ -42,7 +42,7 @@ const subMateriData = {
             { name: "MODUL BKR 4", desc: "Pencatatan & Pelaporan Bina Keluarga Remaja", icon:'<img src="images217.jpg" class="w-8 h-8 object-contain">', link: "https://docs.google.com/presentation/d/1iTkYLkLvHs29ybiTh2PGFp0M6UHHgFBC/edit?usp=sharing&ouid=104636205695945782752&rtpof=true&sd=true" },
             { name: "MODUL BKR 5", desc: "Pengelolaan POKTAN Bina Keluarga Remaja", icon:'<img src="icon7.png" class="w-8 h-8 object-contain">', link: "https://docs.google.com/presentation/d/1g5JLV96VKcTmwSkVn4YAZXlwb-2gB-7A/edit?usp=sharing&ouid=104636205695945782752&rtpof=true&sd=true" },
             { name: "MODUL BKR 6", desc: "Indikator Keberhasilan BKR", icon:'<img src="icon6.png" class="w-8 h-8 object-contain">', link: "https://docs.google.com/presentation/d/1gtePMkxHT2WAM7q413vQigDxoZwX9coC/edit?usp=sharing&ouid=104636205695945782752&rtpof=true&sd=true" },
-            { name: "Modul Pegangan Bagi Fasilitator POKTAN BKR", desc: "Mmbantu Remaja Merencanakan Masa Depan", icon:'<img src="image217.jpg" class="w-8 h-8 object-contain">', link: "https://drive.google.com/file/d/19zfzQMZiQKtCdyHvqDmPRcNf_G7B3UdU/view?usp=sharing" },
+            { name: "Modul Pegangan Bagi Fasilitator POKTAN BKR", desc: "Mmbantu Remaja Merencanakan Masa Depan", icon:'<img src="icon048.png" class="w-8 h-8 object-contain">', link: "https://drive.google.com/file/d/19zfzQMZiQKtCdyHvqDmPRcNf_G7B3UdU/view?usp=sharing" },
             { name: "MODUL BKR 8", desc: "Materi Belum Tersedia", icon:'<img src="icon1.png" class="w-8 h-8 object-contain">', link: "#" },
             { name: "MODUL BKR 9", desc: "Materi Belum Tersedia", icon:'<img src="icon1.png" class="w-8 h-8 object-contain">', link: "#" }
         ]
