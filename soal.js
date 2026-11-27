@@ -10362,6 +10362,2648 @@ const bankSoalKompetensi = [
             "Dusun"
         ],
         jawaban: 4
+    },
+    // --- TAMBAHAN SOAL KOMPETENSI TEKNIS 02 (150 SOAL) ---
+    {
+        pertanyaan: "Di bawah ini yang bukan merupakan faktor penyebab rendahnya tingkat pendidikan penduduk Indonesia adalah",
+        pilihan: [
+            "Ketidakseimbangan antara jumlah murid dengan sarana pendidikan yang ada",
+            "Rendahnya pendapatan per kapita penduduk",
+            "Masih kurangnya kesadaran penduduk terhadap pentingnya pendidikan",
+            "Pendapatan nasional yang masih rendah",
+            "Anak lebih diarahkan untuk bekerja membantu memenuhi ekonomi keluarga"
+        ],
+        jawaban: 3
+    },
+    {
+        pertanyaan: "Masalah kependudukan di Indonesia yang terjadi karena adanya ketimpangan daerah pedesaan dan perkotaan disebut ..",
+        pilihan: [
+            "Reurbanisasi",
+            "Remigrasi",
+            "Urbanisasi",
+            "Emigrasi",
+            "Transmigrasi"
+        ],
+        jawaban: 2
+    },
+    {
+        pertanyaan: "Jumlah penduduk besar, pertumbuhan penduduk tinggi, penyebaran penduduk tidak merata, tingkat urbanisasi tinggi, dan jumlah pengangguran yang meningkat adalah permasalahan penduduk yang berdampak pada kehidupan masyarakat serta pembangunan nasional. Dampak yang dapat muncul dari permasalahan-permasalahan penduduk tersebut adalah .",
+        pilihan: [
+            "Peningkatan Angkatan Kerja",
+            "Pengangguran",
+            "Kemiskinan",
+            "Tekanan Terhadap Kehidupan Beragama",
+            "Daerah Kumuh (Slum)"
+        ],
+        jawaban: 3
+    },
+    {
+        pertanyaan: "Kewenangan BKKBN dalam menjalankan fungsinya menurut UU No 23 Tahun 2014 dan juga Perubahan Peraturan Presiden tentang kelembagaan BKKBN adalah sebagai berikut, kecuali...",
+        pilihan: [
+            "Pengendalian penduduk",
+            "Keluarga Berencana",
+            "Penyediaan sarana pendidikan",
+            "Standardisasi pelayanan KB dan sertifikasi tenaga penyuluh KB/petugas lapangan KB (PKB/PLKB)",
+            "Keluarga sejatera"
+        ],
+        jawaban: 2
+    },
+    {
+        pertanyaan: "Masalah penduduk yang bersifat kuantitatif membahas mengenai ...",
+        pilihan: [
+            "Jumlah, persebaran, serta komposisi penduduk",
+            "Masalah penduduk dari segi genetis",
+            "Masalah penduduk dari segi biologis",
+            "Masalah penduduk dari segi biologis dan genetis",
+            "Jumlah, persebaran, serta komposisi penduduk dari segi genetis dan biologis"
+        ],
+        jawaban: 0
+    },
+    {
+        pertanyaan: "Ilmu yang mempelajari tentang masalah kependudukan disebut ..",
+        pilihan: [
+            "Fertilitas",
+            "Demografi",
+            "Geografi",
+            "Sekularisasi",
+            "Stratifikasi"
+        ],
+        jawaban: 1
+    },
+    {
+        pertanyaan: "Ukuran demografi berupa jumlah kejadian pada sekelompok penduduk pada waktu tertentu terhadap jumlah penduduk yang berisiko terhadap kejadian tersebut disebut",
+        pilihan: [
+            "Bilangan absolut",
+            "Prevalensi",
+            "Proporsi",
+            "Rate/Angka",
+            "Ratio/Rasio"
+        ],
+        jawaban: 3
+    },
+    {
+        pertanyaan: "Ukuran demografi yang menunjukkan terjadinya suatu kejadian demografis selama periode tertentu",
+        pilihan: [
+            "Bilangan absolut",
+            "Prevalensi",
+            "Proporsi",
+            "Rate/Angka",
+            "Ratio/Rasio"
+        ],
+        jawaban: 3
+    },
+    {
+        pertanyaan: "Ukuran demografi berupa jumlah mutlak penduduk/kejadian lain disebut …*",
+        pilihan: [
+            "Bilangan absolut",
+            "Prevalensi",
+            "Proporsi",
+            "Rate/Angka",
+            "Ratio/Rasio"
+        ],
+        jawaban: 0
+    },
+    {
+        pertanyaan: "Angka yang menunjukkan banyaknya kelahiran per 1000 perempuan pada kelompok umur tertentu antara 15-49 tahun merupakan definisi dari .",
+        pilihan: [
+            "Age Specific Fertility Rate (ASFR)",
+            "Total Fertility Rate (TFR)",
+            "Net Reproduction Rate (NRR)",
+            "Replacement Level",
+            "AKB"
+        ],
+        jawaban: 0
+    },
+    {
+        pertanyaan: "Di bawah ini yang merupakan faktor pendorong kelahiran adalah .",
+        pilihan: [
+            "Adanya program Keluarga Berencana (KB)",
+            "Kemajuan di bidang iptek dan obat-obatan",
+            "Adanya peraturan pemerintah tentang pembatasan tunjangan anak bagi pns",
+            "Adanya anggapan bahwa anak laki-laki lebih tinggi nilainya, jika dibandingkan dengan anak perempuan",
+            "Penundaan usia pernikahan karena alasan ekonomi, pendidikan dan karir"
+        ],
+        jawaban: 3
+    },
+    {
+        pertanyaan: "Indikator kelahiran yang memperhitungkan perbedaan fertilitas dari perempuan yang terpapar untuk melahirkan yaitu perempuan usia subur dengan memperhatikan karakteristik kelompok umurnya disebut",
+        pilihan: [
+            "Age Specific Fertility Rate (ASFR)",
+            "Total Fertility Rate (TFR)",
+            "Net Reproduction Rate (NRR)",
+            "Replacement Level",
+            "AKB"
+        ],
+        jawaban: 0
+    },
+    {
+        pertanyaan: "Ukuran-ukuran Demografi mencakup bilangan-bilangan di bawah ini, kecuali ..",
+        pilihan: [
+            "Absolut",
+            "Prevalensi",
+            "Nominal",
+            "Rate/angka",
+            "Ratio/rasio"
+        ],
+        jawaban: 2
+    },
+    {
+        pertanyaan: "Pertumbuhan penduduk adalah ...",
+        pilihan: [
+            "Perubahan jumlah penduduk di suatu wilayah tertentu pada waktu tertentu dibandingkan waktu sebelumnya",
+            "Rasio yang menyatakan perbandingan antara banyaknya penduduk terhadap luaswilayah atau berapa banyaknya penduduk per kilometer persegi pada tahun tertentu",
+            "Keadaan penduduk berdasarkan kelompok umur dan jenis kelamin",
+            "Mata statistik dari statistik kependudukan yang membagi dan membahas masalah kependudukan dari segi umur dan jenis kelamin",
+            "Landasan dalam penyediaan kebutuhan dasar penduduk, seperti pendidikan dan lapangan pekerjaan"
+        ],
+        jawaban: 0
+    },
+    {
+        pertanyaan: "Metode kontrasepsi yang mengandung hormon yang diletakkan di bawah kulit lengan atas dan terdiri dari satu atau dua batang plastik kecil adalah..",
+        pilihan: [
+            "Spiral",
+            "Tubektomi",
+            "Implan",
+            "Vasektomi",
+            "IUD"
+        ],
+        jawaban: 2
+    },
+    {
+        pertanyaan: "Intra Urine Device (IUD) adalah .",
+        pilihan: [
+            "Alat kontrasepsi yang ditelakkan di bawah kulit",
+            "Alat kontrasepsi berbentuk huruf T yang dimasukkan ke dalam rahim",
+            "Alat kontrasepsi yang mengandung hormon progestin dan estogen",
+            "Alat kontrasepsi yang terbuat dari lateks",
+            "Metode kontrasepsi dengan cara memasang cincin pada saluran telur kanan dan kiri"
+        ],
+        jawaban: 1
+    },
+    {
+        pertanyaan: "Di bawah ini yang merupakan cara kerja dari alat kontrasepsi dalam rahim adalah .",
+        pilihan: [
+            "Mencegah pertemuan sperma dengan sel telur dengan jalan menutup kedua telur",
+            "Menghasilkan perubahan kimia yang dapat membuat sperma sulit masuk ke dalam alat reproduksi perempuan",
+            "Melepaskan hormon secara perlahan dan mengentalkan lendir pada mulut rahim",
+            "Mengganggu pembentukan lapisan pada dinding rahim",
+            "Mengentalkan lendir dinding rahim sehingga dapat mengganggu pertemuan antar sperma dan sel telur"
+        ],
+        jawaban: 1
+    },
+    {
+        pertanyaan: "Metode pencegahan kehamilan melalui metode menyusui secara langsung disebut ...",
+        pilihan: [
+            "Metode Amenore Laktasi (MAL)",
+            "Intra Uterine Device (IUD)",
+            "AKBK",
+            "AKDR",
+            "Vasektomi"
+        ],
+        jawaban: 0
+    },
+    {
+        pertanyaan: "Di bawah ini merupakan kelemahan-kelemahan dari alat kontrasepsi pil progestin, kecuali …",
+        pilihan: [
+            "Menyebabkan perubahan pola haid",
+            "Menyebabkan kenaikan berat badan",
+            "Menyebabkan sakit kepala ringan",
+            "Menyebabkan perubahan suasana hati",
+            "Menyebabkan produksi ASI berkurang"
+        ],
+        jawaban: 4
+    },
+    {
+        pertanyaan: "Kelemahan dari metode kontrasepsi tubektomi adalah …",
+        pilihan: [
+            "Dapat muncul rasa nyeri dan bengkak",
+            "Ada perubahan dalam fungsi seksual",
+            "Mempengaruhi proses kualitas dan volume ASI",
+            "Dilakukan pengangkatan rahim sehingga tidak bisa haid",
+            "Tidak dapat dilakukan setelah persalinan"
+        ],
+        jawaban: 0
+    },
+    {
+        pertanyaan: "Di bawah ini yang merupakan metode KB jangka pendek adalah",
+        pilihan: [
+            "AKBK",
+            "AKDR",
+            "Suntik Progesteron",
+            "Tubektomi",
+            "Vasektom"
+        ],
+        jawaban: 2
+    },
+    {
+        pertanyaan: "Di bawah ini yang merupakan metode KB jangka panjang adalah ..",
+        pilihan: [
+            "Kondom",
+            "AKBK",
+            "Pil",
+            "Suntik",
+            "Semua jawaban salah"
+        ],
+        jawaban: 1
+    },
+    {
+        pertanyaan: "Di bawah ini merupakan metode KB jangka pendek, kecuali ..",
+        pilihan: [
+            "Kondom",
+            "AKDR",
+            "Pil",
+            "Suntik",
+            "Sistem manual (kalender)"
+        ],
+        jawaban: 1
+    },
+    {
+        pertanyaan: "Upaya mengatur kelahiran anak, jarak dan usia ideal melahirkan, mengatur kehamilan, melalui promosi, perlindungan, dan bantuan sesuai dengan hak reproduksi untuk mewujudkan keluarga yang berkualitas merupakan definisi KB menurut …",
+        pilihan: [
+            "UU Nomor 25 Tahun 2009",
+            "UU Nomor 52 Tahun 2009",
+            "UU Nomor 52 Tahun 2019",
+            "UU Nomor 25 Tahun 2019",
+            "BKKBN"
+        ],
+        jawaban: 1
+    },
+    {
+        pertanyaan: "Pernyataan yang benar terkait alat kontrasepsi implan yaitu .",
+        pilihan: [
+            "Memasang implan tidak boleh bekerja berat dan angkat berat",
+            "Tidak boleh menggunakan implan jika berat badan lebih dari 70 Kg",
+            "Mempengaruhi periode haid (haid menjadi sedikit atau hanya bercak)",
+            "Orang gondok tidak boleh menggunakan implan",
+            "Implan menyebabkan rahim kering/sulit subur kembali"
+        ],
+        jawaban: 2
+    },
+    {
+        pertanyaan: "Cara kerja metode kontrasepsi tubektomi adalah …",
+        pilihan: [
+            "Melepaskan hormon yang dapat menghambat pergerakan sperma",
+            "Melepaskan hormon yang dapat mengganggu pembentukan lapisan pada dinding rahim atau endometrium",
+            "Pemotongan dan pengikatan saluran sperma menyebabkan cairan mani yang keluar tidak lagi mengandung sel sperma",
+            "Menyebabkan perubahan kimia yang dapat membuat sperma sulit masuk ke dalam alat reproduksi perempuan",
+            "Mencegah pertemuan sperma dengan sel telur dengan jalan menutup kedua saluran telur"
+        ],
+        jawaban: 4
+    },
+    {
+        pertanyaan: "Cara kerja metode kontrasepsi implan adalah",
+        pilihan: [
+            "Melepaskan hormon yang dapat mengentalkan lendir pada mulut rahim sehingga menghambat pergerakan sperma",
+            "Menghambat sperma masuk karena spiral dapat menutup saluran telur",
+            "Pemotongan dan pengikatan saluran sperma menyebabkan cairan mani yang keluar tidak lagi mengandung sel sperma",
+            "Menghasilkan perubahan kimia yang dapat membuat sperma sulit masuk ke dalam alat reproduksi perempuan",
+            "Mencegah pertemuan sperma dengan sel telur dengan jalan menutup kedua saluran telur"
+        ],
+        jawaban: 0
+    },
+    {
+        pertanyaan: "Wanita yang tidak ingin memiliki anak lagi dapat melakukan metode kontrasepsi ..",
+        pilihan: [
+            "Implan",
+            "Spiral",
+            "MAL",
+            "Tubektomi",
+            "Vasektomi"
+        ],
+        jawaban: 3
+    },
+    {
+        pertanyaan: "Di bawah ini yang bukan merupakan hak-hak reproduksi adalah ...",
+        pilihan: [
+            "Hak mendapat informasi dan pendidikan kesehatan reproduksi",
+            "Hak mendapat pelayanan dan perlindungan kesehatan reproduksi",
+            "Hak untuk memperoleh kebebasan berpikir dan membuat keputusan tentang kesehatan reproduksi",
+            "Hak untuk mendapatkan alat kontrasepsi gratis",
+            "Hak untuk memutuskan jumlah dan jarak kelahiran anak"
+        ],
+        jawaban: 3
+    },
+    {
+        pertanyaan: "Pelayanan kesehatan reproduksi komprehensif/lengkap (PKRK/L) terdiri dari komponen- komponen di bawah ini, kecuali ..",
+        pilihan: [
+            "Kesehatan ibu dan anak",
+            "Keluarga berencana",
+            "Kesehatan reproduksi remaja",
+            "Pengendalian infeksi menular seksual (IMS) serta HIV/AIDS",
+            "Pemeliharaan kesehatan pada lansia"
+        ],
+        jawaban: 4
+    },
+    {
+        pertanyaan: "Peranan yang dapat dilakukan oleh suami dalam merencanakan persalinan yang sehat dan aman adalah sebagai berikut, kecuali .",
+        pilihan: [
+            "Merencanakan bersama istri untuk menentukan jumlah anak yang diinginkan",
+            "Merencanakan tempat yang baik dan tenaga kesehatan yang akan menolong persalinan",
+            "Menentukan bersama istri alat/obat kontrasepsi yang akan dipergunakan setelah melahirkan",
+            "Menemani istri lahiran di dalam ruang persalinan",
+            "Mendukung upaya rujukan pasca persalinan bila diperlukan"
+        ],
+        jawaban: 3
+    },
+    {
+        pertanyaan: "Peranan keluarga dalam menghadapi ibu yang mengalami keguguran adalah sebagai berikut, kecuali ...",
+        pilihan: [
+            "Memberi motivasi agar ibu tidak panik dan tidak melakukan gerakan yangdapat mengakibatkan perdarahan semakin banyak",
+            "Membawa ke tempat pelayanan kesehatan dengan segera",
+            "Mempersiapkan kontrasespsi yang aman sebelum kehamilan berikutnya",
+            "Memberi motivasi agar tetap kuat dan sabar",
+            "Menasihati ibu agar menjaga kehamilan dengan baik"
+        ],
+        jawaban: 4
+    },
+    {
+        pertanyaan: "Trimester II pada masa kehamilan dimulai dari…",
+        pilihan: [
+            "Usia kehamilan 12 minggu sampai dengan usia kehamilan 28 minggu",
+            "Usia kehamilan 12 minggu sampai dengan persalinan",
+            "Usia kehamilan 28 minggu sampai dengan persalinan",
+            "Usia kehamilan dari mulai konsepsi sampai dengan 12 minggu",
+            "Usia kehamilan di 12 minggu pertama"
+        ],
+        jawaban: 0
+    },
+    {
+        pertanyaan: "Bayi Berat Lahir Rendah (BBLR) didefinisikan WHO sebagai …",
+        pilihan: [
+            "Berat badan lahir kurang dari 2300 gram",
+            "Berat badan lahir kurang dari 2500 gram",
+            "Berat badan lahir kurang dari 2700 gram",
+            "Berat badan lahir kurang dari 2900 gram",
+            "Berat badan lahir kurang dari 3000 gram"
+        ],
+        jawaban: 1
+    },
+    {
+        pertanyaan: "Proporsi anak umur bawah lima tahun (balita) yang memiliki yinggi badan terhadap umur di bawah -2SD dari median tinggi badan terhadap umur disebut …",
+        pilihan: [
+            "Kekurangan gizi",
+            "Stunting",
+            "Malnutrisi",
+            "Gizi buruk",
+            "Obesitas"
+        ],
+        jawaban: 1
+    },
+    {
+        pertanyaan: "Sebagaimana halnya pada bayi, perkembangan fisik pada anak Balita juga dapat diketahui dari pertambahan berat badannya melalui grafik KMS. Orangtua/keluarga harus memberikan stimulasi dengan cara melatihnya melalui kegiatan bermain, untuk merangsang kemampuan anak Balita sehingga dapat berkembang secara optimal. Beberapa hal yang perlu diperhatikan oleh orangtua/keluarga dalam memberikan stimulasi adalah sebagai berikut, kecuali .",
+        pilihan: [
+            "Stimulasi diberikan secara bertahap sesuai dengan perkembangan usia anak Balita, terus menerus dan berkelanjutan",
+            "Bersifat memaksa untuk membuat anak tertarik",
+            "Memberi pujian dan dorongan setiap kali anak Balita berhasil melakukan sesuatu dengan benar dan baik",
+            "Tidak memarahi atau mencela setiap anak Balita belum mampu melakukan suatu kegiatan",
+            "Stimulasi dilakukan dalam suasana yang menyenangkan dan penuh kasih sayang"
+        ],
+        jawaban: 1
+    },
+    {
+        pertanyaan: "Status gizi Balita dapat diketahui dari perkembangan berat badannya. Melalui KMS dapat diketahui apakah gizi anak Balita termasuk ke dalam kategori normal, kurang atau kegemukan. Bila BB terletak di dalam area berwarna hijau, berarti anak tersebut",
+        pilihan: [
+            "Memiliki gizi baik (normal)",
+            "Memiliki gizi kurang",
+            "Memiliki gizi buruk",
+            "Memiliki penyakit serius",
+            "Memiliki gangguan pertumbuhan"
+        ],
+        jawaban: 0
+    },
+    {
+        pertanyaan: "Status gizi Balita dapat diketahui dari perkembangan berat badannya. Melalui KMS dapat diketahui apakah gizi anak Balita termasuk ke dalam kategori normal, kurang atau kegemukan. Bila BB terletak di dalam area berwarna merah, berarti anak tersebut ..",
+        pilihan: [
+            "Memiliki gizi baik (normal)",
+            "Memiliki gizi kurang",
+            "Memiliki gizi buruk",
+            "Memiliki penyakit serius",
+            "Memiliki gangguan pertumbuhan"
+        ],
+        jawaban: 2
+    },
+    {
+        pertanyaan: "Wadah kegiatan beranggotakan keluarga yang memiliki anak remaja untuk meningkatkan pengetahuan dan keterampilan orangtua dan atau anggota keluarga lainnya dalam pengasuhan dan pembinaan tumbuh kembang anak dan remaja melalui komunikasi efektif antara orang tua dan anak remaja, merupakan definisi dari ...",
+        pilihan: [
+            "Bina Keluarga Remaja (BKR)",
+            "Bina Keluarga Balita (BKB)",
+            "Usaha Peningkatan Pendapatan Keluarga Sejahtera (UPPKS)",
+            "Bina Keluarga Lansia (BKL)",
+            "PIK R/M"
+        ],
+        jawaban: 0
+    },
+    {
+        pertanyaan: "Di bawah ini merupakan gaya komunikasi yang menghambat komunikasi dengan remaja, kecuali",
+        pilihan: [
+            "Memerintah",
+            "Menyalahkan",
+            "Meremehkan",
+            "Menasihati",
+            "Membandingkan"
+        ],
+        jawaban: 3
+    },
+    {
+        pertanyaan: "Di bawah ini merupakan tugas-tugas dari kader BKR, kecuali .",
+        pilihan: [
+            "Melakukan pendataan keluarga yang memiliki remaja.",
+            "Memberikan penyuluhan kepada keluarga remaja yang ada di desa untuk ikut aktif menjadi anggota BKR.",
+            "Menjadi pakar di bidang terkait, bila tidak menguasai materi.",
+            "Menyusun jadwal kegiatan.",
+            "Pencatatan dan pelaporan"
+        ],
+        jawaban: 2
+    },
+    {
+        pertanyaan: "Lansia yang berusia 70 sampai 80 tahun dikategorikan sebagai ..",
+        pilihan: [
+            "Lansia tangguh",
+            "Lansia dewasa",
+            "Lansia muda",
+            "Lansia sejahtra",
+            "Semua Jawaban Salah"
+        ],
+        jawaban: 1
+    },
+    {
+        pertanyaan: "Lansia yang berusia lebih dari 80 tahun dikategorikan sebagai .",
+        pilihan: [
+            "Lansia tangguh",
+            "Lansia dewasa",
+            "Lansia muda",
+            "Lansia sejahtra",
+            "Lansia parpurna"
+        ],
+        jawaban: 4
+    },
+    {
+        pertanyaan: "Upaya mewujudkan Lansia tangguh dapat dilaksanakan melalui penerapan 7 dimensi Lansia tangguh. Di bawah ini yang bukan termasuk dalam 7 dimensi lansia tangguh adalah ..",
+        pilihan: [
+            "Dimensi spiritual",
+            "Dimensi intelektual",
+            "Dimensi emosional",
+            "Dimensi masyarakat",
+            "Dimensi lingkungan"
+        ],
+        jawaban: 3
+    },
+    {
+        pertanyaan: "Lansia tangguh dalam setiap keluarga dapat memberikan kontribusi dalam tercapainya pembangunan keluarga secara berkualitas. Beberapa peran yang dapat dilakukan oleh para Lansia tangguh tersebut antara lain sebagai berikut, kecuali ..",
+        pilihan: [
+            "Motivator bagi keluarga yang mempunyai Lansia agar tetap sehat, aktif, produktif dan mandiri sepanjang siklus hidup",
+            "Grand parenting bagi anak cucu khususnya keluarga muda",
+            "Membantu memberikan bimbingan, bantuan, dan teladan dalam pengasuhan cucu khususnya kepada keluarga muda",
+            "Mengembangkan usaha ekonomi produktif bagi keluarga Lansia dan Lansia",
+            "Membantu mengurus kebutuhan rumah tangga di keluarga"
+        ],
+        jawaban: 4
+    },
+    {
+        pertanyaan: "Dimensi sosial kemasyarakatan lansia tangguh berhubungan dengan ..",
+        pilihan: [
+            "Sosial kultural",
+            "Pemberdayaan ekonomi",
+            "Mental spiritual",
+            "Siklus kehidupan",
+            "Fasilitas"
+        ],
+        jawaban: 0
+    },
+    {
+        pertanyaan: "Dimensi profesional vokasional lansia tangguh berhubungan dengan ..",
+        pilihan: [
+            "Sosial kultural",
+            "Pemberdayaan ekonomi",
+            "Mental spiritual",
+            "Siklus kehidupan",
+            "Fasilitas"
+        ],
+        jawaban: 1
+    },
+    {
+        pertanyaan: "Emosi adalah …",
+        pilihan: [
+            "Ekspresi",
+            "Reaksi dari apa yang ada dipikiran kita",
+            "Perasaan marah",
+            "Perasaan Sedih",
+            "Semua Benar"
+        ],
+        jawaban: 1
+    },
+    {
+        pertanyaan: "Berikut ini yang bukan tipe peribadian yang biasanya terdapat pada lansia adalah",
+        pilihan: [
+            "Kepribadian Konstruktif",
+            "Kepribadian tergantung",
+            "Kepribadian kritik diri",
+            "Kepribadian bermusuhan",
+            "Kepribadian psikomotorik"
+        ],
+        jawaban: 4
+    },
+    {
+        pertanyaan: "Hipertensi pada lansia dapat dicegah dengan..",
+        pilihan: [
+            "membatasi konsumsi garam 1 sendok teh per hari",
+            "Singkirkan tembakau (tidak merokok)",
+            "Makan makanan berwarna hijau atau oranye serta buah-buahan.",
+            "Jangan minum alkohol",
+            "Batasi konsumsi gula"
+        ],
+        jawaban: 0
+    },
+    {
+        pertanyaan: "Gangguan jiwa yang biasa ditemukan pada lansia adalah.",
+        pilihan: [
+            "depresi",
+            "delirium",
+            "insomnia",
+            "gangguan cemas",
+            "gangguan psikotik"
+        ],
+        jawaban: 0
+    },
+    {
+        pertanyaan: "Kemampuan Lansia dalam menerima informasi, memahaminya, menyimpan informasi tersebut serta kemampuan mengamalkan dalam kehidupan sehari-hari, disbut juga.",
+        pilihan: [
+            "Daya Ingat",
+            "Kemampuan intelektual",
+            "Kemampuan berkominukasi",
+            "Kemampuan kognitif",
+            "Kemampuan intrapersonal"
+        ],
+        jawaban: 3
+    },
+    {
+        pertanyaan: "Membaca, menulis, mengarang, asah otak dengan mengisi TTS (Teka Teki Silang) merupakan kegiatan..",
+        pilihan: [
+            "hiburan bagi lansia",
+            "stimulasi otak bagi lansia",
+            "senam otak bagi lansia",
+            "mengisi waktu luang bagi lansia",
+            "memelihara kesehatan mental bagi lansia"
+        ],
+        jawaban: 1
+    },
+    {
+        pertanyaan: "Senam otak untuk lansia dapat dilakukan.",
+        pilihan: [
+            "sambil duduk",
+            "menggunakan tongkat",
+            "dengan bantuan instruktur",
+            "tanpa bantuan instruktur",
+            "sebelum tidur"
+        ],
+        jawaban: 0
+    },
+    {
+        pertanyaan: "Kemudahan aksesibilitas bagi lansia banyak dijumpai di manapun, salah satunya di kereta Commuter line, yaitu.",
+        pilihan: [
+            "tangga khusus lansia",
+            "kursi prioritas",
+            "toilet atau closet khusus lansia",
+            "gerbong khusus lansia",
+            "ruang tunggu stasiun khusus lansia"
+        ],
+        jawaban: 1
+    },
+    {
+        pertanyaan: "Warga lanjut usia yang masih mampu melakukan pekerjaan dan atas kegiatan yang dapat menghasilkan barang dan atau jasa disebut ...",
+        pilihan: [
+            "Lansia Kelompok Mapan",
+            "Lansia kelompok purnabakti",
+            "Lansia kelompok miskin dan rentan",
+            "Lansia potensial",
+            "Semua jawaban benar"
+        ],
+        jawaban: 3
+    },
+    {
+        pertanyaan: "Di bawah ini merupakan kebijakan pembangunan keluarga lansia tangguh, kecuali .",
+        pilihan: [
+            "Pengembangan kemitraan",
+            "Penguatan komitmen para pengelola dan pelaksana",
+            "Pemberdayaan keluarga dalam pembinaan Lansia tangguh",
+            "Peningkatan kepedulian dan peran serta mitra",
+            "Peningkatan akses dan kualitas pelayanan"
+        ],
+        jawaban: 3
+    },
+    {
+        pertanyaan: "Perubahan pada sel, sistem syaraf, sistem pendengaran, sistem penglihatan, sistem jantung dan pembuluh darah, sistem pernafasan, sistem genital (alat reproduksi) dan saluran kemih, sistem hormonal, fungsi kulit, sistem otot dan tulang, dan sistem pencernaan mulai dari pengunyahan sampai pencernaan di lambung dan usus disebut ..",
+        pilihan: [
+            "Perubahan biologis",
+            "Perubahan psikologis",
+            "Perubahan spiritual",
+            "Perubahan emosional",
+            "Perubahan psikososial"
+        ],
+        jawaban: 0
+    },
+    {
+        pertanyaan: "Perubahan yang dipengaruhi oleh nilai yang dianut sesuai dengan keyakinan dan budaya di mana Lansia berada disebut ..",
+        pilihan: [
+            "Perubahan biologis",
+            "Perubahan psikologis",
+            "Perubahan spiritual",
+            "Perubahan emosional",
+            "Perubahan psikososial"
+        ],
+        jawaban: 2
+    },
+    {
+        pertanyaan: "Di bawah ini merupakan peran masyarakat dalam pembinaan mental spiritual Lansia, kecuali...",
+        pilihan: [
+            "mengikutsertakan Lansia dalam kegiatan lembaga pembinaan mental spiritual Lansia atau rumah-rumah ibadah terdekat",
+            "Memberi ruang yang seimbang secara bersama-sama dan seirama dalam pelaksanaan ajaran agama untuk membantu keluarga Lansia secara sukarela",
+            "Mengadakan pertemuan untuk secara bersama dibimbing pendamping spiritual membaca kitab suci, membaca keagungan sifat-sifat Tuhan.",
+            "Menjelaskan makna sifat-sifat kebesaran Tuhan, Dia Maha Kasih, Maha Sayang, Maha Kuasa, Maha Agung, Maha Adil, Maha Pengampun atas dosa-dosa manusia.",
+            "Menjelaskan makna dan contoh dalam kehidupan tentang ikhlas, sabar, tawakal, usaha, kasih antar sesama, dermawan"
+        ],
+        jawaban: 1
+    },
+    {
+        pertanyaan: "Di bawah ini yang bukan merupakan manfaat bercerita/mendongeng bagi lansia adalah ..",
+        pilihan: [
+            "Membina hubungan dengan anak2",
+            "Memelihara kemampuan berbahasa",
+            "Memperlancar aliran darah dan oksigen menuju otak",
+            "Memelihara fungsi pendengaran.",
+            "Memberdayakan Lansia dalam kegiatan pembelajaran bahasa pada anak."
+        ],
+        jawaban: 3
+    },
+    {
+        pertanyaan: "Lansia mengalami serangkaian perubahan fisik, mental dan sosial yang berlangsung secara alamiah dengan meningkatnya usia. Salah satu tanda perubahan fisik adalah ..",
+        pilihan: [
+            "Pendengaran yang berkurang",
+            "Mudah tersinggung terhadap sikap orang di sekitarnya",
+            "Demensia (pikun)",
+            "Kecenderungan hanya ingin menyendiri",
+            "Tidak mempunyai gairah hidup"
+        ],
+        jawaban: 0
+    },
+    {
+        pertanyaan: "Salah satu tanda perubahan sosial pada lansia adalah ..",
+        pilihan: [
+            "Pendengaran yang berkurang",
+            "Mudah Lelah",
+            "Demensia (pikun)",
+            "Mudah tersinggung terhadap sikap orang di sekitarnya",
+            "Tidak mempunyai gairah hidup"
+        ],
+        jawaban: 3
+    },
+    {
+        pertanyaan: "Menopause ditandai dengan gejala fisik dan psikologis. Salah satu gejala fisik menopouse adalah",
+        pilihan: [
+            "Mudah tersinggung/marah",
+            "Masalah lubrikasi (pencairan)",
+            "Cepat merasa lelah",
+            "Kurang semangat",
+            "Merasa tua"
+        ],
+        jawaban: 1
+    },
+    {
+        pertanyaan: "Di bawah ini merupakan tindakan penanganan dalam mengatasi gejala menopause, kecuali .",
+        pilihan: [
+            "Pengobatan dengan asupan hormon (perlu konsultasi terlebih dahulu dengan dokter spesialis kandungan)",
+            "Pengaturan diet",
+            "Bila hubungan seksual terganggu karena keringnya vagina dianjurkan penggunaan krim atau pelumas (misalnya gel).",
+            "Untuk gejala psikologis tidak memerlukan pengobatan karena akan hilang dengan sendirinya",
+            "Perbanyak olah raga"
+        ],
+        jawaban: 3
+    },
+    {
+        pertanyaan: "Salah satu penyebab disfungsi ereksi secara fisik adalah ...",
+        pilihan: [
+            "Konflik hubungan dengan pasangan",
+            "Efek penggunaan obat-obatan",
+            "Kecemasan",
+            "Pelecehan seksual waktu masa anak",
+            "Stres"
+        ],
+        jawaban: 1
+    },
+    {
+        pertanyaan: "Ada beberapa kriteria yang dapat dipakai untuk menilai apakah seseorang sudah andropause atau belum. Kriteria tersebut disebut dengan ..",
+        pilihan: [
+            "9 Kriteria ADAM",
+            "10 Kriteria ADAM",
+            "11 Kriteria ADAM",
+            "12 Kriteria ADAM",
+            "13 Kriteria ADAM"
+        ],
+        jawaban: 1
+    },
+    {
+        pertanyaan: "Di bawah ini merupakan faktor yang dapat meningkatkan risiko hipertensi, kecuali ..",
+        pilihan: [
+            "Faktor keturunan",
+            "Usia",
+            "Jenis Kelamin",
+            "Pola makan",
+            "Tidur tidak teratur"
+        ],
+        jawaban: 4
+    },
+    {
+        pertanyaan: "Penyakit yang terjadi ketika ada penyumbatan sebagian aliran darah ke jantung disebut ...",
+        pilihan: [
+            "Pikun",
+            "Stroke",
+            "Hipertensi",
+            "Jantung Iskemik",
+            "Diabetes"
+        ],
+        jawaban: 3
+    },
+    {
+        pertanyaan: "Gangguan jiwa pada lansia meliputi hal-hal di bawah ini, kecuali ..",
+        pilihan: [
+            "Depresi",
+            "Delirium",
+            "Insomnia",
+            "Anemia",
+            "Demensi"
+        ],
+        jawaban: 3
+    },
+    {
+        pertanyaan: "Kesehatan lansia dapat dipelihara melalui hal-hal berikut, kecuali ...",
+        pilihan: [
+            "Ativitas fisik",
+            "Diet ketat",
+            "Cukup tidur",
+            "Latihan pernafasan",
+            "Tidak merokok"
+        ],
+        jawaban: 1
+    },
+    {
+        pertanyaan: "Berikut ini merupakan tipe kepribadian pada lansia, kecuali",
+        pilihan: [
+            "Kepribadian konstruktif",
+            "Kepribadian mandiri",
+            "Kepribadian tergantung",
+            "Kepribadian kritik diri",
+            "Kepribasian bersahabat"
+        ],
+        jawaban: 4
+    },
+    {
+        pertanyaan: "Lansia yang realistis (menerima kenyataan, percaya diri, sabar, bersyukur, dan tenang) merupakan lansia yang memiliki tipe kepribadian",
+        pilihan: [
+            "Konstruktif",
+            "Mandiri",
+            "Tergantung",
+            "Kritik diri",
+            "Bermusuhan"
+        ],
+        jawaban: 0
+    },
+    {
+        pertanyaan: "Lansia yang sering menyalahkan orang lain, tidak menerima bila disalahkan, agresif, sering merasa tidak puas, kurang bersyukur, sok tahu, suka mengatur, dan mudah tersinggung, merupakan lansia yang memiliki tipe kepribadian",
+        pilihan: [
+            "Konstruktif",
+            "Mandiri",
+            "Tergantung",
+            "Kritik diri",
+            "Bermusuhan"
+        ],
+        jawaban: 4
+    },
+    {
+        pertanyaan: "Di bawah ini merupakan upaya yang perlu dilakukan keluarga dalam memberdayakan Lansia, kecuali...",
+        pilihan: [
+            "Membantu menemukan makna hidup pada usia lanjut.",
+            "Menyediakan waktu untuk mengajak berbicara dari hati ke hati serta membantu agar Lansia dapat menyampaikan keluhannya.",
+            "Berupaya memahami apa yang dirasakan Lansia, mencari penyebab masalah dan berbagi pengalaman dengan keluarga Lansia lain.",
+            "Berusaha memenuhi kebutuhan Lansia dengan memberikan perhatian, kasih sayang yang tulus dan rasa aman.",
+            "Mengikutsertakan lansia dalam lomba-lomba"
+        ],
+        jawaban: 4
+    },
+    {
+        pertanyaan: "Dalam mengelola usaha ekonomi produktif setiap anggota kelompok UPPKS diharapkan dapat memahami kegiatan tersebut agar dapat berjalan dengan baik, salah satu keterampilan yang harus dipahami adalah ..",
+        pilihan: [
+            "Keterampilan berkomunikasi dalam kelompok",
+            "Mengerjakan administrasi usaha kelompok",
+            "Cakap dalam bersosialisai antar kelompok",
+            "Mengatur usaha kelompok",
+            "Memimpin usaha kelompok"
+        ],
+        jawaban: 1
+    },
+    {
+        pertanyaan: "Contoh tugas seksi usaha adalah ...",
+        pilihan: [
+            "Bertanggung jawab mengembangkan usaha",
+            "Bertanggung jawab mengelola usaha",
+            "Bertanggung jawab dalam berusaha memasarkan bahan baku",
+            "Bertanggung jawab mencari pihak yang dapat membantu kelancaran usaha",
+            "Bertanggung jawab dalam pengadaan bahan baku untuk usaha"
+        ],
+        jawaban: 0
+    },
+    {
+        pertanyaan: "Contoh tugas kemitraan adalah .",
+        pilihan: [
+            "Bertanggung jawab mengembangkan relasi",
+            "Bertanggung jawab memilah bahan baku berkualitas untuk kualitas usaha",
+            "Bertanggung jawab dalam memperkenalkan barang hasil prosduksi",
+            "Bertanggung jawab mencari pihak yang dapat membantu kelancaran usaha",
+            "Bertanggung jawab dalam menambah relasi usaha"
+        ],
+        jawaban: 3
+    },
+    {
+        pertanyaan: "Di bawah ini merupakan bentuk kegiatan pembinaan organisasi untuk meningkatkan kemampuan anggota UPPKS sesuai dengan bidang usahanya dan mendorong minat usaha diperlukan pembinaan, yaitu ..",
+        pilihan: [
+            "Mematuhi aturan",
+            "Rajin berusaha",
+            "Mengikuti kegiatan kelompok secara aktif",
+            "Selalu berusaha untuk meningkatkan mutu hasil usahanya",
+            "Memilih jenis usaha dengan memperhatikan kebutuhan pembeli"
+        ],
+        jawaban: 2
+    },
+    {
+        pertanyaan: "Masalah kesehatan Reproduksi Remaja yang akan mengurangi kesempatan remaja untuk mempraktikkan perilaku hidup sehat sebagaimana mestinya adalah ...",
+        pilihan: [
+            "Seks pra-nikah, Napza, HIV dan AIDS",
+            "Tumor, Kanker dan HIV",
+            "Stress, Depresi dan Amnesia",
+            "HIV dan AIDS, Kanker dan Tumor",
+            "Stress, depresi dan Seks pra-nikah"
+        ],
+        jawaban: 0
+    },
+    {
+        pertanyaan: "Di bawah ini merupakan salah satu sasaran dalam program GenRe, kecuali ..",
+        pilihan: [
+            "Remaja (10-24 tahun) dan belum menikah",
+            "Mahasiswa/mahasiswi belum menikah",
+            "Balita",
+            "Keluarga yang punya remaja maupun tidak punya remaja",
+            "Masyarakat peduli remaja"
+        ],
+        jawaban: 2
+    },
+    {
+        pertanyaan: "Salah satu yang menjadi fokus utama dalam Program Genre adalah .",
+        pilihan: [
+            "KB Suntik",
+            "Alat Reproduksi",
+            "Lingkungan Pergaulan Remaja",
+            "Pubertas",
+            "Usia Perkawinan"
+        ],
+        jawaban: 4
+    },
+    {
+        pertanyaan: "Empati, akrab, adil, pemaaf, setia, suka menolong, pengorbanan dan tanggung jawab adalah nilai dasar yang terdapat pada ..",
+        pilihan: [
+            "Fungsi sosialisai dan pendidikan",
+            "Fungsi agama",
+            "Fungsi cinta dan kasih sayang",
+            "Fungsi lingkungan",
+            "Fungsi Reproduksi"
+        ],
+        jawaban: 2
+    },
+    {
+        pertanyaan: "Undang-undang yang mengatur tentang Pendewasaan Usia Perkawinan adalah ..",
+        pilihan: [
+            "UU No. 52 tahun 2009",
+            "UU No. 52 tahun 1999",
+            "UU No. 25 tahun 2009",
+            "UU No. 25 tahun 1999",
+            "UU No. 5 tahun 2009"
+        ],
+        jawaban: 0
+    },
+    {
+        pertanyaan: "Perempuan yang hamil pada usia remaja/muda cenderung memiliki berbagai risiko kehamilan dikarenakan kurangnya pengetahuan dan ketidaksiapan dalam menghadapi kehamilannya. Di bawah ini adalah resiko kehamilan yang terjadi, kecuali .",
+        pilihan: [
+            "Pre eklampsia",
+            "Infeksi",
+            "Insomnia",
+            "Bayi yang meninggal dalam kandungan",
+            "Kanker rahim"
+        ],
+        jawaban: 4
+    },
+    {
+        pertanyaan: "Kesiapan individu dalam menjalankan peran sebagai suami atau istri, meliputi pengetahuan akan tugasnya masing-masing dalam rumah tangga. Hal tersebut termasuk ke dalam aspek .",
+        pilihan: [
+            "Aspek Kesehatan",
+            "Aspek Ekonomi",
+            "Aspek Psikologis",
+            "Aspek Pendidikan",
+            "Aspek Kependudukan"
+        ],
+        jawaban: 2
+    },
+    {
+        pertanyaan: "Di bawah ini adalah persiapan menjelang pranikah, kecuali …",
+        pilihan: [
+            "Persiapan pelaminan",
+            "Persiapan kesehatan pranikah",
+            "Persiapan gizi",
+            "Imunisasi Tetanus Toxoid",
+            "Tidak dalam pemakaian NAPZA"
+        ],
+        jawaban: 0
+    },
+    {
+        pertanyaan: "Segala bentuk perilaku yang muncul akibat dorongan seksual disebut .",
+        pilihan: [
+            "Perilaku seksual",
+            "Reproduksi seksual",
+            "Gairah seksual",
+            "Orientasi seksual",
+            "Hubungan seksual"
+        ],
+        jawaban: 0
+    },
+    {
+        pertanyaan: "Di bawah ini yang bukan organ reproduksi laki-laki adalah",
+        pilihan: [
+            "penis, glans dan uretra",
+            "vas deferensm epidydimis dan testis",
+            "srotum, kelenjar prostat dan vesikula seminalis",
+            "kandung kemih, testis dan skrotum",
+            "vagina, ovarium dan tuba fallopi"
+        ],
+        jawaban: 4
+    },
+    {
+        pertanyaan: "Organ reproduksi laki-laki yang memproduksi sperma adalah ..",
+        pilihan: [
+            "Epidydimis",
+            "Testis",
+            "Scrotum",
+            "Penis",
+            "Kelenjar prostat"
+        ],
+        jawaban: 1
+    },
+    {
+        pertanyaan: "Organ reproduksi perempuan yang menghasilkan sel telur (ovum) adalah ...",
+        pilihan: [
+            "Fimbrae",
+            "Tuba fallopi",
+            "Ovarium",
+            "Uterus",
+            "Cervix"
+        ],
+        jawaban: 2
+    },
+    {
+        pertanyaan: "Hormon-hormon yang dikeluarkan oleh organ reproduksi laki-laki dan perempuan adalah ...",
+        pilihan: [
+            "Testosteron – Estrogen, Progesteron",
+            "Melotonin – Serotonin",
+            "Insulin – Progesteron",
+            "Testosteron – Adrenalin",
+            "Gastrin – Progesteron"
+        ],
+        jawaban: 0
+    },
+    {
+        pertanyaan: "Penyebab terjadinya perubahan pada tubuh dan emosi selama pubertas adalah .",
+        pilihan: [
+            "Makanan",
+            "Orang tua",
+            "Cuaca",
+            "Hormon",
+            "Lingkungan"
+        ],
+        jawaban: 3
+    },
+    {
+        pertanyaan: "Manfaat dari hormon estrogen adalah ...",
+        pilihan: [
+            "Meningkatkan produksi lemak di kulit",
+            "Meningkatkan suhu badan",
+            "Merangsang pertumbuhan saluran susu di payudara sehingga payudara membesar",
+            "Lengan dan tungkai kaki bertambah panjang dan besar.",
+            "Mempertebal dinding rahim."
+        ],
+        jawaban: 2
+    },
+    {
+        pertanyaan: "Peristiwa pelepasan sel telur dari ovarium disebut ...",
+        pilihan: [
+            "Menstruasi",
+            "Fertilisasi",
+            "Ejakulasi",
+            "Ovulasi",
+            "Oogenesis"
+        ],
+        jawaban: 3
+    },
+    {
+        pertanyaan: "Salah satu tanda-tanda melahirkan adalah .",
+        pilihan: [
+            "Keluarnya cairan lendir bercampur darah",
+            "Penambahan berat badan 12 – 15 kg.",
+            "Pembesaran pada pinggul",
+            "Sering terasa mual dan pusing",
+            "Terjadinya muntah-muntah"
+        ],
+        jawaban: 0
+    },
+    {
+        pertanyaan: "Di bawah ini yang bukan termasuk jenis infeksi menular seksual adalah ..",
+        pilihan: [
+            "Trikomonas Vaginalis",
+            "Herpes Genitalis",
+            "Sifilis",
+            "Gonorrhea",
+            "Leukimia"
+        ],
+        jawaban: 4
+    },
+    {
+        pertanyaan: "Dari uretra (lubang kencing) keluar cairan berwarna putih, kuning kehijauan, rasa gatal, panas dan nyeri. Hal tersebut adalah ciri-ciri infeksi menular seksual dari .",
+        pilihan: [
+            "Trikomonas Vaginalis",
+            "Herpes Genitalis",
+            "Sifilis",
+            "Gonorrhea",
+            "Candidiasis"
+        ],
+        jawaban: 3
+    },
+    {
+        pertanyaan: "Orang yang senang dan terangsang melihat hewan melakukan hubungan seks dengan hewan disebut..",
+        pilihan: [
+            "Zoophilia",
+            "Sadomasokisme",
+            "Pedophilia",
+            "Voyeurisme",
+            "Fetishisme"
+        ],
+        jawaban: 0
+    },
+    {
+        pertanyaan: "Nama lain penyimpangan seksual berupa aktivitasnya disalurkan melalui bermasturbasi dengan BH, celana dalam, kaos kaki, atau benda lain yang dapat meningkatkan hasrat atau dorongan seksual adalah ..",
+        pilihan: [
+            "Zoophilia",
+            "Sadomasokisme",
+            "Pedophilia",
+            "Voyeurisme",
+            "Fetishisme"
+        ],
+        jawaban: 4
+    },
+    {
+        pertanyaan: "Manakah yang termasuk fakta tentang HIV adalah:",
+        pilihan: [
+            "HIV menular melalui gigitan nyamuk",
+            "HIV menular melalui penggunaan toilet",
+            "Bayi yang dilahirkan dari Ibu pengidap HIV pasti akan tertular HIV dari ibunya",
+            "HIV hanya bias hidup dalam tubuh manusia",
+            "Kondom tidak efektif dalam pencegahan penularan HIV"
+        ],
+        jawaban: 3
+    },
+    {
+        pertanyaan: "Dibawah ini yang bukan muatan rencana operasional KB dan KS adalah …",
+        pilihan: [
+            "Tujuan yang jelas",
+            "Kegiatan yang akan disampaikan",
+            "Standar mutu",
+            "Jadwal pelaksanaan",
+            "Anggaran Dana"
+        ],
+        jawaban: 2
+    },
+    {
+        pertanyaan: "Musrenbang Desa adalah …",
+        pilihan: [
+            "forum musyawarah tahunan pihak yang berkepentingan untuk mengatasi permasalahan desa",
+            "forum musyawarah tahunan pihak yang berkepentingan untuk mengatasi kenakalan remaja",
+            "forum musyawarah tahunan pihak yang berkepentingan untuk mengatasi pemekaran desa",
+            "forum musyawarah tahunan pihak yang berkepentingan untuk mengatasi imunisasi",
+            "forum musyawarah tahunan pihak yang berkepentingan untuk mengatasi kepadatan penduduk"
+        ],
+        jawaban: 0
+    },
+    {
+        pertanyaan: "Di bawah ini yang bukan merupakan penanganan aspek kesehatan fisik, mental, dan seksual pada korban kekerasan seksual sebagaimana dimaksud dalam PP ttg Kesehatan Reproduksi pasal 26 pada ayat (1) adalah …",
+        pilihan: [
+            "pemeriksaan fisik, mental, dan penunjang pengobatan luka dan/atau cedera",
+            "pencegahan dan/atau penanganan penyakit menular seksual",
+            "pencegahan kehamilan",
+            "penanganan kehamilan",
+            "rawat inap"
+        ],
+        jawaban: 4
+    },
+    {
+        pertanyaan: "Di bawah ini merupakan konsep-konsep utama dalam membangun keluarga, kecuali",
+        pilihan: [
+            "Keluarga berkumpul",
+            "Keluarga berinteraksi",
+            "Keluarga berdaya",
+            "Keluarga peduli dan berbagi",
+            "Keluarga bersatu"
+        ],
+        jawaban: 4
+    },
+    {
+        pertanyaan: "Ketidakberfungsian keluarga akan berdampak pada masalah hubungan antar keluarga serta ...",
+        pilihan: [
+            "Kurangnya kontrol orang tua terhadap perilaku anaknya",
+            "Kurangnya keharmonisan antar anggota keluarga",
+            "Kurangnya dukungan antar anggota keluarga",
+            "Kurangnya kasih sayang dalam keluarga",
+            "Kurangnya nilai moral dalam anggota keluarga"
+        ],
+        jawaban: 0
+    },
+    {
+        pertanyaan: "Fungsi keluarga yang terlaksana dengan baik akan melahirkan insan-insan yang berkualitas dan keluarga yang berkualitas, hal itu dapat terlaksana jika orang tua memiliki sikap …",
+        pilihan: [
+            "Sabar, tekun, kebersamaan",
+            "Penyayang, hangat, perhatian",
+            "Hangat, perhatian, menuntun",
+            "Jujur, disiplin, saling menghormati",
+            "Toleransi, tanggung jawab, pengertian"
+        ],
+        jawaban: 2
+    },
+    {
+        pertanyaan: "Salah satu fungsi keluarga yang paling mendasar yaitu",
+        pilihan: [
+            "Fungsi cinta kasih",
+            "Fungsi ekonomi",
+            "Fungsi keagamaan",
+            "Fungsi pembinaan lingkungan",
+            "Semua jawaban benar"
+        ],
+        jawaban: 0
+    },
+    {
+        pertanyaan: "Berikut ini yang tidak termasuk dalam 12 nilai dasar yang harus dipahami dalam keluarga sebagai fungsi keagamaan yaitu ...",
+        pilihan: [
+            "Iman",
+            "Ketaatan",
+            "Kepercayaan",
+            "Kesalehan",
+            "Sabra dan ikhlas"
+        ],
+        jawaban: 2
+    },
+    {
+        pertanyaan: "Santi ingin sekali membeli mainan baru, sedangkan dirumah masih banyak mainan yang masih baru. Santi tidak bisa menahan diri untuk membeli dan tak sabar ingin memilikinya. Sebagai orang tua, seharusnya dapat menanamkan nilai …",
+        pilihan: [
+            "Ketaqwaan",
+            "Kesalehan",
+            "Sabar dan ikhlas",
+            "Disiplin",
+            "Hemat"
+        ],
+        jawaban: 2
+    },
+    {
+        pertanyaan: "Meluangkan waktu dan tenaga untuk menyelesaikan tugas dan berusaha untuk mendapat hasil yang baik, termasuk nilai-nilai",
+        pilihan: [
+            "Disiplin",
+            "Rajin",
+            "Ketaatan",
+            "Tanggung jawab",
+            "Tekun"
+        ],
+        jawaban: 1
+    },
+    {
+        pertanyaan: "Setiap orang memiliki perbedaan baik dalam sifat atau karakternya, dan kita sebagai makhluk tuhan harus menerima perbedaan itu. Oleh karena itu sebagai orang tua dapat menanamkan nilai…",
+        pilihan: [
+            "Cinta kasih",
+            "Hormat menghormati",
+            "Toleransi",
+            "Tenggang rasa",
+            "Sabar"
+        ],
+        jawaban: 2
+    },
+    {
+        pertanyaan: "Fungsi sosial budaya dalam keluarga diterapkan dengan harapan keluarga dapat …",
+        pilihan: [
+            "menjadi wahan pertama bagi anak dalam belajar berinteraksi dan beradaptasi dengan lingkungannya",
+            "menjadi wahan pertama bagi anak dalam belajar bersosialisasi dan beradaptasi dengan lingkungannya",
+            "menjadi wahan pertama bagi anak dalam belajar berinteraksi dan berkomunikasi dengan lingkungannya",
+            "menjadi wahan pertama bagi anak dalam belajar berkomunikasi dan beradaptasi dengan lingkungannya",
+            "menjadi wahan pertama bagi anak dalam belajar berteman dan beradaptasi dengan lingkungannya"
+        ],
+        jawaban: 1
+    },
+    {
+        pertanyaan: "Di bawah ini yang tidak termasuk dalam 7 nilai dasar yang harus ditanamkan dan diterapkan oleh keluarga adalah .",
+        pilihan: [
+            "Toleransi dan saling menghargai",
+            "Sopan santun",
+            "Gotong royong",
+            "Tenggang rasa",
+            "Kerukunan dan kebersamaan"
+        ],
+        jawaban: 2
+    },
+    {
+        pertanyaan: "Keluarga yang menanamkan dan menerapkan sikap sopan santun dalam keluarga, maka dapat dikatakan telah melaksanakan salah satu fungsi keluarga yaitu…",
+        pilihan: [
+            "Cinta kasih",
+            "Keagamaan",
+            "Social budaya",
+            "Sosialisasi dan pendidikan",
+            "Pembinaan lingkungan"
+        ],
+        jawaban: 2
+    },
+    {
+        pertanyaan: "Salah satu fungsi keluarga yang menciptakan suasana rumah dengan kehangatan dan rasa aman serta memberi perhatian diantara anggota keluarga, yaitu",
+        pilihan: [
+            "Fungsi Cinta kasih",
+            "Fungsi keagamaan",
+            "Fungsi social budaya",
+            "Fungsi sosialisasi dan pendidikan",
+            "Fungsi pembinaan lingkungan"
+        ],
+        jawaban: 0
+    },
+    {
+        pertanyaan: "Kebiasaan yang mencirikan bahwa keluarga menerapkan fungsi cinta kasih dalam keluarga adalah",
+        pilihan: [
+            "Keluarga yang memiliki sikap empati",
+            "Keluarga yang memiliki sikap peduli",
+            "Keluarga yang memiliki sikap kebersamaan",
+            "Keluarga yang memiliki sikap saling membantu",
+            "Keluarga yang memiliki sikap simpati"
+        ],
+        jawaban: 0
+    },
+    {
+        pertanyaan: "Seorang anak yang terbiasa dapat menerima kesalahan orang lain dan selalu berfikir positif bahwa setiap manusia pasti pernah melakukan kesalah tanpa adanya dendam, dalam diri anak tersebut tertanam nilai…",
+        pilihan: [
+            "Toleransi",
+            "Adil",
+            "Pemaaf",
+            "Pengorbanan",
+            "Sabar dan ikhlas"
+        ],
+        jawaban: 2
+    },
+    {
+        pertanyaan: "Sikap pengorbanan orang tua dalam keluarga tercermin dalam keseharian dengan melakukan kegiatan sebagaimana fungsi keluarga yaitu …",
+        pilihan: [
+            "Merelakan waktu berharga untuk keluarga",
+            "Merelakan waktu luang untuk bekerja untuk memenuhi kebutuhan",
+            "Merelakan anak diasuh oleh orang lain sedangkan sibuk bekerja.",
+            "Merelakan masa kecil anak terlewatkan begitu saja.",
+            "Merelakan masa bermain anak untuk kepentingan diri sendiri"
+        ],
+        jawaban: 0
+    },
+    {
+        pertanyaan: "Salah satu nilai fungsi cinta kasih yang tertanam dan diterapkan dalam keluarga yaitu ...",
+        pilihan: [
+            "Suka membantu",
+            "Kasih sayang",
+            "Peduli",
+            "Cinta tanah air",
+            "Suka menolong"
+        ],
+        jawaban: 1
+    },
+    {
+        pertanyaan: "Fungsi keluarga dalam mempertahankan dan mengembangkan kekayaan budaya bangsa yang beraneka ragam dalam satu kesatuan Nusantara yaitu .",
+        pilihan: [
+            "Fungsi Cinta kasih",
+            "Fungsi Social budaya",
+            "Fungsi pelestarian budaya",
+            "Fungsi pendidikan",
+            "Fungsi Ekonomi"
+        ],
+        jawaban: 1
+    },
+    {
+        pertanyaan: "Keluarga berfungsi sebagai perlindungan berarti .",
+        pilihan: [
+            "Tempat bernaung atau berlindung, menumbuhkan rasa aman dan hangat bagi seluruh anggotanya.",
+            "Tempat untuk mendapat perlindungan dan hidup dengan aman dan damai bagi seluruh angotanya",
+            "Tempat penuh dengan kehangatan dan memiliki rasa aman dan nyaman bagi seluruh anggotanya",
+            "Tempat berlindung dari segala hal-hal yang tidak menyenangkan bagi seluruh anggotanya",
+            "Tempat berlindung dari tindakan-tindakan yang kurang baik dan merasa aman bagi seluruh anggotanya"
+        ],
+        jawaban: 0
+    },
+    {
+        pertanyaan: "Contoh penerapan nilai moral tanggap yaitu ..",
+        pilihan: [
+            "Saat kita mengetahui dan menyadari sesuatu yang kurang baik yang akan dihadapinya",
+            "Saat kita mengetahui dan menyadari sesuatu yang tidak menyenangkan yang akan dihadapinya",
+            "Saat kita mengetahui dan menyadari sesuatu yang menyakitkan yang akan dihadapinya",
+            "Saat kita mengetahui dan menyadari sesuatu yang tidak nyaman yang akan dihadapinya",
+            "Saat kita mengetahui dan menyadari sesuatu yang membahayakan yang akan dihadapinya"
+        ],
+        jawaban: 4
+    },
+    {
+        pertanyaan: "Anggota keluarga yang merasa aman terbebas dari rasa takut dan kekhawatiran dalam segala aspek kehidupannya, maka keluarga tersebut menerapkan fungsi keluarga dalam, ..",
+        pilihan: [
+            "Keamanan",
+            "Perlindungan",
+            "kerukunan",
+            "Kenyamanan",
+            "Semua jawaban benar"
+        ],
+        jawaban: 1
+    },
+    {
+        pertanyaan: "Menanamkan kesadaran dalam menjaga kesehatan diri dan kesucian alat reproduksi agar tidak melakukan hubungan seksual diluar pernikahan termasuk sikap ...",
+        pilihan: [
+            "Konsisten",
+            "Tangguh",
+            "Teguh",
+            "Berpendirian",
+            "tegas"
+        ],
+        jawaban: 1
+    },
+    {
+        pertanyaan: "Makna fungsi sosialisasi dan pendidikan adalah ..",
+        pilihan: [
+            "Keluarga sebagai tempat untuk belajar bersosialisasi serta berkomunikasi dengan baik dan sehat.",
+            "Keluarga sebagai tempat pertama mendapatkan pendidikan dan belajar untuk berinteraksi dan beradaptasi terhadap lingkungan hidupnya.",
+            "Keluarga sebagai tempat belajar berinteraksi, bersosialisasi, berkomunikasi denganbaik dan sehat.",
+            "Keluarga sebagai tempat pertama untuk belajar berkomunikasi dan beradaptasi dengan baik terhadap lingkungan hidupnya",
+            "Keluarga sebagai tempat belajar untuk pengembangan diri dalam berinteraksi, komunikasi dan sosialisasi secara baik dan sehat."
+        ],
+        jawaban: 1
+    },
+    {
+        pertanyaan: "Unit terkecil dari masyarakat yang terdiri dari suami istri dan anaknya, atau ayah dan anaknya, atau ibu dan anaknya merupakan definisi dari .",
+        pilihan: [
+            "Penduduk",
+            "Keluarga",
+            "Masyarakat",
+            "Kemitraan",
+            "Golongan"
+        ],
+        jawaban: 1
+    },
+    {
+        pertanyaan: "Di bawah ini yang bukan merupakan bentuk keluarga adalah .",
+        pilihan: [
+            "Keluarga inti",
+            "Keluarga berencana",
+            "Keluarga besar",
+            "Orang tua tunggal",
+            "Keluarga Dyadic"
+        ],
+        jawaban: 1
+    },
+    {
+        pertanyaan: "Bentuk keluarga inti yang ditambah dengan sanak saudaranya, misalnya kakek, nenek, keponakan, paman, bibi, saudara sepupu, dan lain sebagainya disebut ..",
+        pilihan: [
+            "Keluarga inti",
+            "Keluarga berencana",
+            "Keluarga besar",
+            "Keluarga berkomposisi",
+            "Keluarga dyadic"
+        ],
+        jawaban: 2
+    },
+    {
+        pertanyaan: "Bentuk keluarga yang perkawinannya berpoligami dan hidup secara bersama-sama disebut …",
+        pilihan: [
+            "Keluarga inti",
+            "Keluarga berencana",
+            "Keluarga besar",
+            "Keluarga berkomposisi",
+            "Keluarga dyadic"
+        ],
+        jawaban: 3
+    },
+    {
+        pertanyaan: "Salah satu peran anak dalam keluarga adalah …",
+        pilihan: [
+            "Sebagai kepala keluarga",
+            "Sebagai pendidik keluarga",
+            "Sebagai orang yang melaksanakan peranan psikososial sesuai dengan tingkat perkembangan baik fisik, mental, sosial maupun spiritual",
+            "Sebagai pelindung di keluarga",
+            "Sebagai pencari nafkah"
+        ],
+        jawaban: 2
+    },
+    {
+        pertanyaan: "Fungsi pokok keluarga yang menilai tingkat kepuasan anggota keluarga terhadap kebebasan yang diberikan keluarga dalam mematangkan pertumbuhan dan kedewasaan setiap anggota keluarga disebut …",
+        pilihan: [
+            "Fungsi adaptasi",
+            "Fungsi kemitraan",
+            "Fungsi pertumbuhan",
+            "Fungsi kasih sayang",
+            "Fungsi kebersamaan"
+        ],
+        jawaban: 2
+    },
+    {
+        pertanyaan: "Fungsi pokok keluarga yang menilai tingkat kepuasan anggota keluarga dalam menerima yang diperlukan dari anggota keluarga lainnya disebut …",
+        pilihan: [
+            "Fungsi adaptasi",
+            "Fungsi kemitraan",
+            "Fungsi pertumbuhan",
+            "Fungsi kasih sayang",
+            "Fungsi kebersamaan"
+        ],
+        jawaban: 0
+    },
+    {
+        pertanyaan: "Fungsi pokok keluarga yang menilai tingkat kepuasan anggota keluarga terhadap kebersamaan dalam membagi waktu, kekayaan, dan ruang antar keluarga disebut",
+        pilihan: [
+            "Fungsi adaptasi",
+            "Fungsi kemitraan",
+            "Fungsi pertumbuhan",
+            "Fungsi kasih sayang",
+            "Fungsi kebersamaan"
+        ],
+        jawaban: 4
+    },
+    {
+        pertanyaan: "Suatu keadaan yang bermanfaat bagi individu yang diperoleh dari orang lain yang dapat dipercaya, sehingga seseorang akan tahu bahwa ada orang lain yang memperhatikan, mencintai, dan menghargai merupakan definisi dari …",
+        pilihan: [
+            "Dukungan intrumental",
+            "Dukungan sosial",
+            "Dukungan emosional",
+            "Dukungan informatif",
+            "Dukungan penghargaan"
+        ],
+        jawaban: 1
+    },
+    {
+        pertanyaan: "Hormon yang meningkatkan sekresi ASI disebut …",
+        pilihan: [
+            "Hormon Estrogen",
+            "Hormon Progesteron",
+            "Human Chorionic Somatomammotroin (HCS)",
+            "Hormon Prolaktin",
+            "Hormon Oksitosin"
+        ],
+        jawaban: 3
+    },
+    {
+        pertanyaan: "Terdapat beberapa faktor yang mempengaruhi pemberian ASI eksklusif, kecuali .",
+        pilihan: [
+            "Usia Ibu",
+            "Paritas",
+            "Cara Persalinan",
+            "Berat Badan Ibu",
+            "Faktor Psikis Ibu"
+        ],
+        jawaban: 3
+    },
+    {
+        pertanyaan: "Data Individu Anggota Keluarga merupakan data per masing-masing individu keluarga yang terkait dengan hal-hal di bawah ini, kecuali ..",
+        pilihan: [
+            "Nama",
+            "Jenis Kelamin",
+            "Umur",
+            "Hubungan Dengan Kepala Keluarga",
+            "Kode Provinsi"
+        ],
+        jawaban: 4
+    },
+    {
+        pertanyaan: "Data pembangunan keluarga meliputi hal-hal di bawah ini, kecuali",
+        pilihan: [
+            "Jenis atap rumah terluas",
+            "Jenis dinding rumah terluas",
+            "Jenis lantai rumah terluas",
+            "Sumber penerangan utama",
+            "Sumber penghasilan keluarga."
+        ],
+        jawaban: 4
+    },
+    {
+        pertanyaan: "Kumpulan informasi dan data keluarga serta individu anggota keluarga hasil Pendataan Keluarga di setiap wilayah pendataan disebut ...",
+        pilihan: [
+            "Pendataan Keluarga",
+            "Basis Data Keluarga",
+            "Rumah Tangga",
+            "Keluarga Khusus",
+            "Pencatatan Keluarga"
+        ],
+        jawaban: 1
+    },
+    {
+        pertanyaan: "Unit terkecil dalam masyarakat yang terdiri dari suami istri, atau suami istri dan anaknya, atau ayah dan anaknya, atau ibu dan anaknya disebut .",
+        pilihan: [
+            "Option Pendataan Keluarga",
+            "Keluarga",
+            "Rumah Tangga",
+            "Keluarga Khusus",
+            "Pencatatan Keluarga"
+        ],
+        jawaban: 1
+    },
+    {
+        pertanyaan: "Laki laki atau perempuan yang berstatus kawin, atau janda, atau duda, atau tidak kawin, yang mengepalai suatu keluarga yang anggotanya terdiri dari istri/suaminya dan atau anak-anaknya disebut ..",
+        pilihan: [
+            "Anak",
+            "Keluarga",
+            "Rumah Tangga",
+            "Keluarga Khusus",
+            "Kepala Keluarga"
+        ],
+        jawaban: 4
+    },
+    {
+        pertanyaan: "Upaya kegiatan penyebarluasan hasil Pendataan Keluarga kepada pihak atau kelompok/individu yang berkepentingan dengan data informasi laporan hasil Pendataan Keluarga, agar mereka mengetahui, memahami dan memanfaatkan data informasi keluarga disebut ..",
+        pilihan: [
+            "Pencatatan Data Keluarga Indonesia",
+            "Pendataan Keluarga (F/I/PK/15)",
+            "Diseminasi hasil Pendataan Keluarga",
+            "Sosialisasi hasil Pendataan Keluarga",
+            "Sarasehan hasil Pendataan Keluarga"
+        ],
+        jawaban: 2
+    },
+    {
+        pertanyaan: "Pertemuan yang dilakukan oleh pengelola/petugas KB dengan pimpinan wilayah/pihak-pihak yang berkepentingan setempat, untuk melakukan verifikasi dan validasi data keluarga disebut ..",
+        pilihan: [
+            "Pencatatan Data Keluarga Indonesia",
+            "Pendataan Keluarga (F/I/PK/15)",
+            "Diseminasi hasil Pendataan Keluarga",
+            "Sosialisasi hasil Pendataan Keluarga",
+            "Sarasehan hasil Pendataan Keluarga"
+        ],
+        jawaban: 4
+    },
+    {
+        pertanyaan: "Dalam proses pencatatan data keluarga, dikembangkan formulir untuk mencatat data keluarga dan individu anggota keluarga yang disebut ..",
+        pilihan: [
+            "F/I/PK/15",
+            "F/PK/I/15",
+            "F/15/I/PK",
+            "F/15/PK/I",
+            "F/I/15/PK"
+        ],
+        jawaban: 0
+    },
+    {
+        pertanyaan: "Menerbitkan Instruksi Gubernur berdasarkan Surat Edaran Menteri Dalam Negeri tentang Pelaksanaan Pendataan Keluarga kepada bupati dan walikota di wilayahnya merupakan salah satu persiapan pendataan keluarga di tingkat .",
+        pilihan: [
+            "Pusat",
+            "Provinsi",
+            "Kota",
+            "Kevamatan",
+            "Dusun"
+        ],
+        jawaban: 1
+    },
+    {
+        pertanyaan: "Pembentukan Tim Pendataan dan Tim Pos Koordinasi serta penetapan sekretariatnya untuk memantau perkembangan pelaksanaan pendataan di wilayahnya merupakan salah satu persiapan pendataan keluarga di tingkat ...",
+        pilihan: [
+            "Pusat",
+            "Provinsi",
+            "Kota",
+            "Kevamatan",
+            "Dusun"
+        ],
+        jawaban: 3
+    },
+    {
+        pertanyaan: "Dalam pelaksanaan pendataan keluarga, kader pendataan tingkat RT melakukan hal-hal di bawah ini, kecuali ...",
+        pilihan: [
+            "Melakukan kunjungan rumah ke rumah dengan melakukan wawancara dan observasi untuk mencatat data keluarga tersebut menggunakan Formulir Data Keluarga F/I/PK/15",
+            "Menempelkan stiker tanda pendataan keluarga pada setiap rumah tangga yang sudah dikunjungi untuk setiap keluarga yang sudah didata",
+            "Menandai rumah tangga dan keluarga yang sudah didata pada sket peta keluarga hingga seluruh rumah tangga dan keluarga yang menjadi sasaran pendataan selesai didata seluruhnya",
+            "membuat dan menandatangani Rekapitulasi Hasil Pendataan Keluarga Tingkat Dusun/RW menggunakan Formulir Rek.Dus/F/I/PK/15",
+            "Membuat dan menandatangani Rekapitulasi Hasil Pendataan Keluarga Tingkat RT menggunakan Formulir Rek.RT/F/I/PK/15"
+        ],
+        jawaban: 3
+    },
+    {
+        pertanyaan: "Salah satu hal yang dilakukan supervisor pendataan keluarga tingkat dusun/RW dalam melaksanakan pendataan keluarga adalah ..",
+        pilihan: [
+            "Menandatangani pada Formulir Rek.RT/F/I/PK/15 dan menyerahkan lembar 2 dan lembar 3 kepada Kader Pendata dan Ketua RT",
+            "Nenyampaikan hasil Pendataan Keluarga kepada Kepala Dusun/Ketua RW setempat",
+            "Menyampaikan hasil Pendataan Keluarga kepada Kepala Desa/Lurah setempat",
+            "Membuat dan menandatangani Rekapitulasi Hasil Pendataan Keluarga Tingkat Desa/Kelurahan menggunakan Formulir Rek.Des/F/I/PK/15",
+            "Melakukan verifikasi dan validasi hasil Pendataan Keluarga di wilayahnya dan menandatangani pada Formulir Rek.Kec/F/I/PK/15"
+        ],
+        jawaban: 0
+    },
+    {
+        pertanyaan: "Salah satu hal yang dilakukan manajer pendataan keluarga tingkat kecamatan dalam melaksanakan pendataan keluarga adalah",
+        pilihan: [
+            "Menandatangani pada Formulir Rek.RT/F/I/PK/15 dan menyerahkan lembar 2 dan lembar 3 kepada Kader Pendata dan Ketua RT",
+            "Nenyampaikan hasil Pendataan Keluarga kepada Kepala Dusun/Ketua RW setempat",
+            "menyampaikan hasil Pendataan Keluarga kepada Kepala SKPD-KB Kabupaten dan Kota setempat",
+            "Membuat dan menandatangani Rekapitulasi Hasil Pendataan Keluarga Tingkat Desa/Kelurahan menggunakan Formulir Rek.Des/F/I/PK/15",
+            "Melakukan verifikasi dan validasi hasil Pendataan Keluarga di wilayahnya dan menandatangani pada Formulir Rek.Kec/F/I/PK/15"
+        ],
+        jawaban: 2
+    },
+    // --- TAMBAHAN SOAL KOMPETENSI TEKNIS 03 (99 SOAL) ---
+    {
+        pertanyaan: "Sebagai penyuluh tingkat mahir, anda tentu memahami 7 program prioritas nasional RPJMN 2020-2024, dalam 7 program prioritas nasional tersebut BKKBN berkontribusi secara lansung pada program...",
+        pilihan: [
+            "Meningkatkan SDM berkualitas dan berdaya saing",
+            "Meningkatkan SDM berkualitas dan berdaya saing, dan Revolusi Mental dan Pembangunan Kebudayaan",
+            "Revolusi Mental dan Pembangunan Kebudayaan",
+            "Pembangunan lingkungan hidup"
+        ],
+        jawaban: 1
+    },
+    {
+        pertanyaan: "Di dalam arah kebijakan dan strategi BKKBN yang kedua adalah menguatnya pemaduan dan sinkronisasi kebijakan pengendalian penduduk melalui berbagai strategi. Dari jawaban tersebut dibawah ini, strategi yang tepat adalah...",
+        pilihan: [
+            "Pengembangan Grand Design Pembangunan Kependudukan (GDPK)",
+            "Penguatan sinergisitas kebijakan penyelenggaraan pengendalian penduduk",
+            "Peningkatan kapasitas dan kapabilitas kelembagaan",
+            "Semuanya benar"
+        ],
+        jawaban: 3
+    },
+    {
+        pertanyaan: "Arah kebijakan dan strategi BKKBN 2020-2024 yang pertama adalah meningkatkan ketahanan dan kesejahteraan keluarga yang holistic dan integrative sesuai siklus hidup, serta menguatkan pembentukan karakter di keluarga, yang diwujudkan melalui beberapa strategi, a. Penguatan kemampuan keluarga untuk menjalankan delapan fungsi keluarga secara optimal sesuai dengan siklus hidup, karakteristik wilayah dan target sasaran guna mendukung pencapaian Indeks Pembangunan Keluarga (IPK), b Peningkatan ketahanan dan kemandirian keluarga rentan c. Pembentukan dan penguatan karakter suami istri d.Peningkatan kemitraan pembangunan Keluarga",
+        pilihan: [
+            "Hanya a dan b yang benar",
+            "Hanya c dan d yang benar",
+            "Hanya c dan a yang benar",
+            "a, b dan d yang benar"
+        ],
+        jawaban: 3
+    },
+    {
+        pertanyaan: "Program KKBPK menjadi Program Pembangunan Keluarga, Kependudukan, dan Keluarga Berencana (Bangga Kencana), kepada siapa advokasi perlu dilakukan. Sebutkan, kecuali.",
+        pilihan: [
+            "Stakeholders",
+            "Pelaksana kegiatan di masing masing wilayah",
+            "Masyarakat penggerak KB",
+            "Masyarakat pada umumnya"
+        ],
+        jawaban: 3
+    },
+    {
+        pertanyaan: "Sebagai penyuluh tentu semangat kerja menjadi utama dalam melakukan sosialisasi dan penyuluhan KB, terutama di berbagai wilayah yang berbeda kondisinya. Apa saja yang kira kira harus diperhatikan dengan kondisi wilayah yang berbeda tersebut. Sebutkan, kecuali",
+        pilihan: [
+            "Wilayah yang luas dan karakteristik sosial",
+            "Kultur masyarakat yang berbeda",
+            "Memerlukan pendekatan yang ekstra ketat",
+            "Medan wilayah yang susah"
+        ],
+        jawaban: 2
+    },
+    {
+        pertanyaan: "Sebagai penyuluh anda tentu tahu apa yang disebut SIRIKA (Sistem Informasi Rantai Pasok Alokosi). a. SIRIKA merupakan salah satu upaya BKKBN untuk mencegah baby boom terjadi di kemudian hari. b. SIRIKA adalah inovasi dalam proses pengolahan data pelaporan logistik dan pengelolaan di gudang secara digital, c. SIRIKA penting untuk mengantar kesuksesan dalam rangka menaikkan MCPR (Modern Contraceptive Prevalence Rate), d. SIRIKA dapat menurunkan unmetneed dan meningkatkan akuntabilitas. Apa saja yang anda ketahui tentang SIRIKA, pilih satu jawaban yang paling tepat",
+        pilihan: [
+            "A Benar",
+            "B dan C Benar",
+            "D saja yang benar",
+            "Semuanya benar"
+        ],
+        jawaban: 1
+    },
+    {
+        pertanyaan: "penyuluh KB harus mampu melihat program ke depan dan terus semangat karena program akan terus berkembang dan tidak akan habis. Menurut anda apa komponen untuk dapat mewujudkan program ke depan yang tidak pernah habis, terutama terkait dengan SIRIKA. Sebutkan, kecuali",
+        pilihan: [
+            "Dengan SIRIKA persediaan yang real time",
+            "Tidak ada stock out dan tidak ada over stock yang ada di lini lapangan dan yang ada di end user",
+            "Rantai pasok itu menjadi salah satu variabel determining factor untuk sukses menaikkan MCPR",
+            "SIRIKA akan mengurangi beban kerja operasional gudang secara keseluruhan di berbargai daerah"
+        ],
+        jawaban: 3
+    },
+    {
+        pertanyaan: "Penggunaan umbul umbul, poster, brosur dan majalah yang berisi penjelasan kesejahteraan ibu dan anak dalam mewujudkan keluarga kecil bahagia dan sejahtera merupakan media dalam pengendalian kelahiran dan pengendalian pertumbuhan penduduk Indonesia. Mengapa harus digunakan media yang menarik, jelaskan jawaban saudara, kecuali",
+        pilihan: [
+            "Lebih mudah untuk dipahami",
+            "Pemakaian brosur, poster dan brosur sangat efektif bagi daerah daerah tertentu yang masih belum melek huruf",
+            "Penggunaan media seperti tersebut sangat menarik dan masyarakat ingin mengetahui maksud brosur ataupun umbul umbul",
+            "Sebagaian besar masyarakat senang warna warni"
+        ],
+        jawaban: 3
+    },
+    {
+        pertanyaan: "Usaha untuk mengendalikan pertumbuhan penduduk ke arah suatu angka pertumbuhan penduduk yang diinginkan ditempuh melalui suatu kebijaksanaan dan kegiatan pemerintah dibidang kependudukan. Menurut saudara, arah kebijakan apa yang dimaksud, kecuali*",
+        pilihan: [
+            "Mampu menghasilkan kesepahaman sekaligus menyegarkan komitmen dan peran pemerintah dalam peningkatan akses dan kualitas",
+            "Sinergitas para pemangku kepentingan dan mitra kerja dalam implementasi program Bangga Kencana di seluruh wilayah ini harus segera ditingkatkan dalam berbagai bidang",
+            "Komitmen yang kuat dari semua pihak maka sasaran sasaran Program Banga Kencana dapat dicapai sesuai dengan target yang telah ditetapkan",
+            "terwujudnya tujuan pembangunan nasional melalui perwujudan keluarga berkualitas dan pertumbuhan penduduk yang seimbang. Sehingga Indonesia maju yang berdaulat Mandiri dan berlandaskan gotong royong dapat tercapai."
+        ],
+        jawaban: 0
+    },
+    {
+        pertanyaan: "Tahukah anda apa isi dari dokumen Rencana Strategis (Renstra) BKKBN Tahun 2020-2024. Sebutkan, kecuali",
+        pilihan: [
+            "Visi, misi, sasaran strategis.",
+            "Program program yang memdadak harus dilakukan",
+            "Sasaran program, arah kebijakan dan strategi,",
+            "Indikator Kinerja Utama (IKU) serta target yang akan dicapai"
+        ],
+        jawaban: 1
+    },
+    {
+        pertanyaan: "Menurut anda dalam membuat rencana strategis apa saja yang perlu dipertimbangkan. Sebutkan, kecuali",
+        pilihan: [
+            "Kerangka regulasi,",
+            "Kerangka kelembagaan",
+            "Kerangka pendanaan",
+            "Kerangka muatan unit kerja"
+        ],
+        jawaban: 3
+    },
+    {
+        pertanyaan: "Perumusan kebijakan Bangga Kencana terkait dengan Isu strategis pengendalian penduduk dan penguatan tata kelola kependudukan; antara lain tentang bonus demografi; Pembangunan Indonesia dalam periode tahun 2020-2024 ditujukan untuk:",
+        pilihan: [
+            "Memberdayakan keluarga agar lebih mandiri dan berketahanan baik fisik maupun non fisik sehingga terwujud SDM yang tangguh dan mempunyai perencanaan matang",
+            "Pembangunan manusia berdasarkan pendekatan siklus hidup dan inklusif, termasuk memperhatikan kebutuhan penduduk usia lanjut maupun penduduk penyandang disabilitas.",
+            "Membentuk Sumber Daya Manusia (SDM) yang berkualitas dan berdaya saing, yaitu SDM yang sehat dan cerdas, adaptif, inovatif, terampil, dan berkarakter.",
+            "Mengantisipasi perubahan struktur umur penduduk Indonesia yang secara perlahan semakin “menua” Sebagai salah satu dampak pengendalian TFR dan perbaikan status kesehatan"
+        ],
+        jawaban: 2
+    },
+    {
+        pertanyaan: "Data dan informasi untuk menyusun kebijakan Program Bangga Kencana di tingkat daerah meliputi:",
+        pilihan: [
+            "Kebijakan Satu Data Indonesia adalah kebijakan tata kelola data pemerintah untuk menghasilkan data yang akurat, mutakhir, terpadu dan dapat dipertanggungjawabkan kebenarannya.",
+            "Pendataan Keluarga (PK) yang diintegrasikan dengan Sistim Informasi Keluarga (SIGA) dan data sektor lain (Sensus Penduduk Data Kependudukan dan Catatan Sipil)",
+            "Data menjadi sangat penting, tanpa potret keluarga pun kita tidak bisa bicara apa apa, keluarga jika tidak di diagnosis by name by adress maka treatmennya tidak akan maksimal",
+            "aplikasi Pendataan Keluarga (PK) dan Sistem Informasi Keluarga (SIGA)"
+        ],
+        jawaban: 1
+    },
+    {
+        pertanyaan: "Program Bangga Kencana adalah singkatan dari",
+        pilihan: [
+            "Program Pembangunan Keluarga, Kependudukan dan Keluarga Berencana",
+            "Program Pembangunan Keluarga berencana Masuk Desa",
+            "Program Pembangunan Perencanaan Keluarga dan KB",
+            "Program Pembangunan Ketahanan Keluarga dan Keluarga berencana"
+        ],
+        jawaban: 0
+    },
+    {
+        pertanyaan: "Sasaran Program Bangga Kencana adalah",
+        pilihan: [
+            "Pasangan Usia Subur (PUS)",
+            "Keluarga Pra-Sejahtera dan Sejahtera I",
+            "Meningkatnya kualitas penyelenggaraan Program Bangga Kencana dalam meningkatkan kualitas Sumber Daya Manusia Indonesia, serta mewujudkan Revolusi Mental dan Pembangunan Kebudayaan",
+            "peningkatan kualitas keluarga dalam mewujudkan rasa tenteram dan harapan masa depan yang lebih baik serta mandiri dalam mencapai kesejahteraan lahir dan kebahagiaan batin."
+        ],
+        jawaban: 2
+    },
+    {
+        pertanyaan: "BKKBN berperan dalam 3 Program Prioritas (PP) yang masing-masing memiliki Kegiatan Prioritas (KP) salah satu berhubungan dengan Peningkatan akses dan mutu pelayanan kesehatan sebagai berikut:",
+        pilihan: [
+            "Integrasi Sistem Administrasi Kependudukan, dan Pemaduan dan Sinkronisasi Kebijakan Pengendalian Penduduk.",
+            "Pemanfatan bonus demografi melalui Pembangunan Indonesia dengan membentuk Sumber Daya Manusia (SDM) yang berkualitas dan berdaya siang.",
+            "Peningkatan Kesehatan Ibu Anak, Keluarga Berencana (KB) dan Kesehatan Reproduksi, dan Percepatan Perbaikan Gizi Masyarakat.",
+            "peningkatan kualitas keluarga dalam mewujudkan rasa tenteram dan harapan masa depan yang lebih baik serta mandiri dalam mencapai kesejahteraan lahir dan kebahagiaan batin."
+        ],
+        jawaban: 2
+    },
+    {
+        pertanyaan: "Ukuran keberhasilan program Bangga Kencana berkaitan dengan upaya pengendalian penduduk dan peningkatan akses dan pemerataan pelayanan KB difocuskan berupa:",
+        pilihan: [
+            "Peningkatan peserta KB Baru yang berasal dari KPS dan KS tahap I",
+            "Penurunan TFR dan Unmet Need; peningkatan mCPR dan ASFR 15-19 thn",
+            "Index Pembangunan Berwawasan Kependudukan",
+            "Index Gini Rasio"
+        ],
+        jawaban: 1
+    },
+    {
+        pertanyaan: "Salah satu Implementasi Program Bangga Kencana yang dapat dilihat secara komprehensif yaitu pada kegiatan:",
+        pilihan: [
+            "Desa Digital",
+            "Kampung KB",
+            "Posyandu",
+            "Bumdes"
+        ],
+        jawaban: 1
+    },
+    {
+        pertanyaan: "Instrumen pemantauan dan evaluasi Program Bangga Kencana antara lain adalah",
+        pilihan: [
+            "Survey Demografi Kesehatan Indonesia (SDKI)",
+            "Survey RPJMN",
+            "Sistim Informasi Keluarga (SIGA)",
+            "Sistim Pencatatan dan pelaporan KKBPK"
+        ],
+        jawaban: 2
+    },
+    {
+        pertanyaan: "Pembagian kewenangan dalam penerapan Bangga Kencana telah diatur dalam peraturan:",
+        pilihan: [
+            "Undang-Undang nomor 23 tahun 2014 tentang Pemerintah Daerah",
+            "Undang-undang nomor 6 tahun 2014 tentang Desa (UU Desa)",
+            "Undang-Undang (UU) Nomor 52 Tahun 2009 Tentang Perkembangan Kependudukan dan Pembangunan Keluarga.",
+            "Undang-Undang (UU) Nomor 24 Tahun 2013 Tentang Administrasi Kependudukan."
+        ],
+        jawaban: 0
+    },
+    {
+        pertanyaan: "Di tahun 2020 telah memasuki babak baru RPJMN 2020-2024 dan Renstra BKKBN 2020 – 2024 yang terdiri dari 5 ( lima) arah kebijakan dan strategi. Pada arah kebijakan dan strategi yang pertama mencapai, mempertahankan dan memanfaatkan bonus demografi diwujudkan melalui strategi antara lain, pilih satu jawaban yang kurang tepat",
+        pilihan: [
+            "Pengembangan GDPK lima pilar untuk seluruh tingkatan wilayah di Indonesia yang dapat dimanfaatkan sebagai dasar perencanaan pembangunan daerah",
+            "Penguatan sinergisitas kebijakan penyelenggaraan pengendalian penduduk",
+            "Ditentukan masing masing daerah",
+            "Peningkatan kapasitas dan kapabilitas kelembagaan dan institusi pendidikan dari pusat, provinsi serta kabupaten dan kota dalam bidang pengendalian penduduk"
+        ],
+        jawaban: 2
+    },
+    {
+        pertanyaan: "Dalam melakukan advokasi, apa saja yang akan disampaikan. Pilih satu jawaban yang kurang tepat",
+        pilihan: [
+            "Bagaimana upaya mengatur kelahiran anak, jarak dan usia ideal melahirkan",
+            "Mengatur kehamilan melalui promosi",
+            "Sosialisasi membangun keluarga minimalis",
+            "Perlindungan dan bantuan sesuai dengan hak reproduksi untuk mewujudkan keluarga berkualitas"
+        ],
+        jawaban: 2
+    },
+    {
+        pertanyaan: "Dalam pelaksanaan program Bangga Kencana perlu dilakukakan kegiatan advokasi, hal ini dimaksudkan sebagai upaya untuk keberhasilan program. Sebutkan kegiatan yang dilakukan, pilih satu jawaban yang kurang tepat",
+        pilihan: [
+            "Pengendalikan laju pertumbuhan penduduk",
+            "Pengendalian kuantitas penduduk",
+            "Pengendalian keberagaman pelayanan KB",
+            "Mewujudkan keserasian, keselarasan dan keseimbangan antara jumlah penduduk dengan daya tampung lingkungan, dan daya dukung alam"
+        ],
+        jawaban: 2
+    },
+    {
+        pertanyaan: "Menurut Anda kegiatan dalam rangka pengelolaan kependudukan, dapat berupa apa saja, kecuali",
+        pilihan: [
+            "Analisis dan sosialisasi dampak kependudukan,",
+            "Pendidikan kependudukan di berbagai golongan masyarakat,",
+            "Penyusunan grand design pengendalian kuantitas penduduk",
+            "Penyusunan grand design peningkatan kualitas penduduk."
+        ],
+        jawaban: 3
+    },
+    {
+        pertanyaan: "Penyuluh KB merupakan ujung tombak yang diandalkan untuk meningkatkan kualitas hidup masyarakat Indonesia. Menurut anda tantangan apa yang harus ditingkatkan",
+        pilihan: [
+            "Penyuluh KB saat ini untuk melek terhadap teknologi.",
+            "Kemajuan teknologi saat ini menuntut pelayanan yang “always on”.",
+            "Melalui perangkat teknologi informasi, penyuluh KB dapat bekerja dimana pun dan kapan pun.",
+            "Kemampuan para penyuluh untuk dapat menjalin kerjasama lintas sektoral di berbagai bidang kehidupan masyarakat"
+        ],
+        jawaban: 3
+    },
+    {
+        pertanyaan: "SIGA sebagai sistem informasi Keluarga sangat penting untuk ditingkatkan. Apa kemanfaatan dari SIGA,sebutkan kecuali",
+        pilihan: [
+            "Peningkatan pendataan secara efisien dan efektif",
+            "Peningkatan pendataan secara transparant dan akuntabel",
+            "Mampu menginput data dan mengupdate data realtime",
+            "Memfasilitasi keinginan masyarakat di berbagai hal"
+        ],
+        jawaban: 3
+    },
+    {
+        pertanyaan: "Secara singkat, sebutkan tugas PKB, kecuali",
+        pilihan: [
+            "Melaksanakan kegiatan penyuluhan terkait dengan Keluarga Berencana,",
+            "Memberikan pelayanan terkait Keluarga Berencana,",
+            "Melakukan evaluasi dan pengembangan Keluarga Berencana Nasional",
+            "Memberikan fasilitasi terhadap masyarakat tertentu"
+        ],
+        jawaban: 3
+    },
+    {
+        pertanyaan: "Tanggung jawab penyuluh KB antara lain mengambil peran dalam mewujudkan masyarakat yang berkualitas dengan menyampaikan program-program KB kepada masyarakat. Untuk itu apa yang harus ditingkatkan, pilih satu jawaban yang kurang tepat.",
+        pilihan: [
+            "Meningkatkan kemampuan dalam memberikan wawasan terkait program keluarga berencana,",
+            "Memberikan pendalaman melalui penyuluhan agar tercipta kesadaran masyarakat untuk mewujudkan keluarga yang sehat dan berkualit",
+            "Melaksanakan program-program keluarga berkualitas dapat terwujud ditengah-tengah masyarakat pada semua tingkatan.",
+            "Tetap memegang teguh loyalitas, dedikasi, disiplin dan profesionalisme"
+        ],
+        jawaban: 2
+    },
+    {
+        pertanyaan: "Advokasi kebijakan tentang Program Bangga Kencana adalah",
+        pilihan: [
+            "Upaya untuk memberikan informasi kepada masyarakat agar lebih paham tentang Bangga kencana",
+            "Upaya untuk mempengaruhi para pengambil kebijakan agar menempatkan Bangga Kencana sebagai program prioritas",
+            "Proses di mana individu atau kelompok dan organisasi berusaha mempengaruhi kebijakan public dalam melaksanakan Program Bangga Kencana",
+            "upaya mengingatkan dan mendesak negara dan pemerintah untuk selalu konsisten dan bertanggungjawab memmberikan dukungan terhadap operasionalisasi Program Bangga Kencana"
+        ],
+        jawaban: 1
+    },
+    {
+        pertanyaan: "Kegiatan advokasi kebijakan Program Bangga Kencana yang dapat dilakukan meliputi",
+        pilihan: [
+            "Melakukan Lobi Politik, Seminar atau Presentasi, menggunakan media massa, melalui asosiasi atau perkumpulan orang-orang yang mempunyai minat atau keterkaitan dengan Program Bangga Kencana",
+            "Melakukan pendekatan formal dan non formal untuk memberikan informasi kepada tokoh masyarakat dan tokoh agama agar memahami dan memberikan dukungan kepada Program Bangga Kencana",
+            "Melakukan negosiasi dan koordinasi dengan pengambil kebijakan Program Bangga Kencana agar mempunyai dukungan yang tinggi terhadap pelaksanaannya di lapangan",
+            "Memasarkan program Bangga Kencana dengan mensinkronkannya dengan program pembangunan lainnya yang berkaitan."
+        ],
+        jawaban: 0
+    },
+    {
+        pertanyaan: "Beberapa hal yang dapat memperkuat argumentasi dalam advokasi adalah sebagai berikut:",
+        pilihan: [
+            "Tujuan advokasi jelas dan transparan mudah dimengerti dan tepat sasaran Program Bangga Kencana",
+            "Mempunyai desain advokasi yang dirancang dengan baik, mampu memberikan gambaran masalah strategis dan alternative solusinya",
+            "Meyakinkan, Layak secara politis dan teknis, memenuhi kebutuhan masyarakat dan dapat memecahkan masalah, mempunyai urgensi dan prioritas yang tinggi",
+            "Mempunyai nilai tambah dan manfaat yang riil dan besar terhadap Program Bangga Kencana"
+        ],
+        jawaban: 2
+    },
+    {
+        pertanyaan: "Sosialisasi kebijakan Program Bangga Kencana dilaksanakan melalui tahapan",
+        pilihan: [
+            "Pemetaan masalah strategis, peta potensi stakeholder dan penetapan strategi komunikasi sesuai karakteristik sasaran",
+            "Pemilihan topik advokasi yang relevan, menetapkan saluran komunikasi,",
+            "Isi pesan advokasi memberikan keyakinan kepada pengambil kebutusan sehingga banyak dukungan terhadap Bangga Kencana",
+            "Metode yang digunakan untuk melaksanakan advokasi tepat dan tidak memberikan dampak negative program Bangga Kencana"
+        ],
+        jawaban: 0
+    },
+    {
+        pertanyaan: "Agar advokasi Program Bangga Kencana tepat sasaran maka perlu dibuat :",
+        pilihan: [
+            "Pemetaan stakeholder menurut kualitas dukungan dan pengaruhnya",
+            "Branding yang menarik",
+            "Pemetaan potensi yang dimiliki",
+            "Pemberdayaan organisasi pembelajar"
+        ],
+        jawaban: 0
+    },
+    {
+        pertanyaan: "Advokasi Program Bangga Kencana sangat dibutuhkan untuk tujuan :",
+        pilihan: [
+            "Mempengaruhi orang lain melalui berbagai kegiatan sosialisasi",
+            "Meningkatkan kesadaran terhadap pentingnya Bangga Kencana",
+            "Mengupayakan solusi terhadap masalah melalui penegakan dan penerapan kebijakan Bangga Kencana",
+            "Meningkatkan partispasi masyarakat dengan mempromosikan Bangga Kencana"
+        ],
+        jawaban: 2
+    },
+    {
+        pertanyaan: "Indikator keberhasilan advokasi Bangga Kencana ada sebagai berikut :",
+        pilihan: [
+            "Menurunnya Presentase masyarakat yang terjangkau Program Bangga Kencana; Persentase tingkat putus pakai pemakaian kontrasepsi dan angka Unmet-need.",
+            "Meningkatnya jumlah masyarakat ikut KB dan partisipasi terhadap pembangunan keluarga",
+            "Banyaknya keluarga yang berpihak kepada Bangga Kencana",
+            "Meningkatnya kinerja petugas lini lapangan dan pengelolaan smart data dan informasi melalui teknologi."
+        ],
+        jawaban: 1
+    },
+    {
+        pertanyaan: "Tahapan advokasi meliputi :",
+        pilihan: [
+            "Mencari akar permasalahan, mencari solusi, membangun kesadaran atau kemauan politik, tindakan kebijakan dan penilaian efektivitas kegiatan advokasi",
+            "Analisis data, merumuskan bahan advokasi, menghubungi tokoh masyarakat dan mensosialisasikan kebijakan baru",
+            "Pendekatan tokoh formal, membuat kesepakatan bersama, melaksanakan advokasi terpadu",
+            "Mengumpulkan bahan advokasi, merancang strategi advokasi, memberikan feedback dan pelaksanaan advokasi"
+        ],
+        jawaban: 0
+    },
+    {
+        pertanyaan: "Sebelum melakukan advokasi Pembangunan Keluarga hal penting yang harus dilakukan adalah",
+        pilihan: [
+            "Mengumpulkan keluarga di wialayah tertentu dan diberikan sosialisasi tentang Bangga Kencana",
+            "Menyiapkan data-data yang berkaitan dengan keluarga dan mengajak para stakeholder untuk bekerjasama",
+            "Mengidentifikasi permasalahan dan menganailis focus Pembangunan Keluarga di suatu wilayah",
+            "Meningkatkan pemberian informasi kepada keluarga yang tidak mengetahui tentang Pembangunan Keluarga"
+        ],
+        jawaban: 2
+    },
+    {
+        pertanyaan: "Agar memahami dan mampu menjelaskan langkah-langkah implementasi Bangga Kencana, PKB terampil wajib mengetahui metode pendekatan kepada stakeholders yaitu",
+        pilihan: [
+            "Koordinasi dan persuasive kepada semua stakeholders",
+            "Persuasi dan penerapan sanksi",
+            "Pelibatan stakeholders dalam Program Bangga Kencana",
+            "Pemetaan stakeholders dan merancang metode yang sesuai dengan karakteristik stakeholders"
+        ],
+        jawaban: 3
+    },
+    {
+        pertanyaan: "Kebutuhan advokasi apa saja yang harus diketahui oleh PKB trampil",
+        pilihan: [
+            "Karakteristik sasaran dan bentuk komunikasi persuasif dengan menggunakan informasi yang akurat dan tepat.",
+            "Perencanaan waktu pelaksanaan advokasi yang sesuai dengan waktu tokoh masyarakat",
+            "Metoda dan jenis media massa yang dapat diajak bekerja sama",
+            "Berbagai organisasi yang relevan dengan kegiatan advokasi"
+        ],
+        jawaban: 0
+    },
+    {
+        pertanyaan: "Prinsip- Prinsip Advokasi",
+        pilihan: [
+            "Realistis dan logis, mempunyai isu dan agenda yang spesifik, jelas dan terukur (measurable), dan sistematis.",
+            "Dapat memotivasi, memberikan manfaat dan sudah mendapat pengakuan pengambil kebijakan",
+            "Dapat merubah kebijakan pemerintah dan mempunyai manfaat besar terhadap masyarakat",
+            "Realistis dan mempunyai daya ungkit serta memberikan manfaat bagi pengambil kebijakan."
+        ],
+        jawaban: 0
+    },
+    {
+        pertanyaan: "Advokasi dan KIE merupakan 2 hal yang tidak dapat dipisahkan. pernyataan yang tepat untuk mendukung argumen ini adalah... 1. Merupakan salah satu kegiatan kunci merubah sikap, perilaku dan sistem nilai 2. Informasi selalu dibutuhkan dan erat hubungannya dengan pelaksanaan program KB baik bagi masyarakat, pelaksana maupun para pengelola program 3. Informasi merupakan faktor kunci kelangsungan keberhasilan program kependudukan dan KB dimana mana. 4. Melalui advokasi dan KIE (komunikasi, informasi dan edukasi) kegiatan yang dilakukan dapat intensif dan terarah dan tepat sasaran",
+        pilihan: [
+            "1, 2, 3",
+            "2, 3, 4",
+            "1, 2, 4",
+            "1, 3, 4"
+        ],
+        jawaban: 2
+    },
+    {
+        pertanyaan: "Kegiatan Advokasi antara lain merupakan penyampaian informasi program KB kepada masyarakat. di bawah ini disampaikan beberpa sarananya. 1. Mobil unit penerangan. 2. Teknologi elektronik radio, televisi. 3. Internet yang memungkinkan diakses masyarakat secara lebih luas. 4. Layar film lebar. Menurut anda melalui pemanfaatan fasilitas apa saja advokasi dapat dilaksanakan?",
+        pilihan: [
+            "1, 2, 3",
+            "2, 3, 4",
+            "1, 2, 4",
+            "1, 3, 4"
+        ],
+        jawaban: 0
+    },
+    {
+        pertanyaan: "Contoh advokasi yang dilakukan dengan menyampaikan informasi program KB kepada masyarakat dengan pemanfaatan KIE adalah...",
+        pilihan: [
+            "Menggunakan media sederhana, media tradisional, dan mass media.",
+            "KIE perorangan kepada stake holder",
+            "Mengunjungi masyarakat desa",
+            "Melakukan pertemuan dengan mitra kerja"
+        ],
+        jawaban: 0
+    },
+    {
+        pertanyaan: "Keunggulan mobil Unit Penerangan Keluarga Berencana (Mupen KB) yang paling tepat adalah..",
+        pilihan: [
+            "Memungkinkan untuk mengakses website internet serta mengirim e-mail dengan banyak fungsi komunikasi yang super",
+            "Memungkinkan untuk melakukan pendataan keluarga akseptor",
+            "Memiliki fasilitas canggih seperti Note Book beserta wairless internet conection berupa modem",
+            "Memiliki tenaga medis yang siap melakukan pelayanan KB"
+        ],
+        jawaban: 0
+    },
+    {
+        pertanyaan: "Salah satu tugas utama PKB adalah mempertahankan pencapaian angka kesertaan KB yang tinggi dan mengendalikan angka kelahiran penduduk di wilayah binaannya. Peran advokasi penyuluh KB yang paling sesuai dengan pernyataan tersebut adalah...",
+        pilihan: [
+            "Memotivasi dan membina akseptor KB dan menjaga hubungan komunikasi dengan keluarga binaan",
+            "Kemampuan meningkatkan prevalensi pemakaian kontrasepsi bagi seluruh masyarakat",
+            "Menjadi ujung tombak yang langsung berhadapan dengan Stake holder terkait berbagai permasalahan dan isu yang ada",
+            "Kemampuan meyakinkan akseptor KB untuk mengadopsi metode ber-KB tradisional"
+        ],
+        jawaban: 2
+    },
+    {
+        pertanyaan: "Advokasi kebijakan Program Bangga Kencana kepada pengambil kebijakan di tingkat desa diharapkan akan menghasilkan:",
+        pilihan: [
+            "Dukungan operasional di tingkat desa dalam menerapkan Bangga Kencana pada setiap Kampung KB",
+            "Dukungan komitmen politis dan operasional dalam menerapkan Bangga Kencana di semua wilayah Desa",
+            "Dukungan tenaga dan anggaran untuk keterpaduan program Bangga Kencana di tingkat Desa",
+            "Dukungan politis dan operasional dalam mengintegrasikan Bangga Kencana ke dalam pembangunan desa secara komprehensif"
+        ],
+        jawaban: 3
+    },
+    {
+        pertanyaan: "Pokok-pokok materi yang perlu diadvokasikan kepada pembuat kebijakan",
+        pilihan: [
+            "Kampung KB sebagai wadah Program Bangga Kencana, Pemberdayaan Masyarakat Desa dan Pembinaan Institusi Masyarakat dalam Program Bangga Kencana",
+            "Pengendalian pertumbuhan penduduk menjaga kualitas dan struktur penduduk seimbang, Penyelenggaraan keluarga berencana dan kesehatan reproduksi secara komprehensif, Penyelenggaraan pembangunan keluarga yang holistic integrative sesuai siklus hidup.",
+            "Pembinaan Ketahanan Keluarga, Kesehatan Reproduksi Remaja, Pembangun Kependudukan menuju Penduduk Tumbuh Seimbang.",
+            "Kemitraan dalam menggalang partisipasi masyarakat, Dukungan Manajemen Bangga Kencana dan Pengawasan Terpadu dalam Program Bangga Kencana"
+        ],
+        jawaban: 1
+    },
+    {
+        pertanyaan: "Dalam konteks Pelaksanaan advokasi kebijakan Program Bangga Kencana secara on-line melalui web-site dan media social, agar lebih efektif dan tepat sasaran maka perlu memperhatikan hal-hal sebagai berikut:",
+        pilihan: [
+            "Menyediakan fasilitas advokasi kebijakan Bangga Kencana yang interaktif",
+            "Menyediakan fasilitas kendali terhadap advokasi kebijakan Bangga Kencana",
+            "Menyediakan forum multimedia yang sesuai dengan sasaran dan topik advokasi kebijakan",
+            "Menggunakan konten yang jelas, mudah dipahami dan transparent serta memberikan peluang untuk terjadi komunikasi interaktif dengan sasara Program Bangga Kencana"
+        ],
+        jawaban: 3
+    },
+    {
+        pertanyaan: "Analisis data & informasi Program Bangga Kencana adalah",
+        pilihan: [
+            "Proses yang merinci usaha formal untuk menemukan tema dan merumuskan hipotesis (ide) berdasarkan data dan informasi yang dikumpulkan.",
+            "Kegiatan yang dilakukan untuk mengubah data hasil dari penelitian menjadi informasi yang dipergunakan untuk mengambil kesimpulan.",
+            "Cara untuk mengolah data menjadi informasi sehingga karakteristik data tersebut bisa dipahami dan bermanfaat untuk solusi permasalahan.",
+            "Pengelompokan data dan mentabulasi data berdasarkan variabel dari seluruh responden, untuk rumusan masalah"
+        ],
+        jawaban: 2
+    },
+    {
+        pertanyaan: "Jenis-jenis data dan informasi Program Bangga Kencana",
+        pilihan: [
+            "Data primer yang dikumpulkan langsung dan data sekunder yang diambil dari sumber lain",
+            "Data dan informasi Pendataan Keluarga; Pelayanan Kontrasepsi & Pengendalian lapangan",
+            "Data bulanan dan tahunan yang dikumpulkan melalui system yang sudah ada dan diiindentifikasi sebagai isu strategis",
+            "Hasil pengumpulan data dari lapangan dan data penelitian dari pusat penelitian dan pengembangan program"
+        ],
+        jawaban: 1
+    },
+    {
+        pertanyaan: "Data dan informasi Program Bangga Kencana merupakan:",
+        pilihan: [
+            "Data dan informasi hasil pengumpulan, pengolahan, penyajian dan penyebarluasan data berdasarkan Pencatatan & Pelaporan Program Bangga Kencana",
+            "Data yang dipergunakan oleh semua lembaga yang membutuhkan untuk pengambilan keputusan",
+            "Data yang diperoleh dari untuk merumuskan target kesertaan ber KB dan prediksi permintaan masyarakat",
+            "Data yang memuat informasi tentang jenis kontrasepsi dan peserta KB dilayani oleh klinik swasta dan pemerintah"
+        ],
+        jawaban: 0
+    },
+    {
+        pertanyaan: "Teknik pengumpulan, pengolahan dan analisis data tentang penggunaan kontrasepsi dilakukan dengan menggunakan:",
+        pilihan: [
+            "Sistim informasi keluarga dan kependudukan nasional yang berasal dari desa dari berbagai sumber informasi",
+            "Pencatatan dan pelaporan pelayanan kontrasepsi yang berasal dari Klinik KB (faskes pelayanan KB pemerintah & swasta)",
+            "Registrasi kependudukan dan data basis keluarga yang berasal dari pengendalian lapangan",
+            "Pencatatan dan pelaporan yang berkaitan dengan penggunaan sarana prasana kampong KB"
+        ],
+        jawaban: 1
+    },
+    {
+        pertanyaan: "Pendataan Keluarga merupakan sumber data dan informasi tentang: Pelaksanaan Pendataan Keluarga dilakukan setiap",
+        pilihan: [
+            "Data kesertaan ber KB; data kemiskinan; data pemilihan Setiap tahun",
+            "Data keluarga dengan kebutuhan khusus; data lahir, pindah, mati dan datang; data pemilih muda 6 bulan sekali",
+            "Data demografi, data keluarga berencana, dan keluarga sejahtera, dan data anggota keluarga 5 tahun sekali",
+            "Data kependudukan, data penduduk rentan dan data pengelolaan Pembangunan Keluarga Setiap bulan"
+        ],
+        jawaban: 2
+    },
+    {
+        pertanyaan: "Pelaksanaan Pendataan Keluarga dilakukan setiap",
+        pilihan: [
+            "Setiap tahun",
+            "6 bulan sekali",
+            "5 tahun sekali",
+            "Setiap bulan"
+        ],
+        jawaban: 2
+    },
+    {
+        pertanyaan: "Sistem Informasi Keluarga, selanjutnya disingkat SIGA yaitu:",
+        pilihan: [
+            "Serangkaian kegiatan yang merekam seluruh proses pencatatan dan pelaporan dan menjadi suatu kesatuan sistim terpadu",
+            "Suatu proses untuk mengumpulkan semua informasi yang berkaitan dengan kesejahteraan keluarga",
+            "Seperangkat tata kelola yang mengatur pengumpulan data dan informasi yang berkaiatan dengan pembangunan keluarga",
+            "Seperangkat tatanan yang meliputi data, informasi, indikator, prosedur, perangkat, teknologi, dan sumber daya manusia yang saling berkaitan dan dikelola secara terpadu untuk pengambilan keputusan untuk mendukung pembangunan keluarga."
+        ],
+        jawaban: 3
+    },
+    {
+        pertanyaan: "Pemanfaatan data rutin adalah",
+        pilihan: [
+            "Sebagi data bulanan yang akan dibahas dalam forum pengendalian program & anggaran",
+            "sebagai dasar perencanaan, pengukuran kinerja, dan peta kerja pada setiap tingkatan wilayah Program Kependudukan, Keluarga Berencana, dan Pembangunan Keluarga.",
+            "Data tahunan yang digunakan untuk menyusun proyeksi atau target kinerja tahunan sebagai kontrak kinerja",
+            "Data yang dikumpulkan untuk kepentingan pengambilan keputusan yang terstruktur"
+        ],
+        jawaban: 1
+    },
+    {
+        pertanyaan: "Analisis data dan informasi Program Bangga Kencana dapat digunakan untuk membangun Kampung KB terutama untuk:",
+        pilihan: [
+            "Pemetaan masalah dan perumusan isu untuk membuat inovasi kampung KB",
+            "Pemetaan potensi desa dan rancangan kemitraan Kampung KB",
+            "Mengidentifikasi sarana prasarana pendukung",
+            "Menetapkan beberapa rancangan dan rencana kerja yang di Kampung KB"
+        ],
+        jawaban: 0
+    },
+    {
+        pertanyaan: "Pemilahan data dan informasi Program Bangga Kencana sesuai kebutuhan adalah sebagai berikut:",
+        pilihan: [
+            "Data rutin dan data non rutin",
+            "Data operasional dan data perencanaan",
+            "Data pencatatan dan pelaporan Pelayanan Kontrasepsi, pengendalian penduduk & Pembangunan Keluarga",
+            "Data yang berasal dari wilayah dan data hasil penelitian"
+        ],
+        jawaban: 2
+    },
+    {
+        pertanyaan: "berikut adalah manfaat dari Survei Kinerja dan Akuntabilitas Program (SKAP). 1. Merupakan survey tahunan berskala nasional yang dirancang representative provinsi, 2. Memberikan gambaran estimasi parameter provinsi dan dilakukan dengan tujuan untuk memperoleh informasi 3. Bentuk pertanggung jawaban tahunan dari program yang telah dilakukan 4. Menghasilkan banyak data terkait kependudukan, keluarga berencana, kesehatan reprodusi remaja dan pembangunan keluarga Menurut anda apa manfaat dari Survei Kinerja dan Akuntabilitas Program (SKAP) yang telah dilakukan?",
+        pilihan: [
+            "1, 2, 3",
+            "2, 3, 4",
+            "1, 2, 4",
+            "1, 3, 4"
+        ],
+        jawaban: 2
+    },
+    {
+        pertanyaan: "Menurut anda mengapa analisis data penting dalam SKAP?",
+        pilihan: [
+            "Bentuk eksplorasi ilmiah terhadap data primer dalam Pendataan Keluarga yang dilakukan oleh BKKBN",
+            "Analisis data sekunder sebagai upaya pemanfaatan data hasil survei berskala nasional",
+            "Melibatkan para kader yang berpengalaman dalam menganalisis data di bangga kencana",
+            "BKKBN menggunakan komputer tercanggih untuk melakukan analisis tingkat lanjut"
+        ],
+        jawaban: 1
+    },
+    {
+        pertanyaan: "Pengertian analisis data adalah:",
+        pilihan: [
+            "proses pencarian dan penyusunan data yang sistematis melalui transkrip wawancara dan catatan lapangan, serta dokumentasi yang secara akumulasi menambah pemahaman peneliti terhadap yang ditemukan",
+            "kegiatan mengkategorikan data untuk mendaparkan pola hubungan, tema, menafsirkan apa yang bermakna, serta menyampaikan atau melaporkannya kepada pihak lain yang berminat atau berkepentingan",
+            "proses untuk mengatur urutan data, kemudian mengorganisasikan ke dalam kategori, pola, maupun satuan uraian dasar..",
+            "melakukan perincian usaha secara formal yang berguna untuk merumuskan hipotesis dan menemukan tema seperti apa yang telah disarankan serta sebagai bentuk usaha untuk memberikan kontribusi dan tema pada hipotesis."
+        ],
+        jawaban: 1
+    },
+    {
+        pertanyaan: "Tujuan analisis data secara umum adalah",
+        pilihan: [
+            "untuk menjelaskan suatu data agar lebih mudah dipahami, selanjutnya dibuat sebuah kesimpulan",
+            "Menginterpretasikan angka-angka data yang disajikan menggunakan grafik dan atau tabel.",
+            "menguji hipotesis atau dugaan, pertanyaan apa yang perlu dijawab, metode apa yang harus digunakan untuk mendapatkan informasi baru dan kesalahan apa yang harus segera diperbaiki.",
+            "Memberikan gambaran secara tepat dan menyeluruh keadaan di lapangan sampai ke tingkat keluarga tentang hasil pelaksanaan program"
+        ],
+        jawaban: 0
+    },
+    {
+        pertanyaan: "Banyak faktor yang dapat merusak sistem informasi, misalnya bencana alam, api, temperatur tinggi, air, debu, kecurangan-kecurangan harus di antisipasi dengan menerapkan….",
+        pilihan: [
+            "Blok Model",
+            "Blok masukkan",
+            "Blok Kendali",
+            "Blok Teknologi"
+        ],
+        jawaban: 2
+    },
+    {
+        pertanyaan: "Data yang digunakan untuk melakukan analisis data disini adalah data yang bersumber dari…",
+        pilihan: [
+            "Wawancara produk",
+            "Kajian masyarakat",
+            "Temuan LSM",
+            "Pendataan Keluarga, Pencatatan dan Pelaporan, SDKI, SUPAS, SP"
+        ],
+        jawaban: 3
+    },
+    {
+        pertanyaan: "Kualitas informasi terdiri atas 3 hal yaitu..",
+        pilihan: [
+            "Pasti, lama, baik",
+            "Tepat, cepat, ragu",
+            "Benar, siap, lambat",
+            "Akurat, tepat waktu dan relevan"
+        ],
+        jawaban: 3
+    },
+    {
+        pertanyaan: "Pengeditan, pemberian kode, tabulasi, pengujian data, mendeskripsikan data, pengujian hipotesis, dan pemrosesan data, merupakan langkah-langkah…",
+        pilihan: [
+            "verivikasi data",
+            "analisis data",
+            "pengumpulan data",
+            "penafsiaran data"
+        ],
+        jawaban: 1
+    },
+    {
+        pertanyaan: "Proses identifikasi dan klasifikasi data penelitian ke dalam skor numerik atau karakter symbol adalah langkah…",
+        pilihan: [
+            "Editing",
+            "Coding",
+            "Tabulating",
+            "Pengujian data"
+        ],
+        jawaban: 1
+    },
+    {
+        pertanyaan: "Analisis data yang menggunakan rumus staistik tertentu disebut",
+        pilihan: [
+            "Analisis Regresi",
+            "Uji Hipotesis",
+            "Analisis Inferensial",
+            "Analisis deskriptif"
+        ],
+        jawaban: 2
+    },
+    {
+        pertanyaan: "Analisis data yang menggunakan rumus staistik tertentu disebut",
+        pilihan: [
+            "Analisis Regresi",
+            "Uji Hipotesis",
+            "Analisis Inferensial",
+            "Analisis deskriptif"
+        ],
+        jawaban: 2
+    },
+    {
+        pertanyaan: "Pengalaman individu, kronologi pengalaman, pengumpulan cerita, restroying, Coding tema, konteks atau layar, dan kolaborasi, merupakan karakteristik penelitian",
+        pilihan: [
+            "Naratif",
+            "Autobiografi",
+            "Biografi",
+            "Etnografi"
+        ],
+        jawaban: 0
+    },
+    {
+        pertanyaan: "Representasi, Wacana, keragu-raguan, dan posmodernisme termasuk jenis analisis",
+        pilihan: [
+            "Konteks",
+            "Naratif",
+            "Wacana",
+            "Konten"
+        ],
+        jawaban: 2
+    },
+    {
+        pertanyaan: "Contoh analisis data dibidang kependudukan di antaranya berupa",
+        pilihan: [
+            "Dampak kependudukan",
+            "Mix kontrasepsi",
+            "Keaktifan BKB",
+            "Peran Remaja dalam era digital"
+        ],
+        jawaban: 0
+    },
+    {
+        pertanyaan: "Contoh analisis data dibidang keluarga berencana di antaranya berupa…",
+        pilihan: [
+            "Dampak kependudukan",
+            "Mix kontrasepsi",
+            "Distribusi Penduduk",
+            "Administrasi Kependudukan"
+        ],
+        jawaban: 1
+    },
+    {
+        pertanyaan: "Sumber data analisis data kependudukan dapat bersumber dari…",
+        pilihan: [
+            "Televisi",
+            "Radio",
+            "Sensus Penduduk",
+            "Laporan Bulanan RT"
+        ],
+        jawaban: 2
+    },
+    {
+        pertanyaan: "Agar data dapat bernilai, maka data tersebut harus…",
+        pilihan: [
+            "Diabaikan",
+            "Dimanfaatkan",
+            "Diletakan di Alamari",
+            "Menjadi hiasan"
+        ],
+        jawaban: 1
+    },
+    {
+        pertanyaan: "Tujuan pemanfaatan data di antaranya…",
+        pilihan: [
+            "Pengukuran kinerja",
+            "Mendapatkan keuntungan",
+            "Memperoleh sanjungan",
+            "Memiliki program"
+        ],
+        jawaban: 0
+    },
+    {
+        pertanyaan: "Dalam bidang pembangunan lainnya pemanfaatan analisis data digunakan untuk bidang pendidikan di antaranya…",
+        pilihan: [
+            "Pemilihan ketua RT",
+            "Lomba antar RT",
+            "Membuat jalan raya",
+            "Usia rata-rata sekolah"
+        ],
+        jawaban: 3
+    },
+    {
+        pertanyaan: "Dalam bidang pembangunan lainnya pemanfaatan analisis data digunakan untuk bidang ekonomi di antaranya…",
+        pilihan: [
+            "Membuat jalan raya",
+            "Lomba antar RT",
+            "Usia rata-rata sekolah",
+            "Pendapatan warga"
+        ],
+        jawaban: 3
+    },
+    {
+        pertanyaan: "Forum untuk mengkomunikasikan hasil Analisis data misalnya…",
+        pilihan: [
+            "komunitas memancing",
+            "Pertemuan rapat bulanan RT",
+            "Forum Arisan keluarga",
+            "Forum hobi"
+        ],
+        jawaban: 1
+    },
+    {
+        pertanyaan: "Apa tujuan pemberian kode pada tipe pertanyaan terbuka",
+        pilihan: [
+            "mengurangi variasi jawaban responden menjadi beberapa kategori umum sehingga dapat diberi skor numerik atau symbol",
+            "menambah jumlah data",
+            "memudahkan pengumpul data",
+            "menambah variasi jawaban responden"
+        ],
+        jawaban: 0
+    },
+    {
+        pertanyaan: "Apa yang dimaksud dengan analisis data kuantitatif",
+        pilihan: [
+            "analisis yang menggunakan data-data menyeluruh",
+            "analisis yang menggunakan model-model, seperti model matematika (misalnya fungsi multivariat), model statistik, dan ekonometrik.",
+            "analisis yang menggunakan model-model pertanyaan terbuka",
+            "analisis data yang menggunakan teknik wawancara"
+        ],
+        jawaban: 1
+    },
+    {
+        pertanyaan: "Ruang lingkup Sistim pencatatan pelaporan Program Bangga Kencana terdiri dari",
+        pilihan: [
+            "Subsistem pelayanan Kontrasepsi, subsistem pembangunan Keluarga; dan sub sistem Kependudukan",
+            "Subsistem pelayanan kontrasepsi, pengendalian lapangan, dan pendataan keluarga",
+            "Subsistem pengendalian lapangan; subsistem pengendalian lapangan dan subsistem kampung KB",
+            "Subsistem Kampung KB; Subsistem Pengendalian Penduduk da subsistem Pelayanan KB"
+        ],
+        jawaban: 1
+    },
+    {
+        pertanyaan: "Situs Pengolahan Data Statistik Rutin adalah :",
+        pilihan: [
+            "Sebuah aplikasi berbasis web yang dikembangkan untuk menyediakan informasi tentang Pencapaian Program Kependudukan dan Keluarga Berencana Nasional",
+            "Sebuah situs tentang berbagai data tentang pencapaian Program Pembangunan Manusia unggul",
+            "Sebuah sistus yang memuat informasi tentang pelayanan Program Bangga Kencana dengan focus sasaran remaja",
+            "Sebuah situs yang berbasis IT dengan informasi tentang Program Bangga Kencana"
+        ],
+        jawaban: 0
+    },
+    {
+        pertanyaan: "Salah satu tugas dan kompetensi yang harus dimiliki oleh seorang PKB Terampil adalah",
+        pilihan: [
+            "Memahami subsistem pencatatan dan pelaporan program Bangga Kencana",
+            "Menciptakan sistim pencatatan dan pelaporan baru yang lebih efektif dan efisien serta berkualitas",
+            "Menjabarkan bentuk laporan Bangga Kencana kedalam catatan harian yang harus dismapaikan kepada pimpinan di atasnya",
+            "Memperkuat adanya penyediaan data dan informasi yang dibutuhkan oleh pimpinan untuk pengambilan keputusan"
+        ],
+        jawaban: 0
+    },
+    {
+        pertanyaan: "Jenis formulir pencatatan dan pelaporan KKBPK meliputi",
+        pilihan: [
+            "Formulir untuk melaporkan sub system Pendataan Keluarga; Formulir sub system Pelayanan Kontrasepsi dan Subsistem Pengendalian Lapangan",
+            "Formulir untuk pendataan keluarga; formulir pendaftaran peserta KB; formulir laporan pengendalian penduduk",
+            "Formulir untuk membuat data LAMPID; formulir kesertaan ber KB; dan formulir laporan Kampung KB",
+            "Formulir untuk pendataan keluarga; formulir Kampung KB dan Formulir Pembangunan Kelurga"
+        ],
+        jawaban: 0
+    },
+    {
+        pertanyaan: "Tujuan pencatatan dan pelaporan Bangga Kencana",
+        pilihan: [
+            "Untuk mengetahui berapa peserta KB yang sudah merasa puas dengan pelayanan KB yang diterima",
+            "Untuk mengetahui partisipasi masyarakat dalam ber KB dan menjadi peserta KB lestari",
+            "Untuk mengetahui sejauh mana capaian sasaran Program Bangga Kencana yang sudah dilaksanakan.",
+            "Untuk mengetahui pelayanan KKBPK yang diminati oleh masyarakat dan keluarga"
+        ],
+        jawaban: 2
+    },
+    {
+        pertanyaan: "Proses pencatatan dan pelaporan Program Bangga Kencana terdiri dari:",
+        pilihan: [
+            "Entry data ke dalam sistim yang tersedia; analisis data; pengiriman data dan pengambilan keputusan berbasis data",
+            "Pengumpulan data dan informasi serta register; entri data ke dalam sistim; rekapitulasi data; pengiriman data serta feedback",
+            "Pendataan keluarga; pengumpulan hasil pendataan; pemanfaatan data untuk pengambilan keputusan dan dasar operasional",
+            "Pengumpulan data sekunder dan primer; entry data ke dalam sistim; mengelompokan data menurut kriteria; pembersihan data dan pengiriman data"
+        ],
+        jawaban: 1
+    },
+    {
+        pertanyaan: "Pemanfatan hasil pencatatan dan pelaporan Bangga Kencana",
+        pilihan: [
+            "Sebagai bahan masukan untuk mengambil kebijakan dan strategi operasional yang tepat sehingga kegiatan yang kita lakukan akan memperoleh hasil yang maksimal",
+            "Sebagai bahan laporan rutin dan pertanggungan jawaban yang berkaitan dengan pembiayaan dan output kinerja",
+            "Sebagai dokumentasi terhadap berbagai kegiatan yang dilakukan di lapangan sehingga mengetahui trend pencapaian dan progresnya",
+            "Sebagai bahan perbandingan antara pencapaian dan harapan untuk mencapai tujuan suatu kegiatan yang mendukung Program Bangga Kencana"
+        ],
+        jawaban: 0
+    },
+    {
+        pertanyaan: "Pencatatan dan Pelaporan Pelayanan Kontrasepsi (Pelkon) adalah",
+        pilihan: [
+            "Suatu kegiatan mencatat dan laporan tentang pelayanan kontrasepsi yang dilakukan oleh Klinik KB Pemerintah maupun Swasta, serta Dokter/Bidan Praktek Swasta",
+            "Suatu kegiatan untuk melaporkan hasil kerja dan pencapaian Program Bangga Kencana yang berasal dari berbagai klinik KB",
+            "Suatu kegiatan untuk mengumpulkan informasi tentang semua aktivitas pelayanan yang sedang dilaksanakan di lapangan dan melakukan evaluasi terhadapa capaian program",
+            "Suatu kegiatan yang bertujuan untuk menghimpun data yang berkaitan dengan Program Bangga Kencana"
+        ],
+        jawaban: 0
+    },
+    {
+        pertanyaan: "Pencatatan dan Pelaporan Pengendalian Lapangan (Dalap) adalah",
+        pilihan: [
+            "Suatu kegiatan pengumpulan data dan informasi yang terkait dengan kegaiatan di lapangan",
+            "Suatu kegiatan yang bertujuan menghimpun informasi yang akan digunakan untuk pengambilan keputusan dalam operasionalisasi Program Bangga Kencana",
+            "Suatu kegiatan mencatat dan melaporkan berbagai aspek tentang kegiatan koordinasi dan pengendalian pelaksanaan program KKB di lapangan.",
+            "Suatu kegiatan yang berkaitan dengan keperluan kependudukan dengan cara menerima pelaporan dari berbagai stakeholders"
+        ],
+        jawaban: 2
+    },
+    {
+        pertanyaan: "Dalam melaksanakan tugas dan fungsi PKB Terampil salah satu yang berkaitan dengan sistim pencatatan dan pelaporan adalah",
+        pilihan: [
+            "Menjadi katalisator dan pendamping proses pencatatan dan pelaporan Program Bangga Kencana",
+            "Menjadi narasumber dalam melaksanakan pencatatan dan pelaporan agar lebih lancar dan teratur",
+            "Memfasilitasi pencatatan dan pelaporan Bangga Kencana dengan memberikan pendampingan kepada petugas R/R",
+            "Melaksanakan pencatatan pelaporan program Bangga Kencana secara mandiri agar pelaporan lebih cepat"
+        ],
+        jawaban: 2
+    },
+    {
+        pertanyaan: "Berikut adalah kegiatan Rumah Data kependudukan, yang merupakan basis data dan informasi serta pusat intervensi pembangunan di tingkat mikro wilayah Kampung KB. 1. Data, informasi, indikator, prosedur, perangkat, teknologi dan sumber daya manusia yang saling berkaitan 2. Dikelola secara terpadu untuk mengarahkan tindakan 3. Melibatkan semua orang 4. Keputusan yang berguna dalam mendukung gambaran pembangunan keluarga. Menurut anda, proses pencatatan data dan informasi pada Rumah Data Kependudukan adalah...",
+        pilihan: [
+            "1, 2, 3",
+            "2, 3, 4",
+            "1, 2, 4",
+            "1, 3, 4"
+        ],
+        jawaban: 2
+    },
+    {
+        pertanyaan: "Sebagai penyuluh KB, anda diwajibkan membuat rencana kerja. Langkah langkah apa yang anda lakukan. Pilih satu jawaban yang tidak tepat.",
+        pilihan: [
+            "Pengumpulan data dan analisis data",
+            "Menentukan prioritas sasaran",
+            "Membuat rencana kerja secara menyeluruh",
+            "Menyusun rencana kerja dan membuat jadwal kegiatan"
+        ],
+        jawaban: 2
+    },
+    {
+        pertanyaan: "Pada saat memberikan penyuluhan di lapangan tentu ada beberapa kendala yang anda hadapi. 1. Tingkat kehadiran dari masyarakat Pendewasaan Usia Perkawinan (PUP) 2. Faktor budaya pada daerah tertentu 3. Jauhnya lokasi penyuluhan dengan rumah penduduk 4. Masyarakat malas untuk datang. kendala-kendala yang paling sesuai di antaranya...",
+        pilihan: [
+            "1, 2, 3",
+            "2, 3, 4",
+            "1, 2, 4",
+            "1, 3, 4"
+        ],
+        jawaban: 1
+    },
+    {
+        pertanyaan: "Sebagai penyuluh, tugas pencatatan dalam pelayanan kontrasepsi KB yang anda lakukan adalah...",
+        pilihan: [
+            "Pencatatan penyuluhan dalam kegiatan BKB, BKR, dan BKL",
+            "Pencatatan pelayanan kontrasepsi di klinik KB maupun di praktek dokter/bidan dan praktik swasta",
+            "Pencatatan riwayat masyarakat",
+            "Pencatatan keadaan alat alat medis di klinik KB"
+        ],
+        jawaban: 0
+    },
+    {
+        pertanyaan: "Dalam pencatatan dan pelaporan data, hal yang perlu diperhatikan adalah...",
+        pilihan: [
+            "Data dan informasi yang disesuaikan sebagai bukti nyata (evidence based) kegiatan yang dilakukan",
+            "Dapat memberikan gambaran tentang perkembangan data dan termonitor perkembangannya secara rutin setiap tahun di semua lapisan masyarakat",
+            "Melalui pencatatan data dan pelaporan dapat memberikan gambaran akuntabilitas publik bagi para stakeholder dan mitra Program Kependudukan",
+            "Menjamin ketersediaan data dan informasi yang cepat, tepat dan akurat, dalam pengelolaan data dan informasi"
+        ],
+        jawaban: 3
+    },
+    {
+        pertanyaan: "Program KKBPK berubah menjadi Bangga Kencana yaitu singkatan dari :",
+        pilihan: [
+            "Program Pembangunan Keluarga, Kependudukan dan Keluarga Berencana",
+            "Program Pembangunan Desa Keluarga Berencana",
+            "Program Pembangunan Kampung KB",
+            "Program Kependudukan, KB dan Pembangunan Keluarga"
+        ],
+        jawaban: 0
+    },
+    {
+        pertanyaan: "Pembangunan Keluarga pada intinya bertujuan untuk",
+        pilihan: [
+            "Membangun keluarga bahagia sejahtera",
+            "Membangun keluarga sejahtera dan berkualitas",
+            "Mewujudkan keluarga yang tentram, mandiri dan bahagia.",
+            "Mewujudkan keluarga yang harmonis dan bahagia"
+        ],
+        jawaban: 2
+    },
+    {
+        pertanyaan: "Keluarga Berencana merupakan upaya untuk:",
+        pilihan: [
+            "Upaya untuk pengaturan kehamilan",
+            "Upaya untuk merencanakan kehamilan secara ideal dengan memperhatikan hak-hak reproduksi",
+            "Upaya untuk membatasi jumlah anak",
+            "Upaya untuk mengatur usia ideal untuk melahirkan"
+        ],
+        jawaban: 1
     }
 ];
 
