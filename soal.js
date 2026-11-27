@@ -2204,7 +2204,7 @@ const bankSoalKompetensi = [
         pertanyaan: "Sarana dan prasarana yang digunakan oleh faskes KB/jaringan/jejaring untuk mencatat setiap hari mutasi alokon, baik saldo awal bulan, penerimaan, pengeluaran, serta saldo akhir bulan dari semua jenis alat dan obat kontrasepsi disebut ...",
         pilihan: [
             "Kartu pendaftaran tempat pelayanan",
-            "Kartu peserta KB",
+            "kartu peserta KB",
             "Kartu status peserta KB",
             "Register pelayanan KB",
             "Register alat dan obat kontrasepsi"
@@ -3234,7 +3234,7 @@ const bankSoalKompetensi = [
         ],
         jawaban: 2
     },
-{
+    {
         pertanyaan: "Seorang ibu berusia 38 tahun dengan empat anak ingin berhenti hamil, tetapi takut nyeri saat pemasangan alat kontrasepsi. Tindakan Penyuluh KB yang paling tepat adalah ...",
         pilihan: [
             "Menyerahkan keputusan hanya kepada suami",
@@ -8722,6 +8722,1646 @@ const bankSoalKompetensi = [
             "Mengubah juknis sendiri"
         ],
         jawaban: 0
+    },
+    // --- TAMBAHAN SOAL KOMPETENSI TEKNIS 01 (149 SOAL) ---
+    {
+        pertanyaan: "Salah satu penyebab rendahnya pendapatan per kapita penduduk Indonesia adalah",
+        pilihan: [
+            "Angka kemiskinan yang tinggi",
+            "Ketidakseimbangan antara jumlah pencari kerja dengan lapangan pekerjaan",
+            "Pendapatan nasional yang masih rendah yang disebabkan sumber daya alam yang dimiliki belum sepenuhnya dikelola dan di manfaatkan untuk kesejahteraan rakyat",
+            "Masih kurangnya kesadaran penduduk terhadap pentingnya pendidikan",
+            "Lingkungan yang tidak sehat"
+        ],
+        jawaban: 2
+    },
+    {
+        pertanyaan: "Terdapat lima hal penting yang harus diperhatikan dalam memformulasikan arah kebijakan kependudukan yang visioner, kecuali",
+        pilihan: [
+            "Misi kebijakan yang dituangkan dalam program-program kependudukan tidak lagi ditujukan pada target-target yang berdimensi kuantitatif semata-mata",
+            "Perlunya keterlibatan masyarakat dalam mencapai sasaran program kependudukan",
+            "Pemisahan wewenang pengaturan pemerintahan di tingkat pusat dan daerah tidak semestinya membuat perumusan program-program di bidang pengelolaan kependudukan menjadi tumpang tindih",
+            "Memberikan prioritas hanya pada isu penduduk pedesaan dan penduduk usia lanjut",
+            "Semua jawaban benar"
+        ],
+        jawaban: 3
+    },
+    {
+        pertanyaan: "Salah satu tujuan pengelolaan kependudukan adalah",
+        pilihan: [
+            "Agar masyarakat mendapatkan pendidikan yang baik",
+            "Agar masyarakat terpenuhi kebutuhan hidupnya",
+            "Agar masyarakat merasa nyaman untuk hidup dan bertempat tinggal di suatu kawasan",
+            "Agar masyarakat terjamin kesehatannya",
+            "Agar masyarakat miskin berkurang kuantitasnya"
+        ],
+        jawaban: 2
+    },
+    {
+        pertanyaan: "Jumlah penduduk besar, pertumbuhan penduduk tinggi, penyebaran penduduk tidak merata, tingkat urbanisasi tinggi, dan jumlah pengangguran yang meningkat adalah permasalahan penduduk yang berdampak pada kehidupan masyarakat serta pembangunan nasional. Dampak yang dapat muncul dari permasalahan-permasalahan penduduk tersebut adalah .",
+        pilihan: [
+            "Peningkatan Angkatan Kerja",
+            "Pengangguran",
+            "Kemiskinan",
+            "Tekanan Terhadap Kehidupan Beragama",
+            "Daerah Kumuh (Slum)"
+        ],
+        jawaban: 3
+    },
+    {
+        pertanyaan: "Berikut ini yang bukan merupakan permasalahan pengendalian kuantitas penduduk adalah.",
+        pilihan: [
+            "Peningkatan Akses dan Kualitas Pelayanan KB yang Merata untuk dapat mengatasi permasalahan pelayanan KB",
+            "Masih lemahnya komitmen dan dukungan para pemangku kepentingan (stakeholders) terhadap program KKBPK terutama yang terkait dengan kelembagaan, kebijakan, perencanaan program dan penganggaran",
+            "Peningkatan angka pengangguran di masyarakat",
+            "Peningkatan pemahaman dan kesadaran remaja mengenai kesehatan reproduksi dan penyiapan kehidupan berkeluarga",
+            "Pembangunan keluarga melalui peningkatan pemahaman dan kesadaran fungsi keluarga"
+        ],
+        jawaban: 2
+    },
+    {
+        pertanyaan: "Demografi berasal dari kata Yunani, yang dapat diartikan sebagai ...",
+        pilihan: [
+            "Rakyat",
+            "Kependudukan",
+            "Tulisan tentang Kependudukan",
+            "Penduduk",
+            "Tulisan"
+        ],
+        jawaban: 2
+    },
+    {
+        pertanyaan: "Kejadian yang bisa diusahakan oleh manusia (preventive checks) yang bisa menjadi penghambat laju pertumbuhan penduduk di antaranya",
+        pilihan: [
+            "Bencana alam",
+            "Kelaparan",
+            "Menunda perkawinan",
+            "Penyakit menular",
+            "Pembunuhan"
+        ],
+        jawaban: 2
+    },
+    {
+        pertanyaan: "Ukuran demografi berupa hasil perbandingan antara dua angka yang berbeda disebut",
+        pilihan: [
+            "Bilangan absolut",
+            "Prevalensi",
+            "Proporsi",
+            "Rate/Angka",
+            "Ratio/Rasio"
+        ],
+        jawaban: 4
+    },
+    {
+        pertanyaan: "Ukuran demografi berupa persentase perbandingan antara suatu kelompok penduduk tertentu dengan jumlah keseluruhan disebut …*",
+        pilihan: [
+            "Bilangan absolut",
+            "Prevalensi",
+            "Proporsi",
+            "Rate/Angka",
+            "Ratio/Rasio"
+        ],
+        jawaban: 2
+    },
+    {
+        pertanyaan: "Kemampuan seorang wanita secara riil untuk melahirkan yang diwujudkan dalam jumlah bayi yang senyatanya dilahirkan disebut ..",
+        pilihan: [
+            "Fertilitas",
+            "Demografi",
+            "Sekularisasi",
+            "Stratifikasi",
+            "Prevalensi"
+        ],
+        jawaban: 0
+    },
+    {
+        pertanyaan: "Salah satu hasil (output) proyeksi penduduk yang sering diinterpretasikan sebagai banyaknya anak perempuan yang dilahirkan oleh setiap perempuan dalam masa reproduksinya disebut",
+        pilihan: [
+            "Age Specific Fertility Rate (ASFR)",
+            "Total Fertility Rate (TFR)",
+            "Net Reproduction Rate (NRR)",
+            "Replacement Level",
+            "AKB"
+        ],
+        jawaban: 2
+    },
+    {
+        pertanyaan: "Di bawah ini yang merupakan faktor penghambat kelahiran adalah",
+        pilihan: [
+            "Sifat alami manusia yang ingin melanjutkan keturunan.",
+            "Pernikahan usia dini (usia muda)",
+            "Adanya UU perkawinan yang membatasi dan mengatur usia pernikahan",
+            "Adanya anggapan bahwa anak laki-laki lebih tinggi nilainya jika dibandingkan dengan anak perempuan",
+            "Adanya penilaian yang tinggi terhadap anak."
+        ],
+        jawaban: 2
+    },
+    {
+        pertanyaan: "Data dasar untuk mengembangkan proyeksi penduduk, untuk mengetahui jumlah penduduk menurut umur dan jenis kelamin dimasa yang akan datang disebut",
+        pilihan: [
+            "Indikator ASFR",
+            "ASFR",
+            "TFR",
+            "Indikator TFR",
+            "NRR"
+        ],
+        jawaban: 1
+    },
+    {
+        pertanyaan: "Ukuran-ukuran Demografi mencakup bilangan-bilangan di bawah ini, kecuali .",
+        pilihan: [
+            "Absolut",
+            "Prevalensi",
+            "Nominal",
+            "Rate/angka",
+            "Ratio/rasio"
+        ],
+        jawaban: 2
+    },
+    {
+        pertanyaan: "Ilmu yang mempelajari secara statistik dan matematik mengenai fertiltas, mortalitas, migrasi, perkawinan dan mobilitas sosial adalah …",
+        pilihan: [
+            "Prevalensi",
+            "Demografi",
+            "Geografi",
+            "Sekularisasi",
+            "Stratifikasi"
+        ],
+        jawaban: 1
+    },
+    {
+        pertanyaan: "Rasio Kepadatan Penduduk (density ratio) adalah",
+        pilihan: [
+            "Perubahan jumlah penduduk di suatu wilayah tertentu pada waktu tertentu dibandingkan waktu sebelumnya",
+            "Rasio yang menyatakan perbandingan antara banyaknya penduduk terhadap luaswilayah atau berapa banyaknya penduduk per kilometer persegi pada tahun tertentu",
+            "Keadaan penduduk berdasarkan kelompok umur dan jenis kelamin",
+            "Mata statistik dari statistik kependudukan yang membagi dan membahasmasalah kependudukan dari segi umur dan jenis kelamin",
+            "Landasan dalam penyediaan kebutuhan dasar penduduk, seperti pendidikan dan lapangan pekerjaan"
+        ],
+        jawaban: 1
+    },
+    {
+        pertanyaan: "Di bawah ini merupakan kelebihan dari metode kontrasepsi implan, kecuali .",
+        pilihan: [
+            "Ekonomis dan praktis",
+            "Tidak memerlukan pemeriksaan organ reproduksi (vagina)",
+            "Mengurangi nyeri haid",
+            "Melindungi terhadap penularan AIDS/IMS",
+            "Mengurangi jumlah darah saat haid"
+        ],
+        jawaban: 3
+    },
+    {
+        pertanyaan: "Alat kontrasepsi yang terbuat dari plastik yang kecil dan fleksibel, dililit oleh tembaga halus, yang memiliki satu atau dua benang yang tergantung adalah .",
+        pilihan: [
+            "AKBK",
+            "Implan",
+            "Susuk",
+            "Kondom",
+            "Spiral"
+        ],
+        jawaban: 4
+    },
+    {
+        pertanyaan: "Metode kontrasepsi untuk pria berupa tindakan medis pemotongan dan pengikatan saluran sperma kanan dan kiri disebut ...",
+        pilihan: [
+            "Tubektomi",
+            "Vasektomi",
+            "IUD",
+            "Kondom",
+            "Semua jawaban salah"
+        ],
+        jawaban: 1
+    },
+    {
+        pertanyaan: "Di bawah ini merupakan kelebihan dari metode kontrasepsi pil kombinasi, kecuali",
+        pilihan: [
+            "Menjamin perlindungan terhadap penularan HIV/MIS",
+            "Membantu mengurangi pendarahan menstruasi",
+            "Mengurangi resiko kehamilan di luar rahim",
+            "Mengobati PMS",
+            "Mengurangi Jerawat"
+        ],
+        jawaban: 0
+    },
+    {
+        pertanyaan: "Di bawah ini merupakan kelebihan dari alat kontraspsi pil kombinasi, kecuali",
+        pilihan: [
+            "Membantu mengurangi pendarahan menstruasi",
+            "Membantu meringankan nyeri haid",
+            "Mengurangi jerawat",
+            "Tidak mengganggu produksi ASI",
+            "Mudah diperoleh di fasilitas kesehatan atau apotek"
+        ],
+        jawaban: 3
+    },
+    {
+        pertanyaan: "Secara umum, persyaratan metode kontrasepsi ideal adalah sebagai berikut, kecuali ..",
+        pilihan: [
+            "Aman",
+            "Berdayaguna",
+            "Dapat diterima",
+            "Mudah digunakan",
+            "Terjangkau"
+        ],
+        jawaban: 3
+    },
+    {
+        pertanyaan: "Di bawah ini yang merupakan metode KB jangka panjang adalah .",
+        pilihan: [
+            "Kondom",
+            "AKBK",
+            "Pil",
+            "Suntik",
+            "Sistem manual (kalender)"
+        ],
+        jawaban: 1
+    },
+    {
+        pertanyaan: "Di bawah ini yang merupakan metode KB jangka pendek, kecuali...",
+        pilihan: [
+            "Kondom",
+            "Tubektomi",
+            "Pil",
+            "Suntik",
+            "Sistem manual (kalender)"
+        ],
+        jawaban: 1
+    },
+    {
+        pertanyaan: "Di bawah ini merupakan metode KB jangka panjang kecuali ..",
+        pilihan: [
+            "AKBK",
+            "AKDR",
+            "Pill",
+            "Tubektomi",
+            "Vasektomi"
+        ],
+        jawaban: 2
+    },
+    {
+        pertanyaan: "Tindakan yang membantu pasangan untuk menghindari kehamilan yang tidak diinginkan, mengatur interval di antara kehamilan, mengontrol waktu saat kelahiran dalam hubungan dengan umur pasangan serta menentukan jumlah anak dalam keluarga. Pemaparan tersebut merupakan definisi KB menurut …",
+        pilihan: [
+            "WHO",
+            "UU Nomor 52 Tahun 2009",
+            "UNICEF",
+            "BKKBN",
+            "UU Nomor 14 Tahun 2009"
+        ],
+        jawaban: 0
+    },
+    {
+        pertanyaan: "Cara kerja metode kontrasepsi tubektomi adalah …",
+        pilihan: [
+            "Melepaskan hormon yang dapat menghambat pergerakan sperma",
+            "Melepaskan hormon yang dapat mengganggu pembentukan lapisan pada dinding rahim atau endometrium",
+            "Pemotongan dan pengikatan saluran sperma menyebabkan cairan mani yang keluar tidak lagi mengandung sel sperma",
+            "Menghasilkan perubahan kimia yang dapat membuat sperma sulit masuk ke dalam alat reproduksi perempuan",
+            "Mencegah pertemuan sperma dengan sel telur dengan jalan menutup kedua saluran telur"
+        ],
+        jawaban: 4
+    },
+    {
+        pertanyaan: "Cara kerja metode kontrasepsi vasektomi adalah ..",
+        pilihan: [
+            "Melepaskan hormon yang dapat menghambat pergerakan sperma",
+            "Melepaskan hormon yang dapat mengganggu pembentukan lapisan pada dinding rahim atau endometrium",
+            "Pemotongan dan pengikatan saluran sperma menyebabkan cairan mani yang keluar tidak lagi mengandung sel sperma",
+            "Menyebabkan perubahan kimia yang dapat membuat sperma sulit masuk ke dalam alat reproduksi perempuan",
+            "Mencegah pertemuan sperma dengan sel telur dengan jalan menutup kedua saluran telur"
+        ],
+        jawaban: 2
+    },
+    {
+        pertanyaan: "Metode kontrasepsi implan dapat mencegah kehamilan sampai dengan",
+        pilihan: [
+            "3 tahun",
+            "5 tahun",
+            "8 tahun",
+            "10 tahun",
+            "12 tahun"
+        ],
+        jawaban: 0
+    },
+    {
+        pertanyaan: "Sasaran kesehatan reproduksi adalah ..",
+        pilihan: [
+            "Orang tua",
+            "Anak balita",
+            "Anak remaja",
+            "Lansia",
+            "Semua benar"
+        ],
+        jawaban: 4
+    },
+    {
+        pertanyaan: "Di bawah ini merupakan sasaran pelayanan kesehatan ibu dan anak, kecuali ..",
+        pilihan: [
+            "Calon pengantin",
+            "Keluarga dan ibu hamil",
+            "Keluarga yang memiliki anak balita",
+            "Keluarga yang memiliki anak remaja",
+            "Keluarga dengan ibu pasca persalinan"
+        ],
+        jawaban: 3
+    },
+    {
+        pertanyaan: "Pendorong penyebab kematian ibu adalah dikarenakan faktor “Empat T” (Empat Terlalu). Di bawah ini merupakan faktor Empat T, kecuali ..",
+        pilihan: [
+            "Terlalu muda hamil/melahirkan",
+            "Terlalu tua hamil/melahirkan",
+            "Terlalu banyak anak",
+            "Terlalu dini menikah",
+            "Terlalu dekat jarak kehamilan/ melahirkan"
+        ],
+        jawaban: 3
+    },
+    {
+        pertanyaan: "Salah satu penyebab terjadinya keguguran buatan adalah ..",
+        pilihan: [
+            "Kelainan pertumbuhan hasil pembuahan akibat kelainan kromosom, lingkungan yang tidak baik, pengaruh lain (radiasi, virus, obat-oratan)",
+            "Adanya indikasi penyakit atau hal-hal yang membahayakan keselamatan ibu",
+            "Kelainan pada ari-ari, misalnya pada ibu dengan penyakit darah tinggi",
+            "Penyakit ibu antara lain; malaria, anemia berat, toksoplamosis, infeksi ginjal dan typus",
+            "Akibat trauma; jatuh atau mengalami benturan keras pada perut"
+        ],
+        jawaban: 1
+    },
+    {
+        pertanyaan: "Dampak negatif jangka pendek dari kekurangan gizi pada 1000 HPK adalah .",
+        pilihan: [
+            "Menurunkan kemampuan kognitif",
+            "Menununnya kekebalan tubuh",
+            "Risiko tinggi untuk muncul penyakit diabetes",
+            "Terganggunya perkembangan otak",
+            "Disabilitas pada usia tua"
+        ],
+        jawaban: 3
+    },
+    {
+        pertanyaan: "Masa kehamilan mulai dari usia kehamilan 28 minggu sampai dengan persalinan terjadi pada",
+        pilihan: [
+            "Trimester 0",
+            "Trimester I",
+            "Trimester II",
+            "Trimester III",
+            "Trimester IV"
+        ],
+        jawaban: 3
+    },
+    {
+        pertanyaan: "Kondisi terjadinya kekurangan jumlah sel darah merah yang berperan untuk mengangkut oksigen sehingga tidak mencukupi kebutuhan oksigen secara fisiologis bagi tubuh seseorang disebut..",
+        pilihan: [
+            "Anemia",
+            "BBLR",
+            "Stunting",
+            "Semua jawaban benar",
+            "Semua jawaban salah"
+        ],
+        jawaban: 0
+    },
+    {
+        pertanyaan: "Pada kelompok bayi usia 0-6 bulan, intervensi prioritas dilakukan dengan",
+        pilihan: [
+            "Suplementasi Zink",
+            "Fortifikasi besi",
+            "KIE perubahan perilaku",
+            "Pemberian ASI dengan benar",
+            "Promosi menyusui"
+        ],
+        jawaban: 3
+    },
+    {
+        pertanyaan: "Di bawah ini merupakan penyakit yang umumnya diderita oleh anak Balita, kecuali .",
+        pilihan: [
+            "Rabun Senja",
+            "ISPA",
+            "Gagal Ginjal",
+            "Diare",
+            "Semua jawaban benar"
+        ],
+        jawaban: 2
+    },
+    {
+        pertanyaan: "Status gizi Balita dapat diketahui dari perkembangan berat badannya. Melalui KMS dapat diketahui apakah gizi anak Balita termasuk ke dalam kategori normal, kurang atau kegemukan. Bila BB terletak di dalam area berwarna kuning, berarti anak tersebut ..",
+        pilihan: [
+            "Memiliki gizi baik (normal)",
+            "Memiliki gizi kurang",
+            "Memiliki gizi buruk",
+            "Memiliki penyakit serius",
+            "Memiliki gangguan pertumbuhan"
+        ],
+        jawaban: 1
+    },
+    {
+        pertanyaan: "Di bawah ini merupakan peranan suami pada keluarga yang memiliki anak balita, kecuali",
+        pilihan: [
+            "Mengetahui dan memantau pertumbuhan badan anak Balita serta permasalahannya",
+            "Mengetahui dan memantau tugas perkembangan anak Balita serta melakukan stimulasi agar anak Balita dapat berkembang secara optimal",
+            "Menjadi sumber informasi dalam pemeliharaan kesehatan reproduksi yang harus diketahui sedini mungkin oleh anak Balita sesuai dengan usianya",
+            "Sesekali melakukan kekerasan dalam rumah tangga jika ada sesuatu yang menyimpang",
+            "Memahami pola pengasuhan yang baik dan menerapkannya bekerjasama dengan istri secara harmonis dan peran yang seimbang"
+        ],
+        jawaban: 3
+    },
+    {
+        pertanyaan: "Wadah kegiatan program GenRe dalam rangka penyiapan kehidupan berkeluarga bagi remaja/ mahasiswa yang dikelola dari, oleh dan untuk remaja/mahasiswa guna memberikan pelayanan informasi dan konseling tentang perencanaan kehidupan berkeluarga bagi remaja/mahasiswa serta kegiatan-kegiatan penunjang lainnya, merupakan pengertian dari .",
+        pilihan: [
+            "Bina Keluarga Remaja (BKR)",
+            "Bina Keluarga Balita (BKB)",
+            "Usaha Peningkatan Pendapatan Keluarga Sejahtera (UPPKS)",
+            "Bina Keluarga Lansia (BKL)",
+            "PIK R/M"
+        ],
+        jawaban: 4
+    },
+    {
+        pertanyaan: "Syarat kader BKR adalah sebagai berikut, kecuali ...",
+        pilihan: [
+            "Pendidikan minimum D3 atau yang setara",
+            "Tinggal di desa/kelurahan tempat BKR berada",
+            "Bersedia mengikuti pelatihan/orientasi",
+            "Bersedia dan mampu melaksanakan kegiatan BKR",
+            "Aktif dalam kegiatan kemasyarakatan"
+        ],
+        jawaban: 0
+    },
+    {
+        pertanyaan: "Berikut ini merupakan kompetensi yang harus dimiliki oleh kader BKR, kecuali ..",
+        pilihan: [
+            "Memahami substansi Program GenRe.",
+            "Mampu menyampaikan informasi Program GenRe kepada orangtua atau keluarga.",
+            "Memiliki keterampilan dalam memahami perasaan remaja.",
+            "Mampu menggunakan media interaksi dalam menyampaikan materi.",
+            "Mampu menggerakkan masyarakat atau keluarga untuk agar berpartisipasi dalam Program GenRe."
+        ],
+        jawaban: 4
+    },
+    {
+        pertanyaan: "Lansia yang berusia 60 sampai 70 tahun dikategorikan sebagai",
+        pilihan: [
+            "Lansia tangguh",
+            "Lansia dewasa",
+            "Lansia muda",
+            "Lansia sejahtra",
+            "Lansia parpurna"
+        ],
+        jawaban: 2
+    },
+    {
+        pertanyaan: "Kelompok lansia yang mampu beradaptasi terhadap proses penuaan secara positif, sehingga mencapai masa tua berkualitas disebut …",
+        pilihan: [
+            "Lansia tangguh",
+            "Lansia dewasa",
+            "Lansia muda",
+            "Lansia sejahtra",
+            "Lansia parpurna"
+        ],
+        jawaban: 0
+    },
+    {
+        pertanyaan: "Dalam mencapai tujuan pembangunan keluarga Lansia tangguh ditetapkan kebijakan sebagai berikut, kecuali ..*",
+        pilihan: [
+            "Pengembangan kemitraan",
+            "Penguatan komitmen para pengelola dan pelaksana",
+            "Pemberdayaan keluarga dalam pembinaan lansia tangguh",
+            "Pembangunan panti-panti khusus lansia (jompo)",
+            "Peningkatan akses dan kualitas pelayanan"
+        ],
+        jawaban: 3
+    },
+    {
+        pertanyaan: "Di bawah ini merupakan strategi pembangunan keluarga lansia tangguh, kecuali ..",
+        pilihan: [
+            "Meningkatkan advokasi dan sosialisasi tentang pembangunan keluarga lansia tangguh",
+            "Meningkatkan kepedulian dan peranserta mitra",
+            "Meningkatkan dukungan operasional dan dukungan keberlangsungan program",
+            "Meningkatkan pembangunan tempat khusus untuk para lansia langguh",
+            "Memberdayakan keluarga yang memiliki lansia dan lansia potensial"
+        ],
+        jawaban: 3
+    },
+    {
+        pertanyaan: "Dimensi spiritual lansia tangguh berkaitan dengan .",
+        pilihan: [
+            "Sosial kultural",
+            "Pemberdayaan ekonomi",
+            "Mental keagamaan",
+            "Siklus kehidupan",
+            "Fasilitas"
+        ],
+        jawaban: 2
+    },
+    {
+        pertanyaan: "Dimensi lingkungan lansia tangguh berhubungan dengan .. Dimensi lingkungan lansia tangguh berhubungan dengan ..",
+        pilihan: [
+            "Sosial kultural",
+            "Pemberdayaan ekonomi",
+            "Mental spiritual",
+            "Siklus kehidupan",
+            "Fasilitas"
+        ],
+        jawaban: 4
+    },
+    {
+        pertanyaan: "Kecerdasan Emosional disebut juga.",
+        pilihan: [
+            "IQ",
+            "SQ",
+            "AQ",
+            "EQ",
+            "Semua jawaban benar"
+        ],
+        jawaban: 3
+    },
+    {
+        pertanyaan: "Perubahan Mental pada lansia ditandai dengan..",
+        pilihan: [
+            "pendengaran yang berkurang, penglihatan menurun, rambut memutih dan kulit menjadi kering serta berkeriput.",
+            "Gigi-geligi mulai tanggal dan gusi sakit serta meradang.",
+            "menyendiri, sulit tidur, kesedihan akibat ditinggal oleh pasangan hidup atau orang terdekat",
+            "tidak mempunyai gairah hidup untuk berkumpul dengan sebaya, mantan teman sekerja atau pun keluarga besar saudara, anak atau cucu.",
+            "penurunan hormon"
+        ],
+        jawaban: 2
+    },
+    {
+        pertanyaan: "Obesitas pada laki-laki dapat dilihat dari lingkar pinggang yang mencapai angka.",
+        pilihan: [
+            ">70",
+            ">80",
+            ">90",
+            ">100",
+            "Semua jawaban salah"
+        ],
+        jawaban: 2
+    },
+    {
+        pertanyaan: "Latihan pernafasan untuk lansia dapat dilakukan dengan..",
+        pilihan: [
+            "Lari pagi",
+            "Bersepeda",
+            "Senam",
+            "Yoga",
+            "jogging"
+        ],
+        jawaban: 3
+    },
+    {
+        pertanyaan: "Contoh penurunan fungsi intelektual pada lansia adalah.",
+        pilihan: [
+            "gangguan persepsi",
+            "penurunan daya ingat",
+            "penurunan konsentrasi",
+            "gangguan komunikasi",
+            "semua benar"
+        ],
+        jawaban: 4
+    },
+    {
+        pertanyaan: "Di bawah ini yang bukan Peluang profesional vokasional yang dapat dilakukan oleh seorang guru adalah …",
+        pilihan: [
+            "memberikan bimbingan belajar kepada anak-anak disekitar tempat tinggalnya",
+            "membuka kelas pelatihan bagi lansia lainnya untuk belajar keterampilan tertentu",
+            "memberikan penyuluhan hak-hak hukum masyarakat",
+            "memberikan penyuluhan tentang pentingnya kemampuan membaca",
+            "memberikan penyuluhan tentang pentingnya wajib belajar 12 tahun"
+        ],
+        jawaban: 2
+    },
+    {
+        pertanyaan: "Proses alami yang mengubah seseorang dewasa sehat menjadi lemah secara perlahan-lahan, karena menurunnya fungsi yang normal sehingga mengakibatkan peningkatan kerentanan disebut",
+        pilihan: [
+            "Menua",
+            "Tumbuh",
+            "Berkembang",
+            "Lansia",
+            "Penuaan"
+        ],
+        jawaban: 4
+    },
+    {
+        pertanyaan: "Perubahan dari segi psikososial (psikis & sosial) meliputi perubahan cara hidup, kondisi ekonomi, jabatan, rasa kesepian, kehilangan hubungan dengan anggota keluarga atau teman, perubahan konsep diri serta kesadaran akan kematian disebut .",
+        pilihan: [
+            "Perubahan biologis",
+            "Perubahan psikologis",
+            "Perubahan spiritual",
+            "Perubahan emosional",
+            "Perubahan psikososial"
+        ],
+        jawaban: 4
+    },
+    {
+        pertanyaan: "Di bawah ini merupakan peran agama bagi Lansia, kecuali",
+        pilihan: [
+            "Memberikan ketenangan dan kenyamanan batiniah",
+            "Meningkatkan kepasrahan, tawakal, dan kesabaran",
+            "Memoerbaiki hubungan dengan lingkungan sosial masyarakat",
+            "Memperbaiki hubungan dengan Tuhan",
+            "Memperbaiki hubungan dengan sesama manusia dan alam semesta"
+        ],
+        jawaban: 2
+    },
+    {
+        pertanyaan: "Di bawah ini merupakan akibat yang dapat ditimbulkan dari pengurangan sel-sel syaraf otak pada lansia, kecuali .",
+        pilihan: [
+            "Gangguan memori",
+            "Gangguan orientasi waktu, tempat, dan orang",
+            "Kesulitan berpikir abstrak",
+            "Perubahan suasana hati dan perilaku,",
+            "Bertambah minat untuk berinteraksi"
+        ],
+        jawaban: 4
+    },
+    {
+        pertanyaan: "Secara alamiah proses penuaan akan diikuti oleh penurunan fungsi intelektual sehingga terjadi berbagai macam masalah sebagai berikut, kecuali",
+        pilihan: [
+            "Gangguan persepsi",
+            "Penurunan konsentrasi",
+            "Gangguan bahasa dan komunikasi",
+            "Penurunan daya ingat",
+            "Penurunan stamina"
+        ],
+        jawaban: 4
+    },
+    {
+        pertanyaan: "Salah satu tanda perubahan mental pada lansia adalah .",
+        pilihan: [
+            "Pendengaran yang berkurang",
+            "Mudah Lelah",
+            "Demensia (pikun)",
+            "Kecenderungan hanya ingin menyendiri",
+            "Tidak mempunyai gairah hidup"
+        ],
+        jawaban: 2
+    },
+    {
+        pertanyaan: "Menopause ditandai dengan gejala fisik dan psikologis. Salah satu gejala fisik menopouse adalah",
+        pilihan: [
+            "Mudah tersinggung/marah",
+            "Menurunnya hormonal (estrogen)",
+            "Cepat merasa lelah",
+            "Kurang semangat",
+            "Merasa tua"
+        ],
+        jawaban: 2
+    },
+    {
+        pertanyaan: "Salah satu gejala psikologis menopause pada lansia adalah .",
+        pilihan: [
+            "Sakit kepala, pusing",
+            "Muka terasa panas",
+            "Mudah berkeringat",
+            "Daya ingat menurun",
+            "Jantung berdebar-debar"
+        ],
+        jawaban: 3
+    },
+    {
+        pertanyaan: "Di bawah ini merupakan tanda-tanda penurunan fungsi seksual, kecuali ..",
+        pilihan: [
+            "Perlambatan ereksi (menegangnya penis)",
+            "Kelenturan buah zakar menurun",
+            "Gerakan testis hilang",
+            "Disfungsi ereksi (berkurangnya kemampuan ereksi)",
+            "Mudah merasa lelah"
+        ],
+        jawaban: 4
+    },
+    {
+        pertanyaan: "Salah satu penyebab disfungsi ereksi secara psikologis adalah .",
+        pilihan: [
+            "Depresi",
+            "Efek penggunaan obat-obatan",
+            "Masalah hormonal",
+            "Kelainan pembuluh darah",
+            "Kelainan saraf"
+        ],
+        jawaban: 0
+    },
+    {
+        pertanyaan: "Di bawah ini merupakan penyebab disfungsi ereksi secara fisik, kecuali ...",
+        pilihan: [
+            "Kelainan pembuluh darah",
+            "Kelainan saraf",
+            "Kecemasan",
+            "Efek penggunaan obat-obatan",
+            "Masalah hormonal"
+        ],
+        jawaban: 2
+    },
+    {
+        pertanyaan: "Di bawah ini yang tidak termasuk ke dalam 10 Kriteria ADAM adalah .",
+        pilihan: [
+            "Berkurangnya kemampuan ereksi",
+            "Kemunduran kemampuan olahraga",
+            "Penurunan nafsu makan",
+            "Sedih dan atau sering marah tanpa sebab yang jelas",
+            "Berkurangnya kenyamanan dan kesenangan hidup"
+        ],
+        jawaban: 2
+    },
+    {
+        pertanyaan: "Penyakit pembuluh darah otak yang ditandai dengan kematian jaringan otak yang terjadi karena berkurangnya aliran darah dan oksigen ke otak disebut .",
+        pilihan: [
+            "Pikun",
+            "Stroke",
+            "Hipertensi",
+            "Jantung Iskemik",
+            "Diabetes"
+        ],
+        jawaban: 1
+    },
+    {
+        pertanyaan: "Penyakit yang biasanya terjadi pada lansia jika mempunyai tekanan darah melebihi 140/90 mmHg disebut .",
+        pilihan: [
+            "Pikun",
+            "Stroke",
+            "Hipertensi",
+            "Jantung Iskemik",
+            "Diabetes"
+        ],
+        jawaban: 2
+    },
+    {
+        pertanyaan: "Di bawah ini merupakan cara mengatasi insomnia, kecuali ...",
+        pilihan: [
+            "Bangun pada waktu yang sama di pagi hari walaupun malam harinya sulit tidur",
+            "Konseling ke psikolog atau psikiater di PPKS\\Anjurkan pada Lansia untuk menghindari minum kopi dan alcohol",
+            "Perbanyak tidur siang",
+            "Relaksasi",
+            "Olahraga pada pagi atau siang hari dapat menolong Lansia tidur nyenyak"
+        ],
+        jawaban: 2
+    },
+    {
+        pertanyaan: "Dalam upaya membantu Lansia untuk menstabilkan emosinya, kader dan keluarga Lansia harus memiliki tingkat kecerdasan emosi yang memadai. Kecerdasan Emosi (Emotional Quotient/EQ) adalah kemampuan seseorang untuk melakukan hal-hal di bawah ini, kecuali",
+        pilihan: [
+            "Mengendalikan emosi",
+            "Memahami perasaan orang lain",
+            "Memotivasi diri untuk tetap fokus",
+            "Melakukan hubungan sosial dengan menginspirasi",
+            "Melakukan banyak aktivitas fisik"
+        ],
+        jawaban: 4
+    },
+    {
+        pertanyaan: "Lansia yang masih terpengaruh oleh kekuatan dan kejayaan masa lalu, cenderung mengalami tekanan bila masa tua tidak terisi dengan kegiatan yang dapat memberikan kekuasaan pada dirinya (post power syndrom), dan ingin menonjolkan diri, merupakan lansia yang memiliki tipe kepribadian .",
+        pilihan: [
+            "Konstruktif",
+            "Mandiri",
+            "Tergantung",
+            "Kritik diri",
+            "Bermusuhan"
+        ],
+        jawaban: 4
+    },
+    {
+        pertanyaan: "Lansia yang kurang percaya diri, pasif, mudah ragu, rentan, merasa cemas bila ditinggal oleh pasangan atau anggota keluarga lain merupakan lansia yang memiliki tipe kepribadian …",
+        pilihan: [
+            "Konstruktif",
+            "Mandiri",
+            "Tergantung",
+            "Kritik diri",
+            "Bermusuhan"
+        ],
+        jawaban: 2
+    },
+    {
+        pertanyaan: "Lansia yang pesimis, tidak bersemangat, sulit menerima bantuan orang lain, merasa tidak ada gunanya, merasa menyusahkan orang lain, merasa tidak disayang, merasa diri tidak pantas, dan mudah sedih, merupakan lansia yang memiliki tipe kepribadian …",
+        pilihan: [
+            "Konstruktif",
+            "Mandiri",
+            "Tergantung",
+            "Kritik diri",
+            "Bermusuhan"
+        ],
+        jawaban: 3
+    },
+    {
+        pertanyaan: "Program yang dikembangkan lebih melalui pendekatan kelompok yang mayoritas beranggotakan ibu-ibu adalah ..",
+        pilihan: [
+            "UPPK",
+            "UPKB",
+            "UPKS",
+            "UPPKS",
+            "UPKKS"
+        ],
+        jawaban: 3
+    },
+    {
+        pertanyaan: "Contoh tugas seksi produksi adalah .",
+        pilihan: [
+            "Bertanggung jawab mengembangkan produksi",
+            "Bertanggung jawab mengolah bahan baku menjadi barang jadi yang siap dipasarkan",
+            "Bertanggung jawab dalam memasarkan bahan baku",
+            "Bertanggung jawab mencari pihak yang dapat membantu kelancaran pemasaran produksi",
+            "Bertanggung jawab dalam pengadaan bahan baku"
+        ],
+        jawaban: 1
+    },
+    {
+        pertanyaan: "Contoh tugas seksi pemasaran adalah ..",
+        pilihan: [
+            "Bertanggung jawab mengembangkan produksi untuk dipasarkan",
+            "Bertanggung jawab mengolah bahan baku menjadi barang jadi yang siap dipasarkan",
+            "Bertanggung jawab dalam memasarkan hasil produksi",
+            "Bertanggung jawab mencari pihak yang dapat membantu kelancaran pemasaran produksi",
+            "Bertanggung jawab dalam pengadaan bahan baku untuk dipasarkan"
+        ],
+        jawaban: 2
+    },
+    {
+        pertanyaan: "Pertemuan rutin anggota kelompok yang dihadiri oleh PLKB/PKB dan petugasa lapangan sebaiknya dilakukan sebanyak ..",
+        pilihan: [
+            "Seminggu sekali",
+            "Seminggu dua kali",
+            "Sebulan dua kali",
+            "Sebulan sekali",
+            "Setiap tiga bulan sekali"
+        ],
+        jawaban: 3
+    },
+    {
+        pertanyaan: "Rajin menghemat dan menabung untuk memupuk modal dan mengembangkan usaha merupakan salah satu pembinaan ...",
+        pilihan: [
+            "Organisasi",
+            "Permodalan",
+            "Usaha ekonomi produktif",
+            "Administrasi dan pembukuan",
+            "Pemasaran"
+        ],
+        jawaban: 1
+    },
+    {
+        pertanyaan: "Salah satu Program BKKBN yang dikembangkan dalam rangka penyiapan dan perencanaan kehidupan berkeluarga bagi remaja adalah ...",
+        pilihan: [
+            "Program Kampung KB",
+            "Program Genre",
+            "Program Keluarga Berencana",
+            "Program KKBPK",
+            "Program Pemuda Berencana"
+        ],
+        jawaban: 1
+    },
+    {
+        pertanyaan: "Salah satu ciri remaja dalam generasi berencana adalah ..",
+        pilihan: [
+            "Menunda usia perkawinan",
+            "Berperilaku semena-semena",
+            "Terdeteksi dari risiko TRIAD-KRR",
+            "Mengikuti pergaulan bebas",
+            "Menikah muda"
+        ],
+        jawaban: 0
+    },
+    {
+        pertanyaan: "Keluarga sebagai bagian dari masyarakat diharapkan mampu mempertahankan dan mengembangkan social budaya setempat merupakan fungsi keluarga dalam bidang",
+        pilihan: [
+            "Fungsi agama",
+            "Fungsi sosial dan budaya",
+            "Fungsi cinta dan kasih sayang",
+            "Fungsi perlindungan",
+            "Fungsi reproduksi"
+        ],
+        jawaban: 1
+    },
+    {
+        pertanyaan: "Di bawah ini yang termasuk nilai dasar dari fungsi perlindungan adalah .",
+        pilihan: [
+            "iman,takwa, kejujuran, kesalehan dan sopan santun",
+            "empati, setia, adil, pengorbanan, akrab dan tanggung jawab",
+            "gotong royong, sopan santun dan kerukunan",
+            "aman, pemaaf, tanggap, tabah dan peduli",
+            "percaya diri, luwes, bangga dan rajin"
+        ],
+        jawaban: 3
+    },
+    {
+        pertanyaan: "Pendewasaan Usia Perkawinan (PUP) menurut BKKBN adalah upaya untuk meningkatkan usia pada perkawinan pertama. Usia yang layak untuk laki-laki dan perempuan menikah adalah",
+        pilihan: [
+            "Perempuan 15 tahun dan laki-laki 20 tahun",
+            "Perempuan 17 tahun dan laki-laki 15 tahun",
+            "Perempuan 18 tahun dan laki-laki 20 tahun",
+            "Perempuan 19 tahun dan laki-laki 20 tahun",
+            "Perempuan 20 tahun dan laki-laki 25 tahun"
+        ],
+        jawaban: 4
+    },
+    {
+        pertanyaan: "Bagi seorang perempuan yang melahirkan kurang dari usia 20 tahun, dimana secara fisik belum mencapai kematangan, maka risikonya akan semakin tinggi. Risiko yang mungkin terjadi di antaranya ..",
+        pilihan: [
+            "Bayi kelebihan berat badan",
+            "Proses persalinan lancar",
+            "Bayi lahir lebih dari usia 37 minggu",
+            "Bayi lahir dalam anggota tubuh yang lengkap",
+            "Kematian bayi, yaitu bayi yang meninggal dalam usia kurang dari 1 tahun."
+        ],
+        jawaban: 4
+    },
+    {
+        pertanyaan: "Reproduksi wanita berpotensi berhenti pada usia ..",
+        pilihan: [
+            "20 tahun",
+            "29 tahun",
+            "35 tahun",
+            "40 tahun",
+            "49 tahun"
+        ],
+        jawaban: 4
+    },
+    {
+        pertanyaan: "Imunisasi Tetanus Toxoid pada saat persiapan menjelang pranikah dilakukan sebanyak .",
+        pilihan: [
+            "4 kali",
+            "5 kali",
+            "6 kali",
+            "7 kali",
+            "8 kali"
+        ],
+        jawaban: 1
+    },
+    {
+        pertanyaan: "Kecenderungan seseorang mencari pasangan seksualnya berdasarkan jenis kelamin merupakan pengertian dari .",
+        pilihan: [
+            "Perilaku seksual",
+            "Reproduksi seksual",
+            "Gairah seksual",
+            "Orientasi seksual",
+            "Hubungan seksual"
+        ],
+        jawaban: 3
+    },
+    {
+        pertanyaan: "Gangguan pada organ reproduksi laki-laki yang memiliki bentuk alat kelamin ganda dinamakan .",
+        pilihan: [
+            "Cryptorchidism",
+            "Hypospadia",
+            "Pseudohermaphrodite",
+            "Micro penis",
+            "Fimbrae"
+        ],
+        jawaban: 2
+    },
+    {
+        pertanyaan: "Organ reproduksi laki-laki yang banyak mengandung pembuluh darah dan syaraf adalah .",
+        pilihan: [
+            "Glans",
+            "Testis",
+            "Scrotum",
+            "Penis",
+            "Kelenjar prostat"
+        ],
+        jawaban: 0
+    },
+    {
+        pertanyaan: "Tempat pertumbuhan janin adalah di ..",
+        pilihan: [
+            "Uterus",
+            "Fimbrae",
+            "Tuba fallopi",
+            "Ovarium",
+            "Cervix"
+        ],
+        jawaban: 0
+    },
+    {
+        pertanyaan: "Laki-laki pada umumnya mengalami pubertas pada rentang usia .",
+        pilihan: [
+            "7 dan 9 tahun",
+            "8 dan 10 tahun",
+            "9 dan 11 tahun",
+            "10 dan 14 tahun",
+            "Semua jawaban salah"
+        ],
+        jawaban: 3
+    },
+    {
+        pertanyaan: "Perubahan-perubahan fisik yang terjadi pada laki-laki saat pubertas, kecuai",
+        pilihan: [
+            "Pundak dan dada bertambah besar dan bidang",
+            "Tumbuh jakun",
+            "Suara berubah menjadi berat",
+            "Tulang wajah mulai memanjang dan membesar,sehingga tidak terlihat seperti anak kecil lagi",
+            "Pinggul membesar"
+        ],
+        jawaban: 4
+    },
+    {
+        pertanyaan: "Manfaat dari hormon progesteron adalah .",
+        pilihan: [
+            "Merangsang kelenjar-kelenjar agar mengeluarkan cairan nutrisi bagi sel telur yang dibuahi",
+            "Membuat dinding rahim kian tebal",
+            "Membuat cairan vagina bertambah banyak",
+            "Merangsang pertumbuhan saluran susu di payudara sehingga payudara membesar.",
+            "Merangsang pertumbuhan saluran telur, rongga rahim dan vagina"
+        ],
+        jawaban: 1
+    },
+    {
+        pertanyaan: "Peristiwa terjadinya pembuahan (masuknya spermatozoa ke dalam sel telur atau ovum) adalah pengertian dari ..",
+        pilihan: [
+            "kontrasepsi",
+            "konsepsi",
+            "asumsi",
+            "afeksi",
+            "mutasi"
+        ],
+        jawaban: 1
+    },
+    {
+        pertanyaan: "Di bawah ini yang merupakan dampak dari perilaku hubungan seksual pranikah adalah ...",
+        pilihan: [
+            "Kehamilan diingingkan",
+            "Bayi lahir dengan sehat",
+            "Infeksi Menular Seksual",
+            "Pergaulan sehat",
+            "Semakin banyak teman"
+        ],
+        jawaban: 2
+    },
+    {
+        pertanyaan: "Dampak fisik Infeksi menular pada remaja adalah ..",
+        pilihan: [
+            "Rendah diri",
+            "Bekas bisul atau nanah",
+            "Menghindar dari pergaulan",
+            "Malu dan takut",
+            "Gangguan hubungan seks setelah menikah"
+        ],
+        jawaban: 1
+    },
+    {
+        pertanyaan: "Orang dewasa yang yang suka melakukan hubungan seks atau kontak fisik yang merangsang dengan anak di bawah umur merupakan penyimpangan seksual dari ...",
+        pilihan: [
+            "Sadomasokisme",
+            "Pedophilia",
+            "Voyeurisme",
+            "Fetishisme",
+            "Semua jawaban salah"
+        ],
+        jawaban: 1
+    },
+    {
+        pertanyaan: "Nama lain penyimpangan seksual berupa aktivitasnya disalurkan melalui bermasturbasi dengan BH, celana dalam, kaos kaki, atau benda lain yang dapat meningkatkan hasrat atau dorongan seksual adalah ..",
+        pilihan: [
+            "Zoophilia",
+            "Sadomasokisme",
+            "Pedophilia",
+            "Voyeurisme",
+            "Fetishisme"
+        ],
+        jawaban: 4
+    },
+    {
+        pertanyaan: "Kepanjangan dari HIV adalah",
+        pilihan: [
+            "Health Insititute Variaty",
+            "Human Immunodeficiency Virus",
+            "Human Impression Vision",
+            "Human Immunity Virus",
+            "High Immunodeficiency Virus"
+        ],
+        jawaban: 1
+    },
+    {
+        pertanyaan: "Di bawah ini yang bukan merupakan media penularan dari HIV dan AIDS adalah:",
+        pilihan: [
+            "Darah",
+            "Cairan sperma",
+            "Cairan vagina",
+            "Air Susu Ibu (ASI)",
+            "Rambut"
+        ],
+        jawaban: 4
+    },
+    {
+        pertanyaan: "Kepanjangan dari metode ABCDE adalah",
+        pilihan: [
+            "Absurd, Behavior, Creative, Deep, Equipment",
+            "Absent, Be Kind, Clever, Don't use drugs, Equipment",
+            "Abstinence, Be faithful, Condom, Don't use drugs, Equipment",
+            "Abstinence, Brave, Clear, Down, Equipment",
+            "Available, Be faithfull, Condom, Don't use drugs, Equivalent"
+        ],
+        jawaban: 2
+    },
+    {
+        pertanyaan: "Sebuah metode untuk mendeteksi protein pada sampel jaringan adalah:",
+        pilihan: [
+            "ELISA (Enzyme-linked immunosorbent assay)",
+            "Western Blot",
+            "Jumlah Virus/Viral Load RNA HIV dalam plasma",
+            "Western Union",
+            "Tes Plasma"
+        ],
+        jawaban: 1
+    },
+    {
+        pertanyaan: "Tahapan dalam rencana operasional keluarga berencana dan keluarga sejahtera sebanyak",
+        pilihan: [
+            "3 tahap",
+            "4 tahap",
+            "5 tahap",
+            "6 tahap",
+            "7 tahap"
+        ],
+        jawaban: 2
+    },
+    {
+        pertanyaan: "Isi dari Peraturan Menteri Dalam Negeri Nomor 66 Tahun 2007 adalah",
+        pilihan: [
+            "Perencanaan Pembangunan Desa",
+            "Perencanaan Pembangunan Kota",
+            "Perencanaan Pelebaran Jalan",
+            "Perencanaan Pembangunan Pasar",
+            "Perencanaan Pemanfaatan Perumahan"
+        ],
+        jawaban: 0
+    },
+    {
+        pertanyaan: "Di bawah ini yang bukan merupakan kehidupan seksual yang sehat sebagaimana dimaksud dalam PP tentang Kesehatan Reproduksi pasal 26 pada ayat (2) yaitu",
+        pilihan: [
+            "terbebas dari infeksi menular seksual",
+            "terbebas dari disfungsi dan gangguan orientasi seksual",
+            "terbebas dari kekerasan fisik dan mental",
+            "mampu mengatur kehamilan",
+            "terbebas tinggal dengan orangtua"
+        ],
+        jawaban: 4
+    },
+    {
+        pertanyaan: "Menurut UU No. 52 tahun 2009, definisi keluarga adalah ..",
+        pilihan: [
+            "Unit terkecil dari masyarakat yang terdiri dari suami istri dan anaknya, atau ayahdan anaknya, atau ibu dan anaknya",
+            "Perkumpulan dua orang atau lebih individu yang hidup bersama dalam keterikatan, emosional dan setiap individu memiliki peran masing-masing yang merupakan bagian dari keluarga",
+            "Lingkungan yang pertama dan utama bagi perkembangan individu, karena sejak kecil anak tumbuh dan berkembang",
+            "Keluarga merupakan dua atau lebih individu yang hidup dalam satu rumah tangga karena adanya hubungan darah, perkawinan, atau adopsi.",
+            "Unit terkecil dari masyarakat yang terdiri atas kepala keluarga serta beberapa orang yang berkumpul dan tinggal di satu atap dalam keadaan saling bergantungan"
+        ],
+        jawaban: 0
+    },
+    {
+        pertanyaan: "Penerapan 8 fungsi keluarga dilandasi oleh empat konsep, salah satunya adalah anggota keluarga memanfaatkan waktu luang bersama untuk berkumpul dan melakukan aktivitas yang dapat memperkuat ikatan kekeluargaan. Hal tersebut termasuk dalam konsep keluarga .",
+        pilihan: [
+            "Berkumpul",
+            "Berinteraksi",
+            "Peduli dan berbagi",
+            "Berdiskusi",
+            "Berkomunikasi"
+        ],
+        jawaban: 0
+    },
+    {
+        pertanyaan: "Kunci sukses pelaksanan fungsi keluarga adalah",
+        pilihan: [
+            "Anak-anak",
+            "Ayah",
+            "Ibu",
+            "Orang tua",
+            "Saudara"
+        ],
+        jawaban: 3
+    },
+    {
+        pertanyaan: "Berikut ini yang tidak termasuk ke dalam 8 fungsi keluarga adalah ..",
+        pilihan: [
+            "Fungsi cinta kasih",
+            "Fungsi ekonomi",
+            "Fungsi keagamaan",
+            "Fungsi keamanan",
+            "Fungsi perlindungan"
+        ],
+        jawaban: 3
+    },
+    {
+        pertanyaan: "Dalam keluarga, orang tua menanamkan keyakinan terhadap Tuhan Yang maha Esa dan menanamkan sikap takwa, hal tersebut termasuk fungsi keluarga dalam .",
+        pilihan: [
+            "Keagamaan",
+            "Pembinaan lingkungan",
+            "Sosialisasi dan pendidikan",
+            "Keyakinan Keluarga",
+            "Bermasyarakat"
+        ],
+        jawaban: 0
+    },
+    {
+        pertanyaan: "Mengungkapkan rasa kasih sayang dengan penuh perhatian, kesadaran dan kecintaan terhadap seseorang merupakan fungsi keluarga dalam …",
+        pilihan: [
+            "Cinta kasih",
+            "Berkasih sayang",
+            "melindungi",
+            "perhatian",
+            "kerukunan"
+        ],
+        jawaban: 0
+    },
+    {
+        pertanyaan: "Salah satu nilai yang ditanamkan keluarga dalam fungsi keagamaan adalah suka membantu, seperti",
+        pilihan: [
+            "Membiasakan menolong dan membantu orang lain tanpa mengharapkan imbalan",
+            "Membiasakan mendermakan sesuatu tanpa mengharapkan imbalan",
+            "Membiasakan memberi bantuan tanpa mengharapkan imbalan",
+            "Membiasakan tolong menolong tanpa mengharapkan imbalan",
+            "Membiasakan gotong royong tanpa mengharapkan imbalan"
+        ],
+        jawaban: 0
+    },
+    {
+        pertanyaan: "Agar terbentuk karakter yang selalu menepati waktu dan mematuhi aturan yang telah disepakati, orang tua dapat menanamkan nilai…",
+        pilihan: [
+            "Disiplin",
+            "Jujur",
+            "Ketaatan",
+            "Tanggung jawab",
+            "Kepatuhan"
+        ],
+        jawaban: 0
+    },
+    {
+        pertanyaan: "Keluarga adalah wahana utama dalam pembinaan dan penanaman nilai-nilai luhur budaya yang menjadi panutan dalam tata kehidupan, merupakan fungsi…",
+        pilihan: [
+            "Sosial budaya",
+            "ekonomi",
+            "sosialisasi dan pendidikan",
+            "pembinaan lingkungan",
+            "keagamaan"
+        ],
+        jawaban: 0
+    },
+    {
+        pertanyaan: "Keluarga merupakan tempat pertama anak untuk belajar, anak yang memiliki sikap toleransi dan saling menghargai, hal tersebut dikarenakan keluarga menerapkan fungsi",
+        pilihan: [
+            "cinta kasih",
+            "social budaya",
+            "sosialisasi dan pendidikan",
+            "pembinaan lingkungan",
+            "keagamaan"
+        ],
+        jawaban: 2
+    },
+    {
+        pertanyaan: "Perwujudan fungsi social budaya pada nilai cinta tanah air dapat terlihat pada hal-hal di bawah ini, kecuali…",
+        pilihan: [
+            "Kesadaran diri sebagai bangsa Indonesia yang menjunjung tinggi harkat dan martabat bangsa sehingga memilih produk bangsa sendiri.",
+            "Kesadaran diri sebagai bangsa Indonesia yang menjunjung tinggi harkat dan martabat bangsa sehingga suka produk bangsa sendiri.",
+            "Kesadaran diri sebagai bangsa Indonesia yang menjunjung tinggi harkat dan martabat bangsa sehingga memasarkan produk bangsa sendiri",
+            "Kesadaran diri sebagai bangsa Indonesia yang menjunjung tinggi harkat dan martabat bangsa sehingga mencintai produk bangsa sendiri",
+            "Kesadaran diri sebagai bangsa Indonesia yang menjunjung tinggi harkat dan martabat bangsa sehingga menyukai produk luar bangsa sendiri"
+        ],
+        jawaban: 4
+    },
+    {
+        pertanyaan: "Landasan kokoh selain keagamaan agar tetap harmoni dan merasa nyaman dan aman sehingga terbentuk hubungan orang tua dan anak, anak dengan anak, suami dengan istri, serta dengan kerabatan menjadi indah, hal tersebut perwujudan dari fungsi keluarga dalam hal…",
+        pilihan: [
+            "Fungsi Cinta kasih",
+            "Fungsi keagamaan",
+            "Fungsi social budaya",
+            "Fungsi sosialisasi dan pendidikan",
+            "Fungsi pembinaan lingkungan"
+        ],
+        jawaban: 0
+    },
+    {
+        pertanyaan: "Contoh perilaku anak pelajar yang mencerminkan sikap tanggung jawab adalah… .",
+        pilihan: [
+            "Belajar dengan rajin dan tekun serta selalu berusaha lebih baik.",
+            "Membantu orang lain dengan senang hati",
+            "Menyelesaikan tugasnya dengan baik dan tepat waktu",
+            "Berusaha untuk tidak memihak atau tidak pilih kasih terhadap orang lain",
+            "Melaksanakan tugasnya dan tanggung jawabnya dengan segera dan senang hati"
+        ],
+        jawaban: 2
+    },
+    {
+        pertanyaan: "Seorang anak yang tidak segan merawat orangtuanya di kala sudah lansia dan tidak dapat beraktivitas seperti saat masih muda, hal tersebut dikarenakan orang tua tidak menanamkan nilai",
+        pilihan: [
+            "Empati",
+            "Simpati",
+            "Tanggung jawab",
+            "Setia",
+            "pengorbanan"
+        ],
+        jawaban: 4
+    },
+    {
+        pertanyaan: "Di bawah ini yang bukan merupakan nilai-nilai fungsi cinta kasih yang tertanam dan diterapkan dalam keluarga yaitu .",
+        pilihan: [
+            "Empati",
+            "Adil",
+            "Setia",
+            "Kasih sayang",
+            "Suka menolong"
+        ],
+        jawaban: 4
+    },
+    {
+        pertanyaan: "Seorang anak saat libur sekolah membantu orang tuanya membersihkan rumah tanpa ada paksaan dan senang melakukannya, hal tersebut menunjukkan bahwa dalam diri anak sudah tertanam nilai .",
+        pilihan: [
+            "Rajin",
+            "Peduli",
+            "Suka membantu",
+            "Suka menolong",
+            "Semua jawaban benar"
+        ],
+        jawaban: 4
+    },
+    {
+        pertanyaan: "Hidup di Negara yang memiliki keanekaragaman budaya, tradisi dan agama mengharuskan kita untuk saling menghargai satu sama lain. Hal tersebut dapat dilakukan dengan menanamkan nilai moral ..",
+        pilihan: [
+            "Empati",
+            "Simpati",
+            "Toleransi",
+            "Tenggang rasa",
+            "Kerukunan dan kebersamaan"
+        ],
+        jawaban: 2
+    },
+    {
+        pertanyaan: "Nilai-nilai moral yang ditanamkan dan diterapkan pada fungsi perlindungan adalah ...",
+        pilihan: [
+            "Aman, peduli, dan adil",
+            "Pengorbanan, suka menolong, dan pemaaf",
+            "Tanggap, tanggung jawab,dan tabah",
+            "Pemaaf, tabah, dan peduli",
+            "Aman, peduli, dan tanggap"
+        ],
+        jawaban: 4
+    },
+    {
+        pertanyaan: "Upaya untuk menanggapi perasaan dan pengalaman orang lain dan memunculkan rasa persaudaraan disebut…",
+        pilihan: [
+            "Empati",
+            "Simpati",
+            "Peduli",
+            "Perhatian",
+            "Cinta kasih"
+        ],
+        jawaban: 0
+    },
+    {
+        pertanyaan: "Pengertian dari fungsi reproduksi dalam keluarga adalah .",
+        pilihan: [
+            "Mengatur reproduksi keturunan secara sehat dan berencana sehingga melahirkan generasi berkualitas.",
+            "Mengatur reproduksi dengan seksualitas yang sehat dan berkualitas.",
+            "Mengatur reproduksi keturunan agar berkualitas",
+            "Mengatur reproduksi generasi penerus yang sehat dan berkualitas",
+            "Mengatur reproduksi agar terciptanya kesejahteraan keluarga"
+        ],
+        jawaban: 0
+    },
+    {
+        pertanyaan: "Dalam keluarga setiap anggota keluarga diharuskan memiliki rasa tanggung jawab baik untuk diri sendiri maupun keluarga, dalam hal berhubungan dengan reproduksi dan seksual, contoh penanam dalam keluarga seperti ..",
+        pilihan: [
+            "Membicarakan secara jelas mengenai kesehatan seksual dan perilaku seksual dan akibatnya",
+            "Membicarakan seara bijaksana mengenai perilaku seksual, kesehatan reproduksi dan akibatnya.",
+            "Membicarakan secara bijaksana dan jelas mengenai kesehatan seksual dan perilaku seksual dan akibatnya",
+            "Membicarakan dengan hati-hati mengenai perilaku seksual dan bagaimana menyikapinya.",
+            "Semua jawaban benar"
+        ],
+        jawaban: 1
+    },
+    {
+        pertanyaan: "1. Percaya diri, 2. Kerjasama, 3. Bangga, 4. Empati, 5. Kreatif Nilai-nilai yang dapat dilakukan dalam keluarga guna menanamkan dan menerapkan fungsi sosialisasi dan pendidikan ditunjukan oleh nomor,…",
+        pilihan: [
+            "1,2,3, dan 4",
+            "2,3,4, dan 5",
+            "1,2,3, dan 5",
+            "1, 3, 4, dan 5",
+            "1,2,4, dan 5"
+        ],
+        jawaban: 2
+    },
+    {
+        pertanyaan: "Ukuran dari bagaimana sebuah keluarga beroperasi sebagai unit dan bagaimana anggota keluarga berinteraksi satu sama lain disebut ..",
+        pilihan: [
+            "Keluarga",
+            "Bentuk Keluarga",
+            "Fungsi Keluarga",
+            "Peran Keluarga",
+            "Tujuan keluarga"
+        ],
+        jawaban: 2
+    },
+    {
+        pertanyaan: "Bentuk keluarga yang terdiri dari ayah, ibu, dan anak yang diperoleh dari kturunan atau adopsi maupun keduanya disebut …",
+        pilihan: [
+            "Keluarga inti",
+            "Keluarga berencana",
+            "Keluarga besar",
+            "Keluarga berkomposisi",
+            "Keluarga dyadic"
+        ],
+        jawaban: 0
+    },
+    {
+        pertanyaan: "Bentuk keluarga baru yang terbentuk dari pasangan yang telah bercerai atau kehilangan pasangannya disebut .",
+        pilihan: [
+            "Keluarga inti",
+            "Keluarga berencana",
+            "Keluarga besar",
+            "Keluarga berkomposisi",
+            "Keluarga dyadic"
+        ],
+        jawaban: 3
+    },
+    {
+        pertanyaan: "Peran ayah dalam keluarga di antaranya adalah ...",
+        pilihan: [
+            "Sebagai pengasuh dan pendidik anak-anak",
+            "Sebagai pelindung anak-anak",
+            "Sebagai pengurus rumah tangga",
+            "Sebagai kepala keluarga",
+            "Melaksanakan peranan psikososial sesuai dengan tingkat perkembangan baik fisik, mental, sosial maupun spiritual"
+        ],
+        jawaban: 3
+    },
+    {
+        pertanyaan: "Di bawah ini yang tidak termasuk 5 fungsi pokok keluarga yang dinilai dalam APGAR keluarga adalah",
+        pilihan: [
+            "Adaptasi",
+            "Kemitraan",
+            "Kebersamaan",
+            "Penghargaan",
+            "Pertumbuhan"
+        ],
+        jawaban: 2
+    },
+    {
+        pertanyaan: "Fungsi pokok keluarga yang menilai tingkat kepuasan anggota keluarga terhadap kasih sayang serta interaksi emosional yang terjalin dalam keluarga disebut",
+        pilihan: [
+            "Fungsi adaptasi",
+            "Fungsi kemitraan",
+            "Fungsi pertumbuhan",
+            "Fungsi kasih sayang",
+            "Fungsi kebersamaan"
+        ],
+        jawaban: 3
+    },
+    {
+        pertanyaan: "Fungsi pokok keluarga yang menilai tingkat kepuasan anggota keluarga terhadap komunikasi dalam keluarga, musyawarah dalam mengambil keputusan atau dalam penyelesaian masalah yang dihadapi dalam keluarga disebut …",
+        pilihan: [
+            "Fungsi adaptasi",
+            "Fungsi kemitraan",
+            "Fungsi pertumbuhan",
+            "Fungsi kasih sayang",
+            "Fungsi kebersamaan"
+        ],
+        jawaban: 1
+    },
+    {
+        pertanyaan: "Keluarga memiliki berbagai dukungan suportif. Di bawah ini yang bukan merupakan dukungan suportif adalah ...",
+        pilihan: [
+            "Dukungan intrumental",
+            "Dukungan sosial",
+            "Dukungan emosional",
+            "Dukungan informatif",
+            "Dukungan penghargaan"
+        ],
+        jawaban: 1
+    },
+    {
+        pertanyaan: "Terdapat beberapa jenis hormon yang berperan dalam mekanisme pembentukan ASI. Hormon yang berperan dalam perkembangan kelenjar mamaria dengan menginduksi sintesis enzim- enzim yang berguna untuk produksi ASI disebut .",
+        pilihan: [
+            "Hormon Estrogen",
+            "Hormon Progesteron",
+            "Human Chorionic Somatomammotroin (HCS)",
+            "Hormon Prolaktin",
+            "Hormon Oksitosin"
+        ],
+        jawaban: 3
+    },
+    {
+        pertanyaan: "Hormon yang menyebabkan ejeksi (penyemrotan) ASI adalah",
+        pilihan: [
+            "Hormon Estrogen",
+            "Hormon Progesteron",
+            "Human Chorionic Somatomammotroin (HCS)",
+            "Hormon Prolaktin",
+            "Hormon Oksitosin"
+        ],
+        jawaban: 4
+    },
+    {
+        pertanyaan: "Data Wilayah merupakan wilayah keluarga bertempat tinggal yang terdiri dari hal-hal di bawah ini, kecuali ..",
+        pilihan: [
+            "Kode Provinsi",
+            "Nomor rumah",
+            "Nomor Induk Kependudukan (NIK)",
+            "Nomor Urut Keluarga",
+            "Kode Desa/Kelurahan"
+        ],
+        jawaban: 2
+    },
+    {
+        pertanyaan: "Data keluarga berencana berisi poin-poin di bawah ini, kecuali ..",
+        pilihan: [
+            "Usia kawin",
+            "Jumlah anak",
+            "Alasan tidak ber-KB",
+            "Tempat pelayanan KB",
+            "Kesertaan Dalam Jaminan Kesehatan Nasional (JKN)"
+        ],
+        jawaban: 4
+    },
+    {
+        pertanyaan: "Kegiatan pengumpulan data primer tentang data Kependudukan, data Keluarga Berencana, data Pembangunan keluarga dan data Anggota Keluarga yang dilakukan oleh masyarakat bersama pemerintah (BKKBN) secara serentak pada waktu yang telah ditentukan disebut ...",
+        pilihan: [
+            "Pendataan Keluarga",
+            "Penyuluhan Keluarga",
+            "Pembinaan Keluarga",
+            "Advokasi",
+            "Semua jawaban salah"
+        ],
+        jawaban: 0
+    },
+    {
+        pertanyaan: "Seseorang atau sekelompok orang yang mendiami sebagian atau seluruh bangunan yang biasanya tinggal bersama dan makan dari satu dapur, atau seorang yang mendiami sebagian atau seluruh bangunan serta mengurus keperluan sendiri disebut ..",
+        pilihan: [
+            "Pendataan Keluarga",
+            "Basis Data Keluarga",
+            "Rumah Tangga",
+            "Keluarga Khusus",
+            "Pencatatan Keluarga"
+        ],
+        jawaban: 2
+    },
+    {
+        pertanyaan: "Keluarga yang tidak memenuhi definisi keluarga, namun memiliki hubungan keluarga sesama anggotanya, misalnya kakak dan adik tanpa orang tua, seorang kakek/nenek dan cucunya, atau seorang diri (sebatang kara) disebut ..",
+        pilihan: [
+            "Keluarga",
+            "Rumah Tangga",
+            "Keluarga Khusus",
+            "Pencatatan Keluarga",
+            "Semua jawaban benar"
+        ],
+        jawaban: 2
+    },
+    {
+        pertanyaan: "Formulir yang digunakan untuk mencatat data keluarga yang dilakukan oleh kader pendata disebut ...",
+        pilihan: [
+            "Formulir Data Keluarga Indonesia",
+            "Formulir Pendataan Keluarga (F/I/PK/15)",
+            "Diseminasi hasil Pendataan Keluarga",
+            "osialisasi hasil Pendataan Keluarga",
+            "Sarasehan hasil Pendataan Keluarga"
+        ],
+        jawaban: 1
+    },
+    {
+        pertanyaan: "Upaya memasyarakatkan data hasil Pendataan Keluarga, sehingga data tersebut dikenal, dipahami, dihayati oleh pihak-pihak tertentu yang berkepentingan atau masyarakat umum disebut",
+        pilihan: [
+            "Pencatatan Data Keluarga Indonesia",
+            "Pendataan Keluarga (F/I/PK/15)",
+            "Diseminasi hasil Pendataan Keluarga",
+            "Sosialisasi hasil Pendataan Keluarga",
+            "Sarasehan hasil Pendataan Keluarga"
+        ],
+        jawaban: 2
+    },
+    {
+        pertanyaan: "Berikut merupakan beberapa strategi pendataan keluarga, kecuali ..",
+        pilihan: [
+            "Memanfaatkan teknologi informasi dalam pengelolaan Pendataan Keluarga",
+            "Mendayagunakan sumber daya yang ada di lini lapangan",
+            "Meningkatkan kompetensi Sumber Daya Manusia pelaksana Pendataan Keluarga",
+            "Menggalang kemitraan dengan berbagai mitra kerja dan stakeholder Pendataan Keluarga",
+            "Melakukan evaluasi dan monitoring satu kali"
+        ],
+        jawaban: 4
+    },
+    {
+        pertanyaan: "Membentuk Pos Koordinasi (Posko) sebagai pusat rujukan yang diharapkan dapat memberikan dukungan dalam pelaksanaan Pendataan Keluarga merupakan salah satu persiapan pendataan keluarga di tingkat .",
+        pilihan: [
+            "Pusat",
+            "Provinsi",
+            "Kota",
+            "Kevamatan",
+            "Dusun"
+        ],
+        jawaban: 3
+    },
+    {
+        pertanyaan: "Membuat sket peta keluarga sesuai dengan lokasi dan posisi rumah tangga dan keluarga yang akan didata merupakan salah satu persiapan pendataan keluarga di tingkat",
+        pilihan: [
+            "Pusat",
+            "Provinsi",
+            "Kota",
+            "Kevamatan",
+            "Dusun"
+        ],
+        jawaban: 4
+    },
+    {
+        pertanyaan: "Menyusun jadwal waktu pelaksanaan pengumpulan data Pendataan Keluarga di wilayah kerjanya merupakan salah satu persiapan pendataan keluarga di tingkat .",
+        pilihan: [
+            "Pusat",
+            "Provinsi",
+            "Kota",
+            "Kevamatan",
+            "Dusun"
+        ],
+        jawaban: 4
     }
 ];
 
